@@ -1,0 +1,20 @@
+{
+  "name": "as-sharepoint",
+  "version": "1.0.0",
+  "description": "Alaska Sharepoint",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run lite",
+    "lite": "lite-server"
+  },
+  "author": "Irene Jaramillo",
+  "license": "ISC",
+  "devDependencies": {
+    "lite-server": "^2.3.0"
+  },
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "popper.js": "^1.12.9"
+  }
+}
