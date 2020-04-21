@@ -4,6 +4,7 @@
 <!--git push -u origin master-->
 
 <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=10,chrome=1" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -30,12 +31,27 @@
 </head>
 
 <style>
-    h1, a {
+    .ms-core-pageTitle,
+    .ms-core-pageTitle a {
+        color: white;
+        font-size: 1px;
+    }
+
+    .ms-displayInlineBlock ms-normalWrap {
+        color: white;
+        max-width: 0px;
+        max-height: 0px;
+    }
+
+    .ms-siteicon-img {
+        max-width: 0px;
+        max-height: 0px;
         color: white;
     }
 
-    h4, a{
-        padding-bottom: 15px;
+    h4,
+    a {
+        padding-bottom: 5px;
     }
 
     .row-content {
@@ -43,7 +59,6 @@
         border-bottom: 1px ridge;
         min-height: 100px;
     }
-
 
     .jumbotron {
         padding: 10px;
@@ -59,7 +74,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-4 col-sm-3 col-md-2">
-                    <a href="#"><img src="https://alaskaair.sharepoint.com/sites/FOQA/SiteAssets/Images/Alaska_WorkgroupLockups_Safety_rgb_Sm.png" class="img-fluid" /></a>
+                    <a href="#"><img
+                            src="https://alaskaair.sharepoint.com/sites/FOQA/SiteAssets/Images/Alaska_WorkgroupLockups_Safety_rgb_Sm.png"
+                            class="img-fluid" /></a>
                 </div>
                 <div class="col  align-self-center">
                     <h1>Boeing & Airbus</h1>
@@ -82,66 +99,65 @@
                     <div class="container-fluid">
                         <form>
                             <div class="row form-group">
-                                <label class="col-sm-3 col-form-label" for="fleetDAG">Fleet</label>
-                                <select class="col-sm-3 form-control" id="fleetDAG" name="fleetDAG">
+                                <label class="col-sm-1" for="fleetDAG">Fleet</label>
+                                <select class="col form-control" id="fleetDAG" name="fleetDAG" required>
                                     <option>Select</option>
                                     <option value="airbus">Airbus</option>
                                     <option value="boeing">Boeing</option>
                                 </select>
-                                <label class="col-sm-2 col-form-label" for="dagChangeEvent">Event</label>
-                                <select class="col-sm-4 form-control" id="dagChangeEvent" name="dagChangeEvent">
+                                <label class="col" for="dagChangeEvent">Event</label>
+                                <select class="col-sm-3 form-control" id="dagChangeEvent" name="dagChangeEvent"
+                                    required>
                                     <option>Select</option>
                                 </select>
-                            </div>
-                            <h4>Severity</h4>
-                            <div class="row form-group">
-                                <label class="col-sm-3 col-form-label" for="inDAG2">In DAG?</label>
-                                <select class="col-sm-3 form-control" id="inDAG2" name="inDAG2">
+                                <label class="col-sm-1" for="inDAG2">In DAG?</label>
+                                <select class="col form-control" id="inDAG2" name="inDAG2" required>
                                     <option value="Select">Select</option>
                                     <option value="Yes">Yes</option>
                                     <option value="No">No</option>
                                 </select>
-                                <input type="text" id="hiddeninDAG" hidden/>
+                                <input type="text" id="hiddeninDAG" hidden />
 
-                                <label class="col-sm-3 col-form-label" for="inPCAL2">In PCAL?</label>
-                                <select class="col-sm-3 form-control" id="inPCAL2" name="inPCAL2">
+                                <label class="col-sm-1" for="inPCAL2">In PCAL?</label>
+                                <select class="col form-control" id="inPCAL2" name="inPCAL2" required>
                                     <option value="Select">Select</option>
                                     <option value="Yes">Yes</option>
                                     <option value="No">No</option>
                                 </select>
-                                <input type="text" id="hiddeninPCAL" hidden/>
+                                <input type="text" id="hiddeninPCAL" hidden />
+                            </div>
+                            <div class="row form-group"> 
+                                <label class="col col-form-label" for="SeverityLabel">Severity </label>
+                                <label class="col col-form-label" for="infoOnlyDAG">Information Only</label>
+                                <select class="col form-control" id="infoOnlyDAG" name="infoOnlyDAG" required>
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
+                                    <option value="Na">n/a</option>
+                                </select>
+                                <label class="col col-form-label" for="cautionDAG">Caution</label>
+                                <select class="col form-control" id="cautionDAG" name="cautionDAG" required>
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
+                                    <option value="Na">n/a</option>
+                                </select>
+                                <label class="col col-form-label" for="warningDAG">Warning</label>
+                                <select class="col form-control" id="warningDAG" name="warningDAG" required>
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
+                                    <option value="Na">n/a</option>
+                                </select>
+                                <label class="col col-form-label" for="alertDAG">Alert</label>
+                                <select class="col form-control" id="alertDAG" name="alertDAG" required>
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
+                                    <option value="Na">n/a</option>
+                                </select>
                             </div>
                             <div class="row form-group">
-                                <label class="col-sm-2 col-form-label" for="infoOnlyDAG">Information Only</label>
-                                <select class="col-sm-1 form-control" id="infoOnlyDAG" name="infoOnlyDAG">
-                                    <option value="Yes">Yes</option>
-                                    <option value="No">No</option>
-                                    <option value="Na">n/a</option>
-                                </select>
-                                <label class="col-sm-2 col-form-label" for="cautionDAG">Caution</label>
-                                <select class="col-sm-1 form-control" id="cautionDAG" name="cautionDAG">
-                                    <option value="Yes">Yes</option>
-                                    <option value="No">No</option>
-                                    <option value="Na">n/a</option>
-                                </select>
-                                <label class="col-sm-2 col-form-label" for="warningDAG">Warning</label>
-                                <select class="col-sm-1 form-control" id="warningDAG" name="warningDAG">
-                                    <option value="Yes">Yes</option>
-                                    <option value="No">No</option>
-                                    <option value="Na">n/a</option>
-                                </select>
-                                <label class="col-sm-1 col-form-label" for="alertDAG">Alert</label>
-                                <select class="col-sm-1 form-control" id="alertDAG" name="alertDAG">
-                                    <option value="Yes">Yes</option>
-                                    <option value="No">No</option>
-                                    <option value="Na">n/a</option>
-                                </select>
-                            </div>
-                            <div class="row form-group">
-                                <label class="col-sm-3 col-form-label" for="whyChange">Why change?</label>
-                                <textarea class="col-sm-3 form-control" id="whyChange" rows="1"></textarea>
-                                <label class="col-sm-3 col-form-label" for="perWhom">Per Whom?</label>
-                                <textarea class="col-sm-3 form-control" id="perWhom" rows="1"></textarea>
+                                <label class="col-sm-2 col-form-label" for="whyChangeDAG">Why change?</label>
+                                <textarea class="col-sm-4 form-control" id="whyChangeDAG" rows="1" required></textarea>
+                                <label class="col-sm-2 col-form-label" for="perWhomDAG">Per Whom?</label>
+                                <input type="text" class="col-sm-4 form-control" id="perWhomDAG" required></input>
                             </div>
                             <div class="form-row">
                                 <button type="button" class="btn btn-secondary btn-sm ml-auto"
@@ -167,64 +183,65 @@
                     <div class="container-fluid">
                         <form>
                             <div class="row form-group">
-                                <label class="col-sm-3 col-form-label" for="fleetPCAL">Fleet</label>
-                                <select class="col-sm-3 form-control" id="fleetPCAL" name="fleetPCAL">
+                                <label class="col-sm-1" for="fleetPCAL">Fleet</label>
+                                <select class="col form-control" id="fleetPCAL" name="fleetPCAL" required>
                                     <option>Select</option>
                                     <option value="airbus">Airbus</option>
                                     <option value="boeing">Boeing</option>
                                 </select>
-                                <label class="col-sm-2 col-form-label" for="pcalChangeEvent">Event</label>
-                                <select class="col-sm-4 form-control" id="pcalChangeEvent" name="pcalChangeEvent">
+                                <label class="col" for="pcalChangeEvent">Event</label>
+                                <select class="col-sm-3 form-control" id="pcalChangeEvent" name="pcalChangeEvent"
+                                    required>
                                     <option>Select</option>
                                 </select>
-                            </div>
-                            <h4>Severity</h4>
-                            <div class="row form-group">
-                                <label class="col-sm-3 col-form-label" for="inDAG3">In DAG?</label>
-                                <select class="col-sm-3 form-control" id="inDAG3" name="inDAG3">
+                                <label class="col-sm-1" for="inDAG3">In DAG?</label>
+                                <select class="col form-control" id="inDAG3" name="inDAG3" required>
                                     <option value="Select">Select</option>
                                     <option value="Yes">Yes</option>
                                     <option value="No">No</option>
                                 </select>
+                                <input type="text" id="hiddeninDAG" hidden />
 
-                                <label class="col-sm-3 col-form-label" for="inPCAL3">In PCAL?</label>
-                                <select class="col-sm-3 form-control" id="inPCAL3" name="inPCAL3">
+                                <label class="col-sm-1" for="inPCAL3">In PCAL?</label>
+                                <select class="col form-control" id="inPCAL3" name="inPCAL3" required>
                                     <option value="Select">Select</option>
                                     <option value="Yes">Yes</option>
                                     <option value="No">No</option>
                                 </select>
+                                <input type="text" id="hiddeninPCAL" hidden />
+                            </div>
+                            <div class="row form-group"> 
+                                <label class="col col-form-label" for="SeverityLabel">Severity </label>
+                                <label class="col col-form-label" for="infoOnlyPCAL">Information Only</label>
+                                <select class="col form-control" id="infoOnlyPCAL" name="infoOnlyPCAL" required>
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
+                                    <option value="Na">n/a</option>
+                                </select>
+                                <label class="col col-form-label" for="cautionPCAL">Caution</label>
+                                <select class="col form-control" id="cautionPCAL" name="cautionPCAL" required>
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
+                                    <option value="Na">n/a</option>
+                                </select>
+                                <label class="col col-form-label" for="warningPCAL">Warning</label>
+                                <select class="col form-control" id="warningPCAL" name="warningPCAL" required>
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
+                                    <option value="Na">n/a</option>
+                                </select>
+                                <label class="col col-form-label" for="alertPCAL">Alert</label>
+                                <select class="col form-control" id="alertPCAL" name="alertPCAL" required>
+                                    <option value="Yes">Yes</option>
+                                    <option value="No">No</option>
+                                    <option value="Na">n/a</option>
+                                </select>
                             </div>
                             <div class="row form-group">
-                                <label class="col-sm-2 col-form-label" for="infoOnlyPCAL">Information Only</label>
-                                <select class="col-sm-1 form-control" id="infoOnlyPCAL" name="infoOnlyPCAL">
-                                    <option value="Yes">Yes</option>
-                                    <option value="No">No</option>
-                                    <option value="Na">n/a</option>
-                                </select>
-                                <label class="col-sm-2 col-form-label" for="cautionPCAL">Caution</label>
-                                <select class="col-sm-1 form-control" id="cautionPCAL" name="cautionPCAL">
-                                    <option value="Yes">Yes</option>
-                                    <option value="No">No</option>
-                                    <option value="Na">n/a</option>
-                                </select>
-                                <label class="col-sm-2 col-form-label" for="warningPCAL">Warning</label>
-                                <select class="col-sm-1 form-control" id="warningPCAL" name="warningPCAL">
-                                    <option value="Yes">Yes</option>
-                                    <option value="No">No</option>
-                                    <option value="Na">n/a</option>
-                                </select>
-                                <label class="col-sm-1 col-form-label" for="alertPCAL">Alert</label>
-                                <select class="col-sm-1 form-control" id="alertPCAL" name="alertPCAL">
-                                    <option value="Yes">Yes</option>
-                                    <option value="No">No</option>
-                                    <option value="Na">n/a</option>
-                                </select>
-                            </div>
-                            <div class="row form-group">
-                                <label class="col-sm-3 col-form-label" for="whyChange">Why change?</label>
-                                <textarea class="col-sm-3 form-control" id="whyChange" rows="1"></textarea>
-                                <label class="col-sm-3 col-form-label" for="perWhom">Per Whom?</label>
-                                <textarea class="col-sm-3 form-control" id="perWhom" rows="1"></textarea>
+                                <label class="col-sm-2 col-form-label" for="whyChangePCAL">Why change?</label>
+                                <textarea class="col-sm-4 form-control" id="whyChangePCAL" rows="1" required></textarea>
+                                <label class="col-sm-2 col-form-label" for="perWhomPCAL">Per Whom?</label>
+                                <input type="text" class="col-sm-4 form-control" id="perWhomPCAL" required></input>
                             </div>
                             <div class="form-row">
                                 <button type="button" class="btn btn-secondary btn-sm ml-auto"
@@ -239,7 +256,7 @@
     </div>
 
     <div class="container">
-        <div class="row align-items-center">
+        <div class="row align-items-center" style="margin-bottom:0px; padding-bottom: px;">
             <div class="mx-auto ml-auto">
                 <a role="button" class="btn btn-info btn-lg mt-4" data-toggle="modal" data-target="#changeDAGModal"
                     id="changeDAG">Change DAG</a>
@@ -248,9 +265,9 @@
             </div>
         </div>
 
-        <div class="row row-content">
+        <div class="row row-content" style="margin-top:0px; padding-top: 5px;">
             <div class="col">
-                <div class="accordion" id ="accordion1">
+                <div class="accordion" id="accordion1">
                     <div class="card">
                         <div class="card-header" role="tab">
                             <h4>
@@ -270,7 +287,8 @@
                                                 <option value="boeing">Boeing</option>
                                             </select>
                                             <label class="col-sm-1 col-form-label" for="newProfile">Profile</label>
-                                            <select class="col-sm-2 form-control" id="newProfile" name="newProfile" disabled>
+                                            <select class="col-sm-2 form-control" id="newProfile" name="newProfile"
+                                                disabled>
                                                 <option value="select">Select</option>
                                                 <option value="5">5</option>
                                                 <option value="191">191</option>
@@ -292,7 +310,7 @@
                                                 <option value="Yes">Yes</option>
                                                 <option value="No">No</option>
                                             </select>
-            
+
                                             <label class="col-sm-2 col-form-label" for="inPCAL1">In PCAL?</label>
                                             <select class="col-sm-2 form-control" id="inPCAL1" name="inPCAL1" required>
                                                 <option value="Select">Select</option>
@@ -309,17 +327,20 @@
                                             </select>
                                         </div>
                                         <div class="row form-group">
-                                            <label class="col-sm-3 col-form-label" for="formula">EMS Event Formula</label>
+                                            <label class="col-sm-3 col-form-label" for="formula">EMS Event
+                                                Formula</label>
                                             <textarea class="col form-control" id="formula" rows="2"></textarea>
                                         </div>
 
                                         <div class="row form-group">
-                                            <label class="col-sm-3 col-form-label" for="definition">EMS Event Definition</label>
+                                            <label class="col-sm-3 col-form-label" for="definition">EMS Event
+                                                Definition</label>
                                             <textarea class="col form-control" id="definition" rows="2"></textarea>
                                         </div>
                                         <div class=" row form-group">
                                             <label class="col-sm-2 col-form-label" for="infoOnlyDef">Information</label>
-                                            <textarea class="col-sm-4 form-control" id="infoOnlyDef" rows="1"></textarea>
+                                            <textarea class="col-sm-4 form-control" id="infoOnlyDef"
+                                                rows="1"></textarea>
                                             <label class="col-sm-2 col-form-label" for="cautionDef">Caution</label>
                                             <textarea class="col-sm-4 form-control" id="cautionDef" rows="1"></textarea>
                                         </div>
@@ -335,7 +356,8 @@
                                         </div>
                                         <div class="row form-group">
                                             <div class="col">
-                                                <button type="submit" class="btn btn-primary" id="updateEvent">Update Event Details</button>
+                                                <button type="submit" class="btn btn-primary" id="updateEvent">Update
+                                                    Event Details</button>
                                             </div>
                                         </div>
                                     </form>
@@ -355,13 +377,15 @@
                                     <form id="newEventForm">
                                         <div class="row form-group">
                                             <label class="col-sm-1 col-form-label" for="newEventFleet">Fleet</label>
-                                            <select class="col-sm-2 form-control" id="newEventFleet" name="newEventFleet" required> 
+                                            <select class="col-sm-2 form-control" id="newEventFleet"
+                                                name="newEventFleet" required>
                                                 <option>Select</option>
                                                 <option value="airbus">Airbus</option>
                                                 <option value="boeing">Boeing</option>
                                             </select>
                                             <label class="col-sm-1 col-form-label" for="newEventProfile">Profile</label>
-                                            <select class="col-sm-2 form-control" id="newEventProfile" name="newEventProfile" required>
+                                            <select class="col-sm-2 form-control" id="newEventProfile"
+                                                name="newEventProfile" required>
                                                 <option value="select">Select</option>
                                                 <option value="5">5</option>
                                                 <option value="191">191</option>
@@ -371,24 +395,61 @@
                                                 <option value="0">0</option>
                                             </select>
                                             <label class="col-sm-1 col-form-label" for="newEvent">Event</label>
-                                            <input type="text" id="newEvent" name="newEvent" required>
+                                            <input type="text" class="col form-control" id="newEvent" name="newEvent"
+                                                required>
                                         </div>
 
                                         <div class="row form-group">
-                                            <label class="col-sm-1 col-form-label" for="inDAG4">In DAG?</label>
+                                            <!--<label class="col-sm-1 col-form-label" for="inDAG4">In DAG?</label>
                                             <select class="col-sm-2 form-control" id="inDAG4" name="inDAG4" required>
                                                 <option value="Select">Select</option>
                                                 <option value="Yes">Yes</option>
                                                 <option value="No">No</option>
                                             </select>
-            
+
                                             <label class="col-sm-2 col-form-label" for="inPCAL4">In PCAL?</label>
                                             <select class="col-sm-2 form-control" id="inPCAL4" name="inPCAL4" required>
                                                 <option value="Select">Select</option>
                                                 <option value="Yes">Yes</option>
                                                 <option value="No">No</option>
-                                            </select>
-                                            <label class="col-sm-3 col-form-label" for="gPFC1">Event Triggered by Fleet
+                                            </select>-->
+
+                                        </div>
+                                        <div class="row form-group">
+                                            <label class="col-sm-3 col-form-label" for="formula1">EMS Event
+                                                Formula</label>
+                                            <textarea class="col form-control" id="formula1" rows="2"></textarea>
+                                        </div>
+
+                                        <div class="row form-group">
+                                            <label class="col-sm-3 col-form-label" for="definition1">EMS Event
+                                                Definition</label>
+                                            <textarea class="col form-control" id="definition1" rows="2"></textarea>
+                                        </div>
+                                        <div class=" row form-group">
+                                            <label class="col-sm-2 col-form-label"
+                                                for="infoOnlyDef1">Information</label>
+                                            <textarea class="col-sm-4 form-control" id="infoOnlyDef1"
+                                                rows="1"></textarea>
+                                            <label class="col-sm-2 col-form-label" for="cautionDef1">Caution</label>
+                                            <textarea class="col-sm-4 form-control" id="cautionDef1"
+                                                rows="1"></textarea>
+                                        </div>
+                                        <div class=" row form-group">
+                                            <label class="col-sm-2 col-form-label" for="warningDef1">Warning</label>
+                                            <textarea class="col-sm-4 form-control" id="warningDef1"
+                                                rows="1"></textarea>
+                                            <label class="col-sm-2 col-form-label" for="alertDef1">Alert</label>
+                                            <textarea class="col-sm-4 form-control" id="alertDef1" rows="1"></textarea>
+                                        </div>
+                                        <div class="row form-group">
+                                            <label class="col-sm-2 col-form-label" for="intervalDef1">Interval</label>
+                                            <textarea class="col form-control" id="intervalDef1" rows="1"></textarea>
+                                            <label class="col-sm-2 col-form-label" for="fullEMSPath">FullEMSPath</label>
+                                            <textarea class="col form-control" id="fullEMSPath" rows="1"
+                                                placeholder="e.g. Descent and Landing\Descent and Approach\..."></textarea>
+                                            <label class="col-sm-3 col-form-label" id="gPFC1label" for="gPFC1">Event
+                                                Triggered by Fleet
                                                 Constant/Global Parameter?</label>
                                             <select class="col-sm-2 form-control" id="gPFC1" name="gPFC1">
                                                 <option>Select</option>
@@ -396,35 +457,15 @@
                                                 <option value="Fleet Constant">Fleet Constant</option>
                                                 <option value="Global Parameter">Global Parameter</option>
                                             </select>
-                                        </div>
-                                        <div class="row form-group">
-                                            <label class="col-sm-3 col-form-label" for="formula1">EMS Event Formula</label>
-                                            <textarea class="col form-control" id="formula1" rows="2"></textarea>
-                                        </div>
-
-                                        <div class="row form-group">
-                                            <label class="col-sm-3 col-form-label" for="definition1">EMS Event Definition</label>
-                                            <textarea class="col form-control" id="definition1" rows="2"></textarea>
-                                        </div>
-                                        <div class=" row form-group">
-                                            <label class="col-sm-2 col-form-label" for="infoOnlyDef1">Information</label>
-                                            <textarea class="col-sm-4 form-control" id="infoOnlyDef1" rows="1"></textarea>
-                                            <label class="col-sm-2 col-form-label" for="cautionDef1">Caution</label>
-                                            <textarea class="col-sm-4 form-control" id="cautionDef1" rows="1"></textarea>
-                                        </div>
-                                        <div class=" row form-group">
-                                            <label class="col-sm-2 col-form-label" for="warningDef1">Warning</label>
-                                            <textarea class="col-sm-4 form-control" id="warningDef1" rows="1"></textarea>
-                                            <label class="col-sm-2 col-form-label" for="alertDef1">Alert</label>
-                                            <textarea class="col-sm-4 form-control" id="alertDef1" rows="1"></textarea>
-                                        </div>
-                                        <div class="row form-group">
-                                            <label class="col-sm-2 col-form-label" for="intervalDef1">Interval</label>
-                                            <textarea class="col form-control" id="intervalDef1" rows="1"></textarea>
+                                            <label class="col-sm-2 col-form-label" id="gpfcLabel"
+                                                for="gpfcText"></label>
+                                            <input type="text" class="col-sm-2 form-control" id="gpfcText"
+                                                name="gpfcText" placeholder="G.P./F.C. Name" />
                                         </div>
                                         <div class="row form-group">
                                             <div class="col">
-                                                <button type="submit" class="btn btn-primary" id="addEvent">Add Event Details</button>
+                                                <button type="submit" class="btn btn-primary" id="addEvent">Add Event
+                                                    Details</button>
                                             </div>
                                         </div>
                                     </form>
@@ -480,8 +521,9 @@
 
     <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
     <script src="https://alaskaair.sharepoint.com/sites/FOQA/SiteAssets/ASEMSEventTrack.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" 
-    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
 
 
     <script>
