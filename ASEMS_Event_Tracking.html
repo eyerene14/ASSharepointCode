@@ -49,6 +49,11 @@
         color: white;
     }
 
+    .error-message{
+        color: red;
+        font-weight: bold;
+    }
+
     h4,
     a {
         padding-bottom: 5px;
@@ -86,175 +91,6 @@
             </div>
         </div>
     </header>
-
-    <div id="changeDAGModal" class="modal fade" role="dialog">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header bg-info text-white">
-                    <h3 class="modal-title">DAG Reporting Change</h3>
-                    <!-- This line below adds an x button to header to close modal screen-->
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-                <div class="modal-body">
-                    <div class="container-fluid">
-                        <form>
-                            <div class="row form-group">
-                                <label class="col-sm-1" for="fleetDAG">Fleet</label>
-                                <select class="col form-control" id="fleetDAG" name="fleetDAG" required>
-                                    <option>Select</option>
-                                    <option value="airbus">Airbus</option>
-                                    <option value="boeing">Boeing</option>
-                                </select>
-                                <label class="col" for="dagChangeEvent">Event</label>
-                                <select class="col-sm-3 form-control" id="dagChangeEvent" name="dagChangeEvent"
-                                    required>
-                                    <option>Select</option>
-                                </select>
-                                <label class="col-sm-1" for="inDAG2">In DAG?</label>
-                                <select class="col form-control" id="inDAG2" name="inDAG2" required>
-                                    <option value="Select">Select</option>
-                                    <option value="Yes">Yes</option>
-                                    <option value="No">No</option>
-                                </select>
-                                <input type="text" id="hiddeninDAG" hidden />
-
-                                <label class="col-sm-1" for="inPCAL2">In PCAL?</label>
-                                <select class="col form-control" id="inPCAL2" name="inPCAL2" required>
-                                    <option value="Select">Select</option>
-                                    <option value="Yes">Yes</option>
-                                    <option value="No">No</option>
-                                </select>
-                                <input type="text" id="hiddeninPCAL" hidden />
-                            </div>
-                            <div class="row form-group"> 
-                                <label class="col col-form-label" for="SeverityLabel">Severity </label>
-                                <label class="col col-form-label" for="infoOnlyDAG">Information Only</label>
-                                <select class="col form-control" id="infoOnlyDAG" name="infoOnlyDAG" required>
-                                    <option value="Yes">Yes</option>
-                                    <option value="No">No</option>
-                                    <option value="Na">n/a</option>
-                                </select>
-                                <label class="col col-form-label" for="cautionDAG">Caution</label>
-                                <select class="col form-control" id="cautionDAG" name="cautionDAG" required>
-                                    <option value="Yes">Yes</option>
-                                    <option value="No">No</option>
-                                    <option value="Na">n/a</option>
-                                </select>
-                                <label class="col col-form-label" for="warningDAG">Warning</label>
-                                <select class="col form-control" id="warningDAG" name="warningDAG" required>
-                                    <option value="Yes">Yes</option>
-                                    <option value="No">No</option>
-                                    <option value="Na">n/a</option>
-                                </select>
-                                <label class="col col-form-label" for="alertDAG">Alert</label>
-                                <select class="col form-control" id="alertDAG" name="alertDAG" required>
-                                    <option value="Yes">Yes</option>
-                                    <option value="No">No</option>
-                                    <option value="Na">n/a</option>
-                                </select>
-                            </div>
-                            <div class="row form-group">
-                                <label class="col-sm-2 col-form-label" for="whyChangeDAG">Why change?</label>
-                                <textarea class="col-sm-4 form-control" id="whyChangeDAG" rows="1" required></textarea>
-                                <label class="col-sm-2 col-form-label" for="perWhomDAG">Per Whom?</label>
-                                <input type="text" class="col-sm-4 form-control" id="perWhomDAG" required></input>
-                            </div>
-                            <div class="form-row">
-                                <button type="button" class="btn btn-secondary btn-sm ml-auto"
-                                    data-dismiss="modal">Cancel</button>
-                                <button type="submit" class="btn btn-primary btn-sm ml-1" id="inDAGBtn">Submit</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="changePCALModal" class="modal fade" role="dialog">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header bg-info text-white">
-                    <h3 class="modal-title">PCAL Change</h3>
-                    <!-- This line below adds an x button to header to close modal screen-->
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-                <div class="modal-body">
-                    <div class="container-fluid">
-                        <form>
-                            <div class="row form-group">
-                                <label class="col-sm-1" for="fleetPCAL">Fleet</label>
-                                <select class="col form-control" id="fleetPCAL" name="fleetPCAL" required>
-                                    <option>Select</option>
-                                    <option value="airbus">Airbus</option>
-                                    <option value="boeing">Boeing</option>
-                                </select>
-                                <label class="col" for="pcalChangeEvent">Event</label>
-                                <select class="col-sm-3 form-control" id="pcalChangeEvent" name="pcalChangeEvent"
-                                    required>
-                                    <option>Select</option>
-                                </select>
-                                <label class="col-sm-1" for="inDAG3">In DAG?</label>
-                                <select class="col form-control" id="inDAG3" name="inDAG3" required>
-                                    <option value="Select">Select</option>
-                                    <option value="Yes">Yes</option>
-                                    <option value="No">No</option>
-                                </select>
-                                <input type="text" id="hiddeninDAG" hidden />
-
-                                <label class="col-sm-1" for="inPCAL3">In PCAL?</label>
-                                <select class="col form-control" id="inPCAL3" name="inPCAL3" required>
-                                    <option value="Select">Select</option>
-                                    <option value="Yes">Yes</option>
-                                    <option value="No">No</option>
-                                </select>
-                                <input type="text" id="hiddeninPCAL" hidden />
-                            </div>
-                            <div class="row form-group"> 
-                                <label class="col col-form-label" for="SeverityLabel">Severity </label>
-                                <label class="col col-form-label" for="infoOnlyPCAL">Information Only</label>
-                                <select class="col form-control" id="infoOnlyPCAL" name="infoOnlyPCAL" required>
-                                    <option value="Yes">Yes</option>
-                                    <option value="No">No</option>
-                                    <option value="Na">n/a</option>
-                                </select>
-                                <label class="col col-form-label" for="cautionPCAL">Caution</label>
-                                <select class="col form-control" id="cautionPCAL" name="cautionPCAL" required>
-                                    <option value="Yes">Yes</option>
-                                    <option value="No">No</option>
-                                    <option value="Na">n/a</option>
-                                </select>
-                                <label class="col col-form-label" for="warningPCAL">Warning</label>
-                                <select class="col form-control" id="warningPCAL" name="warningPCAL" required>
-                                    <option value="Yes">Yes</option>
-                                    <option value="No">No</option>
-                                    <option value="Na">n/a</option>
-                                </select>
-                                <label class="col col-form-label" for="alertPCAL">Alert</label>
-                                <select class="col form-control" id="alertPCAL" name="alertPCAL" required>
-                                    <option value="Yes">Yes</option>
-                                    <option value="No">No</option>
-                                    <option value="Na">n/a</option>
-                                </select>
-                            </div>
-                            <div class="row form-group">
-                                <label class="col-sm-2 col-form-label" for="whyChangePCAL">Why change?</label>
-                                <textarea class="col-sm-4 form-control" id="whyChangePCAL" rows="1" required></textarea>
-                                <label class="col-sm-2 col-form-label" for="perWhomPCAL">Per Whom?</label>
-                                <input type="text" class="col-sm-4 form-control" id="perWhomPCAL" required></input>
-                            </div>
-                            <div class="form-row">
-                                <button type="button" class="btn btn-secondary btn-sm ml-auto"
-                                    data-dismiss="modal">Cancel</button>
-                                <button type="submit" class="btn btn-primary btn-sm ml-1" id="inPCALBtn">Submit</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <div class="container">
         <div class="row align-items-center" style="margin-bottom:0px; padding-bottom: px;">
             <div class="mx-auto ml-auto">
@@ -262,6 +98,188 @@
                     id="changeDAG">Change DAG</a>
                 <a role="button" class="btn btn-info btn-lg mt-4" data-toggle="modal" data-target="#changePCALModal"
                     id="changePCAL">Change PCAL</a>
+            </div>
+        </div>
+
+        <div id="changeDAGModal" class="modal fade" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header bg-info text-white">
+                        <h3 class="modal-title">DAG Reporting Change</h3>
+                        <!-- This line below adds an x button to header to close modal screen-->
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <form>
+                                <div class="row form-group">
+                                    <label class="col-sm-1" for="fleetDAG">Fleet<span style="color:red">*</span></label>
+                                    <select class="col form-control" id="fleetDAG" name="fleetDAG" required>
+                                        <option>Select</option>
+                                        <option value="airbus">Airbus</option>
+                                        <option value="boeing">Boeing</option>
+                                    </select>
+                                    <label class="col-sm-1" for="dagModalEvent">Event<span style="color:red">*</span></label>
+                                    <select class="col-sm-3 form-control" id="dagModalEvent" name="dagModalEvent"
+                                        required>
+                                        <option>Select</option>
+                                    </select>
+                                    <label class="col-sm-1" for="inDAG2">In DAG?<span style="color:red">*</span></label>
+                                    <select class="col form-control" id="inDAG2" name="inDAG2" required>
+                                        <option value="Select">Select</option>
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
+                                    </select>
+                                    <input type="text" id="hiddeninDAG" hidden />
+
+                                    <label class="col-sm-1" for="inPCAL2">In PCAL?<span style="color:red">*</span></label>
+                                    <select class="col form-control" id="inPCAL2" name="inPCAL2" required>
+                                        <option value="Select">Select</option>
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
+                                    </select>
+                                    <input type="text" id="hiddeninPCAL" hidden />
+                                </div>
+                                <div class="row form-group">
+                                    <label class="col col-form-label" for="SeverityLabel">Severity </label>
+                                    <label class="col col-form-label" for="infoOnlyDAG"><span style="color:red">*</span>Information Only</label>
+                                    <select class="col form-control" id="infoOnlyDAG" name="infoOnlyDAG" required>
+                                        <option value="Select">Select</option>
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
+                                        <option value="Na">n/a</option>
+                                    </select>
+                                    <label class="col col-form-label" for="cautionDAG"><span style="color:red">*</span>Caution</label>
+                                    <select class="col form-control" id="cautionDAG" name="cautionDAG" required>
+                                        <option value="Select">Select</option>
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
+                                        <option value="Na">n/a</option>
+                                    </select>
+                                    <label class="col col-form-label" for="warningDAG"><span style="color:red">*</span>Warning</label>
+                                    <select class="col form-control" id="warningDAG" name="warningDAG" required>
+                                        <option value="Select">Select</option>
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
+                                        <option value="Na">n/a</option>
+                                    </select>
+                                    <label class="col col-form-label" for="alertDAG"><span style="color:red">*</span>Alert</label>
+                                    <select class="col form-control" id="alertDAG" name="alertDAG" required>
+                                        <option value="Select">Select</option>
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
+                                        <option value="Na">n/a</option>
+                                    </select>
+                                </div>
+                                <div class="row form-group">
+                                    <label class="col-sm-2 col-form-label" for="whyChangeDAG"><span style="color:red">*</span>Why change?</label>
+                                    <textarea class="col-sm-4 form-control" id="whyChangeDAG" rows="1"
+                                        required></textarea>
+                                    <label class="col-sm-2 col-form-label" for="perWhomDAG"><span style="color:red">*</span>Per Whom?</label>
+                                    <input type="text" class="col-sm-4 form-control" id="perWhomDAG" required></input>
+                                </div>
+                                <label class="col-sm-2 col-form-label error-message" id="noInDAGDataTracked"></label>
+                                <div class="form-row">
+                                    <button type="button" class="btn btn-secondary btn-sm ml-auto"
+                                        data-dismiss="modal">Cancel</button>
+                                    <button type="submit" class="btn btn-primary btn-sm ml-1"
+                                        id="inDAGBtn">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="changePCALModal" class="modal fade" role="dialog">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header bg-info text-white">
+                        <h3 class="modal-title">PCAL Change</h3>
+                        <!-- This line below adds an x button to header to close modal screen-->
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <form>
+                                <div class="row form-group">
+                                    <label class="col-sm-1" for="fleetPCAL"><span style="color:red">*</span>Fleet</label>
+                                    <select class="col form-control" id="fleetPCAL" name="fleetPCAL" required>
+                                        <option>Select</option>
+                                        <option value="airbus">Airbus</option>
+                                        <option value="boeing">Boeing</option>
+                                    </select>
+                                    <label class="col-sm-1" for="pcalModalEvent"><span style="color:red">*</span>Event</label>
+                                    <select class="col-sm-3 form-control" id="pcalModalEvent" name="pcalModalEvent"
+                                        required>
+                                        <option>Select</option>
+                                    </select>
+                                    <label class="col-sm-1" for="inDAG3"><span style="color:red">*</span>In DAG?</label>
+                                    <select class="col form-control" id="inDAG3" name="inDAG3" required>
+                                        <option value="Select">Select</option>
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
+                                    </select>
+                                    <input type="text" id="hiddeninDAG" hidden />
+
+                                    <label class="col-sm-1" for="inPCAL3">In PCAL?<span style="color:red">*</span></label>
+                                    <select class="col form-control" id="inPCAL3" name="inPCAL3" required>
+                                        <option value="Select">Select</option>
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
+                                    </select>
+                                    <input type="text" id="hiddeninPCAL" hidden />
+                                </div>
+                                <div class="row form-group">
+                                    <label class="col col-form-label" for="SeverityLabel">Severity </label>
+                                    <label class="col col-form-label" for="infoOnlyPCAL"><span style="color:red">*</span>Information Only</label>
+                                    <select class="col form-control" id="infoOnlyPCAL" name="infoOnlyPCAL" required>
+                                        <option value="Select">Select</option>
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
+                                        <option value="Na">n/a</option>
+                                    </select>
+                                    <label class="col col-form-label" for="cautionPCAL"><span style="color:red">*</span>Caution</label>
+                                    <select class="col form-control" id="cautionPCAL" name="cautionPCAL" required>
+                                        <option value="Select">Select</option>
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
+                                        <option value="Na">n/a</option>
+                                    </select>
+                                    <label class="col col-form-label" for="warningPCAL"><span style="color:red">*</span>Warning</label>
+                                    <select class="col form-control" id="warningPCAL" name="warningPCAL" required>
+                                        <option value="Select">Select</option>
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
+                                        <option value="Na">n/a</option>
+                                    </select>
+                                    <label class="col col-form-label" for="alertPCAL"><span style="color:red">*</span>Alert</label>
+                                    <select class="col form-control" id="alertPCAL" name="alertPCAL" required>
+                                        <option value="Select">Select</option>
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
+                                        <option value="Na">n/a</option>
+                                    </select>
+                                </div>
+                                <div class="row form-group">
+                                    <label class="col-sm-2 col-form-label" for="whyChangePCAL"><span style="color:red">*</span>Why change?</label>
+                                    <textarea class="col-sm-4 form-control" id="whyChangePCAL" rows="1"
+                                        required></textarea>
+                                    <label class="col-sm-2 col-form-label" for="perWhomPCAL"><span style="color:red">*</span>Per Whom?</label>
+                                    <input type="text" class="col-sm-4 form-control" id="perWhomPCAL" required></input>
+                                </div>
+                                <label class="col-sm-2 col-form-label error-message" id="noInPCALDataTracked"></label>
+                                <div class="form-row">
+                                    <button type="button" class="btn btn-secondary btn-sm ml-auto"
+                                        data-dismiss="modal">Cancel</button>
+                                    <button type="submit" class="btn btn-primary btn-sm ml-1"
+                                        id="inPCALBtn">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -280,8 +298,8 @@
                                     <form id="changeEventForm">
                                         <div class="row form-group">
                                             <input id="key_id" type="number" hidden="true" disabled>
-                                            <label class="col-sm-1 col-form-label" for="fleet1">Fleet</label>
-                                            <select class="col-sm-2 form-control" id="fleet1" name="fleet">
+                                            <label class="col-sm-1 col-form-label" for="fleet1"><span style="color:red">*</span>Fleet</label>
+                                            <select class="col-sm-2 form-control" id="fleet1" name="fleet" required>
                                                 <option>Select</option>
                                                 <option value="airbus">Airbus</option>
                                                 <option value="boeing">Boeing</option>
@@ -297,13 +315,14 @@
                                                 <option value="180">180</option>
                                                 <option value="0">0</option>
                                             </select>
-                                            <label class="col-sm-1 col-form-label" for="event">Event</label>
+                                            <label class="col-sm-1 col-form-label" for="event"><span style="color:red">*</span>Event</label>
                                             <select class="col-sm-5 form-control" id="event" name="event" required>
                                                 <option>Select</option>
                                             </select>
                                         </div>
 
                                         <div class="row form-group">
+                                            <!--
                                             <label class="col-sm-1 col-form-label" for="inDAG1">In DAG?</label>
                                             <select class="col-sm-2 form-control" id="inDAG1" name="inDAG1">
                                                 <option value="Select">Select</option>
@@ -317,14 +336,8 @@
                                                 <option value="Yes">Yes</option>
                                                 <option value="No">No</option>
                                             </select>
-                                            <label class="col-sm-3 col-form-label" for="gPFC">Event Triggered by Fleet
-                                                Constant/Global Parameter?</label>
-                                            <select class="col-sm-2 form-control" id="gPFC" name="gPFC">
-                                                <option>Select</option>
-                                                <option value="Formula">Formula</option>
-                                                <option value="Fleet Constant">Fleet Constant</option>
-                                                <option value="Global Parameter">Global Parameter</option>
-                                            </select>
+                                            -->
+
                                         </div>
                                         <div class="row form-group">
                                             <label class="col-sm-3 col-form-label" for="formula">EMS Event
@@ -351,8 +364,24 @@
                                             <textarea class="col-sm-4 form-control" id="alertDef" rows="1"></textarea>
                                         </div>
                                         <div class="row form-group">
-                                            <label class="col-sm-2 col-form-label" for="intervalDef">Interval</label>
+                                            <label class="col-sm-1 col-form-label" for="intervalDef">Interval</label>
                                             <textarea class="col form-control" id="intervalDef" rows="1"></textarea>
+                                            <label class="col-sm-1 col-form-label" for="fullEMSPath">EMS Path</label>
+                                            <textarea class="col form-control" id="fullEMSPath" rows="1"
+                                                placeholder="e.g. Descent and Landing\Descent and Approach\..."></textarea>
+                                            <label class="col-sm-3 col-form-label" id="gPFClabel" for="gPFC">Event
+                                                Triggered by Fleet
+                                                Constant/Global Parameter?</label>
+                                            <select class="col form-control" id="gPFC" name="gPFC">
+                                                <option>Select</option>
+                                                <option value="Formula">Formula</option>
+                                                <option value="Fleet Constant">Fleet Constant</option>
+                                                <option value="Global Parameter">Global Parameter</option>
+                                            </select>
+                                            <label class="col-sm-2 col-form-label" id="gpfcLabel"
+                                                for="gpfcText"></label>
+                                            <input type="text" class="col-sm-2 form-control" id="gpfcText"
+                                                name="gpfcText" placeholder="G.P./F.C. Name" />
                                         </div>
                                         <div class="row form-group">
                                             <div class="col">
@@ -376,14 +405,14 @@
                                 <div class="card-body">
                                     <form id="newEventForm">
                                         <div class="row form-group">
-                                            <label class="col-sm-1 col-form-label" for="newEventFleet">Fleet</label>
+                                            <label class="col-sm-1 col-form-label" for="newEventFleet"><span style="color:red">*</span>Fleet</label>
                                             <select class="col-sm-2 form-control" id="newEventFleet"
                                                 name="newEventFleet" required>
                                                 <option>Select</option>
                                                 <option value="airbus">Airbus</option>
                                                 <option value="boeing">Boeing</option>
                                             </select>
-                                            <label class="col-sm-1 col-form-label" for="newEventProfile">Profile</label>
+                                            <label class="col-sm-1 col-form-label" for="newEventProfile"><span style="color:red">*</span>Profile</label>
                                             <select class="col-sm-2 form-control" id="newEventProfile"
                                                 name="newEventProfile" required>
                                                 <option value="select">Select</option>
@@ -394,7 +423,7 @@
                                                 <option value="180">180</option>
                                                 <option value="0">0</option>
                                             </select>
-                                            <label class="col-sm-1 col-form-label" for="newEvent">Event</label>
+                                            <label class="col-sm-1 col-form-label" for="newEvent"><span style="color:red">*</span>Event</label>
                                             <input type="text" class="col form-control" id="newEvent" name="newEvent"
                                                 required>
                                         </div>
@@ -443,24 +472,24 @@
                                             <textarea class="col-sm-4 form-control" id="alertDef1" rows="1"></textarea>
                                         </div>
                                         <div class="row form-group">
-                                            <label class="col-sm-2 col-form-label" for="intervalDef1">Interval</label>
+                                            <label class="col-sm-1 col-form-label" for="intervalDef1">Interval</label>
                                             <textarea class="col form-control" id="intervalDef1" rows="1"></textarea>
-                                            <label class="col-sm-2 col-form-label" for="fullEMSPath">FullEMSPath</label>
-                                            <textarea class="col form-control" id="fullEMSPath" rows="1"
+                                            <label class="col-sm-1 col-form-label" for="fullEMSPath1">EMS Path</label>
+                                            <textarea class="col form-control" id="fullEMSPath1" rows="1"
                                                 placeholder="e.g. Descent and Landing\Descent and Approach\..."></textarea>
                                             <label class="col-sm-3 col-form-label" id="gPFC1label" for="gPFC1">Event
                                                 Triggered by Fleet
                                                 Constant/Global Parameter?</label>
-                                            <select class="col-sm-2 form-control" id="gPFC1" name="gPFC1">
+                                            <select class="col form-control" id="gPFC1" name="gPFC1">
                                                 <option>Select</option>
                                                 <option value="Formula">Formula</option>
                                                 <option value="Fleet Constant">Fleet Constant</option>
                                                 <option value="Global Parameter">Global Parameter</option>
                                             </select>
-                                            <label class="col-sm-2 col-form-label" id="gpfcLabel"
-                                                for="gpfcText"></label>
-                                            <input type="text" class="col-sm-2 form-control" id="gpfcText"
-                                                name="gpfcText" placeholder="G.P./F.C. Name" />
+                                            <label class="col-sm-2 col-form-label" id="gpfcLabel1"
+                                                for="gpfcText1"></label>
+                                            <input type="text" class="col-sm-2 form-control" id="gpfcText1"
+                                                name="gpfcText1" placeholder="G.P./F.C. Name" />
                                         </div>
                                         <div class="row form-group">
                                             <div class="col">
