@@ -5,6 +5,11 @@ $(document).ready(function () {
     $('#gpfcLabel1').hide();
     $('#noInDAGDataTracked').hide();
     $('#noInPCALDataTracked').hide();
+    $("#profileOther").hide();
+    $('#fleet1').children("option:selected").val("");
+    $('#newEventFleet').children("option:selected").val("");
+    $('#fleetDAG').children("option:selected").val("");
+    $('#fleetPCAL').children("option:selected").val("");
 });
 
 $("#fleet1").on("change", function () {
@@ -36,15 +41,15 @@ $('#pcalModalEvent').on("change", function () {
 //this resets fleet and event field to 'Select' when fleet or event are changed
 $("#changeDAG").on("click", function () {
     document.getElementById("fleetDAG").selectedIndex = 0;
-    document.getElementById("pcalModalEvent").children().remove().end();
+    document.getElementById("dagModalEvent").selectedIndex = 0;
     document.getElementById("dagModalEvent").children().remove().end();
 });
 
 //this resets fleet and event field to 'Select' when fleet or event are changed
 $("#changePCAL").on("click", function () {
     document.getElementById("fleetPCAL").selectedIndex = 0;
+    document.getElementById("pcalModalEvent").selectedIndex = 0;
     document.getElementById("pcalModalEvent").children().remove().end();
-    document.getElementById("dagModalEvent").children().remove().end();
 });
 
 //update item in AirbusBoeingEMSEventsArchive List
@@ -54,7 +59,26 @@ $("#updateEvent").on("click", function () {
 
 //add new item in AirbusBoeingEMSEventsArchive List
 $("#addEvent").on("click", function () {
-    saveNewEventForm($("#newEvent").val());
+
+    if (document.getElementById("fleet1").selectedIndex == 0) {
+        $('#errorMessageNewEvent').show();
+        $('#errorMessageNewEvent').val("Please select a fleet");
+    }
+    else if (document.getElementById("newEventProfile").selectedIndex == 0) {
+        $('#errorMessageNewEvent').show();
+        $('#errorMessageNewEvent').val("Please select a profile");
+    }
+    else {
+        saveNewEventForm($("#newEvent").val());
+    }
+});
+
+$("#inDAGBtn").on("click", function () {
+    addToListFromDAGModal();
+});
+
+$("#inPCALBtn").on("click", function () {
+    addToListFromPCALModal();
 });
 
 //show and hide Global Parameter Fleet Constant Drop down and open text box for name in new Event Form
@@ -72,6 +96,16 @@ $('#gPFC1').on("change", function () {
     $('#gpfcLabel1').text($('#gPFC1').children("option:selected").text());
     $('#gPFC1label').hide();
     $('#gPFC1').hide();
+});
+
+$('#newEventProfile').on("change", function () {
+    if ($('#newEventProfile').children("option:selected").text() == 'Other') {
+        $('#newEventProfile').hide();
+        $('#profileOther').show();
+        $('#profileOther').on("change", function () {
+            $('#newEventProfile').children("option:selected").val($('#profileOther').val());
+        });
+    }
 });
 
 function getEvent(fleet) {
@@ -197,7 +231,7 @@ function getEventforDAGModal(event) {
     var url = 'https://alaskaair.sharepoint.com/sites/FOQA/_vti_bin/ListData.svc/DAGandPCALChangeTracking?$filter=EventKey%20eq%20%27' + event + '%27&$orderby=Id%20desc';
     getListItems(url, function (data) {
         var numRecords = data.d.results.length;
-        
+
         if (numRecords > 0) {
             $.each(data, function (i, item) {
                 resetChangeForm();
@@ -269,7 +303,6 @@ function getEventforDAGModal(event) {
         }
         else {
             $('#noInDAGDataTracked').show();
-            $('#noInDAGDataTracked').val(`No DAG Reporting Data Tracked`);
         }
     })
 }; //End of getEventforDAGModal method
@@ -279,7 +312,7 @@ function getEventforPCALModal(event) {
     var url = 'https://alaskaair.sharepoint.com/sites/FOQA/_vti_bin/ListData.svc/DAGandPCALChangeTracking?$filter=EventKey%20eq%20%27' + event + '%27&$orderby=Id%20desc';
     getListItems(url, function (data) {
         var numRecords = data.d.results.length;
-        
+
         if (numRecords > 0) {
             $.each(data, function (i, item) {
                 resetChangeForm();
@@ -351,7 +384,6 @@ function getEventforPCALModal(event) {
         }
         else {
             $('#noInPCALDataTracked').show();
-            $('#noInDAGDataTracked').val(`No DAG Reporting Data Tracked`);
         }
     })
 }; //End of getEventforDAGModal method
