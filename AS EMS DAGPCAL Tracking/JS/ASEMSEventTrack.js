@@ -11,6 +11,8 @@ $(document).ready(function () {
     $('#newEventFleet').children("option:selected").val("");
     $('#fleetDAG').children("option:selected").val("");
     $('#fleetPCAL').children("option:selected").val("");
+    $('#GreyInfo').hide();
+    $('#GreyInfo2').hide();
     $('#dagGreyInfo').hide();
     $('#dagGreyCaution').hide();
     $('#dagGreyWarning').hide();
@@ -202,9 +204,6 @@ function getEvent(fleet) {
                 }
 
             })
-            $("#event").append('<option id= "Other" value="Other">Other</option>');
-            $("#dagModalEvent").append('<option id= "Other" value="Other">Other</option>');
-            $("#pcalModalEvent").append('<option id= "Other" value="Other">Other</option>');
         }
         else {
             alert("Select a fleet");
@@ -300,32 +299,50 @@ function getDAGModalDAGSection(event) {
         var numRecords = data.d.results.length;
         resetDAGModal();
         $("#dagSectionMultiple").text("");
-
-        if (numRecords > 0) {
+        if (numRecords = 1) {
             $.each(data, function (i, item) {
+                var i = 0;
+                getDAGModalEventDetails(data.d.results[i].EventKey, data.d.results[i].DAGSection);
+            })//.each
+        }//if
+        else if (numRecords > 1) {
+            $.each(data, function (i, item) {
+                //inPCAL
+                if (data.d.results[0].InPCAL === 'Yes') {
+                    document.getElementById("inPCAL2").selectedIndex = 1;
+                }
+                else if (data.d.results[0].InPCAL === 'No') {
+                    document.getElementById("inPCAL2").selectedIndex = 2;
+                }
+                else {
+                    document.getElementById("inPCAL2").selectedIndex = 0;
+                }
+                //inDAG
+                if (data.d.results[0].InDAG === 'Yes') {
+                    document.getElementById("inDAG2").selectedIndex = 1;
+                }
+                else if (data.d.results[0].InDAG === 'No') {
+                    document.getElementById("inDAG2").selectedIndex = 2;
+                }
+                else {
+                    document.getElementById("inDAG2").selectedIndex = 0;
+                }
+
                 const arrayDefine = [];
                 for (var i = 0; i < numRecords; i++) {
                     var arrayFilter = arrayDefine.push(data.d.results[i].DAGSection);
                     var dup = arrayDefine.filter(a => a === data.d.results[i].DAGSection);
+                    //if (data.d.results[i].DAGSection != 'null') {
                     if (dup.length <= 1) {
-                        if (dup != "" || dup != "" || dup != "null") {
-                            $("#dagSectionMultiple").append(data.d.results[i].DAGSection + " ");
-                        }
-                    }
-                    //inPCAL
-                    if (data.d.results[i].InPCAL === 'Yes') {
-                        document.getElementById("inPCAL2").selectedIndex = 1;
-                    }
-                    else if (data.d.results[i].InPCAL === 'No') {
-                        document.getElementById("inPCAL2").selectedIndex = 2;
-                    }
-                    else {
-                        document.getElementById("inPCAL2").selectedIndex = 0;
+                        $('#dagSectionMultiple').show();
+                        $("#dagSectionMultiple").append(data.d.results[i].DAGSection + " ");
+                        $("#queryNotesDAG").val(data.d.results[i].DAGSection + " ");
                     }
                 } //for
             })//.each
-            $('#dagSectionMultiple').show();
-        }//if
+            $('#noInDAGDataTracked').hide();
+        }//else if
+
     })//getListItems  
 
 }; //End of getDAGModalEventDetails method
@@ -355,6 +372,16 @@ function getDAGModalEventDetails(event, dagSection) {
                     }
                     else {
                         document.getElementById("inDAG2").selectedIndex = 0;
+                    }
+                    //inPCAL
+                    if (data.d.results[0].InPCAL === 'Yes') {
+                        document.getElementById("inPCAL2").selectedIndex = 1;
+                    }
+                    else if (data.d.results[0].InPCAL === 'No') {
+                        document.getElementById("inPCAL2").selectedIndex = 2;
+                    }
+                    else {
+                        document.getElementById("inPCAL2").selectedIndex = 0;
                     }
 
                     //Info Only in DAG Report?
@@ -410,22 +437,25 @@ function getDAGModalEventDetails(event, dagSection) {
                         document.getElementById("alertDAG").selectedIndex = 0;
                     }
                     if (data.d.results[i].InPCAL === 'Yes') {
-                        $("#pcalGreyInfo").text("In PCAL?: " + data.d.results[i].InfoOnlyPCAL);
+                        $("#pcalGreyInfo").text(data.d.results[i].InfoOnlyPCAL);
                         $("#pcalGreyCaution").text(data.d.results[i].CautionPCAL);
                         $("#pcalGreyWarning").text(data.d.results[i].WarningPCAL);
                         $("#pcalGreyAlert").text(data.d.results[i].AlertPCAL);
+                        $('#GreyInfo').show();
                         $('#pcalGreyInfo').show();
                         $('#pcalGreyCaution').show();
                         $('#pcalGreyWarning').show();
                         $('#pcalGreyAlert').show();
                     }
+                    $("#queryNotesDAG").val(data.d.results[i].QueryNotesDAG);
+                    $("#whyChangeDAG").val(data.d.results[i].WhyChangeDAG);
                 }
             })
             $('#noInDAGDataTracked').hide();
         }
         else {
+            resetDAGModalNotSection();
             $('#noInDAGDataTracked').show();
-            resetDAGModal();
         }
     })
 }; //End of getDAGModalEventDetails method
@@ -521,10 +551,11 @@ function getPCALModalEventDetails(event) {
                         document.getElementById("alertPCAL").selectedIndex = 0;
                     }
                     if (data.d.results[i].InDAG == 'Yes') {
-                        $("#dagGreyInfo").text("DAG?: " + data.d.results[i].InfoOnlyDAG);
+                        $("#dagGreyInfo").text(data.d.results[i].InfoOnlyDAG);
                         $("#dagGreyCaution").text(data.d.results[i].CautionDAG);
                         $("#dagGreyWarning").text(data.d.results[i].WarningDAG);
                         $("#dagGreyAlert").text(data.d.results[i].AlertDAG);
+                        $('#GreyInfo2').show();
                         $('#dagGreyInfo').show();
                         $('#dagGreyCaution').show();
                         $('#dagGreyWarning').show();
@@ -571,11 +602,35 @@ function resetDAGModal() {
     $('#dagSectionMultiple').hide();
     $("#dagSectionMultiple").text("");
     $('#pcalGreyInfo').hide();
+    $('#GreyInfo').hide();
     $('#pcalGreyCaution').hide();
     $('#pcalGreyWarning').hide();
     $('#pcalGreyAlert').hide();
-    $('#noInPCALDataTracked').hide();
+    $('#noInDAGDataTracked').hide();
     $("#whyChangeDAG").val("");
+    $("#queryNotesDAG").val("");
+    $("#perWhomDAG").val("");
+}
+
+function resetDAGModalNotSection() {
+    document.getElementById("inDAG2").selectedIndex = 0;
+    document.getElementById("inPCAL2").selectedIndex = 0;
+    document.getElementById("infoOnlyDAG").selectedIndex = 0;
+    document.getElementById("cautionDAG").selectedIndex = 0;
+    document.getElementById("warningDAG").selectedIndex = 0;
+    document.getElementById("alertDAG").selectedIndex = 0;
+    $('#dagSectionOther').hide();
+    $('#dagSection').show();
+    $('#dagSectionMultiple').hide();
+    $("#dagSectionMultiple").text("");
+    $('#pcalGreyInfo').hide();
+    $('#GreyInfo').hide();
+    $('#pcalGreyCaution').hide();
+    $('#pcalGreyWarning').hide();
+    $('#pcalGreyAlert').hide();
+    $('#noInDAGDataTracked').hide();
+    $("#whyChangeDAG").val("");
+    $("#queryNotesDAG").val("");
     $("#perWhomDAG").val("");
 }
 
@@ -587,6 +642,7 @@ function resetPCALModal() {
     document.getElementById("warningPCAL").selectedIndex = 0;
     document.getElementById("alertPCAL").selectedIndex = 0;
     $('#dagGreyInfo').hide();
+    $('#GreyInfo').hide();
     $('#dagGreyCaution').hide();
     $('#dagGreyWarning').hide();
     $('#dagGreyAlert').hide();
@@ -730,7 +786,12 @@ function addToListFromDAGModal() {
         , "CautionDAG": $("#cautionDAG option:selected").text()
         , "WarningDAG": $("#warningDAG option:selected").text()
         , "AlertDAG": $("#alertDAG option:selected").text()
+        , "InfoOnlyPCAL": $("#pcalGreyInfo").text()
+        , "CautionPCAL": $("#pcalGreyCaution").text()
+        , "WarningPCAL": $("#pcalGreyWarning").text()
+        , "AlertPCAL": $("#pcalGreyAlert").text()
         , "WhyChangeDAG": ($("#whyChangeDAG").val() == "") ? null : $('#whyChangeDAG').val()
+        , "QueryNotesDAG": ($("#queryNotesDAG").val() == "") ? null : $('#queryNotesDAG').val()
         , "PerWhomDAG": ($("#perWhomDAG").val() == "") ? null : $('#perWhomDAG').val()
     }//end item
 
@@ -755,6 +816,10 @@ function addToListFromPCALModal() {
         , "CautionPCAL": $("#cautionPCAL option:selected").text()
         , "WarningPCAL": $("#warningPCAL option:selected").text()
         , "AlertPCAL": $("#alertPCAL option:selected").text()
+        , "InfoOnlyDAG": $("#dagGreyInfo").text()
+        , "CautionDAG": $("#dagGreyCaution").text()
+        , "WarningDAG": $("#dagGreyWarning").text()
+        , "AlertDAG": $("#dagGreyAlert").text()
         , "WhyChangePCAL": ($("#whyChangePCAL").val() == "") ? null : $('#whyChangePCAL').val()
         , "PerWhomPCAL": ($("#perWhomPCAL").val() == "") ? null : $('#perWhomPCAL').val()
         , "Notes": ($("#notesPCAL").val() == "") ? null : $('#notesPCAL').val()
@@ -804,10 +869,6 @@ function insertIntoList(url, item, successMsg, failMsg, source) {
         }
 
     });
-}
-
-function insertIntoList(url, item, successMsg, failMsg, source) {
-
 }
 
 function eventsReporting(fleet) {
