@@ -179,7 +179,7 @@ $('#dagSection').on("change", function () {
 
 function getEvent(fleet) {
 
-    var url = 'https://alaskaair.sharepoint.com/sites/FOQA/_vti_bin/ListData.svc/AirbusBoeingEMSEventsArchive?$select=EventKey&$filter=(%20substringof(%27' + fleet + '%27,Fleet))&groupBy=Event&orderBy=Event';
+    var url = 'https://alaskaair.sharepoint.com/sites/FOQA/_vti_bin/ListData.svc/AirbusBoeingEMSEventsArchive?$select=EventKey&$filter=(%20substringof(%27' + fleet + '%27,Fleet))&$orderby=EventKey%20asc';
 
     getListItems(url, function (data) {
         var numRecords = data.d.results.length;
@@ -232,20 +232,13 @@ function getEventDetails(event) {
                 for (var i = 0; i < numRecords; i++) {
                     $("#key_id").val(data.d.results[i].Id);
                     $("#formula").val(data.d.results[i].Formula);
-                    var formulaHidden = data.d.results[i].Formula;
                     $("#newProfile").val(data.d.results[i].Profile);
                     $("#definition").val(data.d.results[i].EventDefinition);
-                    var eventDefinitionHidden = data.d.results[i].EventDefinition;
                     $("#infoOnlyDef").val(data.d.results[i].Information);
-                    var informationHidden = data.d.results[i].Information;
                     $("#cautionDef").val(data.d.results[i].Caution);
-                    var cautionHidden = data.d.results[i].Caution;
                     $("#warningDef").val(data.d.results[i].Warning);
-                    var warningHidden = data.d.results[i].Warning;
                     $("#alertDef").val(data.d.results[i].Alert);
-                    var alertHidden = data.d.results[i].Alert;
                     $("#intervalDef").val(data.d.results[i].Interval);
-                    var intervalHidden = data.d.results[i].Interval;
                     /*$("#hiddeninDAG").val(data.d.results[i].InDAG);
                     $("#hiddeninPCAL").val(data.d.results[i].InPCAL);
                     //inDAG
@@ -696,14 +689,15 @@ function updateListItem(itemId, eventKey, success, failure) {
 
     var item = {
         "__metadata": { "type": listItemType },
-        "Formula": ($("#formula").val() == "") ? formulaHidden : $('#formula').val()
-        , "EventDefinition": ($("#definition").val() == "") ? eventDefinitionHidden : $('#definition').val()
-        , "Information": ($("#infoOnlyDef").val() == "") ? informationHidden : $('#infoOnlyDef').val()
-        , "Caution": ($("#cautionDef").val() == "") ? cautionHidden : $('#cautionDef').val()
-        , "Warning": ($("#warningDef").val() == "") ? warningHidden : $('#warningDef').val()
-        , "Alert": ($("#alertDef").val() == "") ? alertHidden : $('#alertDef').val()
-        , "Interval": ($("#intervalDef").val() == "") ? intervalHidden : $('#intervalDef').val()
+        "Formula": ($("#formula").val() == "") ? null : $('#formula').val()
+        , "EventDefinition": ($("#definition").val() == "") ? null : $('#definition').val()
+        , "Information": ($("#infoOnlyDef").val() == "") ? null : $('#infoOnlyDef').val()
+        , "Caution": ($("#cautionDef").val() == "") ? null : $('#cautionDef').val()
+        , "Warning": ($("#warningDef").val() == "") ? null : $('#warningDef').val()
+        , "Alert": ($("#alertDef").val() == "") ? null : $('#alertDef').val()
+        , "Interval": ($("#intervalDef").val() == "") ? null : $('#intervalDef').val()
         , "FullEMSPath": ($("#fullEMSPath").val() == "") ? null : $('#fullEMSPath').val()
+        , "ParameterDescription": $("#gPFC option:selected").text()
         , "GlobalParameterFleetConstant": ($("#gpfcText").val() == "") ? null : $("#gpfcText").val()
         //, "InDAG": $("#inDAG1 option:selected").text()
         //, "InPCAL": $("#inPCAL1 option:selected").text()
@@ -749,17 +743,17 @@ function saveNewEventForm() {
         , "Fleet": ($("#newEventFleet option:selected").val() == "") ? null : $("#newEventFleet option:selected").text()
         , "Event": ($("#newEvent").val() == "") ? "?" : $('#newEvent').val()
         , "EventKey": 'P' + $("#newEventProfile").val() + ': ' + $('#newEvent').val()
-        , "Profile": ($('#newEventProfile').children("option:selected").val() == "Other") ? $('profileOther').val() : $('#newEventProfile').children("option:selected").val()
+        , "Profile": ($('#newEventProfile').children("option:selected").val() == "Other") ? $('#profileOther').val() : $('#newEventProfile').children("option:selected").val()
         , "Formula": ($("#formula1").val() == "") ? null : $('#formula1').val()
         , "EventDefinition": ($("#definition1").val() == "") ? null : $('#definition1').val()
         , "Information": ($("#infoOnlyDef1").val() == "") ? null : $('#infoOnlyDef1').val()
         , "Caution": ($("#cautionDef1").val() == "") ? null : $('#cautionDef1').val()
         , "Warning": ($("#warningDef1").val() == "") ? null : $('#warningDef1').val()
         , "Alert": ($("#alertDef1").val() == "") ? null : $('#alertDef1').val()
-        , "Interval": ($("#intervalDef1").val() == "") ? null : $('#intervalDef1').val()
-        , "FullEMSPath": ($("#fullEMSPath1").val() == "") ? null : $('#fullEMSPath1').val()
+        , "Interval": $('#intervalDef1').val()
+        , "FullEMSPath": $('#fullEMSPath1').val()
         , "ParameterDescription": $("#gPFC1 option:selected").text()
-        , "GlobalParameterFleetConstant": ($("#gpfcText1").val() == "") ? null : $("#gpfcText1").val()
+        , "GlobalParameterFleetConstant": $("#gpfcText1").val()
         //, "InDAG": $("#inDAG4 option:selected").text()
         //, "InPCAL": $("#inPCAL4 option:selected").text()
     }//end item
@@ -873,7 +867,7 @@ function insertIntoList(url, item, successMsg, failMsg, source) {
 
 function eventsReporting(fleet) {
 
-    var url = 'https://alaskaair.sharepoint.com/sites/FOQA/_vti_bin/ListData.svc/DAGandPCALChangeTracking?$filter=(%20substringof(%27' + fleet + '%27,Fleet))&groupBy=Event&orderBy=InDAG&InPCAL';
+    var url = 'https://alaskaair.sharepoint.com/sites/FOQA/_vti_bin/ListData.svc/DAGandPCALChangeTracking?$filter=(%20substringof(%27' + fleet + '%27,Fleet))&groupBy=Event&$orderby=Id%20desc';
 
     getListItems(url, function (data) {
         var numRecords = data.d.results.length;
