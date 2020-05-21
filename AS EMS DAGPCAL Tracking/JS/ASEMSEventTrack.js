@@ -7,7 +7,6 @@ $(document).ready(function () {
     $('#noInPCALDataTracked').hide();
     $("#profileOther").hide();
     $('#dagSectionOther').hide();
-    $('#fleet1').children("option:selected").val("");
     $('#newEventFleet').children("option:selected").val("");
     $('#fleetDAG').children("option:selected").val("");
     $('#fleetPCAL').children("option:selected").val("");
@@ -21,6 +20,7 @@ $(document).ready(function () {
     $('#pcalGreyCaution').hide();
     $('#pcalGreyWarning').hide();
     $('#pcalGreyAlert').hide();
+    $('#eventsTable').hide();
 });
 
 $("#fleet1").on("change", function () {
@@ -177,6 +177,11 @@ $('#dagSection').on("change", function () {
     $('#dagSectionMultiple').hide();
 });
 
+$('#fleetReporting').on("click", function () {
+    $('#eventsTable').show();
+    $('#inDAGPCALTable').hide();
+});
+
 function getEvent(fleet) {
 
     var url = 'https://alaskaair.sharepoint.com/sites/FOQA/_vti_bin/ListData.svc/AirbusBoeingEMSEventsArchive?$select=EventKey&$filter=(%20substringof(%27' + fleet + '%27,Fleet))&$orderby=EventKey%20asc';
@@ -240,27 +245,7 @@ function getEventDetails(event) {
                     $("#alertDef").val(data.d.results[i].Alert);
                     $("#intervalDef").val(data.d.results[i].Interval);
                     /*$("#hiddeninDAG").val(data.d.results[i].InDAG);
-                    $("#hiddeninPCAL").val(data.d.results[i].InPCAL);
-                    //inDAG
-                    if (data.d.results[i].InDAG === 'Yes') {
-                        document.getElementById("inDAG1").selectedIndex = 1;
-                    }
-                    else if (data.d.results[i].InDAG === 'No') {
-                        document.getElementById("inDAG1").selectedIndex = 2;
-                    }
-                    else {
-                        document.getElementById("inDAG1").selectedIndex = 0;
-                    }
-                    //inPCAL
-                    if (data.d.results[i].InPCAL === 'Yes') {
-                        document.getElementById("inPCAL1").selectedIndex = 1;
-                    }
-                    else if (data.d.results[i].InPCAL === 'No') {
-                        document.getElementById("inPCAL1").selectedIndex = 2;
-                    }
-                    else {
-                        document.getElementById("inPCAL1").selectedIndex = 0;
-                    }*/
+                    $("#hiddeninPCAL").val(data.d.results[i].InPCAL);*/
                     //GlobalParam/Fleet Constant
                     if (data.d.results[i].ParameterDescription === 'Yes') {
                         document.getElementById("gPFC").selectedIndex = 1;
@@ -292,13 +277,15 @@ function getDAGModalDAGSection(event) {
         var numRecords = data.d.results.length;
         resetDAGModal();
         $("#dagSectionMultiple").text("");
+
         if (numRecords = 1) {
             $.each(data, function (i, item) {
                 var i = 0;
                 getDAGModalEventDetails(data.d.results[i].EventKey, data.d.results[i].DAGSection);
+                $("#hiddeninPCAL").val(data.d.results[i].InPCAL);
             })//.each
         }//if
-        else if (numRecords > 1) {
+        else if (numRecords => 1) {
             $.each(data, function (i, item) {
                 //inPCAL
                 if (data.d.results[0].InPCAL === 'Yes') {
@@ -307,9 +294,15 @@ function getDAGModalDAGSection(event) {
                 else if (data.d.results[0].InPCAL === 'No') {
                     document.getElementById("inPCAL2").selectedIndex = 2;
                 }
+                else if ($("#pcalGreyCaution").val() != '') {
+                    document.getElementById("inPCAL2").selectedIndex = 1;
+                    $("#hiddeninPCAL").val("Yes");
+                }
                 else {
                     document.getElementById("inPCAL2").selectedIndex = 0;
                 }
+                $("#hiddeninDAG").val(data.d.results[i].InDAG);
+                $("#hiddeninPCAL").val(data.d.results[i].InPCAL);
                 //inDAG
                 if (data.d.results[0].InDAG === 'Yes') {
                     document.getElementById("inDAG2").selectedIndex = 1;
@@ -317,6 +310,7 @@ function getDAGModalDAGSection(event) {
                 else if (data.d.results[0].InDAG === 'No') {
                     document.getElementById("inDAG2").selectedIndex = 2;
                 }
+
                 else {
                     document.getElementById("inDAG2").selectedIndex = 0;
                 }
@@ -366,15 +360,19 @@ function getDAGModalEventDetails(event, dagSection) {
                     else {
                         document.getElementById("inDAG2").selectedIndex = 0;
                     }
-                    //inPCAL
-                    if (data.d.results[0].InPCAL === 'Yes') {
+                    //inPCAL 
+                    if ($("#hiddeninPCAL").val() === 'Yes') {
                         document.getElementById("inPCAL2").selectedIndex = 1;
                     }
-                    else if (data.d.results[0].InPCAL === 'No') {
+                    else if ($("#hiddeninPCAL").val() === 'No') {
                         document.getElementById("inPCAL2").selectedIndex = 2;
                     }
                     else {
                         document.getElementById("inPCAL2").selectedIndex = 0;
+                    }
+
+                    if ($("#pcalGreyCaution").val() != '') {
+                        document.getElementById("inPCAL2").selectedIndex = 1;
                     }
 
                     //Info Only in DAG Report?
@@ -429,7 +427,7 @@ function getDAGModalEventDetails(event, dagSection) {
                     else {
                         document.getElementById("alertDAG").selectedIndex = 0;
                     }
-                    if (data.d.results[i].InPCAL === 'Yes') {
+                    if (data.d.results[i].InPCAL === 'Yes' || data.d.results[i].InPCAL === 'No') {
                         $("#pcalGreyInfo").text(data.d.results[i].InfoOnlyPCAL);
                         $("#pcalGreyCaution").text(data.d.results[i].CautionPCAL);
                         $("#pcalGreyWarning").text(data.d.results[i].WarningPCAL);
@@ -439,6 +437,12 @@ function getDAGModalEventDetails(event, dagSection) {
                         $('#pcalGreyCaution').show();
                         $('#pcalGreyWarning').show();
                         $('#pcalGreyAlert').show();
+                        $("#notesPCAL").val(data.d.results[i].Notes);
+                        $("#ccCheck").prop("checked", data.d.results[i].CrewContactRequired);
+                        $("#animationRequired").prop("checked", data.d.results[i].AnimationRequired);
+                        $("#googleEarthRequired").prop("checked", data.d.results[i].GoogleEarthRequired);
+                        $("#whyChangePCAL").val(data.d.results[i].WhyChangePCAL);
+                        $("#perWhomPCAL").val(data.d.results[i].PerWhomPCAL);
                     }
                     $("#queryNotesDAG").val(data.d.results[i].QueryNotesDAG);
                     $("#whyChangeDAG").val(data.d.results[i].WhyChangeDAG);
@@ -472,6 +476,7 @@ function getPCALModalEventDetails(event) {
                     $("#googleEarthRequired").prop("checked", data.d.results[i].GoogleEarthRequired);
                     $("#whyChangePCAL").val(data.d.results[i].WhyChangePCAL);
                     $("#perWhomPCAL").val(data.d.results[i].PerWhomPCAL);
+                    $("#queryNotesDAG").val(data.d.results[i].QueryNotesDAG);
                     if (data.d.results[i].InDAG === 'Yes') {
                         document.getElementById("inDAG3").selectedIndex = 1;
                     }
@@ -590,6 +595,7 @@ function resetDAGModal() {
     document.getElementById("cautionDAG").selectedIndex = 0;
     document.getElementById("warningDAG").selectedIndex = 0;
     document.getElementById("alertDAG").selectedIndex = 0;
+    $("#hiddeninPCAL").val("");
     $('#dagSectionOther').hide();
     $('#dagSection').show();
     $('#dagSectionMultiple').hide();
@@ -603,11 +609,16 @@ function resetDAGModal() {
     $("#whyChangeDAG").val("");
     $("#queryNotesDAG").val("");
     $("#perWhomDAG").val("");
+    $("#notesPCAL").val("");
+    $("#ccCheck").prop("checked", false);
+    $("#animationRequired").prop("checked", false);
+    $("#googleEarthRequired").prop("checked", false);
+    $("#whyChangePCAL").val("");
+    $("#perWhomPCAL").val("");
 }
 
 function resetDAGModalNotSection() {
     document.getElementById("inDAG2").selectedIndex = 0;
-    document.getElementById("inPCAL2").selectedIndex = 0;
     document.getElementById("infoOnlyDAG").selectedIndex = 0;
     document.getElementById("cautionDAG").selectedIndex = 0;
     document.getElementById("warningDAG").selectedIndex = 0;
@@ -616,11 +627,7 @@ function resetDAGModalNotSection() {
     $('#dagSection').show();
     $('#dagSectionMultiple').hide();
     $("#dagSectionMultiple").text("");
-    $('#pcalGreyInfo').hide();
     $('#GreyInfo').hide();
-    $('#pcalGreyCaution').hide();
-    $('#pcalGreyWarning').hide();
-    $('#pcalGreyAlert').hide();
     $('#noInDAGDataTracked').hide();
     $("#whyChangeDAG").val("");
     $("#queryNotesDAG").val("");
@@ -646,6 +653,7 @@ function resetPCALModal() {
     $("#googleEarthRequired").prop("checked", false);
     $("#whyChangePCAL").val("");
     $("#perWhomPCAL").val("");
+    $("#queryNotesDAG").val("");
 }
 
 function getListItems(url, success, failure) {
@@ -787,6 +795,12 @@ function addToListFromDAGModal() {
         , "WhyChangeDAG": ($("#whyChangeDAG").val() == "") ? null : $('#whyChangeDAG').val()
         , "QueryNotesDAG": ($("#queryNotesDAG").val() == "") ? null : $('#queryNotesDAG').val()
         , "PerWhomDAG": ($("#perWhomDAG").val() == "") ? null : $('#perWhomDAG').val()
+        , "Notes": ($("#notesPCAL").val() == "") ? null : $('#notesPCAL').val()
+        , "CrewContactRequired": $("#ccCheck").prop("checked")
+        , "AnimationRequired": $("#animationRequired").prop("checked")
+        , "GoogleEarthRequired": $("#googleEarthRequired").prop("checked")
+        , "WhyChangePCAL": ($("#whyChangePCAL").val() == "") ? null : $('#whyChangePCAL').val()
+        , "PerWhomPCAL": ($("#perWhomPCAL").val() == "") ? null : $('#perWhomPCAL').val()
     }//end item
 
     var errorMessage = "Error inserting record number: " + count;
@@ -820,6 +834,7 @@ function addToListFromPCALModal() {
         , "CrewContactRequired": $("#ccCheck").prop("checked")
         , "AnimationRequired": $("#animationRequired").prop("checked")
         , "GoogleEarthRequired": $("#googleEarthRequired").prop("checked")
+        , "QueryNotesDAG": ($("#queryNotesDAG").val() == "") ? null : $('#queryNotesDAG').val()
     }//end item
 
     var errorMessage = "Error inserting record number: " + count;
@@ -865,13 +880,49 @@ function insertIntoList(url, item, successMsg, failMsg, source) {
     });
 }
 
-function eventsReporting(fleet) {
+function fleetReporting(fleet) {
 
     var url = 'https://alaskaair.sharepoint.com/sites/FOQA/_vti_bin/ListData.svc/DAGandPCALChangeTracking?$filter=(%20substringof(%27' + fleet + '%27,Fleet))&groupBy=Event&$orderby=Id%20desc';
 
     getListItems(url, function (data) {
         var numRecords = data.d.results.length;
         $("#table").children().remove();
+
+        if (numRecords > 0) {
+            $.each(data, function (i, item) {
+                const arrayDefine = [];
+                for (var i = 0; i < numRecords; i++) {
+                    var arrayFilter = arrayDefine.push(data.d.results[i].EventKey);
+                    var dup = arrayDefine.filter(a => a === data.d.results[i].EventKey);
+                    if (dup.length <= 1) {
+                        $("#table").append('<tr>');
+                        $("#table").append('<td><b>' + data.d.results[i].EventKey + '</b></td>');
+                        $("#table").append('<td>' + data.d.results[i].InDAG + '</td>');
+                        $("#table").append('<td>' + data.d.results[i].InfoOnlyDAG + '</td>');
+                        $("#table").append('<td>' + data.d.results[i].CautionDAG + '</td>');
+                        $("#table").append('<td>' + data.d.results[i].WarningDAG + '</td>');
+                        $("#table").append('<td>' + data.d.results[i].AlertDAG + '</td>');
+                        $("#table").append('<td>' + data.d.results[i].InPCAL + '</td>');
+                        $("#table").append('<td>' + data.d.results[i].InfoOnlyPCAL + '</td>');
+                        $("#table").append('<td>' + data.d.results[i].CautionPCAL + '</td>');
+                        $("#table").append('<td>' + data.d.results[i].WarningPCAL + '</td>');
+                        $("#table").append('<td>' + data.d.results[i].AlertPCAL + '</td>');
+                        $("#table").append('</tr>');
+                    }
+                }
+            })
+
+        }
+    })
+};
+
+function eventsReporting(event) {
+
+    var url = 'https://alaskaair.sharepoint.com/sites/FOQA/_vti_bin/ListData.svc/AirbusBoeingEMSEventsArchive?$filter=EventKey%20eq%20%27' + event + '%27&orderBy=Event';
+
+    getListItems(url, function (data) {
+        var numRecords = data.d.results.length;
+        $("#tableEvent").children().remove();
 
         if (numRecords > 0) {
             $.each(data, function (i, item) {

@@ -132,7 +132,7 @@
                     <div class="modal-header bg-info text-white">
                         <h3 class="modal-title ml-3">DAG Reporting Change</h3>
                         <!-- This line below adds an x button to header to close modal screen-->
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <button type="button" class="close" data-dismiss="modal" onclick="resetDAGModal()">&times;</button>
                     </div>
                     <div class="modal-body">
                         <div class="container-fluid">
@@ -181,6 +181,7 @@
                                             <option value="Yes">Yes</option>
                                             <option value="No">No</option>
                                         </select>
+                                        <input type="text" id="hiddeninDAG" hidden />
                                     </div>
                                     <div class="col-md-2">
                                         <label class="" for="inPCAL2">In PCAL?</label>
@@ -190,6 +191,7 @@
                                             <option value="No">No</option>
                                             <option value="Unknown">Unknown</option>
                                         </select>
+                                        <input type="text" id="hiddeninPCAL" hidden />
                                     </div>
                                 </div>
                                 <div class="row row-narrower form-group">
@@ -278,7 +280,7 @@
                     <div class="modal-header bg-info text-white">
                         <h4 class="modal-title ml-3">PCAL Change</h4>
                         <!-- This line below adds an x button to header to close modal screen-->
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <button type="button" class="close" data-dismiss="modal" onclick="resetPCALModal()">&times;</button>
                     </div>
                     <div class="modal-body">
                         <div class="container-fluid">
@@ -309,7 +311,7 @@
                                             <option value="Yes">Yes</option>
                                             <option value="No">No</option>
                                         </select>
-                                        <input type="text" id="hiddeninDAG" hidden />
+                                        <input type="text" id="hiddeninDAG2" hidden />
                                     </div>
                                     <div class="col-md-3 mb-3">
                                         <label class="" for="inPCAL3" style="font-size: medium;">In PCAL?<span
@@ -320,7 +322,7 @@
                                             <option value="Yes">Yes</option>
                                             <option value="No">No</option>
                                         </select>
-                                        <input type="text" id="hiddeninPCAL" hidden />
+                                        <input type="text" id="hiddeninPCAL2" hidden />
                                     </div>
                                 </div>
                                 <div class="row row-narrower form-group">
@@ -381,16 +383,19 @@
                                         <div class="row row-narrower form-group ml-1">
                                             <label class="form-check-label" for="ccCheck"> Crew Contact </label>
                                             <input type="checkbox" class="form-check-input" id="ccCheck">
+                                            <input type="checkbox" class="form-check-input" id="ccCheckHidden" hidden="true">
                                         </div>
                                         <div class="row row-narrower form-group ml-1">
                                             <label class="form-check-label ml-1" for="animationRequired"> Animation
                                                 review </label>
                                             <input type="checkbox" class="form-check-input" id="animationRequired">
+                                            <input type="checkbox" class="form-check-input" id="animationRequiredHidden" hidden="true">
                                         </div>
                                         <div class="row row-narrower form-group ml-1">
                                             <label class="form-check-label ml-1" for="googleEarthRequired"> Google Earth
                                                 review </label>
                                             <input type="checkbox" class="form-check-input" id="googleEarthRequired">
+                                            <input type="checkbox" class="form-check-input" id="googleEarthRequired" hidden="true">
                                         </div>
                                     </div>
                                 </div>
@@ -657,15 +662,26 @@
 
     <div class="container-fluid">
         <div class="nonFormValue form-group">
-            <div class="col-md-3">
+            <div class="row">
+            <div class="col-sm-2">
                 <label class="" for="fleetReporting">Fleet</label>
                 <select class="form-control form-control-sm" id="fleetReporting" name="fleetReporting"
+                    onclick="fleetReporting(this.value)">
+                    <option>Select</option>
+                    <option value="airbus">Airbus</option>
+                    <option value="boeing">Boeing</option>
+                </select>
+            </div>
+            <div class="col-sm-2">
+                <label class="" for="eventsReporting">Event</label>
+                <select class="form-control form-control-sm" id="eventsReporting" name="eventsReporting"
                     onclick="eventsReporting(this.value)">
                     <option>Select</option>
                     <option value="airbus">Airbus</option>
                     <option value="boeing">Boeing</option>
                 </select>
             </div>
+        </div>
         </div>
     </div>
 
@@ -687,6 +703,28 @@
                 </tr>
             </thead>
             <tbody id="table">
+            </tbody>
+        </table>
+    </div>
+
+    <div class="table-responsive">
+        <table class="row-content table table-bordered table-sm" id="eventsTable">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Event</th>
+                    <th scope="col">In DAG?</th>
+                    <th scope="col">Info Only</th>
+                    <th scope="col">Caution</th>
+                    <th scope="col">Warning</th>
+                    <th scope="col">Alert</th>
+                    <th scope="col">In PCAL?</th>
+                    <th scope="col">Info Only</th>
+                    <th scope="col">Caution</th>
+                    <th scope="col">Warning</th>
+                    <th scope="col">Alert</th>
+                </tr>
+            </thead>
+            <tbody id="tableEvent">
             </tbody>
         </table>
     </div>
