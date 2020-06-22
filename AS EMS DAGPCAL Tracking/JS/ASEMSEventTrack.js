@@ -244,6 +244,7 @@ function getEventDetails(event) {
                     $("#warningDef").val(data.d.results[i].Warning);
                     $("#alertDef").val(data.d.results[i].Alert);
                     $("#intervalDef").val(data.d.results[i].Interval);
+                    $("#fullEMSPath").val(data.d.results[i].FullEMSPath);
                     /*$("#hiddeninDAG").val(data.d.results[i].InDAG);
                     $("#hiddeninPCAL").val(data.d.results[i].InPCAL);*/
                     //GlobalParam/Fleet Constant
@@ -705,7 +706,7 @@ function updateListItem(itemId, eventKey, success, failure) {
         , "Alert": ($("#alertDef").val() == "") ? null : $('#alertDef').val()
         , "Interval": ($("#intervalDef").val() == "") ? null : $('#intervalDef').val()
         , "FullEMSPath": ($("#fullEMSPath").val() == "") ? null : $('#fullEMSPath').val()
-        , "ParameterDescription": $("#gPFC option:selected").text()
+        , "ParameterDescription": ($("#gPFC option:selected").text() == "") ? null :$("#gPFC option:selected").text()
         , "GlobalParameterFleetConstant": ($("#gpfcText").val() == "") ? null : $("#gpfcText").val()
         //, "InDAG": $("#inDAG1 option:selected").text()
         //, "InPCAL": $("#inPCAL1 option:selected").text()
@@ -758,10 +759,10 @@ function saveNewEventForm() {
         , "Caution": ($("#cautionDef1").val() == "") ? null : $('#cautionDef1').val()
         , "Warning": ($("#warningDef1").val() == "") ? null : $('#warningDef1').val()
         , "Alert": ($("#alertDef1").val() == "") ? null : $('#alertDef1').val()
-        , "Interval": $('#intervalDef1').val()
-        , "FullEMSPath": $('#fullEMSPath1').val()
-        , "ParameterDescription": $("#gPFC1 option:selected").text()
-        , "GlobalParameterFleetConstant": $("#gpfcText1").val()
+        , "Interval": ($('#intervalDef1').val() == "") ? null : $('#intervalDef1').val()
+        , "FullEMSPath": ($('#fullEMSPath1').val() == "") ? null :$('#fullEMSPath1').val()
+        , "ParameterDescription": ($("#gPFC1 option:selected").text() == "") ? null :$("#gPFC1 option:selected").text()
+        , "GlobalParameterFleetConstant": ($("#gpfcText1").val() == "") ? null : $("#gpfcText1").val() 
         //, "InDAG": $("#inDAG4 option:selected").text()
         //, "InPCAL": $("#inPCAL4 option:selected").text()
     }//end item
