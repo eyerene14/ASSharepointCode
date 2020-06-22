@@ -101,11 +101,6 @@
         padding: 0px;
         margin-bottom: 0rem;
     }
-
-    #airspaceType {
-        border: 1px;
-        background-image: linear-gradient(to right, white, grey);
-    }
 </style>
 
 <body>
@@ -150,10 +145,10 @@
             </div>
             <!--Fleet-->
             <div class="form-row form-group">
-                <div class="col-md-2 col-sm-2">
+                <div class="col-md-1 col-sm-2">
                     <label class="col-form-label" for="fleet">Fleet<span style="color:red">*</span></label>
                     <select class="form-control" id="fleet" name="fleet" required>
-                        <option>Select</option>
+                        <option value="">Select</option>
                         <option value="airbus">Airbus</option>
                         <option value="boeing">Boeing</option>
                     </select>
@@ -163,7 +158,7 @@
                     <label class="col-form-label" for="fleetModel">Aircraft type/model/freighter<span
                             style="color:red">*</span></label>
                     <select class="form-control" id="fleetModel" name="fleetModel" required>
-                        <option>Select</option>
+                        <option value="">Select</option>
                         <option value="700">700</option>
                         <option value="800">800</option>
                         <option value="800">800SFP</option>
@@ -178,7 +173,7 @@
                     <label class="col-form-label" for="approachType">Type of Approach<span
                             style="color:red">*</span></label>
                     <select class="form-control" id="approachType" name="approachType" required>
-                        <option>Select</option>
+                        <option value="">Select</option>
                         <option value="visual">Visual</option>
                         <option value="ILS">ILS</option>
                         <option value="RNAV">RNAV</option>
@@ -194,32 +189,210 @@
                 <div class="col-md-3 col">
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="10-7 notes/FOQA Alert" id="tcpBriefA">
-                        <label class="form-check-label" for="tcpBriefA">
-                            10-7 notes/FOQA Alert
-                        </label>
+                        <label class="form-check-label" for="tcpBriefA">10-7 notes/FOQA Alert</label>
+
                     </div>
                 </div>
                 <div class="col-md-2 col">
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="Steep GS" id="tcpBriefB">
-                        <label class="form-check-label" for="tcpBriefB">
-                            Steep GS
-                        </label>
+                        <label class="form-check-label" for="tcpBriefB">Steep GS</label>
                     </div>
                 </div>
                 <div class="col-md-2 col">
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="Terrain" id="tcpBriefC">
-                        <label class="form-check-label" for="tcpBriefC">
-                            Terrain
+                        <label class="form-check-label" for="tcpBriefC">Terrain</label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row form-group">
+                <div class="col-md-3">
+                    <label class="col-form-label" for="airspaceType">Type of airspace:</label>
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-secondary radioButton1 btn-sm align-self-center">
+                            <span style="color:rgb(210, 213, 214)"><input type="radio" name="options" id="airspace"
+                                    value="Controlled" autocomplete="off">
+                                Controlled</span>
+                        </label>
+                        <label class="btn btn-secondary btn-sm align-self-center">
+                            <input type="radio" name="options" id="airspace" value="Uncontrolled" autocomplete="off">
+                            Uncontrolled
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <label class="col-form-label" for="location">Location:</label>
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-secondary radioButton1 btn-sm align-self-center">
+                            <span style="color:rgb(58, 53, 53)"><input type="radio" name="options" id="location"
+                                    value="Lower 48" autocomplete="off">
+                                Lower 48</span>
+                        </label>
+                        <label class="btn btn-secondary btn-sm align-self-center">
+                            <span style="color:#bcbfc0"><input type="radio" name="options" id="location"
+                                    value="State of Alaska" autocomplete="off">
+                                State of Alaska</span>
+                        </label>
+                        <label class="btn btn-secondary btn-sm align-self-center">
+                            <input type="radio" name="options" id="location" value="Hawaii" autocomplete="off">
+                            Hawaii
                         </label>
                     </div>
                 </div>
             </div>
+            <div class="form-row form-group">
+                <div class="col-md-2 col-sm-3">
+                    <select class="custom-select" id="conditions">
+                        <option selected>Conditions</option>
+                        <option value="">Select</option>
+                        <option value="VFR">VFR</option>
+                        <option value="MVFR">MVFR</option>
+                        <option value="IMC">IMC</option>
+                        <option value="DAY">DAY</option>
+                        <option value="Night">Night</option>
+                        <option value="Windshear">Windshear</option>
+                        <option value="WIND (fill in)">WIND (fill in)</option>
+                        <option value="TURBULENCE (fill in)">TURBULENCE (fill in)</option>
+                    </select>
+                </div>
+                <label class="col-md-1 col-sm-1 col-form-label" for="loExperience">Base: </label>
+                <div class="col-md-1 col-sm-2">
+                    <select class="custom-select" id="caBase">
+                        <option selected>C.A.</option>
+                        <option value="ANC">ANC</option>
+                        <option value="LAX">LAX</option>
+                        <option value="PDX">PDX</option>
+                        <option value="SEA">SEA</option>
+                        <option value="SFO">SFO</option>
+                    </select>
+                </div>
+                <div class="col-md-1 col-sm-2">
+                    <select class="custom-select" id="foBase">
+                        <option selected>F.O.</option>
+                        <option value="ANC">ANC</option>
+                        <option value="LAX">LAX</option>
+                        <option value="PDX">PDX</option>
+                        <option value="SEA">SEA</option>
+                        <option value="SFO">SFO</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row form-group">
+                <label class="col-md-3 col-sm-4 col-form-label" for="loExperience">Level of experience in type
+                    (hrs):</label>
+                <div class="col-md-1 col-sm-2">
+                    <select class="custom-select" id="caLOExperience">
+                        <option selected>C.A.</option>
+                        <option value="&lt; 500"> &lt; 500</option>
+                        <option value="500-1000"> 500-1000</option>
+                        <option value="&gt; 1000"> &gt; 1000</option>
+                    </select>
+                </div>
+                <div class="col-md-1 col-sm-2">
+                    <select class="custom-select" id="foLOExperience">
+                        <option selected>F.O.</option>
+                        <option value="&lt; 500"> &lt; 500</option>
+                        <option value="500-1000"> 500-1000</option>
+                        <option value="&gt; 1000"> &gt; 1000</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row form-group">
+                <div class="col-md-2 col-sm-3">
+                    <b><label class="col-form-label" for="roExperience">Recency of experience:</label></b>
+                    <small id="greySmall1" class="form-text text-muted">90 day look back</small>
+                </div>
+                <div class="col-md-1 col-sm-2">
+                    <div class="form-row">
+                        <label class="col-form-label" for="roExperience">Hrs:
+                    </div>
+                    <div class="form-row">
+                        <label class="col-form-label" for="roExperience">Landings:
+                    </div>
+                </div>
+                <div class="col-md-1 col-sm-3">
+                    <div class="form-row">
+                        <select class="custom-select" id="caROExperience">
+                            <option selected>C.A. (hrs)</option>
+                            <option value="&lt; 100"> &lt; 100</option>
+                            <option value="100-200"> 100-200</option>
+                            <option value="&gt; 200"> &gt; 200</option>
+                        </select>
+                        <select class="custom-select" id="caROLandings">
+                            <option selected>C.A.</option>
+                            <option value="&lt; 100"> &lt; 10</option>
+                            <option value="10-20"> 10-20</option>
+                            <option value="&gt; 20"> &gt; 20</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-1 col-sm-3">
+                    <div class="form-row">
+                        <select class="custom-select" id="foROExperience">
+                            <option selected>F.O. (hrs)</option>
+                            <option value="&lt; 500"> &lt; 500</option>
+                            <option value="500-1000"> 500-1000</option>
+                            <option value="&gt; 1000"> &gt; 1000</option>
+                        </select>
+                        <select class="custom-select" id="foROLandings">
+                            <option selected>F.O.</option>
+                            <option value="&lt; 100"> &lt; 10</option>
+                            <option value="10-20"> 10-20</option>
+                            <option value="&gt; 20"> &gt; 20</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row form-group">
+                <div class="col-md-1 col-sm-2">
+                    <label class="col-form-label-sm" for="pilotFlying">Flying:</label>
+                    <div class="btn-group btn-group-toggle mb-3" data-toggle="buttons">
+                        <label class="btn btn-secondary btn-sm align-self-center">
+                            <span style="color:#bcbfc0">
+                                <input type="radio" name="options" id="pilotFlying" value="F.O." autocomplete="off">F.O.
+                            </span>
+                        </label>
+                        <label class="btn btn-secondary btn-sm align-self-center">
+                            <input type="radio" name="options" id="pilotFlying" value="C.A." autocomplete="off">C.A.
+                        </label>
+                    </div>
+                </div>
+                <div class="col-md-1 col-sm-2">
+                    <label class="col-form-label-sm" for="pilotFlying">Monitoring:</label>
+                    <div class="btn-group btn-group-toggle mb-3" data-toggle="buttons">
+                        <label class="btn btn-secondary btn-sm align-self-center">
+                            <span style="color:#bcbfc0">
+                                <input type="radio" name="options" id="pilotMonitoring" value="F.O."
+                                    autocomplete="off">F.O.
+                            </span>
+                        </label>
+                        <label class="btn btn-secondary btn-sm align-self-center">
+                            <input type="radio" name="options" id="pilotMonitoring" value="C.A." autocomplete="off">C.A.
+                        </label>
+                    </div>
+                </div>
+                <label class="col-md-2 col-sm-5 col-form-label-sm" for="gatesUnderstandingLabel">Did PF/PM understand the FOM Stabilized approach
+                    gates?</label>
+                    <div class="col-md-2 col-sm-2">
+                            <select class="custom-select" id="pfGatesUnderstanding">
+                                <option selected>P.F.</option>
+                                <option value="No">No</option>
+                                <option value="Yes">Yes</option>
+                            </select>
+                            <select class="custom-select" id="pmGatesUnderstanding">
+                                <option selected>P.M.</option>
+                                <option value="No">No</option>
+                                <option value="Yes">Yes</option>
+                            </select>
+                </div>
+            </div>
+
+
             <!--Event-->
             <label class="col-form-label" for="event">Event<span style="color:red">*</span></label>
             <select class="col-sm-2 form-control" id="event" name="event" required>
-                <option>Select</option>
+                <option value="">Select</option>
                 <option value="cua">Continous Unstable Aprroach</option>
             </select>
             <!--Flight Classification-->
@@ -508,6 +681,16 @@
              $('[data-toggle="tooltip"]').tooltip()
          })
          */
+
+        function changeColor(color) {
+            if ($("#airspace").val() = "Controlled") {
+                document.getElementsByClassName("radioButton1").style.backgroundColor = color;
+            }
+            else {
+                document.getElementsByClassName("radioButton2").style.backgroundColor = color;
+            }
+        }
+
     </script>
 </body>
 
