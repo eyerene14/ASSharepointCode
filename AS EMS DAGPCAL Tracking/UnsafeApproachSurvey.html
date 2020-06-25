@@ -128,20 +128,25 @@
             <div class="form-row form-group">
                 <label class="col-form-label" for="gatekeeperLabel">Gatekeeper:</label>
                 <label class="col-sm-3 col-xs-3 col-form-label" id="gatekeepersName"></label>
+
+            </div>
+            <div class="form-row form-group">
                 <label class="col-form-label" for="contactDateLabel">Contact Date:</label>
-                <input class="col-sm-2 col-xs-2 form-control col-form-label-sm" type="date" id="contactDateLabel">
+                <input class="col-md-2 col-sm-3 col-xs-2 form-control col-form-label-sm" type="date"
+                    id="contactDateLabel">
+                <label class="col-form-label ml-1" for="flightRecord">Event ID</label>
+                <input class="col-md-2 col-sm-3 col-xs-2 ml-1 form-control col-form-label-sm" type="text" id="eventID">
             </div>
             <div class="form-row form-group">
-                <label class="col-form-label" for="flightRecord">Event ID</label>
-                <input class="col-sm-2 col-xs-2 form-control col-form-label-sm" type="text" id="eventID">
                 <label class="col-form-label" for="origin">Origin</label>
-                <input class="col-sm-2 col-xs-2 form-control col-form-label-sm" type="text" id="origin">
-            </div>
-            <div class="form-row form-group">
+                <input class="col-md-1 col-sm-2 col-xs-2 form-control col-form-label-sm" type="text" id="origin"
+                    placeholder="SEA">
                 <label class="col-form-label" for="destination">Destination</label>
-                <input class="col-sm-2 col-xs-2 form-control col-form-label-sm" type="text" id="destination">
+                <input class="col-md-1 col-sm-2 col-xs-2 form-control col-form-label-sm" type="text" id="destination"
+                    placeholder="ORD">
                 <label class="col-form-label" for="landingRunway">Rwy</label>
-                <input class="col-sm-2 col-xs-2 form-control col-form-label-sm" type="text" id="landingRunway">
+                <input class="col-md-1 col-sm-2 col-xs-2 form-control col-form-label-sm" type="text" id="landingRunway"
+                    placeholder="16R">
             </div>
             <!--Fleet-->
             <div class="form-row form-group">
@@ -186,20 +191,19 @@
                     <label class="col-form-label" for="tcpBrief">Was any of the following included in the TPC
                         brief?<span style="color:red">*</span></label>
                 </div>
-                <div class="col-md-3 col">
+                <div class="col-md-3 col-sm-5">
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="10-7 notes/FOQA Alert" id="tcpBriefA">
-                        <label class="form-check-label" for="tcpBriefA">10-7 notes/FOQA Alert</label>
-
+                        <label class="form-check-label-sm" for="tcpBriefA">10-7 notes/FOQA Alert</label>
                     </div>
                 </div>
-                <div class="col-md-2 col">
+                <div class="col-md-2 col-sm-3">
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="Steep GS" id="tcpBriefB">
                         <label class="form-check-label" for="tcpBriefB">Steep GS</label>
                     </div>
                 </div>
-                <div class="col-md-2 col">
+                <div class="col-md-2 col-sm-2">
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="Terrain" id="tcpBriefC">
                         <label class="form-check-label" for="tcpBriefC">Terrain</label>
@@ -207,8 +211,8 @@
                 </div>
             </div>
             <div class="form-row form-group">
-                <div class="col-md-4 col-sm-5 col-xs-2">
-                    <label class="col-form-label" for="airspaceType">Type of airspace:</label>
+                <div class="col-md-4 col-sm-9 col-xs-2">
+                    <label class="" for="airspaceType">Type of airspace:</label>
                     <div class="btn-group btn-group-toggle" data-toggle="buttons">
                         <label class="btn btn-secondary radioButton1 btn-sm align-self-center">
                             <span style="color:rgb(210, 213, 214)"><input type="radio" name="options" id="airspace"
@@ -221,10 +225,12 @@
                         </label>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6 col-xs-2">
+            </div>
+            <div class="form-row form-group">
+                <div class="col-md-4 col-sm-9 col-xs-2">
                     <label class="col-form-label" for="location">Location:</label>
                     <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                        <label class="btn btn-secondary radioButton1 btn-sm align-self-center">
+                        <label class="btn btn-secondary btn-sm align-self-center">
                             <span style="color:rgb(58, 53, 53)"><input type="radio" name="options" id="location"
                                     value="Lower 48" autocomplete="off">
                                 Lower 48</span>
@@ -416,8 +422,12 @@
                 </select>
             </div>
             <div class="form-row">
-                <label class="col-form-label-sm" for="fullyConfigured">
-                    Did the PM recognize the aircraft was not fully configured at 1000 ft HAT ?
+                <div class="col-md-6 col-sm-9 col-xs-8">
+                    <label class="col-form-label-sm" for="fullyConfigured">
+                        Did the PM recognize the aircraft was not fully configured at 1000 ft HAT ?
+                    </label>
+                </div>
+                <div class="col-md-1 col-sm-2 col-xs-1">
                     <div class="btn-group btn-group-toggle" data-toggle="buttons">
                         <label class="btn btn-secondary radioButton1 btn-sm align-self-center">
                             <span style="color:rgb(210, 213, 214)"><input type="radio" name="options"
@@ -429,12 +439,17 @@
                             No
                         </label>
                     </div>
+                </div>
             </div>
             <div class="form-row">
-                <label class="col-md-10 col-sm-8 col-form-label-sm" for="pmCommunication">
-                    If yes, did the PM communicate not configured?
+                <div class="col-md-6 col-sm-9 col-xs-8">
+                    <label class="col-form-label-sm" for="pmCommunication">
+                        If yes, did the PM communicate not configured?
+                    </label>
+                </div>
+                <div class="col-md-1 col-sm-2 col-xs-1">
                     <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                        <label class="btn btn-secondary radioButton1 btn-sm align-self-center">
+                        <label class="btn btn-secondary btn-sm align-self-center">
                             <span style="color:rgb(210, 213, 214)"><input type="radio" name="options"
                                     id="pmCommunication" value="Yes" autocomplete="off">
                                 Yes</span>
@@ -443,11 +458,15 @@
                             <input type="radio" name="options" id="pmCommunication" value="No" autocomplete="off">
                             No
                         </label>
-            </div>
+                    </div>
+                </div>
             </div>
             <div class="form-row">
-                <label class="col-md-6 col-sm-8 col-form-label-sm" for="pfAcknowledge">
-                    Did the PF acknowledge?
+                <div class="col-md-6 col-sm-9 col-xs-8">
+                    <label class="col-form-label-sm" for="pfAcknowledge">
+                        Did the PF acknowledge? </label>
+                </div>
+                <div class="col-md-1 col-sm-2 col-xs-1">
                     <div class="btn-group btn-group-toggle" data-toggle="buttons">
                         <label class="btn btn-secondary radioButton1 btn-sm align-self-center">
                             <span style="color:rgb(210, 213, 214)"><input type="radio" name="options" id="pfAcknowledge"
@@ -459,10 +478,15 @@
                             No
                         </label>
                     </div>
+                </div>
             </div>
             <div class="form-row">
-                <label class="col-md-8 col-sm-8 col-form-label-sm" for="pm500ftHAT">
-                    Did the PM recognize the aircraft was not fully stable at 500 ft HAT ?
+                <div class="col-md-6 col-sm-9 col-xs-8">
+                    <label class="col-form-label-sm" for="pm500ftHAT">
+                        Did the PM recognize the aircraft was not fully stable at 500 ft HAT ?
+                    </label>
+                </div>
+                <div class="col-md-1 col-sm-2 col-xs-1">
                     <div class="btn-group btn-group-toggle" data-toggle="buttons">
                         <label class="btn btn-secondary radioButton1 btn-sm align-self-center">
                             <span style="color:rgb(210, 213, 214)"><input type="radio" name="options" id="pm500ftHAT"
@@ -474,10 +498,14 @@
                             No
                         </label>
                     </div>
+                </div>
             </div>
             <div class="form-row">
-                <label class="col-md-6 col-sm-8 col-form-label-sm" for="pmNotStable">
-                    If yes, did the PM communicate not stable?
+                <div class="col-md-6 col-sm-9 col-xs-8">
+                    <label class="col-form-label-sm" for="pmNotStable">
+                        If yes, did the PM communicate not stable?</label>
+                </div>
+                <div class="col-md-1 col-sm-2 col-xs-1">
                     <div class="btn-group btn-group-toggle" data-toggle="buttons">
                         <label class="btn btn-secondary radioButton1 btn-sm align-self-center">
                             <span style="color:rgb(210, 213, 214)"><input type="radio" name="options" id="pmNotStable"
@@ -489,10 +517,15 @@
                             No
                         </label>
                     </div>
+                </div>
             </div>
             <div class="form-row">
-                <label class="col-md-6 col-sm-8 col-form-label-sm" for="goAround500">
-                    Did the PM communicate “GO AROUND” at 500 ft HAT?
+                <div class="col-md-6 col-sm-9 col-xs-8">
+                    <label class="col-form-label-sm" for="goAround500">
+                        Did the PM communicate “GO AROUND” at 500 ft HAT?
+                    </label>
+                </div>
+                <div class="col-md-1 col-sm-2 col-xs-1">
                     <div class="btn-group btn-group-toggle" data-toggle="buttons">
                         <label class="btn btn-secondary radioButton1 btn-sm align-self-center">
                             <span style="color:rgb(210, 213, 214)"><input type="radio" name="options" id="goAround500"
@@ -504,28 +537,14 @@
                             No
                         </label>
                     </div>
-            </div>
-            <div class="form-row">
-                <div class="col-md-4 col-xs-8">
-                    <label class="col-form-label-sm" for="pfAcknowledgeGoAround">
-                        If yes, did PF acknowledge?
-                        <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                            <label class="btn btn-secondary radioButton1 btn-sm align-self-center">
-                                <span style="color:rgb(210, 213, 214)"><input type="radio" name="options"
-                                        id="pfAcknowledgeGoAround" value="Yes" autocomplete="off">
-                                    Yes</span>
-                            </label>
-                            <label class="btn btn-secondary btn-sm align-self-center">
-                                <input type="radio" name="options" id="pfAcknowledgeGoAround" value="No"
-                                    autocomplete="off">
-                                No
-                            </label>
-                        </div>
                 </div>
             </div>
             <div class="form-row">
-                <label class="col-md-6 col-sm-8 col-form-label-sm" for="pfAcknowledgeGoAround">
-                    Why did the crew continue? (choose all that apply)
+                <div class="col-md-6 col-sm-9 col-xs-8">
+                    <label class="col-form-label-sm" for="pfAcknowledgeGoAround">
+                        If yes, did PF acknowledge?</label>
+                </div>
+                <div class="col-md-1 col-sm-2 col-xs-1">
                     <div class="btn-group btn-group-toggle" data-toggle="buttons">
                         <label class="btn btn-secondary radioButton1 btn-sm align-self-center">
                             <span style="color:rgb(210, 213, 214)"><input type="radio" name="options"
@@ -537,21 +556,50 @@
                             No
                         </label>
                     </div>
+                </div>
             </div>
             <div class="form-row">
-                <label class="col-md-6 col-sm-8 col-form-label-sm" for="pfAcknowledgeGoAround">
+                <label class="col-md-6 col-sm-11 col-form-label-sm" for="whyContinue">
+                    Why did the crew continue? (choose all that apply)
+                    <select class="custom-select" id="whyContinue" multiple>
+                        <option selected>Choose all that apply</option>
+                        <option value="Poor Decision Making">Poor Decision Making</option>
+                        <option value="Weather">Weather</option>
+                        <option value="Fuel">Fuel</option>
+                        <option value="Thunderstorm">Thunderstorm</option>
+                        <option value="Thought it was safer to land than go around">Thought it was safer to land
+                            than go
+                            around</option>
+                        <option value="Uncomfortable with GA/ breaking off from approach procedures">
+                            Uncomfortable with
+                            GA/ breaking off from approach procedures</option>
+                        <option value="Overcommitted">Overcommitted</option>
+                        <option value="Moderate of Greater Turbulence">Moderate of Greater Turbulence</option>
+                    </select>
+            </div>
+            <div class="form-row">
+                <label class="col-md-6 col-sm-11 col-form-label-sm" for="pfAcknowledgeGoAround">
                     Crews assessment of additional factors: (choose all that apply)
-                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                        <label class="btn btn-secondary radioButton1 btn-sm align-self-center">
-                            <span style="color:rgb(210, 213, 214)"><input type="radio" name="options"
-                                    id="pfAcknowledgeGoAround" value="Yes" autocomplete="off">
-                                Yes</span>
-                        </label>
-                        <label class="btn btn-secondary btn-sm align-self-center">
-                            <input type="radio" name="options" id="pfAcknowledgeGoAround" value="No" autocomplete="off">
-                            No
-                        </label>
+                    <select class="custom-select" multiple>
+                        <option selected>Choose all that apply</option>
+                        <option value="ATC">ATC</option>
+                        <option value="Weather">Weather</option>
+                        <option value="Improper Energy Management">Improper Energy Management</option>
+                        <option value="Aircraft weight">Aircraft weight</option>
+                        <option value="CRM">CRM</option>
+                        <option value="Inadequate briefing">Inadequate briefing</option>
+                        <option value="Recency of experience">Recency of experience</option>
+                        <option value="Traffic ">Traffic</option>
+                        <option value="Unfamiliar airport ">Unfamiliar airport</option>
+                    </select>
+            </div>
+            <div class="form-row form-group">
+                <div class="col-md-6 col-sm-11 col-xs-8 input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Crew Contact Summary</span>
                     </div>
+                    <textarea class="form-control" aria-label="With textarea" id="ccSummary"></textarea>
+                </div>
             </div>
             <div class="row form-group">
                 <div class="col">
