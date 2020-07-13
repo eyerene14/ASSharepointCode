@@ -126,12 +126,12 @@
             <input id="key_id" type="number" hidden="true" disabled>
             <!--Gatekeeper-->
             <label class="col-form-label" for="gatekeeperLabel">Gatekeeper:</label>
-            <label class="col-sm-3 col-xs-3 col-form-label" id="gatekeepersName"></label>
+            <label class="col-sm-3 col-xs-3 col-form-label" id="gatekeepersNameRedirect"></label>
             <!--Fleet-->
             <div class="form-row form-group">
                 <div class="col-md-2 col-sm-2 col-xs-2">
-                    <label class="col-form-label" for="fleet">Fleet<span style="color:red">*</span></label>
-                    <select class="form-control" id="fleet" name="fleet" required>
+                    <label class="col-form-label" for="fleet">Fleet</label>
+                    <select class="form-control" id="fleetRedirect" name="fleet">
                         <option value="">Select</option>
                         <option value="airbus">Airbus</option>
                         <option value="boeing">Boeing</option>
@@ -139,9 +139,8 @@
                 </div>
                 <div class="col-md-3 col-sm-6 col-xs-6">
                     <!--Model-->
-                    <label class="col-form-label" for="fleetModel">Aircraft type/model/freighter<span
-                            style="color:red">*</span></label>
-                    <select class="form-control" id="fleetModel" name="fleetModel" required>
+                    <label class="col-form-label" for="fleetModel">Aircraft type/model/freighter</label>
+                    <select class="form-control" id="fleetModelRedirect" name="fleetModel">
                         <option value="">Select</option>
                         <option value="700">700</option>
                         <option value="800">800</option>
@@ -154,9 +153,8 @@
                     </select>
                 </div>
                 <div class="col-md-2 col-sm-4 col-xs-4">
-                    <label class="col-form-label" for="approachType">Type of Approach<span
-                            style="color:red">*</span></label>
-                    <select class="form-control" id="approachType" name="approachType" required>
+                    <label class="col-form-label" for="approachType">Type of Approach</label>
+                    <select class="form-control" id="approachTypeRedirect" name="approachType">
                         <option value="">Select</option>
                         <option value="visual">Visual</option>
                         <option value="ILS">ILS</option>
@@ -169,9 +167,10 @@
                 <label class="col-form-label" for="contactDateLabel">Contact Date:</label>
                 <input class="col-md-2 col-sm-3 col-xs-2 form-control col-form-label-sm" type="date" id="contactDate">
                 <label class="col-form-label ml-1" for="flightRecord">Event ID</label>
-                <input class="col-md-1 col-sm-3 col-xs-2 ml-1 form-control col-form-label-sm" type="text" id="eventID">
+                <input class="col-md-1 col-sm-3 col-xs-2 ml-1 form-control col-form-label-sm" type="text"
+                    id="eventIDRedirect">
                 <div class="col-md-2 col-sm-5 col-xs-3">
-                    <select class="col-md-10 custom-select form-control col-form-label-sm" id="conditions">
+                    <select class="col-md-10 custom-select form-control col-form-label-sm" id="conditionsRedirect">
                         <option selected>Conditions</option>
                         <option value="">Select</option>
                         <option value="VFR">VFR</option>
@@ -187,17 +186,18 @@
             </div>
             <div class="form-row form-group">
                 <label class="col-form-label" for="origin"><span style="color:red">*</span>Origin</label>
-                <select class="col-md-1 col-sm-2 col-xs-2 form-control col-form-label-sm" id="origin" name="origin"
-                    required>
+                <select class="col-md-1 col-sm-2 col-xs-2 form-control col-form-label-sm" id="originRedirect"
+                    name="origin" required>
                     <option value="">Select</option>
                 </select>
                 <label class="col-form-label" for="destination"><span style="color:red">*</span>Destination</label>
-                <select class="col-md-1 col-sm-2 col-xs-2 form-control col-form-label-sm" id="destination"
+                <select class="col-md-1 col-sm-2 col-xs-2 form-control col-form-label-sm" id="destinationRedirect"
                     name="destination" required>
                     <option value="">Select</option>
                 </select>
                 <label class="col-form-label" for="landingRunway">Rwy</label>
-                <input class="col-md-1 col-sm-2 col-xs-2 form-control col-form-label-sm" type="text" id="landingRunway">
+                <input class="col-md-1 col-sm-2 col-xs-2 form-control col-form-label-sm" type="text"
+                    id="landingRunwayRedirect">
 
             </div>
 
@@ -208,19 +208,20 @@
                 </div>
                 <div class="col-md-3 col-sm-5">
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="10-7 notes/FOQA Alert" id="tcpBriefA">
+                        <input class="form-check-input" type="checkbox" value="10-7 notes/FOQA Alert"
+                            id="tcpBriefARedirect">
                         <label class="form-check-label-sm" for="tcpBriefA">10-7 notes/FOQA Alert</label>
                     </div>
                 </div>
                 <div class="col-md-2 col-sm-3">
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="Steep GS" id="tcpBriefB">
+                        <input class="form-check-input" type="checkbox" value="Steep GS" id="tcpBriefBRedirect">
                         <label class="form-check-label" for="tcpBriefB">Steep GS</label>
                     </div>
                 </div>
                 <div class="col-md-2 col-sm-2">
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="Terrain" id="tcpBriefC">
+                        <input class="form-check-input" type="checkbox" value="Terrain" id="tcpBriefCRedirect">
                         <label class="form-check-label" for="tcpBriefC">Terrain</label>
                     </div>
                 </div>
@@ -228,42 +229,17 @@
             <div class="form-row form-group">
                 <div class="col-md-3 col-sm-9 col-xs-2">
                     <label class="col-form-label" for="airspaceType">Type of airspace:</label>
-                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                        <label class="btn btn-secondary radioButton1 btn-sm align-self-center">
-                            <span style="color:rgb(210, 213, 214)"><input type="radio" name="airspace" id="airspace"
-                                    value="Controlled" autocomplete="off">
-                                Controlled</span>
-                        </label>
-                        <label class="btn btn-secondary btn-sm align-self-center">
-                            <input type="radio" name="airspace" id="airspace" value="Uncontrolled" autocomplete="off">
-                            Uncontrolled
-                        </label>
-                    </div>
+                    <label class="col-form-label-sm" id="airspaceRedirect"></label>
                 </div>
                 <div class="col-md-3 col-sm-9 col-xs-2">
                     <label class="col-form-label" for="location">Location:</label>
-                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                        <label class="btn btn-secondary btn-sm align-self-center">
-                            <span style="color:rgb(58, 53, 53)"><input type="radio" name="location" id="location"
-                                    value="Lower 48" autocomplete="off">
-                                Lower 48</span>
-                        </label>
-                        <label class="btn btn-secondary btn-sm align-self-center">
-                            <span style="color:#bcbfc0"><input type="radio" name="location" id="location"
-                                    value="State of Alaska" autocomplete="off">
-                                State of Alaska</span>
-                        </label>
-                        <label class="btn btn-secondary btn-sm align-self-center">
-                            <input type="radio" name="location" id="location" value="Hawaii" autocomplete="off">
-                            Hawaii
-                        </label>
-                    </div>
+                    <label class="col-form-label-sm" id="locationRedirect"></label>
                 </div>
             </div>
             <div class="form-row form-group">
-                <label class="col-md-3 col-sm-2 col-xs-1 col-form-label" for="loExperience">Base: </label>
+                <label class="col-md-3 col-sm-2 col-xs-1 col-form-label" for="caBaseRedirect">Base: </label>
                 <div class="col-md-2 col-sm-2 col-xs-2">
-                    <select class="custom-select" id="caBase">
+                    <select class="custom-select" id="caBaseRedirect">
                         <option selected>C.A.</option>
                         <option value="ANC">ANC</option>
                         <option value="LAX">LAX</option>
@@ -273,7 +249,7 @@
                     </select>
                 </div>
                 <div class="col-md-2 col-sm-2 col-xs-2">
-                    <select class="custom-select" id="foBase">
+                    <select class="custom-select" id="foBaseRedirect">
                         <option selected>F.O.</option>
                         <option value="ANC">ANC</option>
                         <option value="LAX">LAX</option>
@@ -287,7 +263,7 @@
                 <label class="col-md-3 col-sm-7 col-xs-4 col-form-label" for="loExperience">Level of experience in type
                     (hrs):</label>
                 <div class="col-md-2 col-sm-2 col-xs-2">
-                    <select class="custom-select" id="caLOExperience">
+                    <select class="custom-select" id="caLOExperienceRedirect">
                         <option selected>C.A.</option>
                         <option value="&lt; 500"> &lt; 500</option>
                         <option value="500-1000"> 500-1000</option>
@@ -295,7 +271,7 @@
                     </select>
                 </div>
                 <div class="col-md-2 col-sm-2 col-xs-2">
-                    <select class="custom-select" id="foLOExperience">
+                    <select class="custom-select" id="foLOExperienceRedirect">
                         <option selected>F.O.</option>
                         <option value="&lt; 500"> &lt; 500</option>
                         <option value="500-1000"> 500-1000</option>
@@ -318,13 +294,13 @@
                 </div>
                 <div class="col-md-2 col-sm-3 col-xs-3">
                     <div class="form-row">
-                        <select class="custom-select" id="caROExperience">
+                        <select class="custom-select" id="caROExperienceRedirect">
                             <option selected>C.A. (hrs)</option>
                             <option value="&lt; 100"> &lt; 100</option>
                             <option value="100-200"> 100-200</option>
                             <option value="&gt; 200"> &gt; 200</option>
                         </select>
-                        <select class="custom-select" id="caROLandings">
+                        <select class="custom-select" id="caROLandingsRedirect">
                             <option selected>C.A.</option>
                             <option value="&lt; 100"> &lt; 10</option>
                             <option value="10-20"> 10-20</option>
@@ -334,13 +310,13 @@
                 </div>
                 <div class="col-md-2 col-sm-3 col-xs-3">
                     <div class="form-row">
-                        <select class="custom-select" id="foROExperience">
+                        <select class="custom-select" id="foROExperienceRedirect">
                             <option selected>F.O. (hrs)</option>
                             <option value="&lt; 500"> &lt; 500</option>
                             <option value="500-1000"> 500-1000</option>
                             <option value="&gt; 1000"> &gt; 1000</option>
                         </select>
-                        <select class="custom-select" id="foROLandings">
+                        <select class="custom-select" id="foROLandingsRedirect">
                             <option selected>F.O.</option>
                             <option value="&lt; 100"> &lt; 10</option>
                             <option value="10-20"> 10-20</option>
@@ -352,44 +328,23 @@
             <div class="form-row row-narrower form-group">
                 <div class="col-md-1 col-sm-2 col-xs-2">
                     <label class="col-form-label-sm" for="pilotFlying">Flying:</label>
-                    <div class="btn-group btn-group-toggle mb-3" data-toggle="buttons">
-                        <label class="btn btn-secondary btn-sm align-self-center">
-                            <span style="color:#bcbfc0">
-                                <input type="radio" name="pilotFlying" id="pilotFlying" value="F.O."
-                                    autocomplete="off">F.O.
-                            </span>
-                        </label>
-                        <label class="btn btn-secondary btn-sm align-self-center">
-                            <input type="radio" name="pilotFlying" id="pilotFlying" value="C.A." autocomplete="off">C.A.
-                        </label>
-                    </div>
+                    <b><label class="col-form-label-sm" id="pilotFlyingRedirect"></label></b>
                 </div>
                 <div class="col-md-1 col-sm-2 col-xs-2">
                     <label class="col-form-label-sm" for="pilotFlying">Monitoring:</label>
-                    <div class="btn-group btn-group-toggle mb-3" data-toggle="buttons">
-                        <label class="btn btn-secondary btn-sm align-self-center">
-                            <span style="color:#bcbfc0">
-                                <input type="radio" name="pilotMonitoring" id="pilotMonitoring" value="F.O."
-                                    autocomplete="off">F.O.
-                            </span>
-                        </label>
-                        <label class="btn btn-secondary btn-sm align-self-center">
-                            <input type="radio" name="pilotMonitoring" id="pilotMonitoring" value="C.A."
-                                autocomplete="off">C.A.
-                        </label>
-                    </div>
+                <b><label class="col-form-label-sm" id="pilotMonitoringRedirect"></label></b>
                 </div>
                 <label class="col-md-4 col-sm-5 col-xs-5 col-form-label-sm ml-1" for="gatesUnderstandingLabel">Did PF/PM
                     understand
                     the FOM Stabilized approach
                     gates?</label>
                 <div class="col-md-1 col-sm-2 col-xs-2">
-                    <select class="custom-select" id="pfGatesUnderstanding">
+                    <select class="custom-select" id="pfGatesUnderstandingRedirect">
                         <option value="" selected>P.F.</option>
                         <option value="No">No</option>
                         <option value="Yes">Yes</option>
                     </select>
-                    <select class="custom-select" id="pmGatesUnderstanding">
+                    <select class="custom-select" id="pmGatesUnderstandingRedirect">
                         <option value="" selected>P.M.</option>
                         <option value="No">No</option>
                         <option value="Yes">Yes</option>
@@ -399,19 +354,14 @@
             <div class="form-row">
                 <label class="col-md-6 col-sm-8 col-xs col-form-label-sm" for="errorChainLabel">
                     At what altitude did the error chain start for this CUA? (HAT or RA)</label>
-                <select class="col-md-1 col-sm-3 col-xs custom-select" id="errorChain">
-                    <option value="" selected>Select</option>
-                    <option value="&lt; 1000"> &lt; 1000</option>
-                    <option value="1000-2000"> 1000-2000</option>
-                    <option value="&gt; 2000"> &gt; 2000</option>
-                </select>
+                <label class="col-form-label-sm" id="errorChainRedirect"></label>
             </div>
             <div class="form-row row-narrower">
                 <label class="col-md-7 col-sm-8 col-form-label-sm" for="unmitigatedThreatsLabel">
                     What were the unmitigated threats or errors identified above the 1000ft configuration gate?</label>
             </div>
             <div class="form-row">
-                <select class="col-md-5 col-sm-8 custom-select" id="unmitigatedThreats" multiple>
+                <select class="col-md-5 col-sm-8 custom-select" id="unmitigatedThreatsRedirect" multiple>
                     <option value="" selected>Choose all that apply</option>
                     <option value="n/a"> n/a</option>
                     <option value="Improper configuration schedule for energy state"> Improper configuration
@@ -430,39 +380,17 @@
                     </label>
                 </div>
                 <div class="col-md-1 col-sm-2 col-xs-1">
-                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                        <label class="btn btn-secondary radioButton1 btn-sm align-self-center">
-                            <span style="color:rgb(210, 213, 214)"><input type="radio" name="fullyConfigured"
-                                    id="fullyConfigured" value="Yes" autocomplete="off">
-                                Yes</span>
-                        </label>
-                        <label class="btn btn-secondary btn-sm align-self-center">
-                            <input type="radio" name="fullyConfigured" id="fullyConfigured" value="No"
-                                autocomplete="off">
-                            No
-                        </label>
-                    </div>
+                    <label class="col-form-label-sm" id="fullyConfiguredRedirect"></label>
                 </div>
             </div>
-            <div class="form-row" id="pmCommunicationUnfiguredHide">
+            <div class="form-row" id="pmCommunicationUnfiguredHideRedirect">
                 <div class="col-md-6 col-sm-9 col-xs-8">
                     <label class="col-form-label-sm" for="pmCommunication">
                         If yes, did the PM communicate not configured?
                     </label>
                 </div>
                 <div class="col-md-1 col-sm-2 col-xs-1">
-                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                        <label class="btn btn-secondary btn-sm align-self-center">
-                            <span style="color:rgb(210, 213, 214)"><input type="radio" name="pmCommunicationUnfigured"
-                                    id="pmCommunicationUnfigured" value="Yes" autocomplete="off">
-                                Yes</span>
-                        </label>
-                        <label class="btn btn-secondary btn-sm align-self-center">
-                            <input type="radio" name="pmCommunicationUnfigured" id="pmCommunicationUnfigured" value="No"
-                                autocomplete="off">
-                            No
-                        </label>
-                    </div>
+                    <label class="col-form-label-sm" id="pmCommunicationRedirect"></label>
                 </div>
             </div>
             <div class="form-row">
@@ -471,17 +399,7 @@
                         Did the PF acknowledge? </label>
                 </div>
                 <div class="col-md-1 col-sm-2 col-xs-1">
-                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                        <label class="btn btn-secondary radioButton1 btn-sm align-self-center">
-                            <span style="color:rgb(210, 213, 214)"><input type="radio" name="pfAcknowledge"
-                                    id="pfAcknowledge" value="Yes" autocomplete="off">
-                                Yes</span>
-                        </label>
-                        <label class="btn btn-secondary btn-sm align-self-center">
-                            <input type="radio" name="pfAcknowledge" id="pfAcknowledge" value="No" autocomplete="off">
-                            No
-                        </label>
-                    </div>
+                    <label class="col-form-label-sm" id="pfAcknowledgeRedirect"></label>
                 </div>
             </div>
             <div class="form-row">
@@ -491,36 +409,16 @@
                     </label>
                 </div>
                 <div class="col-md-1 col-sm-2 col-xs-1">
-                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                        <label class="btn btn-secondary radioButton1 btn-sm align-self-center">
-                            <span style="color:rgb(210, 213, 214)"><input type="radio" name="pm500ftHAT" id="pm500ftHAT"
-                                    value="Yes" autocomplete="off">
-                                Yes</span>
-                        </label>
-                        <label class="btn btn-secondary btn-sm align-self-center">
-                            <input type="radio" name="pm500ftHAT" id="pm500ftHAT" value="No" autocomplete="off">
-                            No
-                        </label>
-                    </div>
+                    <label class="col-form-label-sm" id="pm500ftHATRedirect"></label>
                 </div>
             </div>
-            <div class="form-row" id="pmNotStableHide">
+            <div class="form-row" id="pmNotStableHideRedirect">
                 <div class="col-md-6 col-sm-9 col-xs-8">
                     <label class="col-form-label-sm" for="pmNotStable">
                         If yes, did the PM communicate not stable?</label>
                 </div>
                 <div class="col-md-1 col-sm-2 col-xs-1">
-                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                        <label class="btn btn-secondary radioButton1 btn-sm align-self-center">
-                            <span style="color:rgb(210, 213, 214)"><input type="radio" name="pmNotStable"
-                                    id="pmNotStable" value="Yes" autocomplete="off">
-                                Yes</span>
-                        </label>
-                        <label class="btn btn-secondary btn-sm align-self-center">
-                            <input type="radio" name="pmNotStable" id="pmNotStable" value="No" autocomplete="off">
-                            No
-                        </label>
-                    </div>
+                    <label class="col-form-label-sm" id="pmNotStableRedirect"></label>
                 </div>
             </div>
             <div class="form-row">
@@ -530,43 +428,22 @@
                     </label>
                 </div>
                 <div class="col-md-1 col-sm-2 col-xs-1">
-                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                        <label class="btn btn-secondary radioButton1 btn-sm align-self-center">
-                            <span style="color:rgb(210, 213, 214)"><input type="radio" name="goAround500"
-                                    id="goAround500" value="Yes" autocomplete="off">
-                                Yes</span>
-                        </label>
-                        <label class="btn btn-secondary btn-sm align-self-center">
-                            <input type="radio" name="goAround500" id="goAround500" value="No" autocomplete="off">
-                            No
-                        </label>
-                    </div>
+                    <label class="col-form-label-sm" id="goAround500Redirect"></label>
                 </div>
             </div>
-            <div class="form-row" id="pfAcknowledgeGoAroundHide">
+            <div class="form-row" id="pfAcknowledgeGoAroundHideRedirect">
                 <div class="col-md-6 col-sm-9 col-xs-8">
                     <label class="col-form-label-sm" for="pfAcknowledgeGoAround">
                         If yes, did PF acknowledge?</label>
                 </div>
                 <div class="col-md-1 col-sm-2 col-xs-1">
-                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                        <label class="btn btn-secondary radioButton1 btn-sm align-self-center">
-                            <span style="color:rgb(210, 213, 214)"><input type="radio" name="pfAcknowledgeGoAround"
-                                    id="pfAcknowledgeGoAround" value="Yes" autocomplete="off">
-                                Yes</span>
-                        </label>
-                        <label class="btn btn-secondary btn-sm align-self-center">
-                            <input type="radio" name="pfAcknowledgeGoAround" id="pfAcknowledgeGoAround" value="No"
-                                autocomplete="off">
-                            No
-                        </label>
-                    </div>
+                    <label class="col-form-label-sm" id="pfAcknowledgeGoAroundRedirect"></label>
                 </div>
             </div>
             <div class="form-row">
                 <label class="col-md-6 col-sm-11 col-form-label-sm" for="whyContinue">
                     Why did the crew continue? (choose all that apply)
-                    <select class="custom-select" id="whyContinue" multiple>
+                    <select class="custom-select" id="whyContinueRedirect" multiple>
                         <option value="" selected>Choose all that apply</option>
                         <option value="Poor Decision Making">Poor Decision Making</option>
                         <option value="Weather">Weather</option>
@@ -585,7 +462,7 @@
             <div class="form-row">
                 <label class="col-md-6 col-sm-11 col-form-label-sm" for="additionalFactors">
                     Crews assessment of additional factors: (choose all that apply)
-                    <select class="custom-select" id="additionalFactors" multiple>
+                    <select class="custom-select" id="additionalFactorsRedirect" multiple>
                         <option value="" selected>Choose all that apply</option>
                         <option value="ATC">ATC</option>
                         <option value="Weather">Weather</option>
@@ -603,12 +480,7 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text">Crew Contact Summary</span>
                     </div>
-                    <textarea class="form-control" aria-label="With textarea" id="ccSummary"></textarea>
-                </div>
-            </div>
-            <div class="row form-group">
-                <div class="col">
-                    <button type="submit" class="btn btn-warning" id="submitForm">Submit</button>
+                    <textarea class="form-control" aria-label="With textarea" id="ccSummaryRedirect"></textarea>
                 </div>
             </div>
         </form>
@@ -634,11 +506,10 @@
         crossorigin="anonymous"></script>
 
     <script>
-        /* Tooltip Code
-         $(function () {
-             $('[data-toggle="tooltip"]').tooltip()
-         })
-         */
+        $(document).ready(function () {
+    
+            getCUASurveyResults();
+});
 
         function changeColor(color) {
             if ($("#airspace").val() = "Controlled") {
