@@ -3,6 +3,7 @@ $(document).ready(function () {
     $("#pmCommunicationUnfiguredHide").hide();
     $("#pmNotStableHide").hide();
     $("#pfAcknowledgeGoAroundHide").hide();
+    $("#insertStatus").hide();
 
     getCUASurveyResults();
     //getEventId($("#eventIDRedirect").val());
@@ -48,7 +49,7 @@ $("#submitForm").on("click", function () {
     else if ($("#origin").val() == "") { }
     else if ($("#destination").val() == "") { }
     else {
-        addToSharepointListTest();
+        addToSharepointList();
     }
 });
 
@@ -163,6 +164,73 @@ function getEventId() {
 
 function getCUASurveyResults() {
 
+    var url = 'https://alaskaair.sharepoint.com/sites/FOQA/_vti_bin/ListData.svc/CUASurvey?$orderby=Id%20desc';
+
+    getListItems(url, function (data) {
+        var numRecords = data.d.results.length;
+
+        if (numRecords > 0) {
+            $.each(data, function (i, item) {
+
+                for (var i = 0; i < 1; i++) {
+                    $("#key_id").val(data.d.results[i].Id);
+                    document.getElementById("gatekeepersNameRedirect").innerHTML = data.d.results[i].GatekeepersName;
+                    document.getElementById('fleetRedirect').value = data.d.results[i].Fleet;
+                    $("#fleetModelRedirect").children().remove().end();
+                    $("#fleetModelRedirect").append('<option value="' + data.d.results[i].FleetModel + '">' + data.d.results[i].FleetModel + '</option>')
+                    document.getElementById('fleetModelRedirect').value = data.d.results[i].FleetModel;
+                    document.getElementById('approachTypeRedirect').value = data.d.results[i].ApproachType;
+                    document.getElementById('contactDate').value = data.d.results[i].ContactDate;
+                    document.getElementById('eventIDRedirect').value = data.d.results[i].EventID;
+                    document.getElementById('conditionsRedirect').value = data.d.results[i].Conditions;
+                    $("#originRedirect").children().remove().end();
+                    $("#originRedirect").append('<option value="' + data.d.results[i].Origin + '">' + data.d.results[i].Origin + '</option>')
+                    document.getElementById('originRedirect').value = data.d.results[i].Origin;
+                    $("#destinationRedirect").children().remove().end();
+                    $("#destinationRedirect").append('<option value="' + data.d.results[i].Destination + '">' + data.d.results[i].Destination + '</option>')
+                    document.getElementById('destinationRedirect').value = data.d.results[i].Destination;
+                    document.getElementById('landingRunwayRedirect').value = data.d.results[i].LandingRunway;
+                    $("#freighterRedirect").prop("checked", data.d.results[i].Freighter);
+                    $("#tcpBriefARedirect").prop("checked", data.d.results[i].TcpBriefA);
+                    $("#tcpBriefBRedirect").prop("checked", data.d.results[i].TcpBriefB);
+                    $("#tcpBriefCRedirect").prop("checked", data.d.results[i].TcpBriefC);
+                    document.getElementById('airspaceRedirect').innerHTML = data.d.results[i].Airspace;
+                    document.getElementById('locationRedirect').innerHTML = data.d.results[i].Location;
+                    document.getElementById('caBaseRedirect').value = data.d.results[i].Cabase;
+                    document.getElementById('foBaseRedirect').value = data.d.results[i].Fobase;
+                    document.getElementById('caLOExperienceRedirect').value = data.d.results[i].Caloexperience;
+                    document.getElementById('foLOExperienceRedirect').value = data.d.results[i].Foloexperience;
+                    document.getElementById('caROExperienceRedirect').value = data.d.results[i].Caroexperience;
+                    document.getElementById('caROLandingsRedirect').value = data.d.results[i].Carolandings;
+                    document.getElementById('foROExperienceRedirect').value = data.d.results[i].Foroexperience;
+                    document.getElementById('foROLandingsRedirect').value = data.d.results[i].Forolandings;
+                    document.getElementById('pilotFlyingRedirect').innerHTML = data.d.results[i].Pilotflying;
+                    document.getElementById('pilotMonitoringRedirect').innerHTML = data.d.results[i].Pilotmonitoring;
+                    document.getElementById('pfGatesUnderstandingRedirect').value = data.d.results[i].Pfgatesunderstanding;
+                    document.getElementById('pmGatesUnderstandingRedirect').value = data.d.results[i].Pmgatesunderstanding;
+                    document.getElementById('errorChainRedirect').value = data.d.results[i].Errorchain;
+                    data.d.results[i].Unmitigatedthreats.map(option => $("unmitigatedThreatsLabelRedirect").val(option));
+                    data.d.results[i].Unmitigatedthreats.map(option => $("#unmitigatedThreatsRedirect").val(option));
+                    document.getElementById('fullyConfiguredRedirect').innerHTML = data.d.results[i].Fullyconfigured;
+                    document.getElementById('pmCommunicationRedirect').innerHTML = data.d.results[i].Pmcommunicationunfigured;
+                    document.getElementById('pfAcknowledgeRedirect').innerHTML = data.d.results[i].Pfacknowledge;
+                    document.getElementById('pm500ftHATRedirect').innerHTML = data.d.results[i].Pm500Fthat;
+                    document.getElementById('pmNotStableRedirect').innerHTML = data.d.results[i].Pmnotstable;
+                    document.getElementById('goAround500Redirect').innerHTML = data.d.results[i].Goaround500;
+                    document.getElementById('pfAcknowledgeGoAroundRedirect').innerHTML = data.d.results[i].Pfacknowledgegoaround;
+                    document.getElementById('ccSummaryRedirect').value = data.d.results[i].Ccsummary;
+                    data.d.results[i].Whycontinue.map(option => $("#whycontinue").val(option));
+                    data.d.results[i].Additionalfactors.map(option => $("#additionalfactors").val(option));
+                }
+            })
+        }
+        else {
+        }
+    })
+};
+
+function getCUASurveyResultsTest() {
+
     var url = 'https://alaskaair.sharepoint.com/sites/FOQA/_vti_bin/ListData.svc/CUASurveyTest?$orderby=Id%20desc';
 
     getListItems(url, function (data) {
@@ -207,6 +275,7 @@ function getCUASurveyResults() {
                     document.getElementById('pfGatesUnderstandingRedirect').value = data.d.results[i].Pfgatesunderstanding;
                     document.getElementById('pmGatesUnderstandingRedirect').value = data.d.results[i].Pmgatesunderstanding;
                     document.getElementById('errorChainRedirect').value = data.d.results[i].Errorchain;
+                    data.d.results[i].Unmitigatedthreats.map(option => $("unmitigatedThreatsLabelRedirect").val(option));
                     data.d.results[i].Unmitigatedthreats.map(option => $("#unmitigatedThreatsRedirect").val(option));
                     document.getElementById('fullyConfiguredRedirect').innerHTML = data.d.results[i].Fullyconfigured;
                     document.getElementById('pmCommunicationRedirect').innerHTML = data.d.results[i].Pmcommunicationunfigured;
@@ -271,6 +340,7 @@ function addToSharepointListTest() {
         , "Fleet": ($("#fleet").val() == "") ? null : $('#fleet').val()
         , "FleetModel": ($("#fleetModel").val() == "") ? null : $('#fleetModel option:selected').text()
         , "ApproachType": ($("#approachType").val() == "") ? null : $('#approachType').val()
+        , "Freighter": ($("#freighter").val() == "") ? null : $('#freighter').val()
         , "TcpBriefA": $("#tcpBriefA").prop("checked")
         , "TcpBriefB": $("#tcpBriefB").prop("checked")
         , "TcpBriefC": $("#tcpBriefC").prop("checked")
@@ -325,26 +395,27 @@ function addToSharepointList() {
         , "Fleet": ($("#fleet").val() == "") ? null : $('#fleet').val()
         , "FleetModel": ($("#fleetModel").val() == "") ? null : $('#fleetModel option:selected').text()
         , "ApproachType": ($("#approachType").val() == "") ? null : $('#approachType').val()
+        , "Freighter": ($("#freighter").val() == "") ? null : $('#freighter').val()
         , "TcpBriefA": $("#tcpBriefA").prop("checked")
         , "TcpBriefB": $("#tcpBriefB").prop("checked")
         , "TcpBriefC": $("#tcpBriefC").prop("checked")
-        , "Airspace": (document.querySelectorAll("input[id=airspace]:checked")[0].value == "") ? null : document.querySelectorAll("input[id=airspace]:checked")[0].value
-        , "Location": (document.querySelectorAll("input[id=location]:checked")[0].value == "") ? null : document.querySelectorAll("input[id=location]:checked")[0].value
+        , "Airspace": (document.querySelectorAll("input[id=airspace]:checked")[0] == undefined) ? null : document.querySelectorAll("input[id=airspace]:checked")[0].value
+        , "Location": (document.querySelectorAll("input[id=location]:checked")[0] == undefined) ? null : document.querySelectorAll("input[id=location]:checked")[0].value
         , "Conditions": ($("#conditions").val() == "Conditions") ? null : $('#conditions').val()
-        , "Cabase": ($("#caBase").val() == "") ? null : $('#caBase').val()
-        , "Fobase": ($("#foBase").val() == "") ? null : $('#foBase').val()
-        , "Caloexperience": ($("#caLOExperience").val() == "") ? null : $('#caLOExperience').val()
-        , "Foloexperience": ($("#foLOExperience").val() == "") ? null : $('#foLOExperience').val()
-        , "Caroexperience": ($("#caROExperience").val() == "") ? null : $('#caROExperience').val()
-        , "Carolandings": ($("#caROLandings").val() == "") ? null : $('#caROLandings').val()
-        , "Foroexperience": ($("#foROExperience").val() == "") ? null : $('#foROExperience').val()
-        , "Forolandings": ($("#foROLandings").val() == "") ? null : $('#foROLandings').val()
-        , "Pilotflying": (document.querySelectorAll("input[id=pilotFlying]:checked")[0].value == "") ? null : document.querySelectorAll("input[id=pilotFlying]:checked")[0].value
-        , "Pilotmonitoring": (document.querySelectorAll("input[id=pilotMonitoring]:checked")[0].value == "") ? null : document.querySelectorAll("input[id=pilotMonitoring]:checked")[0].value
+        , "Cabase": ($("#caBase").val() == "C.A.") ? null : $('#caBase').val()
+        , "Fobase": ($("#foBase").val() == "F.O.") ? null : $('#foBase').val()
+        , "Caloexperience": ($("#caLOExperience").val() == "C.A.") ? null : $('#caLOExperience').val()
+        , "Foloexperience": ($("#foLOExperience").val() == "F.O.") ? null : $('#foLOExperience').val()
+        , "Caroexperience": ($("#caROExperience").val() == "C.A. (hrs)") ? null : $('#caROExperience').val()
+        , "Carolandings": ($("#caROLandings").val() == "C.A.") ? null : $('#caROLandings').val()
+        , "Foroexperience": ($("#foROExperience").val() == "F.O. (hrs)") ? null : $('#foROExperience').val()
+        , "Forolandings": ($("#foROLandings").val() == "F.O.") ? null : $('#foROLandings').val()
+        , "Pilotflying": (document.querySelectorAll("input[id=pilotFlying]:checked")[0] == undefined) ? null : document.querySelectorAll("input[id=pilotFlying]:checked")[0].value
+        , "Pilotmonitoring": (document.querySelectorAll("input[id=pilotMonitoring]:checked")[0] == undefined) ? null : document.querySelectorAll("input[id=pilotMonitoring]:checked")[0].value
         , "Pfgatesunderstanding": ($("#pfGatesUnderstanding").val() == "") ? null : $('#pfGatesUnderstanding').val()
         , "Pmgatesunderstanding": ($("#pmGatesUnderstanding").val() == "") ? null : $('#pmGatesUnderstanding').val()
         , "Errorchain": ($("#errorChain").val() == "") ? null : $('#errorChain').val()
-        , "Unmitigatedthreats": ($("#unmitigatedThreats").val() == "") ? null : $('#unmitigatedThreats').val()
+        , "Unmitigatedthreats": $('#unmitigatedThreats option:selected').toArray().map(item => item.text)
         , "Fullyconfigured": (document.querySelectorAll("input[id=fullyConfigured]:checked")[0] == undefined) ? null : document.querySelectorAll("input[id=fullyConfigured]:checked")[0].value
         , "Pmcommunicationunfigured": (document.querySelectorAll("input[id=pmCommunicationUnfigured]:checked")[0] == undefined) ? null : document.querySelectorAll("input[id=pmCommunicationUnfigured]:checked")[0].value
         , "Pfacknowledge": (document.querySelectorAll("input[id=pfAcknowledge]:checked")[0] == undefined) ? null : document.querySelectorAll("input[id=pfAcknowledge]:checked")[0].value
@@ -352,8 +423,8 @@ function addToSharepointList() {
         , "Pmnotstable": (document.querySelectorAll("input[id=pmNotStable]:checked")[0] == undefined) ? null : document.querySelectorAll("input[id=pmNotStable]:checked")[0].value
         , "Goaround500": (document.querySelectorAll("input[id=goAround500]:checked")[0] == undefined) ? null : document.querySelectorAll("input[id=goAround500]:checked")[0].value
         , "Pfacknowledgegoaround": (document.querySelectorAll("input[id=pfAcknowledgeGoAround]:checked")[0] == undefined) ? null : document.querySelectorAll("input[id=pfAcknowledgeGoAround]:checked")[0].value
-        , "Whycontinue": ($('#whyContinue option:selected').toArray().value == undefined) ? null : $('#whyContinue option:selected').toArray()
-        , "Additionalfactors": ($('#additionalfactors option:selected').toArray().value == undefined) ? null : $('#additionalfactors option:selected').toArray()
+        , "Whycontinue": $('#whyContinue option:selected').toArray().map(item => item.text)
+        , "Additionalfactors": $('#additionalFactors option:selected').toArray().map(item => item.text)
         , "Ccsummary": ($("#ccSummary").val() == "") ? null : $('#ccSummary').val()
     }//end item
 
@@ -364,7 +435,7 @@ function addToSharepointList() {
 }
 
 function insertIntoList(url, item, successMsg, failMsg, source) {
-    alert(JSON.stringify(item));
+    console.log(JSON.stringify(item));
     $.ajax({
         url: url,
         type: "POST",
@@ -383,19 +454,21 @@ function insertIntoList(url, item, successMsg, failMsg, source) {
             if (successMsg != '') {
                 console.log(successMsg);
                 console.log(JSON.stringify(item));
-                $("#attachmentStatus").html("Request sent! Please refresh page to see details below.").css({ "color": "green", "font-weight": "bold", "font-size": "18px" });
+                $("#insertStatus").show();
+                $("#insertStatus").html("Request sent!").css({ "color": "green", "font-weight": "bold", "font-size": "18px" });
                 location.href = _spPageContextInfo.webAbsoluteUrl + '/SitePages/CUASurveyRedirect.aspx';
             };
             //window.location.reload();
         },
         error: function (data) {
-            alert('fail');
+            //alert('fail');
             if (failMsg != '') {
-                alert(failMsg);
+                //alert(failMsg);
                 console.log(failMsg);
                 console.log(JSON.stringify(item));
                 //toggleCursor();
-                alert(failMsg);
+                $("#insertStatus").show();
+                $("#insertStatus").html("Request NOT entered!").css({ "color": "red", "font-weight": "bold", "font-size": "18px" });
             }
         }
 
