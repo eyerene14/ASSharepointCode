@@ -1,0 +1,3648 @@
+<Root_Element>
+   <CParameterSet>
+      <xml_version_number>1</xml_version_number>
+      <BasicInfo>Created by AUSDIGINC\shelby.balogh at 7 Aug 2017, 15:24 UTC-5</BasicInfo>
+      <Description></Description>
+      <Parameter>
+         <Resolvable>
+            <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+            <Specific_Guid>{00000001-03F6-4000-0000-000000000000}</Specific_Guid>
+         </Resolvable>
+         <Metadata>
+            <Item>
+               <Name>Chart:UpdateType</Name>
+               <Data>VisibleData</Data>
+            </Item>
+            <Item>
+               <Name>Chart:GroupName</Name>
+               <Data>Unstable Approach (HAT method) (2)</Data>
+            </Item>
+            <Item>
+               <Name>Chart:Color</Name>
+               <Data>Black</Data>
+            </Item>
+            <Item>
+               <Name>Chart:StripIndex</Name>
+               <Data>0</Data>
+            </Item>
+         </Metadata>
+      </Parameter>
+      <Parameter>
+         <Resolvable>
+            <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+            <Specific_Guid>{00000001-03E6-4000-0000-000000000000}</Specific_Guid>
+         </Resolvable>
+         <Metadata>
+            <Item>
+               <Name>Chart:UpdateType</Name>
+               <Data>VisibleData</Data>
+            </Item>
+            <Item>
+               <Name>Chart:GroupName</Name>
+               <Data>Unstable Approach (HAT method) (2)</Data>
+            </Item>
+            <Item>
+               <Name>Chart:Color</Name>
+               <Data>Black</Data>
+            </Item>
+            <Item>
+               <Name>Chart:StripIndex</Name>
+               <Data>1</Data>
+            </Item>
+         </Metadata>
+      </Parameter>
+      <Parameter>
+         <Resolvable>
+            <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+            <Specific_Guid>{00000001-03E7-4000-0000-000000000000}</Specific_Guid>
+         </Resolvable>
+         <Metadata>
+            <Item>
+               <Name>Chart:UpdateType</Name>
+               <Data>VisibleData</Data>
+            </Item>
+            <Item>
+               <Name>Chart:GroupName</Name>
+               <Data>Unstable Approach (HAT method) (2)</Data>
+            </Item>
+            <Item>
+               <Name>Chart:Color</Name>
+               <Data>Blue</Data>
+            </Item>
+            <Item>
+               <Name>Chart:StripIndex</Name>
+               <Data>1</Data>
+            </Item>
+         </Metadata>
+      </Parameter>
+      <Parameter>
+         <Resolvable>
+            <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+            <Specific_Guid>{00000001-03E8-4000-0000-000000000000}</Specific_Guid>
+         </Resolvable>
+         <Metadata>
+            <Item>
+               <Name>Chart:UpdateType</Name>
+               <Data>VisibleData</Data>
+            </Item>
+            <Item>
+               <Name>Chart:GroupName</Name>
+               <Data>Unstable Approach (HAT method) (2)</Data>
+            </Item>
+            <Item>
+               <Name>Chart:Color</Name>
+               <Data>Green</Data>
+            </Item>
+            <Item>
+               <Name>Chart:StripIndex</Name>
+               <Data>1</Data>
+            </Item>
+         </Metadata>
+      </Parameter>
+      <Parameter>
+         <Resolvable>
+            <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+            <Specific_Guid>{00000001-03E9-4000-0000-000000000000}</Specific_Guid>
+         </Resolvable>
+         <Metadata>
+            <Item>
+               <Name>Chart:UpdateType</Name>
+               <Data>VisibleData</Data>
+            </Item>
+            <Item>
+               <Name>Chart:GroupName</Name>
+               <Data>Unstable Approach (HAT method) (2)</Data>
+            </Item>
+            <Item>
+               <Name>Chart:Color</Name>
+               <Data>Magenta</Data>
+            </Item>
+            <Item>
+               <Name>Chart:StripIndex</Name>
+               <Data>1</Data>
+            </Item>
+         </Metadata>
+      </Parameter>
+      <Parameter>
+         <Resolvable>
+            <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+            <Specific_Guid>{00000001-03EA-4000-0000-000000000000}</Specific_Guid>
+         </Resolvable>
+         <Metadata>
+            <Item>
+               <Name>Chart:UpdateType</Name>
+               <Data>VisibleData</Data>
+            </Item>
+            <Item>
+               <Name>Chart:GroupName</Name>
+               <Data>Unstable Approach (HAT method) (2)</Data>
+            </Item>
+            <Item>
+               <Name>Chart:Color</Name>
+               <Data>Cyan</Data>
+            </Item>
+            <Item>
+               <Name>Chart:StripIndex</Name>
+               <Data>1</Data>
+            </Item>
+         </Metadata>
+      </Parameter>
+      <Parameter>
+         <Resolvable>
+            <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+            <Specific_Guid>{00000001-03EB-4000-0000-000000000000}</Specific_Guid>
+         </Resolvable>
+         <Metadata>
+            <Item>
+               <Name>Chart:UpdateType</Name>
+               <Data>VisibleData</Data>
+            </Item>
+            <Item>
+               <Name>Chart:GroupName</Name>
+               <Data>Unstable Approach (HAT method) (2)</Data>
+            </Item>
+            <Item>
+               <Name>Chart:Color</Name>
+               <Data>Purple</Data>
+            </Item>
+            <Item>
+               <Name>Chart:StripIndex</Name>
+               <Data>1</Data>
+            </Item>
+         </Metadata>
+      </Parameter>
+      <Parameter>
+         <Resolvable>
+            <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+            <Specific_Guid>{00000001-03F7-4000-0000-000000000000}</Specific_Guid>
+         </Resolvable>
+         <Metadata>
+            <Item>
+               <Name>Chart:UpdateType</Name>
+               <Data>VisibleData</Data>
+            </Item>
+            <Item>
+               <Name>Chart:GroupName</Name>
+               <Data>Unstable Approach (HAT method) (2)</Data>
+            </Item>
+            <Item>
+               <Name>Chart:Color</Name>
+               <Data>Brown</Data>
+            </Item>
+            <Item>
+               <Name>Chart:StripIndex</Name>
+               <Data>1</Data>
+            </Item>
+         </Metadata>
+      </Parameter>
+      <Parameter>
+         <Resolvable>
+            <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+            <Specific_Guid>{00000001-03EF-4000-0000-000000000000}</Specific_Guid>
+         </Resolvable>
+         <Metadata>
+            <Item>
+               <Name>Chart:UpdateType</Name>
+               <Data>VisibleData</Data>
+            </Item>
+            <Item>
+               <Name>Chart:GroupName</Name>
+               <Data>Unstable Approach (HAT method) (2)</Data>
+            </Item>
+            <Item>
+               <Name>Chart:Color</Name>
+               <Data>Black</Data>
+            </Item>
+            <Item>
+               <Name>Chart:LineStyle</Name>
+               <Data>Dash</Data>
+            </Item>
+            <Item>
+               <Name>Chart:StripIndex</Name>
+               <Data>1</Data>
+            </Item>
+         </Metadata>
+      </Parameter>
+      <Parameter>
+         <Resolvable>
+            <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+            <Specific_Guid>{00000001-03F0-4000-0000-000000000000}</Specific_Guid>
+         </Resolvable>
+         <Metadata>
+            <Item>
+               <Name>Chart:UpdateType</Name>
+               <Data>VisibleData</Data>
+            </Item>
+            <Item>
+               <Name>Chart:GroupName</Name>
+               <Data>Unstable Approach (HAT method) (2)</Data>
+            </Item>
+            <Item>
+               <Name>Chart:Color</Name>
+               <Data>Blue</Data>
+            </Item>
+            <Item>
+               <Name>Chart:LineStyle</Name>
+               <Data>Dash</Data>
+            </Item>
+            <Item>
+               <Name>Chart:StripIndex</Name>
+               <Data>1</Data>
+            </Item>
+         </Metadata>
+      </Parameter>
+      <Parameter>
+         <Resolvable>
+            <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+            <Specific_Guid>{00000001-03F1-4000-0000-000000000000}</Specific_Guid>
+         </Resolvable>
+         <Metadata>
+            <Item>
+               <Name>Chart:UpdateType</Name>
+               <Data>VisibleData</Data>
+            </Item>
+            <Item>
+               <Name>Chart:GroupName</Name>
+               <Data>Unstable Approach (HAT method) (2)</Data>
+            </Item>
+            <Item>
+               <Name>Chart:Color</Name>
+               <Data>Green</Data>
+            </Item>
+            <Item>
+               <Name>Chart:LineStyle</Name>
+               <Data>Dash</Data>
+            </Item>
+            <Item>
+               <Name>Chart:StripIndex</Name>
+               <Data>1</Data>
+            </Item>
+         </Metadata>
+      </Parameter>
+      <Parameter>
+         <Resolvable>
+            <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+            <Specific_Guid>{00000001-03F2-4000-0000-000000000000}</Specific_Guid>
+         </Resolvable>
+         <Metadata>
+            <Item>
+               <Name>Chart:UpdateType</Name>
+               <Data>VisibleData</Data>
+            </Item>
+            <Item>
+               <Name>Chart:GroupName</Name>
+               <Data>Unstable Approach (HAT method) (2)</Data>
+            </Item>
+            <Item>
+               <Name>Chart:Color</Name>
+               <Data>Magenta</Data>
+            </Item>
+            <Item>
+               <Name>Chart:LineStyle</Name>
+               <Data>Dash</Data>
+            </Item>
+            <Item>
+               <Name>Chart:StripIndex</Name>
+               <Data>1</Data>
+            </Item>
+         </Metadata>
+      </Parameter>
+      <Parameter>
+         <Resolvable>
+            <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+            <Specific_Guid>{00000001-03F3-4000-0000-000000000000}</Specific_Guid>
+         </Resolvable>
+         <Metadata>
+            <Item>
+               <Name>Chart:UpdateType</Name>
+               <Data>VisibleData</Data>
+            </Item>
+            <Item>
+               <Name>Chart:GroupName</Name>
+               <Data>Unstable Approach (HAT method) (2)</Data>
+            </Item>
+            <Item>
+               <Name>Chart:Color</Name>
+               <Data>Cyan</Data>
+            </Item>
+            <Item>
+               <Name>Chart:LineStyle</Name>
+               <Data>Dash</Data>
+            </Item>
+            <Item>
+               <Name>Chart:StripIndex</Name>
+               <Data>1</Data>
+            </Item>
+         </Metadata>
+      </Parameter>
+      <Parameter>
+         <Resolvable>
+            <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+            <Specific_Guid>{00000001-03F4-4000-0000-000000000000}</Specific_Guid>
+         </Resolvable>
+         <Metadata>
+            <Item>
+               <Name>Chart:UpdateType</Name>
+               <Data>VisibleData</Data>
+            </Item>
+            <Item>
+               <Name>Chart:GroupName</Name>
+               <Data>Unstable Approach (HAT method) (2)</Data>
+            </Item>
+            <Item>
+               <Name>Chart:Color</Name>
+               <Data>Purple</Data>
+            </Item>
+            <Item>
+               <Name>Chart:LineStyle</Name>
+               <Data>Dash</Data>
+            </Item>
+            <Item>
+               <Name>Chart:StripIndex</Name>
+               <Data>1</Data>
+            </Item>
+         </Metadata>
+      </Parameter>
+      <Parameter>
+         <Resolvable>
+            <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+            <Specific_Guid>{00000001-03F5-4000-0000-000000000000}</Specific_Guid>
+         </Resolvable>
+         <Metadata>
+            <Item>
+               <Name>Chart:UpdateType</Name>
+               <Data>VisibleData</Data>
+            </Item>
+            <Item>
+               <Name>Chart:GroupName</Name>
+               <Data>Unstable Approach (HAT method) (2)</Data>
+            </Item>
+            <Item>
+               <Name>Chart:Color</Name>
+               <Data>Brown</Data>
+            </Item>
+            <Item>
+               <Name>Chart:LineStyle</Name>
+               <Data>Dash</Data>
+            </Item>
+            <Item>
+               <Name>Chart:StripIndex</Name>
+               <Data>1</Data>
+            </Item>
+         </Metadata>
+      </Parameter>
+      <Parameter>
+         <Resolvable>
+            <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+            <Specific_Guid>{00000001-05FD-4000-0000-000000000000}</Specific_Guid>
+         </Resolvable>
+         <Metadata>
+            <Item>
+               <Name>Chart:UpdateType</Name>
+               <Data>VisibleData</Data>
+            </Item>
+            <Item>
+               <Name>Chart:GroupName</Name>
+               <Data>Unstable Approach (HAT method) (2)</Data>
+            </Item>
+            <Item>
+               <Name>Chart:Color</Name>
+               <Data>Chocolate</Data>
+            </Item>
+            <Item>
+               <Name>Chart:LineStyle</Name>
+               <Data>Dash</Data>
+            </Item>
+            <Item>
+               <Name>Chart:StripIndex</Name>
+               <Data>1</Data>
+            </Item>
+         </Metadata>
+      </Parameter>
+      <Parameter>
+         <Resolvable>
+            <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+            <Specific_Guid>{00000001-0277-4000-0000-000000000000}</Specific_Guid>
+         </Resolvable>
+         <Metadata>
+            <Item>
+               <Name>Chart:UpdateType</Name>
+               <Data>VisibleData</Data>
+            </Item>
+            <Item>
+               <Name>Chart:GroupName</Name>
+               <Data>Unstable Approach (HAT method) (2)</Data>
+            </Item>
+            <Item>
+               <Name>Chart:Color</Name>
+               <Data>Black</Data>
+            </Item>
+            <Item>
+               <Name>Chart:StripIndex</Name>
+               <Data>2</Data>
+            </Item>
+         </Metadata>
+      </Parameter>
+      <Parameter>
+         <Resolvable>
+            <Resolver_Id>Resolvers.Formula</Resolver_Id>
+            <Specific_Guid>{B8974A40-87F4-BF64-E31F-91C419C28D35}</Specific_Guid>
+            <Specific_Data>
+               <Name>Caution Threshold</Name>
+               <Units>ft</Units>
+               <Formula>if( 
+
+exists([Measurement: Meteorological Condition for First Approach (0 = VMC, 1 = intermediate, 2 = IMC)]) and
+([Measurement: Meteorological Condition for First Approach (0 = VMC, 1 = intermediate, 2 = IMC)] = 2),
+
+[Unstable Approach (HAT method) (IMC Caution Threshold) (ft)],
+
+[Unstable Approach (HAT method) (VMC Caution Threshold) (ft)]
+)</Formula>
+               <CompiledFormula>4	if	4	and	4	exists	3	Measurement: Meteorological Condition for First Approach (0 = VMC, 1 = intermediate, 2 = IMC)	NULL	4	=	3	Measurement: Meteorological Condition for First Approach (0 = VMC, 1 = intermediate, 2 = IMC)	2	VT_R8;2	NULL	NULL	3	Unstable Approach (HAT method) (IMC Caution Threshold) (ft)	3	Unstable Approach (HAT method) (VMC Caution Threshold) (ft)	NULL</CompiledFormula>
+               <UsedObjectSet>
+                  <UsedObject>
+                     <Alias>Unstable Approach (HAT method) (IMC Caution Threshold) (ft)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                        <Specific_Guid>{00000002-0175-4000-0000-000000000000}</Specific_Guid>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>Measurement: Meteorological Condition for First Approach (0 = VMC, 1 = intermediate, 2 = IMC)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>ApmValue</Resolver_Id>
+                        <Specific_Guid>{E0501B08-4056-1314-8B1B-E47013B593DD}</Specific_Guid>
+                        <Specific_Data>
+                           <Item>{6535111A-26D0-4B74-A578-8146E4C653CE}</Item>
+                        </Specific_Data>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>Unstable Approach (HAT method) (VMC Caution Threshold) (ft)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                        <Specific_Guid>{00000002-0174-4000-0000-000000000000}</Specific_Guid>
+                     </Resolvable>
+                  </UsedObject>
+               </UsedObjectSet>
+            </Specific_Data>
+         </Resolvable>
+         <Metadata>
+            <Item>
+               <Name>Chart:UpdateType</Name>
+               <Data>VisibleData</Data>
+            </Item>
+            <Item>
+               <Name>Chart:GroupName</Name>
+               <Data>Unstable Approach (HAT method) (2)</Data>
+            </Item>
+            <Item>
+               <Name>Chart:Color</Name>
+               <Data>Orange</Data>
+            </Item>
+            <Item>
+               <Name>Chart:StripIndex</Name>
+               <Data>2</Data>
+            </Item>
+         </Metadata>
+      </Parameter>
+      <Parameter>
+         <Resolvable>
+            <Resolver_Id>Resolvers.Formula</Resolver_Id>
+            <Specific_Guid>{69ACAA2F-3818-0D25-A964-F349658BF9F5}</Specific_Guid>
+            <Specific_Data>
+               <Name>Warning Threshold</Name>
+               <Units>ft</Units>
+               <Formula>if( 
+exists([Measurement: Meteorological Condition for First Approach (0 = VMC, 1 = intermediate, 2 = IMC)]) and
+([Measurement: Meteorological Condition for First Approach (0 = VMC, 1 = intermediate, 2 = IMC)] = 2),
+
+[Unstable Approach (HAT method) (IMC Warning Threshold) (ft)],
+
+[Unstable Approach (HAT method) (VMC Warning Threshold) (ft)]
+)</Formula>
+               <CompiledFormula>4	if	4	and	4	exists	3	Measurement: Meteorological Condition for First Approach (0 = VMC, 1 = intermediate, 2 = IMC)	NULL	4	=	3	Measurement: Meteorological Condition for First Approach (0 = VMC, 1 = intermediate, 2 = IMC)	2	VT_R8;2	NULL	NULL	3	Unstable Approach (HAT method) (IMC Warning Threshold) (ft)	3	Unstable Approach (HAT method) (VMC Warning Threshold) (ft)	NULL</CompiledFormula>
+               <UsedObjectSet>
+                  <UsedObject>
+                     <Alias>Measurement: Meteorological Condition for First Approach (0 = VMC, 1 = intermediate, 2 = IMC)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>ApmValue</Resolver_Id>
+                        <Specific_Guid>{E0501B08-4056-1314-8B1B-E47013B593DD}</Specific_Guid>
+                        <Specific_Data>
+                           <Item>{6535111A-26D0-4B74-A578-8146E4C653CE}</Item>
+                        </Specific_Data>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>Unstable Approach (HAT method) (IMC Warning Threshold) (ft)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                        <Specific_Guid>{00000002-0177-4000-0000-000000000000}</Specific_Guid>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>Unstable Approach (HAT method) (VMC Warning Threshold) (ft)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                        <Specific_Guid>{00000002-0176-4000-0000-000000000000}</Specific_Guid>
+                     </Resolvable>
+                  </UsedObject>
+               </UsedObjectSet>
+            </Specific_Data>
+         </Resolvable>
+         <Metadata>
+            <Item>
+               <Name>Chart:UpdateType</Name>
+               <Data>VisibleData</Data>
+            </Item>
+            <Item>
+               <Name>Chart:GroupName</Name>
+               <Data>Unstable Approach (HAT method) (2)</Data>
+            </Item>
+            <Item>
+               <Name>Chart:Color</Name>
+               <Data>Red</Data>
+            </Item>
+            <Item>
+               <Name>Chart:StripIndex</Name>
+               <Data>2</Data>
+            </Item>
+         </Metadata>
+      </Parameter>
+      <Parameter>
+         <Resolvable>
+            <Resolver_Id>Resolvers.Formula</Resolver_Id>
+            <Specific_Guid>{D25C6767-5FFC-F8CE-F079-BA7F4AFF5002}</Specific_Guid>
+            <Specific_Data>
+               <Name>Upper Limit</Name>
+               <Units>dots</Units>
+               <Formula>if( exists([1) Stable on Glideslope]) and
+([Measurement: 1) Height Above Touchdown when Stable on Glideslope on 1st Approach (feet)] &lt; [Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)]),
+
+[1) Glideslope Upper Limit (HAT method) (dots)]
+
+)</Formula>
+               <CompiledFormula>4	if	4	and	4	exists	3	1) Stable on Glideslope	NULL	4	&lt;	3	Measurement: 1) Height Above Touchdown when Stable on Glideslope on 1st Approach (feet)	3	Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)	NULL	NULL	3	1) Glideslope Upper Limit (HAT method) (dots)	NULL</CompiledFormula>
+               <UsedObjectSet>
+                  <UsedObject>
+                     <Alias>1) Glideslope Upper Limit (HAT method) (dots)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                        <Specific_Guid>{00000001-04A7-4000-0000-000000000000}</Specific_Guid>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>1) Stable on Glideslope</Alias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                        <Specific_Guid>{00000001-03E6-4000-0000-000000000000}</Specific_Guid>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>Measurement: 1) Height Above Touchdown when Stable on Glideslope on 1st Approach (feet)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>ApmValue</Resolver_Id>
+                        <Specific_Guid>{B76B4A9B-B57D-39C9-E14E-300222ADCC81}</Specific_Guid>
+                        <Specific_Data>
+                           <Item>{0865FD43-76F0-4791-9F18-B6465F9DA5D4}</Item>
+                        </Specific_Data>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>ApmValue</Resolver_Id>
+                        <Specific_Guid>{AD305BA8-A264-3F33-2F0E-93AB2913C27C}</Specific_Guid>
+                        <Specific_Data>
+                           <Item>{D10657BB-67C6-486E-A60F-8A288CF5484E}</Item>
+                        </Specific_Data>
+                     </Resolvable>
+                  </UsedObject>
+               </UsedObjectSet>
+            </Specific_Data>
+         </Resolvable>
+         <Metadata>
+            <Item>
+               <Name>Chart:UpdateType</Name>
+               <Data>VisibleData</Data>
+            </Item>
+            <Item>
+               <Name>Chart:GroupName</Name>
+               <Data>Unstable Approach (HAT method) (2)</Data>
+            </Item>
+            <Item>
+               <Name>Chart:Color</Name>
+               <Data>Orange</Data>
+            </Item>
+            <Item>
+               <Name>Chart:StripIndex</Name>
+               <Data>3</Data>
+            </Item>
+         </Metadata>
+      </Parameter>
+      <Parameter>
+         <Resolvable>
+            <Resolver_Id>Resolvers.Formula</Resolver_Id>
+            <Specific_Guid>{D7396D6A-4A34-589C-8CF4-6D10CF3008FF}</Specific_Guid>
+            <Specific_Data>
+               <Name>1) Glide Slope Deviation</Name>
+               <Units>dots</Units>
+               <Formula>if( exists([1) Stable on Glideslope]) and
+([Measurement: 1) Height Above Touchdown when Stable on Glideslope on 1st Approach (feet)] &lt; [Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)]),
+
+[Glide Slope Deviation in Dots (1: only) (dots)]
+
+)</Formula>
+               <CompiledFormula>4	if	4	and	4	exists	3	1) Stable on Glideslope	NULL	4	&lt;	3	Measurement: 1) Height Above Touchdown when Stable on Glideslope on 1st Approach (feet)	3	Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)	NULL	NULL	3	Glide Slope Deviation in Dots (1: only) (dots)	NULL</CompiledFormula>
+               <UsedObjectSet>
+                  <UsedObject>
+                     <Alias>Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>ApmValue</Resolver_Id>
+                        <Specific_Guid>{AD305BA8-A264-3F33-2F0E-93AB2913C27C}</Specific_Guid>
+                        <Specific_Data>
+                           <Item>{D10657BB-67C6-486E-A60F-8A288CF5484E}</Item>
+                        </Specific_Data>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>Glide Slope Deviation in Dots (1: only) (dots)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                        <Specific_Guid>{00000001-0087-4000-0000-000000000000}</Specific_Guid>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>Measurement: 1) Height Above Touchdown when Stable on Glideslope on 1st Approach (feet)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>ApmValue</Resolver_Id>
+                        <Specific_Guid>{B76B4A9B-B57D-39C9-E14E-300222ADCC81}</Specific_Guid>
+                        <Specific_Data>
+                           <Item>{0865FD43-76F0-4791-9F18-B6465F9DA5D4}</Item>
+                        </Specific_Data>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>1) Stable on Glideslope</Alias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                        <Specific_Guid>{00000001-03E6-4000-0000-000000000000}</Specific_Guid>
+                     </Resolvable>
+                  </UsedObject>
+               </UsedObjectSet>
+            </Specific_Data>
+         </Resolvable>
+         <Metadata>
+            <Item>
+               <Name>Chart:UpdateType</Name>
+               <Data>VisibleData</Data>
+            </Item>
+            <Item>
+               <Name>Chart:GroupName</Name>
+               <Data>Unstable Approach (HAT method) (2)</Data>
+            </Item>
+            <Item>
+               <Name>Chart:Color</Name>
+               <Data>Black</Data>
+            </Item>
+            <Item>
+               <Name>Chart:StripIndex</Name>
+               <Data>3</Data>
+            </Item>
+         </Metadata>
+      </Parameter>
+      <Parameter>
+         <Resolvable>
+            <Resolver_Id>Resolvers.Formula</Resolver_Id>
+            <Specific_Guid>{7399E5E0-5C09-8542-6827-9597F2F145A1}</Specific_Guid>
+            <Specific_Data>
+               <Name>Lower Limit</Name>
+               <Units>dots</Units>
+               <Formula>if( exists([1) Stable on Glideslope]) and
+([Measurement: 1) Height Above Touchdown when Stable on Glideslope on 1st Approach (feet)] &lt; [Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)]),
+
+[1) Glideslope Lower Limit (HAT method) (dots)]
+)</Formula>
+               <CompiledFormula>4	if	4	and	4	exists	3	1) Stable on Glideslope	NULL	4	&lt;	3	Measurement: 1) Height Above Touchdown when Stable on Glideslope on 1st Approach (feet)	3	Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)	NULL	NULL	3	1) Glideslope Lower Limit (HAT method) (dots)	NULL</CompiledFormula>
+               <UsedObjectSet>
+                  <UsedObject>
+                     <Alias>1) Glideslope Lower Limit (HAT method) (dots)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                        <Specific_Guid>{00000001-04A8-4000-0000-000000000000}</Specific_Guid>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>1) Stable on Glideslope</Alias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                        <Specific_Guid>{00000001-03E6-4000-0000-000000000000}</Specific_Guid>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>Measurement: 1) Height Above Touchdown when Stable on Glideslope on 1st Approach (feet)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>ApmValue</Resolver_Id>
+                        <Specific_Guid>{B76B4A9B-B57D-39C9-E14E-300222ADCC81}</Specific_Guid>
+                        <Specific_Data>
+                           <Item>{0865FD43-76F0-4791-9F18-B6465F9DA5D4}</Item>
+                        </Specific_Data>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>ApmValue</Resolver_Id>
+                        <Specific_Guid>{AD305BA8-A264-3F33-2F0E-93AB2913C27C}</Specific_Guid>
+                        <Specific_Data>
+                           <Item>{D10657BB-67C6-486E-A60F-8A288CF5484E}</Item>
+                        </Specific_Data>
+                     </Resolvable>
+                  </UsedObject>
+               </UsedObjectSet>
+            </Specific_Data>
+         </Resolvable>
+         <Metadata>
+            <Item>
+               <Name>Chart:UpdateType</Name>
+               <Data>VisibleData</Data>
+            </Item>
+            <Item>
+               <Name>Chart:GroupName</Name>
+               <Data>Unstable Approach (HAT method) (2)</Data>
+            </Item>
+            <Item>
+               <Name>Chart:Color</Name>
+               <Data>Orange</Data>
+            </Item>
+            <Item>
+               <Name>Chart:StripIndex</Name>
+               <Data>3</Data>
+            </Item>
+         </Metadata>
+      </Parameter>
+      <Parameter>
+         <Resolvable>
+            <Resolver_Id>Resolvers.Formula</Resolver_Id>
+            <Specific_Guid>{0758E218-30FF-AA15-C88F-2A9ED8BE0188}</Specific_Guid>
+            <Specific_Data>
+               <Name>Upper Limit</Name>
+               <Units>dots</Units>
+               <Formula>if( exists([2) Stable on Localizer]) and
+([Measurement: 2) Height Above Touchdown when Stable on Localizer on 1st Approach (feet)] &lt; [Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)]),
+
+[2) Localizer Limit (HAT method) (dots)]
+
+)</Formula>
+               <CompiledFormula>4	if	4	and	4	exists	3	2) Stable on Localizer	NULL	4	&lt;	3	Measurement: 2) Height Above Touchdown when Stable on Localizer on 1st Approach (feet)	3	Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)	NULL	NULL	3	2) Localizer Limit (HAT method) (dots)	NULL</CompiledFormula>
+               <UsedObjectSet>
+                  <UsedObject>
+                     <Alias>2) Localizer Limit (HAT method) (dots)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                        <Specific_Guid>{00000001-04A9-4000-0000-000000000000}</Specific_Guid>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>2) Stable on Localizer</Alias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                        <Specific_Guid>{00000001-03E7-4000-0000-000000000000}</Specific_Guid>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>Measurement: 2) Height Above Touchdown when Stable on Localizer on 1st Approach (feet)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>ApmValue</Resolver_Id>
+                        <Specific_Guid>{3627656D-CBEB-C0D9-F586-40E28ED3E08C}</Specific_Guid>
+                        <Specific_Data>
+                           <Item>{6A97CC5B-56C3-4F16-B71C-FB4EC8B21F97}</Item>
+                        </Specific_Data>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>ApmValue</Resolver_Id>
+                        <Specific_Guid>{AD305BA8-A264-3F33-2F0E-93AB2913C27C}</Specific_Guid>
+                        <Specific_Data>
+                           <Item>{D10657BB-67C6-486E-A60F-8A288CF5484E}</Item>
+                        </Specific_Data>
+                     </Resolvable>
+                  </UsedObject>
+               </UsedObjectSet>
+            </Specific_Data>
+         </Resolvable>
+         <Metadata>
+            <Item>
+               <Name>Chart:UpdateType</Name>
+               <Data>VisibleData</Data>
+            </Item>
+            <Item>
+               <Name>Chart:GroupName</Name>
+               <Data>Unstable Approach (HAT method) (2)</Data>
+            </Item>
+            <Item>
+               <Name>Chart:Color</Name>
+               <Data>Orange</Data>
+            </Item>
+            <Item>
+               <Name>Chart:StripIndex</Name>
+               <Data>4</Data>
+            </Item>
+         </Metadata>
+      </Parameter>
+      <Parameter>
+         <Resolvable>
+            <Resolver_Id>Resolvers.Formula</Resolver_Id>
+            <Specific_Guid>{25DA76FC-DA1C-C4C7-BA04-744FADC7118B}</Specific_Guid>
+            <Specific_Data>
+               <Name>2) Localizer Deviation</Name>
+               <Units>dots</Units>
+               <Formula>if( exists([2) Stable on Localizer]) and
+([Measurement: 2) Height Above Touchdown when Stable on Localizer on 1st Approach (feet)] &lt; [Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)]),
+
+[Localizer Deviation in Dots (1; only) (dots)]
+
+)</Formula>
+               <CompiledFormula>4	if	4	and	4	exists	3	2) Stable on Localizer	NULL	4	&lt;	3	Measurement: 2) Height Above Touchdown when Stable on Localizer on 1st Approach (feet)	3	Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)	NULL	NULL	3	Localizer Deviation in Dots (1; only) (dots)	NULL</CompiledFormula>
+               <UsedObjectSet>
+                  <UsedObject>
+                     <Alias>Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>ApmValue</Resolver_Id>
+                        <Specific_Guid>{AD305BA8-A264-3F33-2F0E-93AB2913C27C}</Specific_Guid>
+                        <Specific_Data>
+                           <Item>{D10657BB-67C6-486E-A60F-8A288CF5484E}</Item>
+                        </Specific_Data>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>Localizer Deviation in Dots (1; only) (dots)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                        <Specific_Guid>{00000001-0088-4000-0000-000000000000}</Specific_Guid>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>2) Stable on Localizer</Alias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                        <Specific_Guid>{00000001-03E7-4000-0000-000000000000}</Specific_Guid>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>Measurement: 2) Height Above Touchdown when Stable on Localizer on 1st Approach (feet)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>ApmValue</Resolver_Id>
+                        <Specific_Guid>{3627656D-CBEB-C0D9-F586-40E28ED3E08C}</Specific_Guid>
+                        <Specific_Data>
+                           <Item>{6A97CC5B-56C3-4F16-B71C-FB4EC8B21F97}</Item>
+                        </Specific_Data>
+                     </Resolvable>
+                  </UsedObject>
+               </UsedObjectSet>
+            </Specific_Data>
+         </Resolvable>
+         <Metadata>
+            <Item>
+               <Name>Chart:UpdateType</Name>
+               <Data>VisibleData</Data>
+            </Item>
+            <Item>
+               <Name>Chart:GroupName</Name>
+               <Data>Unstable Approach (HAT method) (2)</Data>
+            </Item>
+            <Item>
+               <Name>Chart:Color</Name>
+               <Data>Blue</Data>
+            </Item>
+            <Item>
+               <Name>Chart:StripIndex</Name>
+               <Data>4</Data>
+            </Item>
+         </Metadata>
+      </Parameter>
+      <Parameter>
+         <Resolvable>
+            <Resolver_Id>Resolvers.Formula</Resolver_Id>
+            <Specific_Guid>{D487E4C1-A905-8CAE-C80F-4E226A2B5BC0}</Specific_Guid>
+            <Specific_Data>
+               <Name>Lower Limit</Name>
+               <Units>dots</Units>
+               <Formula>if( exists([2) Stable on Localizer]) and
+([Measurement: 2) Height Above Touchdown when Stable on Localizer on 1st Approach (feet)] &lt; [Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)]),
+
+-[2) Localizer Limit (HAT method) (dots)]
+
+)</Formula>
+               <CompiledFormula>4	if	4	and	4	exists	3	2) Stable on Localizer	NULL	4	&lt;	3	Measurement: 2) Height Above Touchdown when Stable on Localizer on 1st Approach (feet)	3	Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)	NULL	NULL	4	-	3	2) Localizer Limit (HAT method) (dots)	NULL	NULL</CompiledFormula>
+               <UsedObjectSet>
+                  <UsedObject>
+                     <Alias>2) Localizer Limit (HAT method) (dots)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                        <Specific_Guid>{00000001-04A9-4000-0000-000000000000}</Specific_Guid>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>2) Stable on Localizer</Alias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                        <Specific_Guid>{00000001-03E7-4000-0000-000000000000}</Specific_Guid>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>Measurement: 2) Height Above Touchdown when Stable on Localizer on 1st Approach (feet)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>ApmValue</Resolver_Id>
+                        <Specific_Guid>{3627656D-CBEB-C0D9-F586-40E28ED3E08C}</Specific_Guid>
+                        <Specific_Data>
+                           <Item>{6A97CC5B-56C3-4F16-B71C-FB4EC8B21F97}</Item>
+                        </Specific_Data>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>ApmValue</Resolver_Id>
+                        <Specific_Guid>{AD305BA8-A264-3F33-2F0E-93AB2913C27C}</Specific_Guid>
+                        <Specific_Data>
+                           <Item>{D10657BB-67C6-486E-A60F-8A288CF5484E}</Item>
+                        </Specific_Data>
+                     </Resolvable>
+                  </UsedObject>
+               </UsedObjectSet>
+            </Specific_Data>
+         </Resolvable>
+         <Metadata>
+            <Item>
+               <Name>Chart:UpdateType</Name>
+               <Data>VisibleData</Data>
+            </Item>
+            <Item>
+               <Name>Chart:GroupName</Name>
+               <Data>Unstable Approach (HAT method) (2)</Data>
+            </Item>
+            <Item>
+               <Name>Chart:Color</Name>
+               <Data>Orange</Data>
+            </Item>
+            <Item>
+               <Name>Chart:StripIndex</Name>
+               <Data>4</Data>
+            </Item>
+         </Metadata>
+      </Parameter>
+      <Parameter>
+         <Resolvable>
+            <Resolver_Id>Resolvers.Formula</Resolver_Id>
+            <Specific_Guid>{2689CE52-A7B9-9C12-9D15-E8FE1D588CBA}</Specific_Guid>
+            <Specific_Data>
+               <Name>Upper Limit</Name>
+               <Units>knots</Units>
+               <Formula>if( exists([3) Stable CAS - Vapp]) and
+([Measurement: 3) Height Above Touchdown when Stable CAS - Vapp on 1st Approach (feet)] &lt; [Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)]),
+
+[range-filtered Vapp] +
+
+[3) CAS - Vapp Upper Limit (HAT method) (knots)]
+
+)</Formula>
+               <CompiledFormula>4	if	4	and	4	exists	3	3) Stable CAS - Vapp	NULL	4	&lt;	3	Measurement: 3) Height Above Touchdown when Stable CAS - Vapp on 1st Approach (feet)	3	Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)	NULL	NULL	4	+	3	range-filtered Vapp	3	3) CAS - Vapp Upper Limit (HAT method) (knots)	NULL	NULL</CompiledFormula>
+               <UsedObjectSet>
+                  <UsedObject>
+                     <Alias>3) CAS - Vapp Upper Limit (HAT method) (knots)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                        <Specific_Guid>{00000001-04AA-4000-0000-000000000000}</Specific_Guid>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>3) Stable CAS - Vapp</Alias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                        <Specific_Guid>{00000001-03E8-4000-0000-000000000000}</Specific_Guid>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>Measurement: 3) Height Above Touchdown when Stable CAS - Vapp on 1st Approach (feet)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>ApmValue</Resolver_Id>
+                        <Specific_Guid>{9A1A299C-4D25-0030-ED3D-682E48CE798D}</Specific_Guid>
+                        <Specific_Data>
+                           <Item>{11683FC3-FA2A-419E-A488-DF28A562D426}</Item>
+                        </Specific_Data>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>ApmValue</Resolver_Id>
+                        <Specific_Guid>{AD305BA8-A264-3F33-2F0E-93AB2913C27C}</Specific_Guid>
+                        <Specific_Data>
+                           <Item>{D10657BB-67C6-486E-A60F-8A288CF5484E}</Item>
+                        </Specific_Data>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>range-filtered Vapp</Alias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.Formula</Resolver_Id>
+                        <Specific_Guid>{3840AF62-A3B8-C92D-9BA3-6ED8676F175D}</Specific_Guid>
+                        <Specific_Data>
+                           <Name>range-filtered Vapp</Name>
+                           <Formula>if( between([VApp (Approach Speed) (knots)],100,180),
+[VApp (Approach Speed) (knots)])</Formula>
+                           <CompiledFormula>4	if	4	between	3	VApp (Approach Speed) (knots)	2	VT_R8;100	2	VT_R8;180	NULL	3	VApp (Approach Speed) (knots)	NULL</CompiledFormula>
+                           <UsedObjectSet>
+                              <UsedObject>
+                                 <Alias>VApp (Approach Speed) (knots)</Alias>
+                                 <Resolvable>
+                                    <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                                    <Specific_Guid>{00000001-0081-4000-0000-000000000000}</Specific_Guid>
+                                 </Resolvable>
+                              </UsedObject>
+                           </UsedObjectSet>
+                        </Specific_Data>
+                     </Resolvable>
+                  </UsedObject>
+               </UsedObjectSet>
+            </Specific_Data>
+         </Resolvable>
+         <Metadata>
+            <Item>
+               <Name>Chart:UpdateType</Name>
+               <Data>VisibleData</Data>
+            </Item>
+            <Item>
+               <Name>Chart:GroupName</Name>
+               <Data>Unstable Approach (HAT method) (2)</Data>
+            </Item>
+            <Item>
+               <Name>Chart:Color</Name>
+               <Data>Orange</Data>
+            </Item>
+            <Item>
+               <Name>Chart:StripIndex</Name>
+               <Data>5</Data>
+            </Item>
+         </Metadata>
+      </Parameter>
+      <Parameter>
+         <Resolvable>
+            <Resolver_Id>Resolvers.Formula</Resolver_Id>
+            <Specific_Guid>{69E706A3-8183-4E46-BD29-08C2D4B17856}</Specific_Guid>
+            <Specific_Data>
+               <Name>3) Airspeed (calibrated)</Name>
+               <Units>knots</Units>
+               <Formula>if( exists([3) Stable _CAS - Vapp_]) and
+([Measurement: 3) Height Above Touchdown when Stable _CAS - Vapp_ on 1st Approach (feet)] &lt; [Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)]),
+
+[Airspeed (calibrated) (knots)]
+
+)</Formula>
+               <CompiledFormula>4	if	4	and	4	exists	3	3) Stable _CAS - Vapp_	NULL	4	&lt;	3	Measurement: 3) Height Above Touchdown when Stable _CAS - Vapp_ on 1st Approach (feet)	3	Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)	NULL	NULL	3	Airspeed (calibrated) (knots)	NULL</CompiledFormula>
+               <UsedObjectSet>
+                  <UsedObject>
+                     <Alias>3) Stable _CAS - Vapp_</Alias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                        <Specific_Guid>{00000001-03E8-4000-0000-000000000000}</Specific_Guid>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>ApmValue</Resolver_Id>
+                        <Specific_Guid>{AD305BA8-A264-3F33-2F0E-93AB2913C27C}</Specific_Guid>
+                        <Specific_Data>
+                           <Item>{D10657BB-67C6-486E-A60F-8A288CF5484E}</Item>
+                        </Specific_Data>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>Measurement: 3) Height Above Touchdown when Stable _CAS - Vapp_ on 1st Approach (feet)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>ApmValue</Resolver_Id>
+                        <Specific_Guid>{9A1A299C-4D25-0030-ED3D-682E48CE798D}</Specific_Guid>
+                        <Specific_Data>
+                           <Item>{11683FC3-FA2A-419E-A488-DF28A562D426}</Item>
+                        </Specific_Data>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>Airspeed (calibrated) (knots)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                        <Specific_Guid>{00000001-0015-4000-0000-000000000000}</Specific_Guid>
+                     </Resolvable>
+                  </UsedObject>
+               </UsedObjectSet>
+            </Specific_Data>
+         </Resolvable>
+         <Metadata>
+            <Item>
+               <Name>Chart:UpdateType</Name>
+               <Data>VisibleData</Data>
+            </Item>
+            <Item>
+               <Name>Chart:GroupName</Name>
+               <Data>Unstable Approach (HAT method) (2)</Data>
+            </Item>
+            <Item>
+               <Name>Chart:Color</Name>
+               <Data>Green</Data>
+            </Item>
+            <Item>
+               <Name>Chart:StripIndex</Name>
+               <Data>5</Data>
+            </Item>
+         </Metadata>
+      </Parameter>
+      <Parameter>
+         <Resolvable>
+            <Resolver_Id>Resolvers.Formula</Resolver_Id>
+            <Specific_Guid>{3499079C-0A93-82B6-D1B7-A39AAA5B45DD}</Specific_Guid>
+            <Specific_Data>
+               <Name>VApp (Target Approach Speed)</Name>
+               <Units>knots</Units>
+               <Formula>if( exists([3) Stable _CAS - Vapp_]) and
+([Measurement: 3) Height Above Touchdown when Stable _CAS - Vapp_ on 1st Approach (feet)] &lt; [Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)]),
+
+[range-filtered Vapp]
+
+)</Formula>
+               <CompiledFormula>4	if	4	and	4	exists	3	3) Stable _CAS - Vapp_	NULL	4	&lt;	3	Measurement: 3) Height Above Touchdown when Stable _CAS - Vapp_ on 1st Approach (feet)	3	Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)	NULL	NULL	3	range-filtered Vapp	NULL</CompiledFormula>
+               <UsedObjectSet>
+                  <UsedObject>
+                     <Alias>3) Stable _CAS - Vapp_</Alias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                        <Specific_Guid>{00000001-03E8-4000-0000-000000000000}</Specific_Guid>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>ApmValue</Resolver_Id>
+                        <Specific_Guid>{AD305BA8-A264-3F33-2F0E-93AB2913C27C}</Specific_Guid>
+                        <Specific_Data>
+                           <Item>{D10657BB-67C6-486E-A60F-8A288CF5484E}</Item>
+                        </Specific_Data>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>Measurement: 3) Height Above Touchdown when Stable _CAS - Vapp_ on 1st Approach (feet)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>ApmValue</Resolver_Id>
+                        <Specific_Guid>{9A1A299C-4D25-0030-ED3D-682E48CE798D}</Specific_Guid>
+                        <Specific_Data>
+                           <Item>{11683FC3-FA2A-419E-A488-DF28A562D426}</Item>
+                        </Specific_Data>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>range-filtered Vapp</Alias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.Formula</Resolver_Id>
+                        <Specific_Guid>{3840AF62-A3B8-C92D-9BA3-6ED8676F175D}</Specific_Guid>
+                        <Specific_Data>
+                           <Name>range-filtered Vapp</Name>
+                           <Formula>if( between([VApp (Approach Speed) (knots)],100,180),
+[VApp (Approach Speed) (knots)])</Formula>
+                           <CompiledFormula>4	if	4	between	3	VApp (Approach Speed) (knots)	2	VT_R8;100	2	VT_R8;180	NULL	3	VApp (Approach Speed) (knots)	NULL</CompiledFormula>
+                           <UsedObjectSet>
+                              <UsedObject>
+                                 <Alias>VApp (Approach Speed) (knots)</Alias>
+                                 <Resolvable>
+                                    <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                                    <Specific_Guid>{00000001-0081-4000-0000-000000000000}</Specific_Guid>
+                                 </Resolvable>
+                              </UsedObject>
+                           </UsedObjectSet>
+                        </Specific_Data>
+                     </Resolvable>
+                  </UsedObject>
+               </UsedObjectSet>
+            </Specific_Data>
+         </Resolvable>
+         <Metadata>
+            <Item>
+               <Name>Chart:UpdateType</Name>
+               <Data>VisibleData</Data>
+            </Item>
+            <Item>
+               <Name>Chart:GroupName</Name>
+               <Data>Unstable Approach (HAT method) (2)</Data>
+            </Item>
+            <Item>
+               <Name>Chart:Color</Name>
+               <Data>Gray</Data>
+            </Item>
+            <Item>
+               <Name>Chart:StripIndex</Name>
+               <Data>5</Data>
+            </Item>
+         </Metadata>
+      </Parameter>
+      <Parameter>
+         <Resolvable>
+            <Resolver_Id>Resolvers.Formula</Resolver_Id>
+            <Specific_Guid>{1A1F1FAA-5ECC-4EEC-F89C-2870D98AE21D}</Specific_Guid>
+            <Specific_Data>
+               <Name>Lower Limit</Name>
+               <Units>knots</Units>
+               <Formula>if( exists([3) Stable CAS - Vapp]) and
+([Measurement: 3) Height Above Touchdown when Stable CAS - Vapp on 1st Approach (feet)] &lt; [Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)]),
+
+[range-filtered Vapp] +
+
+[3) CAS - Vapp Lower Limit (HAT method) (knots)]
+
+)</Formula>
+               <CompiledFormula>4	if	4	and	4	exists	3	3) Stable CAS - Vapp	NULL	4	&lt;	3	Measurement: 3) Height Above Touchdown when Stable CAS - Vapp on 1st Approach (feet)	3	Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)	NULL	NULL	4	+	3	range-filtered Vapp	3	3) CAS - Vapp Lower Limit (HAT method) (knots)	NULL	NULL</CompiledFormula>
+               <UsedObjectSet>
+                  <UsedObject>
+                     <Alias>3) CAS - Vapp Lower Limit (HAT method) (knots)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                        <Specific_Guid>{00000001-04AB-4000-0000-000000000000}</Specific_Guid>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>3) Stable CAS - Vapp</Alias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                        <Specific_Guid>{00000001-03E8-4000-0000-000000000000}</Specific_Guid>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>Measurement: 3) Height Above Touchdown when Stable CAS - Vapp on 1st Approach (feet)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>ApmValue</Resolver_Id>
+                        <Specific_Guid>{9A1A299C-4D25-0030-ED3D-682E48CE798D}</Specific_Guid>
+                        <Specific_Data>
+                           <Item>{11683FC3-FA2A-419E-A488-DF28A562D426}</Item>
+                        </Specific_Data>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>ApmValue</Resolver_Id>
+                        <Specific_Guid>{AD305BA8-A264-3F33-2F0E-93AB2913C27C}</Specific_Guid>
+                        <Specific_Data>
+                           <Item>{D10657BB-67C6-486E-A60F-8A288CF5484E}</Item>
+                        </Specific_Data>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>range-filtered Vapp</Alias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.Formula</Resolver_Id>
+                        <Specific_Guid>{3840AF62-A3B8-C92D-9BA3-6ED8676F175D}</Specific_Guid>
+                        <Specific_Data>
+                           <Name>range-filtered Vapp</Name>
+                           <Formula>if( between([VApp (Approach Speed) (knots)],100,180),
+[VApp (Approach Speed) (knots)])</Formula>
+                           <CompiledFormula>4	if	4	between	3	VApp (Approach Speed) (knots)	2	VT_R8;100	2	VT_R8;180	NULL	3	VApp (Approach Speed) (knots)	NULL</CompiledFormula>
+                           <UsedObjectSet>
+                              <UsedObject>
+                                 <Alias>VApp (Approach Speed) (knots)</Alias>
+                                 <Resolvable>
+                                    <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                                    <Specific_Guid>{00000001-0081-4000-0000-000000000000}</Specific_Guid>
+                                 </Resolvable>
+                              </UsedObject>
+                           </UsedObjectSet>
+                        </Specific_Data>
+                     </Resolvable>
+                  </UsedObject>
+               </UsedObjectSet>
+            </Specific_Data>
+         </Resolvable>
+         <Metadata>
+            <Item>
+               <Name>Chart:UpdateType</Name>
+               <Data>VisibleData</Data>
+            </Item>
+            <Item>
+               <Name>Chart:GroupName</Name>
+               <Data>Unstable Approach (HAT method) (2)</Data>
+            </Item>
+            <Item>
+               <Name>Chart:Color</Name>
+               <Data>Orange</Data>
+            </Item>
+            <Item>
+               <Name>Chart:StripIndex</Name>
+               <Data>5</Data>
+            </Item>
+         </Metadata>
+      </Parameter>
+      <Parameter>
+         <Resolvable>
+            <Resolver_Id>Resolvers.Formula</Resolver_Id>
+            <Specific_Guid>{45F35F28-5321-4951-D129-EDA65F2431BB}</Specific_Guid>
+            <Specific_Data>
+               <Name>Upper Limit</Name>
+               <Units>knots</Units>
+               <Formula>if( exists([4) Stable CAS - Vref]) and
+([Measurement: 4) Height Above Touchdown when Stable CAS - Vref on 1st Approach (feet)] &lt; [Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)]),
+
+[Vref (best available) (knots)] +
+[4) CAS - Vref Upper Limit (HAT method) (knots)]
+
+)</Formula>
+               <CompiledFormula>4	if	4	and	4	exists	3	4) Stable CAS - Vref	NULL	4	&lt;	3	Measurement: 4) Height Above Touchdown when Stable CAS - Vref on 1st Approach (feet)	3	Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)	NULL	NULL	4	+	3	Vref (best available) (knots)	3	4) CAS - Vref Upper Limit (HAT method) (knots)	NULL	NULL</CompiledFormula>
+               <UsedObjectSet>
+                  <UsedObject>
+                     <Alias>4) CAS - Vref Upper Limit (HAT method) (knots)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                        <Specific_Guid>{00000001-04AD-4000-0000-000000000000}</Specific_Guid>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>4) Stable CAS - Vref</Alias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                        <Specific_Guid>{00000001-03E9-4000-0000-000000000000}</Specific_Guid>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>Measurement: 4) Height Above Touchdown when Stable CAS - Vref on 1st Approach (feet)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>ApmValue</Resolver_Id>
+                        <Specific_Guid>{3CA5A353-72C3-A3FB-FE0B-0F99C9C9F3A2}</Specific_Guid>
+                        <Specific_Data>
+                           <Item>{BCC84889-7EF3-4B57-8C3F-5A4400C53A8F}</Item>
+                        </Specific_Data>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>ApmValue</Resolver_Id>
+                        <Specific_Guid>{AD305BA8-A264-3F33-2F0E-93AB2913C27C}</Specific_Guid>
+                        <Specific_Data>
+                           <Item>{D10657BB-67C6-486E-A60F-8A288CF5484E}</Item>
+                        </Specific_Data>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>Vref (best available) (knots)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                        <Specific_Guid>{00000001-0405-4000-0000-000000000000}</Specific_Guid>
+                     </Resolvable>
+                  </UsedObject>
+               </UsedObjectSet>
+            </Specific_Data>
+         </Resolvable>
+         <Metadata>
+            <Item>
+               <Name>Chart:UpdateType</Name>
+               <Data>VisibleData</Data>
+            </Item>
+            <Item>
+               <Name>Chart:GroupName</Name>
+               <Data>Unstable Approach (HAT method) (2)</Data>
+            </Item>
+            <Item>
+               <Name>Chart:Color</Name>
+               <Data>Orange</Data>
+            </Item>
+            <Item>
+               <Name>Chart:StripIndex</Name>
+               <Data>6</Data>
+            </Item>
+         </Metadata>
+      </Parameter>
+      <Parameter>
+         <Resolvable>
+            <Resolver_Id>Resolvers.Formula</Resolver_Id>
+            <Specific_Guid>{2B59A558-FB05-450D-D092-8161551CA859}</Specific_Guid>
+            <Specific_Data>
+               <Name>4) Airspeed (calibrated)</Name>
+               <Units>knots</Units>
+               <Formula>if( exists([4) Stable _CAS - Vref_]) and
+([Measurement: 4) Height Above Touchdown when Stable _CAS - Vref_ on 1st Approach (feet)] &lt; [Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)]),
+
+[Airspeed (calibrated) (knots)]
+
+)</Formula>
+               <CompiledFormula>4	if	4	and	4	exists	3	4) Stable _CAS - Vref_	NULL	4	&lt;	3	Measurement: 4) Height Above Touchdown when Stable _CAS - Vref_ on 1st Approach (feet)	3	Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)	NULL	NULL	3	Airspeed (calibrated) (knots)	NULL</CompiledFormula>
+               <UsedObjectSet>
+                  <UsedObject>
+                     <Alias>Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>ApmValue</Resolver_Id>
+                        <Specific_Guid>{AD305BA8-A264-3F33-2F0E-93AB2913C27C}</Specific_Guid>
+                        <Specific_Data>
+                           <Item>{D10657BB-67C6-486E-A60F-8A288CF5484E}</Item>
+                        </Specific_Data>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>4) Stable _CAS - Vref_</Alias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                        <Specific_Guid>{00000001-03E9-4000-0000-000000000000}</Specific_Guid>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>Measurement: 4) Height Above Touchdown when Stable _CAS - Vref_ on 1st Approach (feet)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>ApmValue</Resolver_Id>
+                        <Specific_Guid>{3CA5A353-72C3-A3FB-FE0B-0F99C9C9F3A2}</Specific_Guid>
+                        <Specific_Data>
+                           <Item>{BCC84889-7EF3-4B57-8C3F-5A4400C53A8F}</Item>
+                        </Specific_Data>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>Airspeed (calibrated) (knots)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                        <Specific_Guid>{00000001-0015-4000-0000-000000000000}</Specific_Guid>
+                     </Resolvable>
+                  </UsedObject>
+               </UsedObjectSet>
+            </Specific_Data>
+         </Resolvable>
+         <Metadata>
+            <Item>
+               <Name>Chart:UpdateType</Name>
+               <Data>VisibleData</Data>
+            </Item>
+            <Item>
+               <Name>Chart:GroupName</Name>
+               <Data>Unstable Approach (HAT method) (2)</Data>
+            </Item>
+            <Item>
+               <Name>Chart:Color</Name>
+               <Data>Magenta</Data>
+            </Item>
+            <Item>
+               <Name>Chart:StripIndex</Name>
+               <Data>6</Data>
+            </Item>
+         </Metadata>
+      </Parameter>
+      <Parameter>
+         <Resolvable>
+            <Resolver_Id>Resolvers.Formula</Resolver_Id>
+            <Specific_Guid>{EEC1F5F5-42A7-261A-7C08-7F0C0EAB2F81}</Specific_Guid>
+            <Specific_Data>
+               <Name>Vref</Name>
+               <Units>knots</Units>
+               <Formula>if( exists([4) Stable _CAS - Vref_]) and
+([Measurement: 4) Height Above Touchdown when Stable _CAS - Vref_ on 1st Approach (feet)] &lt; [Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)]),
+
+[Vref (knots)]
+
+)</Formula>
+               <CompiledFormula>4	if	4	and	4	exists	3	4) Stable _CAS - Vref_	NULL	4	&lt;	3	Measurement: 4) Height Above Touchdown when Stable _CAS - Vref_ on 1st Approach (feet)	3	Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)	NULL	NULL	3	Vref (knots)	NULL</CompiledFormula>
+               <UsedObjectSet>
+                  <UsedObject>
+                     <Alias>Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>ApmValue</Resolver_Id>
+                        <Specific_Guid>{AD305BA8-A264-3F33-2F0E-93AB2913C27C}</Specific_Guid>
+                        <Specific_Data>
+                           <Item>{D10657BB-67C6-486E-A60F-8A288CF5484E}</Item>
+                        </Specific_Data>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>Vref (knots)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.Formula</Resolver_Id>
+                        <Specific_Guid>{08606681-F11F-0603-C6AE-D487BBA14098}</Specific_Guid>
+                        <Specific_Data>
+                           <Name>Vref</Name>
+                           <Units>knots</Units>
+                           <Formula>if(exists([Vref (from airplane) (knots)]) and between([Vref (from airplane) (knots)], 100, 200),
+[Vref (from airplane) (knots)], 
+  if(([Gross Weight (lbs)]&gt;50) or ([Gross Weight (kg)]&gt;25), [Vref (from Table) (knots)]))</Formula>
+                           <CompiledFormula>4	if	4	and	4	exists	3	Vref (from airplane) (knots)	NULL	4	between	3	Vref (from airplane) (knots)	2	VT_R8;100	2	VT_R8;200	NULL	NULL	3	Vref (from airplane) (knots)	4	if	4	or	4	&gt;	3	Gross Weight (lbs)	2	VT_R8;50	NULL	4	&gt;	3	Gross Weight (kg)	2	VT_R8;25	NULL	NULL	3	Vref (from Table) (knots)	NULL	NULL</CompiledFormula>
+                           <UsedObjectSet>
+                              <UsedObject>
+                                 <Alias>Gross Weight (kg)</Alias>
+                                 <Resolvable>
+                                    <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                                    <Specific_Guid>{00000001-00BB-4000-0000-000000000000}</Specific_Guid>
+                                 </Resolvable>
+                              </UsedObject>
+                              <UsedObject>
+                                 <Alias>Gross Weight (lbs)</Alias>
+                                 <Resolvable>
+                                    <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                                    <Specific_Guid>{00000001-000C-4000-0000-000000000000}</Specific_Guid>
+                                 </Resolvable>
+                              </UsedObject>
+                              <UsedObject>
+                                 <Alias>Vref (from Table) (knots)</Alias>
+                                 <Resolvable>
+                                    <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                                    <Specific_Guid>{00000001-0041-4000-0000-000000000000}</Specific_Guid>
+                                 </Resolvable>
+                              </UsedObject>
+                              <UsedObject>
+                                 <Alias>Vref (from airplane) (knots)</Alias>
+                                 <Resolvable>
+                                    <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                                    <Specific_Guid>{00000001-00BA-4000-0000-000000000000}</Specific_Guid>
+                                 </Resolvable>
+                              </UsedObject>
+                           </UsedObjectSet>
+                        </Specific_Data>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>4) Stable _CAS - Vref_</Alias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                        <Specific_Guid>{00000001-03E9-4000-0000-000000000000}</Specific_Guid>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>Measurement: 4) Height Above Touchdown when Stable _CAS - Vref_ on 1st Approach (feet)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>ApmValue</Resolver_Id>
+                        <Specific_Guid>{3CA5A353-72C3-A3FB-FE0B-0F99C9C9F3A2}</Specific_Guid>
+                        <Specific_Data>
+                           <Item>{BCC84889-7EF3-4B57-8C3F-5A4400C53A8F}</Item>
+                        </Specific_Data>
+                     </Resolvable>
+                  </UsedObject>
+               </UsedObjectSet>
+            </Specific_Data>
+         </Resolvable>
+         <Metadata>
+            <Item>
+               <Name>Chart:UpdateType</Name>
+               <Data>VisibleData</Data>
+            </Item>
+            <Item>
+               <Name>Chart:GroupName</Name>
+               <Data>Unstable Approach (HAT method) (2)</Data>
+            </Item>
+            <Item>
+               <Name>Chart:Color</Name>
+               <Data>Gray</Data>
+            </Item>
+            <Item>
+               <Name>Chart:StripIndex</Name>
+               <Data>6</Data>
+            </Item>
+         </Metadata>
+      </Parameter>
+      <Parameter>
+         <Resolvable>
+            <Resolver_Id>Resolvers.Formula</Resolver_Id>
+            <Specific_Guid>{F63DAFD0-D991-F9DA-2873-855AB7AA026E}</Specific_Guid>
+            <Specific_Data>
+               <Name>Lower Limit</Name>
+               <Units>knots</Units>
+               <Formula>if( exists([4) Stable CAS - Vref]) and
+([Measurement: 4) Height Above Touchdown when Stable CAS - Vref on 1st Approach (feet)] &lt; [Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)]),
+
+[Vref (best available) (knots)]+
+[4) CAS - Vref Lower Limit (HAT method) (knots)]
+
+)</Formula>
+               <CompiledFormula>4	if	4	and	4	exists	3	4) Stable CAS - Vref	NULL	4	&lt;	3	Measurement: 4) Height Above Touchdown when Stable CAS - Vref on 1st Approach (feet)	3	Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)	NULL	NULL	4	+	3	Vref (best available) (knots)	3	4) CAS - Vref Lower Limit (HAT method) (knots)	NULL	NULL</CompiledFormula>
+               <UsedObjectSet>
+                  <UsedObject>
+                     <Alias>4) CAS - Vref Lower Limit (HAT method) (knots)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                        <Specific_Guid>{00000001-04AC-4000-0000-000000000000}</Specific_Guid>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>4) Stable CAS - Vref</Alias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                        <Specific_Guid>{00000001-03E9-4000-0000-000000000000}</Specific_Guid>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>Measurement: 4) Height Above Touchdown when Stable CAS - Vref on 1st Approach (feet)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>ApmValue</Resolver_Id>
+                        <Specific_Guid>{3CA5A353-72C3-A3FB-FE0B-0F99C9C9F3A2}</Specific_Guid>
+                        <Specific_Data>
+                           <Item>{BCC84889-7EF3-4B57-8C3F-5A4400C53A8F}</Item>
+                        </Specific_Data>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>ApmValue</Resolver_Id>
+                        <Specific_Guid>{AD305BA8-A264-3F33-2F0E-93AB2913C27C}</Specific_Guid>
+                        <Specific_Data>
+                           <Item>{D10657BB-67C6-486E-A60F-8A288CF5484E}</Item>
+                        </Specific_Data>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>Vref (best available) (knots)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                        <Specific_Guid>{00000001-0405-4000-0000-000000000000}</Specific_Guid>
+                     </Resolvable>
+                  </UsedObject>
+               </UsedObjectSet>
+            </Specific_Data>
+         </Resolvable>
+         <Metadata>
+            <Item>
+               <Name>Chart:UpdateType</Name>
+               <Data>VisibleData</Data>
+            </Item>
+            <Item>
+               <Name>Chart:GroupName</Name>
+               <Data>Unstable Approach (HAT method) (2)</Data>
+            </Item>
+            <Item>
+               <Name>Chart:Color</Name>
+               <Data>Orange</Data>
+            </Item>
+            <Item>
+               <Name>Chart:StripIndex</Name>
+               <Data>6</Data>
+            </Item>
+         </Metadata>
+      </Parameter>
+      <Parameter>
+         <Resolvable>
+            <Resolver_Id>Resolvers.Formula</Resolver_Id>
+            <Specific_Guid>{88677120-8017-FEC2-7E1B-D4890DD753D9}</Specific_Guid>
+            <Specific_Data>
+               <Name>Upper Limit</Name>
+               <Units>knots</Units>
+               <Formula>if( exists([5) Stable Ground Speed]) and
+([Measurement: 5) Height Above Touchdown when Stable Ground Speed on 1st Approach (feet)] &lt; [Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)]),
+
+[5) Ground Speed Limit (HAT method) (knots)]
+
+)</Formula>
+               <CompiledFormula>4	if	4	and	4	exists	3	5) Stable Ground Speed	NULL	4	&lt;	3	Measurement: 5) Height Above Touchdown when Stable Ground Speed on 1st Approach (feet)	3	Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)	NULL	NULL	3	5) Ground Speed Limit (HAT method) (knots)	NULL</CompiledFormula>
+               <UsedObjectSet>
+                  <UsedObject>
+                     <Alias>5) Ground Speed Limit (HAT method) (knots)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                        <Specific_Guid>{00000001-04AE-4000-0000-000000000000}</Specific_Guid>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>5) Stable Ground Speed</Alias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                        <Specific_Guid>{00000001-03EA-4000-0000-000000000000}</Specific_Guid>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>Measurement: 5) Height Above Touchdown when Stable Ground Speed on 1st Approach (feet)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>ApmValue</Resolver_Id>
+                        <Specific_Guid>{20DFF372-8813-6256-833D-8860338A9A24}</Specific_Guid>
+                        <Specific_Data>
+                           <Item>{92A354B7-CEA1-414A-A414-D41934990266}</Item>
+                        </Specific_Data>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>ApmValue</Resolver_Id>
+                        <Specific_Guid>{AD305BA8-A264-3F33-2F0E-93AB2913C27C}</Specific_Guid>
+                        <Specific_Data>
+                           <Item>{D10657BB-67C6-486E-A60F-8A288CF5484E}</Item>
+                        </Specific_Data>
+                     </Resolvable>
+                  </UsedObject>
+               </UsedObjectSet>
+            </Specific_Data>
+         </Resolvable>
+         <Metadata>
+            <Item>
+               <Name>Chart:UpdateType</Name>
+               <Data>VisibleData</Data>
+            </Item>
+            <Item>
+               <Name>Chart:GroupName</Name>
+               <Data>Unstable Approach (HAT method) (2)</Data>
+            </Item>
+            <Item>
+               <Name>Chart:Color</Name>
+               <Data>Orange</Data>
+            </Item>
+            <Item>
+               <Name>Chart:StripIndex</Name>
+               <Data>7</Data>
+            </Item>
+         </Metadata>
+      </Parameter>
+      <Parameter>
+         <Resolvable>
+            <Resolver_Id>Resolvers.Formula</Resolver_Id>
+            <Specific_Guid>{ACCF199C-09ED-8892-99FD-1216BBC4886D}</Specific_Guid>
+            <Specific_Data>
+               <Name>5) Ground Speed</Name>
+               <Units>knots</Units>
+               <Formula>if( exists([5) Stable Ground Speed]) and
+([Measurement: 5) Height Above Touchdown when Stable Ground Speed on 1st Approach (feet)] &lt; [Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)]),
+
+[Ground Speed (knots)]
+
+)</Formula>
+               <CompiledFormula>4	if	4	and	4	exists	3	5) Stable Ground Speed	NULL	4	&lt;	3	Measurement: 5) Height Above Touchdown when Stable Ground Speed on 1st Approach (feet)	3	Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)	NULL	NULL	3	Ground Speed (knots)	NULL</CompiledFormula>
+               <UsedObjectSet>
+                  <UsedObject>
+                     <Alias>Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>ApmValue</Resolver_Id>
+                        <Specific_Guid>{AD305BA8-A264-3F33-2F0E-93AB2913C27C}</Specific_Guid>
+                        <Specific_Data>
+                           <Item>{D10657BB-67C6-486E-A60F-8A288CF5484E}</Item>
+                        </Specific_Data>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>Measurement: 5) Height Above Touchdown when Stable Ground Speed on 1st Approach (feet)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>ApmValue</Resolver_Id>
+                        <Specific_Guid>{20DFF372-8813-6256-833D-8860338A9A24}</Specific_Guid>
+                        <Specific_Data>
+                           <Item>{92A354B7-CEA1-414A-A414-D41934990266}</Item>
+                        </Specific_Data>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>5) Stable Ground Speed</Alias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                        <Specific_Guid>{00000001-03EA-4000-0000-000000000000}</Specific_Guid>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>Ground Speed (knots)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                        <Specific_Guid>{00000001-0018-4000-0000-000000000000}</Specific_Guid>
+                     </Resolvable>
+                  </UsedObject>
+               </UsedObjectSet>
+            </Specific_Data>
+         </Resolvable>
+         <Metadata>
+            <Item>
+               <Name>Chart:UpdateType</Name>
+               <Data>VisibleData</Data>
+            </Item>
+            <Item>
+               <Name>Chart:GroupName</Name>
+               <Data>Unstable Approach (HAT method) (2)</Data>
+            </Item>
+            <Item>
+               <Name>Chart:Color</Name>
+               <Data>Cyan</Data>
+            </Item>
+            <Item>
+               <Name>Chart:StripIndex</Name>
+               <Data>7</Data>
+            </Item>
+         </Metadata>
+      </Parameter>
+      <Parameter>
+         <Resolvable>
+            <Resolver_Id>Resolvers.Formula</Resolver_Id>
+            <Specific_Guid>{B08A198C-DAD3-16F6-2897-E40A97BCDA8C}</Specific_Guid>
+            <Specific_Data>
+               <Name>Upper Limit</Name>
+               <Units>ft/min</Units>
+               <Formula>if( exists([6) Stable Rate of Descent]) and
+([Measurement: 6) Height Above Touchdown when Stable ROD on 1st Approach (feet)] &lt; [Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)]),
+
+[6) Rate of Descent Limit (HAT method) (ft/min)]
+
+)</Formula>
+               <CompiledFormula>4	if	4	and	4	exists	3	6) Stable Rate of Descent	NULL	4	&lt;	3	Measurement: 6) Height Above Touchdown when Stable ROD on 1st Approach (feet)	3	Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)	NULL	NULL	3	6) Rate of Descent Limit (HAT method) (ft/min)	NULL</CompiledFormula>
+               <UsedObjectSet>
+                  <UsedObject>
+                     <Alias>6) Rate of Descent Limit (HAT method) (ft/min)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                        <Specific_Guid>{00000001-04AF-4000-0000-000000000000}</Specific_Guid>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>6) Stable Rate of Descent</Alias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                        <Specific_Guid>{00000001-03EB-4000-0000-000000000000}</Specific_Guid>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>Measurement: 6) Height Above Touchdown when Stable ROD on 1st Approach (feet)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>ApmValue</Resolver_Id>
+                        <Specific_Guid>{AA66D1CA-59D0-7F67-1540-CCE86BA42209}</Specific_Guid>
+                        <Specific_Data>
+                           <Item>{2116D19E-75FF-4541-AF19-701F999CA916}</Item>
+                        </Specific_Data>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>ApmValue</Resolver_Id>
+                        <Specific_Guid>{AD305BA8-A264-3F33-2F0E-93AB2913C27C}</Specific_Guid>
+                        <Specific_Data>
+                           <Item>{D10657BB-67C6-486E-A60F-8A288CF5484E}</Item>
+                        </Specific_Data>
+                     </Resolvable>
+                  </UsedObject>
+               </UsedObjectSet>
+            </Specific_Data>
+         </Resolvable>
+         <Metadata>
+            <Item>
+               <Name>Chart:UpdateType</Name>
+               <Data>VisibleData</Data>
+            </Item>
+            <Item>
+               <Name>Chart:GroupName</Name>
+               <Data>Unstable Approach (HAT method) (2)</Data>
+            </Item>
+            <Item>
+               <Name>Chart:Color</Name>
+               <Data>Orange</Data>
+            </Item>
+            <Item>
+               <Name>Chart:StripIndex</Name>
+               <Data>8</Data>
+            </Item>
+         </Metadata>
+      </Parameter>
+      <Parameter>
+         <Resolvable>
+            <Resolver_Id>Resolvers.Formula</Resolver_Id>
+            <Specific_Guid>{80171745-34B3-F6F4-1285-D7644BFBE94C}</Specific_Guid>
+            <Specific_Data>
+               <Name>6) Rate of Descent</Name>
+               <Units>ft/min</Units>
+               <Formula>if( exists([6) Stable Rate of Descent]) and
+([Measurement: 6) Height Above Touchdown when Stable ROD on 1st Approach (feet)] &lt; [Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)]),
+
+-[Vertical Speed (best available) (ft/min)]
+
+)</Formula>
+               <CompiledFormula>4	if	4	and	4	exists	3	6) Stable Rate of Descent	NULL	4	&lt;	3	Measurement: 6) Height Above Touchdown when Stable ROD on 1st Approach (feet)	3	Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)	NULL	NULL	4	-	3	Vertical Speed (best available) (ft/min)	NULL	NULL</CompiledFormula>
+               <UsedObjectSet>
+                  <UsedObject>
+                     <Alias>Measurement: 6) Height Above Touchdown when Stable ROD on 1st Approach (feet)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>ApmValue</Resolver_Id>
+                        <Specific_Guid>{AA66D1CA-59D0-7F67-1540-CCE86BA42209}</Specific_Guid>
+                        <Specific_Data>
+                           <Item>{2116D19E-75FF-4541-AF19-701F999CA916}</Item>
+                        </Specific_Data>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>ApmValue</Resolver_Id>
+                        <Specific_Guid>{AD305BA8-A264-3F33-2F0E-93AB2913C27C}</Specific_Guid>
+                        <Specific_Data>
+                           <Item>{D10657BB-67C6-486E-A60F-8A288CF5484E}</Item>
+                        </Specific_Data>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>Vertical Speed (best available) (ft/min)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                        <Specific_Guid>{00000001-036E-4000-0000-000000000000}</Specific_Guid>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>6) Stable Rate of Descent</Alias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                        <Specific_Guid>{00000001-03EB-4000-0000-000000000000}</Specific_Guid>
+                     </Resolvable>
+                  </UsedObject>
+               </UsedObjectSet>
+            </Specific_Data>
+         </Resolvable>
+         <Metadata>
+            <Item>
+               <Name>Chart:UpdateType</Name>
+               <Data>VisibleData</Data>
+            </Item>
+            <Item>
+               <Name>Chart:GroupName</Name>
+               <Data>Unstable Approach (HAT method) (2)</Data>
+            </Item>
+            <Item>
+               <Name>Chart:Color</Name>
+               <Data>Purple</Data>
+            </Item>
+            <Item>
+               <Name>Chart:StripIndex</Name>
+               <Data>8</Data>
+            </Item>
+         </Metadata>
+      </Parameter>
+      <Parameter>
+         <Resolvable>
+            <Resolver_Id>Resolvers.Formula</Resolver_Id>
+            <Specific_Guid>{8EC70E17-B217-2180-1EF4-92B01C896BD0}</Specific_Guid>
+            <Specific_Data>
+               <Name>7) Average Torque</Name>
+               <Units>%</Units>
+               <Formula>if( exists([7) Stable Thrust]) and
+exists([7a) Thrust (% Torque) Lower Limit (HAT method) (%)]) and
+([Measurement: 7) Height Above Touchdown when Stable Thrust on 1st Approach (feet)] &lt; [Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)]),
+
+[% Torque Average (%)]
+
+)</Formula>
+               <CompiledFormula>4	if	4	and	4	and	4	exists	3	7) Stable Thrust	NULL	4	exists	3	7a) Thrust (% Torque) Lower Limit (HAT method) (%)	NULL	NULL	4	&lt;	3	Measurement: 7) Height Above Touchdown when Stable Thrust on 1st Approach (feet)	3	Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)	NULL	NULL	3	% Torque Average (%)	NULL</CompiledFormula>
+               <UsedObjectSet>
+                  <UsedObject>
+                     <Alias>% Torque Average (%)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                        <Specific_Guid>{00000001-020F-4000-0000-000000000000}</Specific_Guid>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>7) Stable Thrust</Alias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                        <Specific_Guid>{00000001-03F7-4000-0000-000000000000}</Specific_Guid>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>7a) Thrust (% Torque) Lower Limit (HAT method) (%)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                        <Specific_Guid>{00000001-04B0-4000-0000-000000000000}</Specific_Guid>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>Measurement: 7) Height Above Touchdown when Stable Thrust on 1st Approach (feet)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>ApmValue</Resolver_Id>
+                        <Specific_Guid>{2430816D-5851-1DE8-190D-53D2750C5288}</Specific_Guid>
+                        <Specific_Data>
+                           <Item>{00CC5E90-9827-49F6-9321-ACD4F90DE070}</Item>
+                        </Specific_Data>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>ApmValue</Resolver_Id>
+                        <Specific_Guid>{AD305BA8-A264-3F33-2F0E-93AB2913C27C}</Specific_Guid>
+                        <Specific_Data>
+                           <Item>{D10657BB-67C6-486E-A60F-8A288CF5484E}</Item>
+                        </Specific_Data>
+                     </Resolvable>
+                  </UsedObject>
+               </UsedObjectSet>
+            </Specific_Data>
+         </Resolvable>
+         <Metadata>
+            <Item>
+               <Name>Chart:UpdateType</Name>
+               <Data>VisibleData</Data>
+            </Item>
+            <Item>
+               <Name>Chart:GroupName</Name>
+               <Data>Unstable Approach (HAT method) (2)</Data>
+            </Item>
+            <Item>
+               <Name>Chart:Color</Name>
+               <Data>Brown</Data>
+            </Item>
+            <Item>
+               <Name>Chart:StripIndex</Name>
+               <Data>9</Data>
+            </Item>
+         </Metadata>
+      </Parameter>
+      <Parameter>
+         <Resolvable>
+            <Resolver_Id>Resolvers.Formula</Resolver_Id>
+            <Specific_Guid>{BA21D97B-5816-1AEF-3B48-42D55152D333}</Specific_Guid>
+            <Specific_Data>
+               <Name>Lower Limit</Name>
+               <Formula>if( exists([7) Stable Thrust]) and
+exists([% Torque Average (%)]) and
+([Measurement: 7) Height Above Touchdown when Stable Thrust on 1st Approach (feet)] &lt; [Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)]),
+
+[7a) Thrust (% Torque) Lower Limit (HAT method) (%)]
+
+)</Formula>
+               <CompiledFormula>4	if	4	and	4	and	4	exists	3	7) Stable Thrust	NULL	4	exists	3	% Torque Average (%)	NULL	NULL	4	&lt;	3	Measurement: 7) Height Above Touchdown when Stable Thrust on 1st Approach (feet)	3	Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)	NULL	NULL	3	7a) Thrust (% Torque) Lower Limit (HAT method) (%)	NULL</CompiledFormula>
+               <UsedObjectSet>
+                  <UsedObject>
+                     <Alias>% Torque Average (%)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                        <Specific_Guid>{00000001-020F-4000-0000-000000000000}</Specific_Guid>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>7) Stable Thrust</Alias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                        <Specific_Guid>{00000001-03F7-4000-0000-000000000000}</Specific_Guid>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>7a) Thrust (% Torque) Lower Limit (HAT method) (%)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                        <Specific_Guid>{00000001-04B0-4000-0000-000000000000}</Specific_Guid>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>Measurement: 7) Height Above Touchdown when Stable Thrust on 1st Approach (feet)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>ApmValue</Resolver_Id>
+                        <Specific_Guid>{2430816D-5851-1DE8-190D-53D2750C5288}</Specific_Guid>
+                        <Specific_Data>
+                           <Item>{00CC5E90-9827-49F6-9321-ACD4F90DE070}</Item>
+                        </Specific_Data>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>ApmValue</Resolver_Id>
+                        <Specific_Guid>{AD305BA8-A264-3F33-2F0E-93AB2913C27C}</Specific_Guid>
+                        <Specific_Data>
+                           <Item>{D10657BB-67C6-486E-A60F-8A288CF5484E}</Item>
+                        </Specific_Data>
+                     </Resolvable>
+                  </UsedObject>
+               </UsedObjectSet>
+            </Specific_Data>
+         </Resolvable>
+         <Metadata>
+            <Item>
+               <Name>Chart:UpdateType</Name>
+               <Data>VisibleData</Data>
+            </Item>
+            <Item>
+               <Name>Chart:GroupName</Name>
+               <Data>Unstable Approach (HAT method) (2)</Data>
+            </Item>
+            <Item>
+               <Name>Chart:Color</Name>
+               <Data>Orange</Data>
+            </Item>
+            <Item>
+               <Name>Chart:StripIndex</Name>
+               <Data>9</Data>
+            </Item>
+         </Metadata>
+      </Parameter>
+      <Parameter>
+         <Resolvable>
+            <Resolver_Id>Resolvers.Formula</Resolver_Id>
+            <Specific_Guid>{0EF0AA40-A645-51B5-545C-3612EB6495EE}</Specific_Guid>
+            <Specific_Data>
+               <Name>7) Average N1</Name>
+               <Units>%</Units>
+               <Formula>if( exists([7) Stable Thrust]) and
+exists([7b) LowerThrust (N1) Limit (HAT method) (%)]) and
+([Measurement: 7) Height Above Touchdown when Stable Thrust on 1st Approach (feet)] &lt; [Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)]),
+
+[N1 Average (%)]
+
+)</Formula>
+               <CompiledFormula>4	if	4	and	4	and	4	exists	3	7) Stable Thrust	NULL	4	exists	3	7b) LowerThrust (N1) Limit (HAT method) (%)	NULL	NULL	4	&lt;	3	Measurement: 7) Height Above Touchdown when Stable Thrust on 1st Approach (feet)	3	Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)	NULL	NULL	3	N1 Average (%)	NULL</CompiledFormula>
+               <UsedObjectSet>
+                  <UsedObject>
+                     <Alias>7) Stable Thrust</Alias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                        <Specific_Guid>{00000001-03F7-4000-0000-000000000000}</Specific_Guid>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>7b) LowerThrust (N1) Limit (HAT method) (%)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                        <Specific_Guid>{00000001-04B1-4000-0000-000000000000}</Specific_Guid>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>Measurement: 7) Height Above Touchdown when Stable Thrust on 1st Approach (feet)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>ApmValue</Resolver_Id>
+                        <Specific_Guid>{2430816D-5851-1DE8-190D-53D2750C5288}</Specific_Guid>
+                        <Specific_Data>
+                           <Item>{00CC5E90-9827-49F6-9321-ACD4F90DE070}</Item>
+                        </Specific_Data>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>ApmValue</Resolver_Id>
+                        <Specific_Guid>{AD305BA8-A264-3F33-2F0E-93AB2913C27C}</Specific_Guid>
+                        <Specific_Data>
+                           <Item>{D10657BB-67C6-486E-A60F-8A288CF5484E}</Item>
+                        </Specific_Data>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>N1 Average (%)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                        <Specific_Guid>{00000001-007B-4000-0000-000000000000}</Specific_Guid>
+                     </Resolvable>
+                  </UsedObject>
+               </UsedObjectSet>
+            </Specific_Data>
+         </Resolvable>
+         <Metadata>
+            <Item>
+               <Name>Chart:UpdateType</Name>
+               <Data>VisibleData</Data>
+            </Item>
+            <Item>
+               <Name>Chart:GroupName</Name>
+               <Data>Unstable Approach (HAT method) (2)</Data>
+            </Item>
+            <Item>
+               <Name>Chart:Color</Name>
+               <Data>Brown</Data>
+            </Item>
+            <Item>
+               <Name>Chart:StripIndex</Name>
+               <Data>10</Data>
+            </Item>
+         </Metadata>
+      </Parameter>
+      <Parameter>
+         <Resolvable>
+            <Resolver_Id>Resolvers.Formula</Resolver_Id>
+            <Specific_Guid>{DE781CFB-B5EB-A1D2-AF1D-05A58CCAA997}</Specific_Guid>
+            <Specific_Data>
+               <Name>Lower Limit</Name>
+               <Units>%</Units>
+               <Formula>if( exists([7) Stable Thrust]) and
+exists([N1 Average (%)]) and
+([Measurement: 7) Height Above Touchdown when Stable Thrust on 1st Approach (feet)] &lt; [Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)]),
+
+[Approach Power: Minimum (N1; warning) (%)]
+)</Formula>
+               <CompiledFormula>4	if	4	and	4	and	4	exists	3	7) Stable Thrust	NULL	4	exists	3	N1 Average (%)	NULL	NULL	4	&lt;	3	Measurement: 7) Height Above Touchdown when Stable Thrust on 1st Approach (feet)	3	Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)	NULL	NULL	3	Approach Power: Minimum (N1; warning) (%)	NULL</CompiledFormula>
+               <UsedObjectSet>
+                  <UsedObject>
+                     <Alias>7) Stable Thrust</Alias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                        <Specific_Guid>{00000001-03F7-4000-0000-000000000000}</Specific_Guid>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>Approach Power: Minimum (N1; warning) (%)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                        <Specific_Guid>{00000002-0073-4000-0000-000000000000}</Specific_Guid>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>Measurement: 7) Height Above Touchdown when Stable Thrust on 1st Approach (feet)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>ApmValue</Resolver_Id>
+                        <Specific_Guid>{2430816D-5851-1DE8-190D-53D2750C5288}</Specific_Guid>
+                        <Specific_Data>
+                           <Item>{00CC5E90-9827-49F6-9321-ACD4F90DE070}</Item>
+                        </Specific_Data>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>ApmValue</Resolver_Id>
+                        <Specific_Guid>{AD305BA8-A264-3F33-2F0E-93AB2913C27C}</Specific_Guid>
+                        <Specific_Data>
+                           <Item>{D10657BB-67C6-486E-A60F-8A288CF5484E}</Item>
+                        </Specific_Data>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>N1 Average (%)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                        <Specific_Guid>{00000001-007B-4000-0000-000000000000}</Specific_Guid>
+                     </Resolvable>
+                  </UsedObject>
+               </UsedObjectSet>
+            </Specific_Data>
+         </Resolvable>
+         <Metadata>
+            <Item>
+               <Name>Chart:UpdateType</Name>
+               <Data>VisibleData</Data>
+            </Item>
+            <Item>
+               <Name>Chart:GroupName</Name>
+               <Data>Unstable Approach (HAT method) (2)</Data>
+            </Item>
+            <Item>
+               <Name>Chart:Color</Name>
+               <Data>Orange</Data>
+            </Item>
+            <Item>
+               <Name>Chart:StripIndex</Name>
+               <Data>10</Data>
+            </Item>
+         </Metadata>
+      </Parameter>
+      <Parameter>
+         <Resolvable>
+            <Resolver_Id>Resolvers.Formula</Resolver_Id>
+            <Specific_Guid>{8D2F835E-0BDB-FA6C-6630-681608BA79F2}</Specific_Guid>
+            <Specific_Data>
+               <Name>7) Average EPR</Name>
+               <Formula>if( exists([7) Stable Thrust]) and
+exists([7c) LowerThrust (EPR) Limit (HAT method)]) and
+([Measurement: 7) Height Above Touchdown when Stable Thrust on 1st Approach (feet)] &lt; [Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)]),
+
+[EPR Average]
+
+)</Formula>
+               <CompiledFormula>4	if	4	and	4	and	4	exists	3	7) Stable Thrust	NULL	4	exists	3	7c) LowerThrust (EPR) Limit (HAT method)	NULL	NULL	4	&lt;	3	Measurement: 7) Height Above Touchdown when Stable Thrust on 1st Approach (feet)	3	Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)	NULL	NULL	3	EPR Average	NULL</CompiledFormula>
+               <UsedObjectSet>
+                  <UsedObject>
+                     <Alias>7) Stable Thrust</Alias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                        <Specific_Guid>{00000001-03F7-4000-0000-000000000000}</Specific_Guid>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>7c) LowerThrust (EPR) Limit (HAT method)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                        <Specific_Guid>{00000001-04B2-4000-0000-000000000000}</Specific_Guid>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>EPR Average</Alias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                        <Specific_Guid>{00000001-02E1-4000-0000-000000000000}</Specific_Guid>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>Measurement: 7) Height Above Touchdown when Stable Thrust on 1st Approach (feet)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>ApmValue</Resolver_Id>
+                        <Specific_Guid>{2430816D-5851-1DE8-190D-53D2750C5288}</Specific_Guid>
+                        <Specific_Data>
+                           <Item>{00CC5E90-9827-49F6-9321-ACD4F90DE070}</Item>
+                        </Specific_Data>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>ApmValue</Resolver_Id>
+                        <Specific_Guid>{AD305BA8-A264-3F33-2F0E-93AB2913C27C}</Specific_Guid>
+                        <Specific_Data>
+                           <Item>{D10657BB-67C6-486E-A60F-8A288CF5484E}</Item>
+                        </Specific_Data>
+                     </Resolvable>
+                  </UsedObject>
+               </UsedObjectSet>
+            </Specific_Data>
+         </Resolvable>
+         <Metadata>
+            <Item>
+               <Name>Chart:UpdateType</Name>
+               <Data>VisibleData</Data>
+            </Item>
+            <Item>
+               <Name>Chart:GroupName</Name>
+               <Data>Unstable Approach (HAT method) (2)</Data>
+            </Item>
+            <Item>
+               <Name>Chart:Color</Name>
+               <Data>Brown</Data>
+            </Item>
+            <Item>
+               <Name>Chart:StripIndex</Name>
+               <Data>11</Data>
+            </Item>
+         </Metadata>
+      </Parameter>
+      <Parameter>
+         <Resolvable>
+            <Resolver_Id>Resolvers.Formula</Resolver_Id>
+            <Specific_Guid>{A229C385-0924-B18B-4220-D7BC5C5A6E63}</Specific_Guid>
+            <Specific_Data>
+               <Name>Lower Limit</Name>
+               <Formula>if( exists([7) Stable Thrust]) and
+exists([EPR Average]) and
+([Measurement: 7) Height Above Touchdown when Stable Thrust on 1st Approach (feet)] &lt; [Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)]),
+
+[7c) LowerThrust (EPR) Limit (HAT method)]
+
+)</Formula>
+               <CompiledFormula>4	if	4	and	4	and	4	exists	3	7) Stable Thrust	NULL	4	exists	3	EPR Average	NULL	NULL	4	&lt;	3	Measurement: 7) Height Above Touchdown when Stable Thrust on 1st Approach (feet)	3	Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)	NULL	NULL	3	7c) LowerThrust (EPR) Limit (HAT method)	NULL</CompiledFormula>
+               <UsedObjectSet>
+                  <UsedObject>
+                     <Alias>7) Stable Thrust</Alias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                        <Specific_Guid>{00000001-03F7-4000-0000-000000000000}</Specific_Guid>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>7c) LowerThrust (EPR) Limit (HAT method)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                        <Specific_Guid>{00000001-04B2-4000-0000-000000000000}</Specific_Guid>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>EPR Average</Alias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                        <Specific_Guid>{00000001-02E1-4000-0000-000000000000}</Specific_Guid>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>Measurement: 7) Height Above Touchdown when Stable Thrust on 1st Approach (feet)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>ApmValue</Resolver_Id>
+                        <Specific_Guid>{2430816D-5851-1DE8-190D-53D2750C5288}</Specific_Guid>
+                        <Specific_Data>
+                           <Item>{00CC5E90-9827-49F6-9321-ACD4F90DE070}</Item>
+                        </Specific_Data>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>ApmValue</Resolver_Id>
+                        <Specific_Guid>{AD305BA8-A264-3F33-2F0E-93AB2913C27C}</Specific_Guid>
+                        <Specific_Data>
+                           <Item>{D10657BB-67C6-486E-A60F-8A288CF5484E}</Item>
+                        </Specific_Data>
+                     </Resolvable>
+                  </UsedObject>
+               </UsedObjectSet>
+            </Specific_Data>
+         </Resolvable>
+         <Metadata>
+            <Item>
+               <Name>Chart:UpdateType</Name>
+               <Data>VisibleData</Data>
+            </Item>
+            <Item>
+               <Name>Chart:GroupName</Name>
+               <Data>Unstable Approach (HAT method) (2)</Data>
+            </Item>
+            <Item>
+               <Name>Chart:Color</Name>
+               <Data>Orange</Data>
+            </Item>
+            <Item>
+               <Name>Chart:StripIndex</Name>
+               <Data>11</Data>
+            </Item>
+         </Metadata>
+      </Parameter>
+      <Parameter>
+         <Resolvable>
+            <Resolver_Id>Resolvers.Formula</Resolver_Id>
+            <Specific_Guid>{343DCED9-EB5D-16AA-110A-20B3D0B516B8}</Specific_Guid>
+            <Specific_Data>
+               <Name>8) Flap Position</Name>
+               <Units>deg</Units>
+               <Formula>if( exists([8) Landing Flaps Set]) and
+([Measurement: 8) Height Above Touchdown when Landing Flaps Set on 1st Approach (feet)] &lt; [Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)]),
+
+[Flap Position (deg+=TED)]
+
+)</Formula>
+               <CompiledFormula>4	if	4	and	4	exists	3	8) Landing Flaps Set	NULL	4	&lt;	3	Measurement: 8) Height Above Touchdown when Landing Flaps Set on 1st Approach (feet)	3	Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)	NULL	NULL	3	Flap Position (deg+=TED)	NULL</CompiledFormula>
+               <UsedObjectSet>
+                  <UsedObject>
+                     <Alias>Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>ApmValue</Resolver_Id>
+                        <Specific_Guid>{AD305BA8-A264-3F33-2F0E-93AB2913C27C}</Specific_Guid>
+                        <Specific_Data>
+                           <Item>{D10657BB-67C6-486E-A60F-8A288CF5484E}</Item>
+                        </Specific_Data>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>Flap Position (deg+=TED)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                        <Specific_Guid>{00000001-0020-4000-0000-000000000000}</Specific_Guid>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>8) Landing Flaps Set</Alias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                        <Specific_Guid>{00000001-03EF-4000-0000-000000000000}</Specific_Guid>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>Measurement: 8) Height Above Touchdown when Landing Flaps Set on 1st Approach (feet)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>ApmValue</Resolver_Id>
+                        <Specific_Guid>{214FC5EF-DC24-64DB-72A5-E23F7D8ED284}</Specific_Guid>
+                        <Specific_Data>
+                           <Item>{66E420FE-AA78-42F7-9787-E16EC0D7CC7C}</Item>
+                        </Specific_Data>
+                     </Resolvable>
+                  </UsedObject>
+               </UsedObjectSet>
+            </Specific_Data>
+         </Resolvable>
+         <Metadata>
+            <Item>
+               <Name>Chart:UpdateType</Name>
+               <Data>VisibleData</Data>
+            </Item>
+            <Item>
+               <Name>Chart:GroupName</Name>
+               <Data>Unstable Approach (HAT method) (2)</Data>
+            </Item>
+            <Item>
+               <Name>Chart:Color</Name>
+               <Data>Black</Data>
+            </Item>
+            <Item>
+               <Name>Chart:LineStyle</Name>
+               <Data>Dash</Data>
+            </Item>
+            <Item>
+               <Name>Chart:StripIndex</Name>
+               <Data>12</Data>
+            </Item>
+         </Metadata>
+      </Parameter>
+      <Parameter>
+         <Resolvable>
+            <Resolver_Id>Resolvers.Formula</Resolver_Id>
+            <Specific_Guid>{70C31ACB-7DCB-719F-6F3B-3B267ABCD336}</Specific_Guid>
+            <Specific_Data>
+               <Name>Lower Limit</Name>
+               <Units>deg</Units>
+               <Formula>if( exists([8) Landing Flaps Set]) and
+([Measurement: 8) Height Above Touchdown when Landing Flaps Set on 1st Approach (feet)] &lt; [Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)]),
+
+[8) Flap Lower Limit (HAT method) (deg)]
+
+)</Formula>
+               <CompiledFormula>4	if	4	and	4	exists	3	8) Landing Flaps Set	NULL	4	&lt;	3	Measurement: 8) Height Above Touchdown when Landing Flaps Set on 1st Approach (feet)	3	Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)	NULL	NULL	3	8) Flap Lower Limit (HAT method) (deg)	NULL</CompiledFormula>
+               <UsedObjectSet>
+                  <UsedObject>
+                     <Alias>8) Flap Lower Limit (HAT method) (deg)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                        <Specific_Guid>{00000001-04B3-4000-0000-000000000000}</Specific_Guid>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>8) Landing Flaps Set</Alias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                        <Specific_Guid>{00000001-03EF-4000-0000-000000000000}</Specific_Guid>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>Measurement: 8) Height Above Touchdown when Landing Flaps Set on 1st Approach (feet)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>ApmValue</Resolver_Id>
+                        <Specific_Guid>{214FC5EF-DC24-64DB-72A5-E23F7D8ED284}</Specific_Guid>
+                        <Specific_Data>
+                           <Item>{66E420FE-AA78-42F7-9787-E16EC0D7CC7C}</Item>
+                        </Specific_Data>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>ApmValue</Resolver_Id>
+                        <Specific_Guid>{AD305BA8-A264-3F33-2F0E-93AB2913C27C}</Specific_Guid>
+                        <Specific_Data>
+                           <Item>{D10657BB-67C6-486E-A60F-8A288CF5484E}</Item>
+                        </Specific_Data>
+                     </Resolvable>
+                  </UsedObject>
+               </UsedObjectSet>
+            </Specific_Data>
+         </Resolvable>
+         <Metadata>
+            <Item>
+               <Name>Chart:UpdateType</Name>
+               <Data>VisibleData</Data>
+            </Item>
+            <Item>
+               <Name>Chart:GroupName</Name>
+               <Data>Unstable Approach (HAT method) (2)</Data>
+            </Item>
+            <Item>
+               <Name>Chart:Color</Name>
+               <Data>Orange</Data>
+            </Item>
+            <Item>
+               <Name>Chart:StripIndex</Name>
+               <Data>12</Data>
+            </Item>
+         </Metadata>
+      </Parameter>
+      <Parameter>
+         <Resolvable>
+            <Resolver_Id>Resolvers.Formula</Resolver_Id>
+            <Specific_Guid>{4124A47B-56F6-17D5-4089-9D0D5E96CFF5}</Specific_Guid>
+            <Specific_Data>
+               <Name>9) Gear Down</Name>
+               <Formula>if( exists([9) Gear Down]) and
+([Measurement: 9) Height Above Touchdown when Gear Down on 1st Approach (feet)] &lt; [Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)]),
+
+[Gear Down(1)]
+)</Formula>
+               <CompiledFormula>4	if	4	and	4	exists	3	9) Gear Down	NULL	4	&lt;	3	Measurement: 9) Height Above Touchdown when Gear Down on 1st Approach (feet)	3	Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)	NULL	NULL	3	Gear Down(1)	NULL</CompiledFormula>
+               <UsedObjectSet>
+                  <UsedObject>
+                     <Alias>Gear Down(1)</Alias>
+                     <IsNewAlias>true</IsNewAlias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.Formula</Resolver_Id>
+                        <Specific_Guid>{78F74826-6D1B-2595-F7EA-78FB51D11A5C}</Specific_Guid>
+                        <Specific_Data>
+                           <Name>Gear Down</Name>
+                           <Formula>//prefer gear down and locked, because this indicates we're configured to safely land
+if( exists([Landing Gear Down and Locked (0 = all gear down)]),
+![Landing Gear Down and Locked (0 = all gear down)],
+
+//otherwise, use gear handle
+if ( exists( [Landing Gear Handle (1 = down)] ),
+[Landing Gear Handle (1 = down)],
+
+//expect "fully retracted" to be likely to toggle when gear are up
+[Landing Gear Fully Retracted (0 = all gear up)]))</Formula>
+                           <CompiledFormula>4	if	4	exists	3	Landing Gear Down and Locked (0 = all gear down)	NULL	4	!	3	Landing Gear Down and Locked (0 = all gear down)	NULL	4	if	4	exists	3	Landing Gear Handle (1 = down)	NULL	3	Landing Gear Handle (1 = down)	3	Landing Gear Fully Retracted (0 = all gear up)	NULL	NULL</CompiledFormula>
+                           <UsedObjectSet>
+                              <UsedObject>
+                                 <Alias>Landing Gear Handle (1 = down)</Alias>
+                                 <Resolvable>
+                                    <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                                    <Specific_Guid>{00000001-00B9-4000-0000-000000000000}</Specific_Guid>
+                                 </Resolvable>
+                              </UsedObject>
+                              <UsedObject>
+                                 <Alias>Landing Gear Down and Locked (0 = all gear down)</Alias>
+                                 <Resolvable>
+                                    <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                                    <Specific_Guid>{00000001-0022-4000-0000-000000000000}</Specific_Guid>
+                                 </Resolvable>
+                              </UsedObject>
+                              <UsedObject>
+                                 <Alias>Landing Gear Fully Retracted (0 = all gear up)</Alias>
+                                 <Resolvable>
+                                    <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                                    <Specific_Guid>{00000001-001F-4000-0000-000000000000}</Specific_Guid>
+                                 </Resolvable>
+                              </UsedObject>
+                           </UsedObjectSet>
+                        </Specific_Data>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>ApmValue</Resolver_Id>
+                        <Specific_Guid>{AD305BA8-A264-3F33-2F0E-93AB2913C27C}</Specific_Guid>
+                        <Specific_Data>
+                           <Item>{D10657BB-67C6-486E-A60F-8A288CF5484E}</Item>
+                        </Specific_Data>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>9) Gear Down</Alias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                        <Specific_Guid>{00000001-03F0-4000-0000-000000000000}</Specific_Guid>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>Measurement: 9) Height Above Touchdown when Gear Down on 1st Approach (feet)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>ApmValue</Resolver_Id>
+                        <Specific_Guid>{E53C554D-365E-04E1-8409-1548C1ADC5C1}</Specific_Guid>
+                        <Specific_Data>
+                           <Item>{65C9A738-337E-422E-8327-80E0B2E5A781}</Item>
+                        </Specific_Data>
+                     </Resolvable>
+                  </UsedObject>
+               </UsedObjectSet>
+            </Specific_Data>
+         </Resolvable>
+         <Metadata>
+            <Item>
+               <Name>Chart:UpdateType</Name>
+               <Data>VisibleData</Data>
+            </Item>
+            <Item>
+               <Name>Chart:GroupName</Name>
+               <Data>Unstable Approach (HAT method) (2)</Data>
+            </Item>
+            <Item>
+               <Name>Chart:Color</Name>
+               <Data>Blue</Data>
+            </Item>
+            <Item>
+               <Name>Chart:LineStyle</Name>
+               <Data>Dash</Data>
+            </Item>
+            <Item>
+               <Name>Chart:StripIndex</Name>
+               <Data>13</Data>
+            </Item>
+         </Metadata>
+      </Parameter>
+      <Parameter>
+         <Resolvable>
+            <Resolver_Id>Resolvers.Formula</Resolver_Id>
+            <Specific_Guid>{EE37826D-5CEF-7DDB-5B77-4A7BE1968069}</Specific_Guid>
+            <Specific_Data>
+               <Name>Upper Limit</Name>
+               <Units>deg/sec</Units>
+               <Formula>if( exists([10) Stable in Pitch]) and
+([Measurement: 10) Height Above Touchdown when Stable in Pitch on 1st Approach (feet)] &lt; [Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)]),
+
+[10) Pitch Rate Limit (HAT method) (deg)]
+)</Formula>
+               <CompiledFormula>4	if	4	and	4	exists	3	10) Stable in Pitch	NULL	4	&lt;	3	Measurement: 10) Height Above Touchdown when Stable in Pitch on 1st Approach (feet)	3	Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)	NULL	NULL	3	10) Pitch Rate Limit (HAT method) (deg)	NULL</CompiledFormula>
+               <UsedObjectSet>
+                  <UsedObject>
+                     <Alias>10) Pitch Rate Limit (HAT method) (deg)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                        <Specific_Guid>{00000001-04B4-4000-0000-000000000000}</Specific_Guid>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>10) Stable in Pitch</Alias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                        <Specific_Guid>{00000001-03F1-4000-0000-000000000000}</Specific_Guid>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>Measurement: 10) Height Above Touchdown when Stable in Pitch on 1st Approach (feet)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>ApmValue</Resolver_Id>
+                        <Specific_Guid>{916FE043-467D-D717-2F16-45C010DC2B5C}</Specific_Guid>
+                        <Specific_Data>
+                           <Item>{0A133ABB-FCEC-463C-BAC3-B0205C85BEEC}</Item>
+                        </Specific_Data>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>ApmValue</Resolver_Id>
+                        <Specific_Guid>{AD305BA8-A264-3F33-2F0E-93AB2913C27C}</Specific_Guid>
+                        <Specific_Data>
+                           <Item>{D10657BB-67C6-486E-A60F-8A288CF5484E}</Item>
+                        </Specific_Data>
+                     </Resolvable>
+                  </UsedObject>
+               </UsedObjectSet>
+            </Specific_Data>
+         </Resolvable>
+         <Metadata>
+            <Item>
+               <Name>Chart:UpdateType</Name>
+               <Data>VisibleData</Data>
+            </Item>
+            <Item>
+               <Name>Chart:GroupName</Name>
+               <Data>Unstable Approach (HAT method) (2)</Data>
+            </Item>
+            <Item>
+               <Name>Chart:Color</Name>
+               <Data>Orange</Data>
+            </Item>
+            <Item>
+               <Name>Chart:StripIndex</Name>
+               <Data>14</Data>
+            </Item>
+         </Metadata>
+      </Parameter>
+      <Parameter>
+         <Resolvable>
+            <Resolver_Id>Resolvers.Formula</Resolver_Id>
+            <Specific_Guid>{A93158E1-9741-48DB-EAC4-0F0D9DD82436}</Specific_Guid>
+            <Specific_Data>
+               <Name>10) Pitch Rate</Name>
+               <Units>deg/sec</Units>
+               <Formula>if( exists([10) Stable in Pitch]) and
+([Measurement: 10) Height Above Touchdown when Stable in Pitch on 1st Approach (feet)] &lt; [Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)]),
+
+[Pitch Rate (deg/sec)]
+)</Formula>
+               <CompiledFormula>4	if	4	and	4	exists	3	10) Stable in Pitch	NULL	4	&lt;	3	Measurement: 10) Height Above Touchdown when Stable in Pitch on 1st Approach (feet)	3	Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)	NULL	NULL	3	Pitch Rate (deg/sec)	NULL</CompiledFormula>
+               <UsedObjectSet>
+                  <UsedObject>
+                     <Alias>10) Stable in Pitch</Alias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                        <Specific_Guid>{00000001-03F1-4000-0000-000000000000}</Specific_Guid>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>Measurement: 10) Height Above Touchdown when Stable in Pitch on 1st Approach (feet)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>ApmValue</Resolver_Id>
+                        <Specific_Guid>{916FE043-467D-D717-2F16-45C010DC2B5C}</Specific_Guid>
+                        <Specific_Data>
+                           <Item>{0A133ABB-FCEC-463C-BAC3-B0205C85BEEC}</Item>
+                        </Specific_Data>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>ApmValue</Resolver_Id>
+                        <Specific_Guid>{AD305BA8-A264-3F33-2F0E-93AB2913C27C}</Specific_Guid>
+                        <Specific_Data>
+                           <Item>{D10657BB-67C6-486E-A60F-8A288CF5484E}</Item>
+                        </Specific_Data>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>Pitch Rate (deg/sec)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                        <Specific_Guid>{00000001-00E9-4000-0000-000000000000}</Specific_Guid>
+                     </Resolvable>
+                  </UsedObject>
+               </UsedObjectSet>
+            </Specific_Data>
+         </Resolvable>
+         <Metadata>
+            <Item>
+               <Name>Chart:UpdateType</Name>
+               <Data>VisibleData</Data>
+            </Item>
+            <Item>
+               <Name>Chart:GroupName</Name>
+               <Data>Unstable Approach (HAT method) (2)</Data>
+            </Item>
+            <Item>
+               <Name>Chart:Color</Name>
+               <Data>Green</Data>
+            </Item>
+            <Item>
+               <Name>Chart:LineStyle</Name>
+               <Data>Dash</Data>
+            </Item>
+            <Item>
+               <Name>Chart:StripIndex</Name>
+               <Data>14</Data>
+            </Item>
+         </Metadata>
+      </Parameter>
+      <Parameter>
+         <Resolvable>
+            <Resolver_Id>Resolvers.Formula</Resolver_Id>
+            <Specific_Guid>{3994A888-2328-51BC-B301-1C4A62295272}</Specific_Guid>
+            <Specific_Data>
+               <Name>Lower Limit</Name>
+               <Units>deg/sec</Units>
+               <Formula>if( exists([10) Stable in Pitch]) and
+([Measurement: 10) Height Above Touchdown when Stable in Pitch on 1st Approach (feet)] &lt; [Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)]),
+
+-[10) Pitch Rate Limit (HAT method) (deg)]
+)</Formula>
+               <CompiledFormula>4	if	4	and	4	exists	3	10) Stable in Pitch	NULL	4	&lt;	3	Measurement: 10) Height Above Touchdown when Stable in Pitch on 1st Approach (feet)	3	Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)	NULL	NULL	4	-	3	10) Pitch Rate Limit (HAT method) (deg)	NULL	NULL</CompiledFormula>
+               <UsedObjectSet>
+                  <UsedObject>
+                     <Alias>10) Pitch Rate Limit (HAT method) (deg)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                        <Specific_Guid>{00000001-04B4-4000-0000-000000000000}</Specific_Guid>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>10) Stable in Pitch</Alias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                        <Specific_Guid>{00000001-03F1-4000-0000-000000000000}</Specific_Guid>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>Measurement: 10) Height Above Touchdown when Stable in Pitch on 1st Approach (feet)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>ApmValue</Resolver_Id>
+                        <Specific_Guid>{916FE043-467D-D717-2F16-45C010DC2B5C}</Specific_Guid>
+                        <Specific_Data>
+                           <Item>{0A133ABB-FCEC-463C-BAC3-B0205C85BEEC}</Item>
+                        </Specific_Data>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>ApmValue</Resolver_Id>
+                        <Specific_Guid>{AD305BA8-A264-3F33-2F0E-93AB2913C27C}</Specific_Guid>
+                        <Specific_Data>
+                           <Item>{D10657BB-67C6-486E-A60F-8A288CF5484E}</Item>
+                        </Specific_Data>
+                     </Resolvable>
+                  </UsedObject>
+               </UsedObjectSet>
+            </Specific_Data>
+         </Resolvable>
+         <Metadata>
+            <Item>
+               <Name>Chart:UpdateType</Name>
+               <Data>VisibleData</Data>
+            </Item>
+            <Item>
+               <Name>Chart:GroupName</Name>
+               <Data>Unstable Approach (HAT method) (2)</Data>
+            </Item>
+            <Item>
+               <Name>Chart:Color</Name>
+               <Data>Orange</Data>
+            </Item>
+            <Item>
+               <Name>Chart:StripIndex</Name>
+               <Data>14</Data>
+            </Item>
+         </Metadata>
+      </Parameter>
+      <Parameter>
+         <Resolvable>
+            <Resolver_Id>Resolvers.Formula</Resolver_Id>
+            <Specific_Guid>{5AD1DDCD-53F6-98C2-9951-D4771CDD9C8F}</Specific_Guid>
+            <Specific_Data>
+               <Name>Upper Limit</Name>
+               <Units>deg/sec</Units>
+               <Formula>if( exists([11) Stable in Roll]) and
+([Measurement: 11) Height Above Touchdown when Stable in Roll on 1st Approach (feet)] &lt; [Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)]),
+
+[11) Roll Rate Limit (HAT method) (deg)]
+)</Formula>
+               <CompiledFormula>4	if	4	and	4	exists	3	11) Stable in Roll	NULL	4	&lt;	3	Measurement: 11) Height Above Touchdown when Stable in Roll on 1st Approach (feet)	3	Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)	NULL	NULL	3	11) Roll Rate Limit (HAT method) (deg)	NULL</CompiledFormula>
+               <UsedObjectSet>
+                  <UsedObject>
+                     <Alias>11) Roll Rate Limit (HAT method) (deg)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                        <Specific_Guid>{00000001-04B5-4000-0000-000000000000}</Specific_Guid>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>11) Stable in Roll</Alias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                        <Specific_Guid>{00000001-03F2-4000-0000-000000000000}</Specific_Guid>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>Measurement: 11) Height Above Touchdown when Stable in Roll on 1st Approach (feet)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>ApmValue</Resolver_Id>
+                        <Specific_Guid>{1272014A-F0AE-989C-D57B-943392EA3579}</Specific_Guid>
+                        <Specific_Data>
+                           <Item>{0EE97468-619C-47DA-90DE-E0C0928DF44A}</Item>
+                        </Specific_Data>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>ApmValue</Resolver_Id>
+                        <Specific_Guid>{AD305BA8-A264-3F33-2F0E-93AB2913C27C}</Specific_Guid>
+                        <Specific_Data>
+                           <Item>{D10657BB-67C6-486E-A60F-8A288CF5484E}</Item>
+                        </Specific_Data>
+                     </Resolvable>
+                  </UsedObject>
+               </UsedObjectSet>
+            </Specific_Data>
+         </Resolvable>
+         <Metadata>
+            <Item>
+               <Name>Chart:UpdateType</Name>
+               <Data>VisibleData</Data>
+            </Item>
+            <Item>
+               <Name>Chart:GroupName</Name>
+               <Data>Unstable Approach (HAT method) (2)</Data>
+            </Item>
+            <Item>
+               <Name>Chart:Color</Name>
+               <Data>Orange</Data>
+            </Item>
+            <Item>
+               <Name>Chart:StripIndex</Name>
+               <Data>15</Data>
+            </Item>
+         </Metadata>
+      </Parameter>
+      <Parameter>
+         <Resolvable>
+            <Resolver_Id>Resolvers.Formula</Resolver_Id>
+            <Specific_Guid>{AA6D777D-94BC-2809-8791-04CEE824E345}</Specific_Guid>
+            <Specific_Data>
+               <Name>11) Roll Rate</Name>
+               <Units>deg/sec</Units>
+               <Formula>if( exists([11) Stable in Roll]) and
+([Measurement: 11) Height Above Touchdown when Stable in Roll on 1st Approach (feet)] &lt; [Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)]),
+
+[Roll Rate (degrees / second)]
+)</Formula>
+               <CompiledFormula>4	if	4	and	4	exists	3	11) Stable in Roll	NULL	4	&lt;	3	Measurement: 11) Height Above Touchdown when Stable in Roll on 1st Approach (feet)	3	Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)	NULL	NULL	3	Roll Rate (degrees / second)	NULL</CompiledFormula>
+               <UsedObjectSet>
+                  <UsedObject>
+                     <Alias>Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>ApmValue</Resolver_Id>
+                        <Specific_Guid>{AD305BA8-A264-3F33-2F0E-93AB2913C27C}</Specific_Guid>
+                        <Specific_Data>
+                           <Item>{D10657BB-67C6-486E-A60F-8A288CF5484E}</Item>
+                        </Specific_Data>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>11) Stable in Roll</Alias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                        <Specific_Guid>{00000001-03F2-4000-0000-000000000000}</Specific_Guid>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>Measurement: 11) Height Above Touchdown when Stable in Roll on 1st Approach (feet)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>ApmValue</Resolver_Id>
+                        <Specific_Guid>{1272014A-F0AE-989C-D57B-943392EA3579}</Specific_Guid>
+                        <Specific_Data>
+                           <Item>{0EE97468-619C-47DA-90DE-E0C0928DF44A}</Item>
+                        </Specific_Data>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>Roll Rate (degrees / second)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                        <Specific_Guid>{00000001-00EA-4000-0000-000000000000}</Specific_Guid>
+                     </Resolvable>
+                  </UsedObject>
+               </UsedObjectSet>
+            </Specific_Data>
+         </Resolvable>
+         <Metadata>
+            <Item>
+               <Name>Chart:UpdateType</Name>
+               <Data>VisibleData</Data>
+            </Item>
+            <Item>
+               <Name>Chart:GroupName</Name>
+               <Data>Unstable Approach (HAT method) (2)</Data>
+            </Item>
+            <Item>
+               <Name>Chart:Color</Name>
+               <Data>Magenta</Data>
+            </Item>
+            <Item>
+               <Name>Chart:LineStyle</Name>
+               <Data>Dash</Data>
+            </Item>
+            <Item>
+               <Name>Chart:StripIndex</Name>
+               <Data>15</Data>
+            </Item>
+         </Metadata>
+      </Parameter>
+      <Parameter>
+         <Resolvable>
+            <Resolver_Id>Resolvers.Formula</Resolver_Id>
+            <Specific_Guid>{7E86540C-0E7D-DDCF-44EB-8641A485FA6C}</Specific_Guid>
+            <Specific_Data>
+               <Name>Lower Limit</Name>
+               <Units>deg/sec</Units>
+               <Formula>if( exists([11) Stable in Roll]) and
+([Measurement: 11) Height Above Touchdown when Stable in Roll on 1st Approach (feet)] &lt; [Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)]),
+
+-[11) Roll Rate Limit (HAT method) (deg)]
+)</Formula>
+               <CompiledFormula>4	if	4	and	4	exists	3	11) Stable in Roll	NULL	4	&lt;	3	Measurement: 11) Height Above Touchdown when Stable in Roll on 1st Approach (feet)	3	Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)	NULL	NULL	4	-	3	11) Roll Rate Limit (HAT method) (deg)	NULL	NULL</CompiledFormula>
+               <UsedObjectSet>
+                  <UsedObject>
+                     <Alias>11) Roll Rate Limit (HAT method) (deg)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                        <Specific_Guid>{00000001-04B5-4000-0000-000000000000}</Specific_Guid>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>11) Stable in Roll</Alias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                        <Specific_Guid>{00000001-03F2-4000-0000-000000000000}</Specific_Guid>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>Measurement: 11) Height Above Touchdown when Stable in Roll on 1st Approach (feet)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>ApmValue</Resolver_Id>
+                        <Specific_Guid>{1272014A-F0AE-989C-D57B-943392EA3579}</Specific_Guid>
+                        <Specific_Data>
+                           <Item>{0EE97468-619C-47DA-90DE-E0C0928DF44A}</Item>
+                        </Specific_Data>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>ApmValue</Resolver_Id>
+                        <Specific_Guid>{AD305BA8-A264-3F33-2F0E-93AB2913C27C}</Specific_Guid>
+                        <Specific_Data>
+                           <Item>{D10657BB-67C6-486E-A60F-8A288CF5484E}</Item>
+                        </Specific_Data>
+                     </Resolvable>
+                  </UsedObject>
+               </UsedObjectSet>
+            </Specific_Data>
+         </Resolvable>
+         <Metadata>
+            <Item>
+               <Name>Chart:UpdateType</Name>
+               <Data>VisibleData</Data>
+            </Item>
+            <Item>
+               <Name>Chart:GroupName</Name>
+               <Data>Unstable Approach (HAT method) (2)</Data>
+            </Item>
+            <Item>
+               <Name>Chart:Color</Name>
+               <Data>Orange</Data>
+            </Item>
+            <Item>
+               <Name>Chart:StripIndex</Name>
+               <Data>15</Data>
+            </Item>
+         </Metadata>
+      </Parameter>
+      <Parameter>
+         <Resolvable>
+            <Resolver_Id>Resolvers.Formula</Resolver_Id>
+            <Specific_Guid>{CD1B5DBB-70CE-27DD-1D96-72866B76BFB6}</Specific_Guid>
+            <Specific_Data>
+               <Name>Upper Limit</Name>
+               <Units>deg/sec</Units>
+               <Formula>if( exists([12) Stable in Yaw]) and
+([Measurement: 12) Height Above Touchdown when Stable in Yaw on 1st Approach (feet)] &lt; [Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)]),
+
+[12) Yaw Rate Limit (HAT method) (deg)]
+)</Formula>
+               <CompiledFormula>4	if	4	and	4	exists	3	12) Stable in Yaw	NULL	4	&lt;	3	Measurement: 12) Height Above Touchdown when Stable in Yaw on 1st Approach (feet)	3	Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)	NULL	NULL	3	12) Yaw Rate Limit (HAT method) (deg)	NULL</CompiledFormula>
+               <UsedObjectSet>
+                  <UsedObject>
+                     <Alias>12) Stable in Yaw</Alias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                        <Specific_Guid>{00000001-03F3-4000-0000-000000000000}</Specific_Guid>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>12) Yaw Rate Limit (HAT method) (deg)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                        <Specific_Guid>{00000001-04B6-4000-0000-000000000000}</Specific_Guid>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>Measurement: 12) Height Above Touchdown when Stable in Yaw on 1st Approach (feet)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>ApmValue</Resolver_Id>
+                        <Specific_Guid>{AA9D1405-8B3E-BAD1-AB08-5F8C9735372F}</Specific_Guid>
+                        <Specific_Data>
+                           <Item>{ACBCF62A-3D89-4BAF-BD64-0850116F3B56}</Item>
+                        </Specific_Data>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>ApmValue</Resolver_Id>
+                        <Specific_Guid>{AD305BA8-A264-3F33-2F0E-93AB2913C27C}</Specific_Guid>
+                        <Specific_Data>
+                           <Item>{D10657BB-67C6-486E-A60F-8A288CF5484E}</Item>
+                        </Specific_Data>
+                     </Resolvable>
+                  </UsedObject>
+               </UsedObjectSet>
+            </Specific_Data>
+         </Resolvable>
+         <Metadata>
+            <Item>
+               <Name>Chart:UpdateType</Name>
+               <Data>VisibleData</Data>
+            </Item>
+            <Item>
+               <Name>Chart:GroupName</Name>
+               <Data>Unstable Approach (HAT method) (2)</Data>
+            </Item>
+            <Item>
+               <Name>Chart:Color</Name>
+               <Data>Orange</Data>
+            </Item>
+            <Item>
+               <Name>Chart:StripIndex</Name>
+               <Data>16</Data>
+            </Item>
+         </Metadata>
+      </Parameter>
+      <Parameter>
+         <Resolvable>
+            <Resolver_Id>Resolvers.Formula</Resolver_Id>
+            <Specific_Guid>{AD2A7D89-BD7D-16ED-13D3-21AB1182FD2C}</Specific_Guid>
+            <Specific_Data>
+               <Name>12) Yaw Rate</Name>
+               <Units>deg/sec</Units>
+               <Formula>if( exists([12) Stable in Yaw]) and
+([Measurement: 12) Height Above Touchdown when Stable in Yaw on 1st Approach (feet)] &lt; [Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)]),
+
+[Yaw Rate (degrees / second)]
+)</Formula>
+               <CompiledFormula>4	if	4	and	4	exists	3	12) Stable in Yaw	NULL	4	&lt;	3	Measurement: 12) Height Above Touchdown when Stable in Yaw on 1st Approach (feet)	3	Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)	NULL	NULL	3	Yaw Rate (degrees / second)	NULL</CompiledFormula>
+               <UsedObjectSet>
+                  <UsedObject>
+                     <Alias>12) Stable in Yaw</Alias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                        <Specific_Guid>{00000001-03F3-4000-0000-000000000000}</Specific_Guid>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>ApmValue</Resolver_Id>
+                        <Specific_Guid>{AD305BA8-A264-3F33-2F0E-93AB2913C27C}</Specific_Guid>
+                        <Specific_Data>
+                           <Item>{D10657BB-67C6-486E-A60F-8A288CF5484E}</Item>
+                        </Specific_Data>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>Yaw Rate (degrees / second)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                        <Specific_Guid>{00000001-00EB-4000-0000-000000000000}</Specific_Guid>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>Measurement: 12) Height Above Touchdown when Stable in Yaw on 1st Approach (feet)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>ApmValue</Resolver_Id>
+                        <Specific_Guid>{AA9D1405-8B3E-BAD1-AB08-5F8C9735372F}</Specific_Guid>
+                        <Specific_Data>
+                           <Item>{ACBCF62A-3D89-4BAF-BD64-0850116F3B56}</Item>
+                        </Specific_Data>
+                     </Resolvable>
+                  </UsedObject>
+               </UsedObjectSet>
+            </Specific_Data>
+         </Resolvable>
+         <Metadata>
+            <Item>
+               <Name>Chart:UpdateType</Name>
+               <Data>VisibleData</Data>
+            </Item>
+            <Item>
+               <Name>Chart:GroupName</Name>
+               <Data>Unstable Approach (HAT method) (2)</Data>
+            </Item>
+            <Item>
+               <Name>Chart:Color</Name>
+               <Data>Cyan</Data>
+            </Item>
+            <Item>
+               <Name>Chart:LineStyle</Name>
+               <Data>Dash</Data>
+            </Item>
+            <Item>
+               <Name>Chart:StripIndex</Name>
+               <Data>16</Data>
+            </Item>
+         </Metadata>
+      </Parameter>
+      <Parameter>
+         <Resolvable>
+            <Resolver_Id>Resolvers.Formula</Resolver_Id>
+            <Specific_Guid>{C55FEF9A-BCBF-B13F-1C96-A43121B6A677}</Specific_Guid>
+            <Specific_Data>
+               <Name>Lower Limit</Name>
+               <Units>deg/sec</Units>
+               <Formula>if( exists([12) Stable in Yaw]) and
+([Measurement: 12) Height Above Touchdown when Stable in Yaw on 1st Approach (feet)] &lt; [Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)]),
+
+-[12) Yaw Rate Limit (HAT method) (deg)]
+)</Formula>
+               <CompiledFormula>4	if	4	and	4	exists	3	12) Stable in Yaw	NULL	4	&lt;	3	Measurement: 12) Height Above Touchdown when Stable in Yaw on 1st Approach (feet)	3	Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)	NULL	NULL	4	-	3	12) Yaw Rate Limit (HAT method) (deg)	NULL	NULL</CompiledFormula>
+               <UsedObjectSet>
+                  <UsedObject>
+                     <Alias>12) Stable in Yaw</Alias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                        <Specific_Guid>{00000001-03F3-4000-0000-000000000000}</Specific_Guid>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>12) Yaw Rate Limit (HAT method) (deg)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                        <Specific_Guid>{00000001-04B6-4000-0000-000000000000}</Specific_Guid>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>Measurement: 12) Height Above Touchdown when Stable in Yaw on 1st Approach (feet)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>ApmValue</Resolver_Id>
+                        <Specific_Guid>{AA9D1405-8B3E-BAD1-AB08-5F8C9735372F}</Specific_Guid>
+                        <Specific_Data>
+                           <Item>{ACBCF62A-3D89-4BAF-BD64-0850116F3B56}</Item>
+                        </Specific_Data>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>ApmValue</Resolver_Id>
+                        <Specific_Guid>{AD305BA8-A264-3F33-2F0E-93AB2913C27C}</Specific_Guid>
+                        <Specific_Data>
+                           <Item>{D10657BB-67C6-486E-A60F-8A288CF5484E}</Item>
+                        </Specific_Data>
+                     </Resolvable>
+                  </UsedObject>
+               </UsedObjectSet>
+            </Specific_Data>
+         </Resolvable>
+         <Metadata>
+            <Item>
+               <Name>Chart:UpdateType</Name>
+               <Data>VisibleData</Data>
+            </Item>
+            <Item>
+               <Name>Chart:GroupName</Name>
+               <Data>Unstable Approach (HAT method) (2)</Data>
+            </Item>
+            <Item>
+               <Name>Chart:Color</Name>
+               <Data>Orange</Data>
+            </Item>
+            <Item>
+               <Name>Chart:StripIndex</Name>
+               <Data>16</Data>
+            </Item>
+         </Metadata>
+      </Parameter>
+      <Parameter>
+         <Resolvable>
+            <Resolver_Id>Resolvers.Formula</Resolver_Id>
+            <Specific_Guid>{F7CEEDA4-3291-E9E1-24CE-A22C381AE7C5}</Specific_Guid>
+            <Specific_Data>
+               <Name>13) Spoilers Armed</Name>
+               <Formula>if( exists([13) Ground Spoilers Armed]) and
+([Measurement: 13) Height Above Touchdown when Ground Spoilers Armed on 1st Approach (feet)] &lt; [Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)]),
+
+[Spoilers Armed]
+)</Formula>
+               <CompiledFormula>4	if	4	and	4	exists	3	13) Ground Spoilers Armed	NULL	4	&lt;	3	Measurement: 13) Height Above Touchdown when Ground Spoilers Armed on 1st Approach (feet)	3	Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)	NULL	NULL	3	Spoilers Armed	NULL</CompiledFormula>
+               <UsedObjectSet>
+                  <UsedObject>
+                     <Alias>13) Ground Spoilers Armed</Alias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                        <Specific_Guid>{00000001-03F4-4000-0000-000000000000}</Specific_Guid>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>ApmValue</Resolver_Id>
+                        <Specific_Guid>{AD305BA8-A264-3F33-2F0E-93AB2913C27C}</Specific_Guid>
+                        <Specific_Data>
+                           <Item>{D10657BB-67C6-486E-A60F-8A288CF5484E}</Item>
+                        </Specific_Data>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>Spoilers Armed</Alias>
+                     <IsNewAlias>true</IsNewAlias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.Formula</Resolver_Id>
+                        <Specific_Guid>{F03BD8BB-0752-FC20-9EB9-EAB5D54504B3}</Specific_Guid>
+                        <Specific_Data>
+                           <Name>Spoilers Armed</Name>
+                           <Formula>if ( exists([Ground Spoilers Armed (1 = Armed)]),
+[Ground Spoilers Armed (1 = Armed)],
+
+[Speed Brake Handle (degrees)] &gt; ( 0.8 * [Speed Brake Handle Position for Arming the Ground Spoilers])
+)</Formula>
+                           <CompiledFormula>4	if	4	exists	3	Ground Spoilers Armed (1 = Armed)	NULL	3	Ground Spoilers Armed (1 = Armed)	4	&gt;	3	Speed Brake Handle (degrees)	4	*	2	VT_R8;0.80000000000000004	3	Speed Brake Handle Position for Arming the Ground Spoilers	NULL	NULL	NULL</CompiledFormula>
+                           <UsedObjectSet>
+                              <UsedObject>
+                                 <Alias>Speed Brake Handle Position for Arming the Ground Spoilers</Alias>
+                                 <Resolvable>
+                                    <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                                    <Specific_Guid>{00000002-0059-4000-0000-000000000000}</Specific_Guid>
+                                 </Resolvable>
+                              </UsedObject>
+                              <UsedObject>
+                                 <Alias>Ground Spoilers Armed (1 = Armed)</Alias>
+                                 <Resolvable>
+                                    <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                                    <Specific_Guid>{00000001-00EE-4000-0000-000000000000}</Specific_Guid>
+                                 </Resolvable>
+                              </UsedObject>
+                              <UsedObject>
+                                 <Alias>Speed Brake Handle (degrees)</Alias>
+                                 <Resolvable>
+                                    <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                                    <Specific_Guid>{00000001-002B-4000-0000-000000000000}</Specific_Guid>
+                                 </Resolvable>
+                              </UsedObject>
+                           </UsedObjectSet>
+                        </Specific_Data>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>Measurement: 13) Height Above Touchdown when Ground Spoilers Armed on 1st Approach (feet)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>ApmValue</Resolver_Id>
+                        <Specific_Guid>{7190FFB6-827B-7A4D-D5F6-556D616E2EDD}</Specific_Guid>
+                        <Specific_Data>
+                           <Item>{08D4B340-1799-4A5E-BC2E-7CAF783B9CFC}</Item>
+                        </Specific_Data>
+                     </Resolvable>
+                  </UsedObject>
+               </UsedObjectSet>
+            </Specific_Data>
+         </Resolvable>
+         <Metadata>
+            <Item>
+               <Name>Chart:UpdateType</Name>
+               <Data>VisibleData</Data>
+            </Item>
+            <Item>
+               <Name>Chart:GroupName</Name>
+               <Data>Unstable Approach (HAT method) (2)</Data>
+            </Item>
+            <Item>
+               <Name>Chart:Color</Name>
+               <Data>Purple</Data>
+            </Item>
+            <Item>
+               <Name>Chart:LineStyle</Name>
+               <Data>Dash</Data>
+            </Item>
+            <Item>
+               <Name>Chart:StripIndex</Name>
+               <Data>17</Data>
+            </Item>
+         </Metadata>
+      </Parameter>
+      <Parameter>
+         <Resolvable>
+            <Resolver_Id>Resolvers.Formula</Resolver_Id>
+            <Specific_Guid>{9C4C3989-6EA0-AE44-75FF-ECF7D996FDA1}</Specific_Guid>
+            <Specific_Data>
+               <Name>14) Speed Brakes Out</Name>
+               <Formula>if( exists([14) Speed Brakes Retracted]) and
+([Measurement: 14) Height Above Touchdown when Speed Brakes Retracted on 1st Approach (feet)] &lt; [Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)]),
+
+![Speed Brakes In]
+)</Formula>
+               <CompiledFormula>4	if	4	and	4	exists	3	14) Speed Brakes Retracted	NULL	4	&lt;	3	Measurement: 14) Height Above Touchdown when Speed Brakes Retracted on 1st Approach (feet)	3	Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)	NULL	NULL	4	!	3	Speed Brakes In	NULL	NULL</CompiledFormula>
+               <UsedObjectSet>
+                  <UsedObject>
+                     <Alias>Measurement: Height Above Touchdown when 1st Approach is Required to be 100% Stable (feet)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>ApmValue</Resolver_Id>
+                        <Specific_Guid>{AD305BA8-A264-3F33-2F0E-93AB2913C27C}</Specific_Guid>
+                        <Specific_Data>
+                           <Item>{D10657BB-67C6-486E-A60F-8A288CF5484E}</Item>
+                        </Specific_Data>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>14) Speed Brakes Retracted</Alias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                        <Specific_Guid>{00000001-03F5-4000-0000-000000000000}</Specific_Guid>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>Measurement: 14) Height Above Touchdown when Speed Brakes Retracted on 1st Approach (feet)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>ApmValue</Resolver_Id>
+                        <Specific_Guid>{BF85AF10-2206-C726-B95D-0FE0D45EF6DE}</Specific_Guid>
+                        <Specific_Data>
+                           <Item>{BC3EC3BE-8A4B-4BF8-8D68-A78019429FD5}</Item>
+                        </Specific_Data>
+                     </Resolvable>
+                  </UsedObject>
+                  <UsedObject>
+                     <Alias>Speed Brakes In</Alias>
+                     <IsNewAlias>true</IsNewAlias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.Formula</Resolver_Id>
+                        <Specific_Guid>{834FD368-1C8B-3DBB-08E9-E692E5EBD22A}</Specific_Guid>
+                        <Specific_Data>
+                           <Name>Speed Brakes In</Name>
+                           <Formula>
+!if ( 
+exists([Speed Brake Handle (degrees)]) AND 
+exists([Speed Brake Handle Position for Extending the Speed Brakes]),
+ 
+[Speed Brake Handle (degrees)] &gt; 
+( 0.8 * [Speed Brake Handle Position for Extending the Speed Brakes]),
+
+if ( exists([Speed Brakes Deployed (1 = Deployed)]),
+[Speed Brakes Deployed (1 = Deployed)], 
+[Speed Brake Position (deg += TEU)] &gt; 
+[Speed Brake Position Maximum for Climb and Approach (degrees)]
+) )</Formula>
+                           <CompiledFormula>4	!	4	if	4	AND	4	exists	3	Speed Brake Handle (degrees)	NULL	4	exists	3	Speed Brake Handle Position for Extending the Speed Brakes	NULL	NULL	4	&gt;	3	Speed Brake Handle (degrees)	4	*	2	VT_R8;0.80000000000000004	3	Speed Brake Handle Position for Extending the Speed Brakes	NULL	NULL	4	if	4	exists	3	Speed Brakes Deployed (1 = Deployed)	NULL	3	Speed Brakes Deployed (1 = Deployed)	4	&gt;	3	Speed Brake Position (deg += TEU)	3	Speed Brake Position Maximum for Climb and Approach (degrees)	NULL	NULL	NULL	NULL</CompiledFormula>
+                           <UsedObjectSet>
+                              <UsedObject>
+                                 <Alias>Speed Brake Handle Position for Extending the Speed Brakes</Alias>
+                                 <Resolvable>
+                                    <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                                    <Specific_Guid>{00000002-005E-4000-0000-000000000000}</Specific_Guid>
+                                 </Resolvable>
+                              </UsedObject>
+                              <UsedObject>
+                                 <Alias>Speed Brakes Deployed (1 = Deployed)</Alias>
+                                 <Resolvable>
+                                    <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                                    <Specific_Guid>{00000001-00F0-4000-0000-000000000000}</Specific_Guid>
+                                 </Resolvable>
+                              </UsedObject>
+                              <UsedObject>
+                                 <Alias>Speed Brake Position Maximum for Climb and Approach (degrees)</Alias>
+                                 <Resolvable>
+                                    <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                                    <Specific_Guid>{00000002-005A-4000-0000-000000000000}</Specific_Guid>
+                                 </Resolvable>
+                              </UsedObject>
+                              <UsedObject>
+                                 <Alias>Speed Brake Position (deg += TEU)</Alias>
+                                 <Resolvable>
+                                    <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                                    <Specific_Guid>{00000001-00F1-4000-0000-000000000000}</Specific_Guid>
+                                 </Resolvable>
+                              </UsedObject>
+                              <UsedObject>
+                                 <Alias>Speed Brake Handle (degrees)</Alias>
+                                 <Resolvable>
+                                    <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                                    <Specific_Guid>{00000001-002B-4000-0000-000000000000}</Specific_Guid>
+                                 </Resolvable>
+                              </UsedObject>
+                           </UsedObjectSet>
+                        </Specific_Data>
+                     </Resolvable>
+                  </UsedObject>
+               </UsedObjectSet>
+            </Specific_Data>
+         </Resolvable>
+         <Metadata>
+            <Item>
+               <Name>Chart:UpdateType</Name>
+               <Data>VisibleData</Data>
+            </Item>
+            <Item>
+               <Name>Chart:GroupName</Name>
+               <Data>Unstable Approach (HAT method) (2)</Data>
+            </Item>
+            <Item>
+               <Name>Chart:Color</Name>
+               <Data>Brown</Data>
+            </Item>
+            <Item>
+               <Name>Chart:LineStyle</Name>
+               <Data>Dash</Data>
+            </Item>
+            <Item>
+               <Name>Chart:StripIndex</Name>
+               <Data>18</Data>
+            </Item>
+         </Metadata>
+      </Parameter>
+      <Parameter>
+         <Resolvable>
+            <Resolver_Id>Resolvers.Formula</Resolver_Id>
+            <Specific_Guid>{A69D9C7C-53B4-A0CE-359A-48FBFD9FF32C}</Specific_Guid>
+            <Specific_Data>
+               <Name>AOA Upper Limit</Name>
+               <Units>deg</Units>
+               <Formula>[15) Angle of Attack Upper Limit (HAT method) (deg)]</Formula>
+               <CompiledFormula>3	15) Angle of Attack Upper Limit (HAT method) (deg)</CompiledFormula>
+               <UsedObjectSet>
+                  <UsedObject>
+                     <Alias>15) Angle of Attack Upper Limit (HAT method) (deg)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                        <Specific_Guid>{00000001-064F-4000-0000-000000000000}</Specific_Guid>
+                     </Resolvable>
+                  </UsedObject>
+               </UsedObjectSet>
+            </Specific_Data>
+         </Resolvable>
+         <Metadata>
+            <Item>
+               <Name>Chart:UpdateType</Name>
+               <Data>VisibleData</Data>
+            </Item>
+            <Item>
+               <Name>Chart:GroupName</Name>
+               <Data>Unstable Approach (HAT method) (2)</Data>
+            </Item>
+            <Item>
+               <Name>Chart:Color</Name>
+               <Data>Orange</Data>
+            </Item>
+            <Item>
+               <Name>Chart:StripIndex</Name>
+               <Data>19</Data>
+            </Item>
+         </Metadata>
+      </Parameter>
+      <Parameter>
+         <Resolvable>
+            <Resolver_Id>Resolvers.Formula</Resolver_Id>
+            <Specific_Guid>{286AD990-6DB6-28DC-D83E-52FF1AE4A6B8}</Specific_Guid>
+            <Specific_Data>
+               <Name>15) Angle of Attack (Estimated) (deg)</Name>
+               <Formula>[Angle of Attack (Estimated) (deg)]</Formula>
+               <CompiledFormula>3	Angle of Attack (Estimated) (deg)</CompiledFormula>
+               <UsedObjectSet>
+                  <UsedObject>
+                     <Alias>Angle of Attack (Estimated) (deg)</Alias>
+                     <Resolvable>
+                        <Resolver_Id>Resolvers.EmsLogical</Resolver_Id>
+                        <Specific_Guid>{00000001-02EF-4000-0000-000000000000}</Specific_Guid>
+                     </Resolvable>
+                  </UsedObject>
+               </UsedObjectSet>
+            </Specific_Data>
+         </Resolvable>
+         <Metadata>
+            <Item>
+               <Name>Chart:UpdateType</Name>
+               <Data>VisibleData</Data>
+            </Item>
+            <Item>
+               <Name>Chart:GroupName</Name>
+               <Data>Unstable Approach (HAT method) (2)</Data>
+            </Item>
+            <Item>
+               <Name>Chart:Color</Name>
+               <Data>Black</Data>
+            </Item>
+            <Item>
+               <Name>Chart:StripIndex</Name>
+               <Data>19</Data>
+            </Item>
+         </Metadata>
+      </Parameter>
+   </CParameterSet>
+</Root_Element>
