@@ -134,81 +134,46 @@
             <!--Fleet-->
             <div class="form-row form-group">
                 <div class="col-md-2 col-sm-2 col-xs-2">
-                    <label class="col-form-label" for="fleet">Fleet</label>
-                    <select class="form-control" id="fleetRedirect" name="fleet">
-                        <option value="">Select</option>
-                        <option value="airbus">Airbus</option>
-                        <option value="boeing">Boeing</option>
-                    </select>
+                    <label class="col-form-label" for="fleet">Fleet: </label>
+                    <label class="col-form-label" for="fleetRedirect"></label>
                 </div>
                 <div class="col-md-3 col-sm-6 col-xs-6">
                     <!--Model-->
-                    <label class="col-form-label" for="fleetModel">Aircraft type/model/freighter</label>
-                    <select class="form-control" id="fleetModelRedirect" name="fleetModel">
-                        <option value="">Select</option>
-                        <option value="700">700</option>
-                        <option value="800">800</option>
-                        <option value="800">800SFP</option>
-                        <option value="900">900</option>
-                        <option value="900">Freighter</option>
-                        <option value="319">319</option>
-                        <option value="320">A320</option>
-                        <option value="321">A321</option>
-                    </select>
+                    <label class="col-form-label" for="fleetModel">Aircraft type/model/freighter: </label>
+                    <label class="col-form-label" for="fleetModelRedirect"></label>
                 </div>
                 <div class="col-md-2 col-sm-4 col-xs-4">
-                    <label class="col-form-label" for="approachType">Type of Approach</label>
-                    <select class="form-control" id="approachTypeRedirect" name="approachType">
-                        <option value="">Select</option>
-                        <option value="visual">Visual</option>
-                        <option value="ILS">ILS</option>
-                        <option value="RNAV">RNAV</option>
-                        <option value="Non precision">Non precision</option>
-                    </select>
+                    <label class="col-form-label" for="approachType">Type of Approach: </label>
+                    <label class="col-form-label" for="approachTypeRedirect"></label>
                 </div>
             </div>
             <div class="form-row form-group">
                 <label class="col-form-label" for="contactDateLabel">Contact Date:</label>
-                <input class="col-md-2 col-sm-3 col-xs-2 form-control col-form-label-sm" type="date" id="contactDate">
-                <label class="col-form-label ml-1" for="flightRecord">Event ID</label>
-                <input class="col-md-1 col-sm-3 col-xs-2 ml-1 form-control col-form-label-sm" type="text"
-                    id="eventIDRedirect">
+                <label class="col-form-label" for="contactDate"></label>
+                <label class="col-form-label ml-1" for="flightRecord">Event ID: </label>
+                <label class="col-form-label" for="eventIDRedirect"></label>
                 <div class="col-md-2 col-sm-5 col-xs-3">
-                    <select class="col-md-10 custom-select form-control col-form-label-sm" id="conditionsRedirect">
-                        <option selected>Conditions</option>
-                        <option value="">Select</option>
-                        <option value="VFR">VFR</option>
-                        <option value="MVFR">MVFR</option>
-                        <option value="IMC">IMC</option>
-                        <option value="DAY">DAY</option>
-                        <option value="Night">Night</option>
-                        <option value="Windshear">Windshear</option>
-                        <option value="WIND (fill in)">WIND (fill in)</option>
-                        <option value="TURBULENCE (fill in)">TURBULENCE (fill in)</option>
-                    </select>
+                    <label class="col-form-label ml-1" for="conditionsLabel">Conditions: </label>
+                <label class="col-form-label" for="conditionsRedirect"></label>
                 </div>
             </div>
             <div class="form-row form-group">
-                <label class="col-form-label" for="origin"><span style="color:red">*</span>Origin</label>
-                <select class="col-md-1 col-sm-2 col-xs-2 form-control col-form-label-sm" id="originRedirect"
-                    name="origin" required>
-                    <option value="">Select</option>
-                </select>
-                <label class="col-form-label" for="destination"><span style="color:red">*</span>Destination</label>
-                <select class="col-md-1 col-sm-2 col-xs-2 form-control col-form-label-sm" id="destinationRedirect"
-                    name="destination" required>
-                    <option value="">Select</option>
-                </select>
-                <label class="col-form-label" for="landingRunway">Rwy</label>
-                <input class="col-md-1 col-sm-2 col-xs-2 form-control col-form-label-sm" type="text"
-                    id="landingRunwayRedirect">
-
+                <label class="col-form-label" for="origin">Origin: </label>
+                <label class="col-form-label" for="originRedirect"></label>
+               
+                <label class="col-form-label" for="destination">Destination: </label>
+                <label class="col-form-label" for="destinationRedirect"></label>
+                
+                <label class="col-form-label" for="landingRunway">Rwy: </label>
+                <label class="col-form-label" for="landingRunwayRedirect"></label>
+                <label class="col-form-label" for="freighterLabel">Freighter? </label>
+                <label class="col-form-label" for="freighterRedirect"></label>
             </div>
 
             <div class="form-row row-narrower form-group">
                 <div class="col-sm-12 col-xs-12">
                     <label class="col-form-label" for="tcpBrief">Was any of the following included in the TPC
-                        brief?<span style="color:red">*</span></label>
+                        brief?</label>
                 </div>
                 <div class="col-md-3 col-sm-5">
                     <div class="form-check">
@@ -233,11 +198,11 @@
             <div class="form-row form-group">
                 <div class="col-md-3 col-sm-9 col-xs-2">
                     <label class="col-form-label" for="airspaceType">Type of airspace:</label>
-                    <label class="col-form-label-sm" id="airspaceRedirect"></label>
+                    <label class="col-form-label" id="airspaceRedirect"></label>
                 </div>
                 <div class="col-md-3 col-sm-9 col-xs-2">
                     <label class="col-form-label" for="location">Location:</label>
-                    <label class="col-form-label-sm" id="locationRedirect"></label>
+                    <label class="col-form-label" id="locationRedirect"></label>
                 </div>
             </div>
             <div class="form-row form-group">

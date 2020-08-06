@@ -139,7 +139,6 @@ function getFleetType(fleet) {
             $("#origin").append('<option value="">Select</option>');
             $("#destination").children().remove().end();
             $("#destination").append('<option value="">Select</option>');
-            resetChangeForm();
         }
     })
 };
@@ -191,6 +190,7 @@ function getCUASurveyResults() {
                     $("#destinationRedirect").append('<option value="' + data.d.results[i].Destination + '">' + data.d.results[i].Destination + '</option>')
                     document.getElementById('destinationRedirect').value = data.d.results[i].Destination;
                     document.getElementById('landingRunwayRedirect').value = data.d.results[i].LandingRunway;
+                    $("#freighter").prop("checked", data.d.results[i].Freighter);
                     $("#tcpBriefARedirect").prop("checked", data.d.results[i].TcpBriefA);
                     $("#tcpBriefBRedirect").prop("checked", data.d.results[i].TcpBriefB);
                     $("#tcpBriefCRedirect").prop("checked", data.d.results[i].TcpBriefC);
@@ -257,6 +257,7 @@ function getCUASurveyResultsTest() {
                     $("#destinationRedirect").append('<option value="' + data.d.results[i].Destination + '">' + data.d.results[i].Destination + '</option>')
                     document.getElementById('destinationRedirect').value = data.d.results[i].Destination;
                     document.getElementById('landingRunwayRedirect').value = data.d.results[i].LandingRunway;
+                    $("#freighter").prop("checked", data.d.results[i].Freighter);
                     $("#tcpBriefARedirect").prop("checked", data.d.results[i].TcpBriefA);
                     $("#tcpBriefBRedirect").prop("checked", data.d.results[i].TcpBriefB);
                     $("#tcpBriefCRedirect").prop("checked", data.d.results[i].TcpBriefC);
@@ -340,6 +341,7 @@ function addToSharepointListTest() {
         , "Origin": ($("#origin").val() == "") ? null : $('#origin option:selected').text()
         , "Destination": ($("#destination").val() == "") ? null : $('#destination option:selected').text()
         , "LandingRunway": ($("#landingRunway").val() == "") ? null : $('#landingRunway').val()
+        , "Freighter": $("#freighter").prop("checked")
         , "Fleet": ($("#fleet").val() == "") ? null : $('#fleet').val()
         , "FleetModel": ($("#fleetModel").val() == "") ? null : $('#fleetModel option:selected').text()
         , "ApproachType": ($("#approachType").val() == "") ? null : $('#approachType').val()
@@ -376,15 +378,63 @@ function addToSharepointListTest() {
     }//end item
 
     var errorMessage = "Error inserting record number: " + count;
-    insertIntoList(url, item, "Item added/saved", errorMessage);
+    insertIntoListTest(url, item, "Item added/saved", errorMessage);
     /*window.location.reload();
     $("#tBody1").append("Saved to Human Factors by Flight List");*/
 }
+
+    function insertIntoListTest(url, item, successMsg, failMsg, source) {
+        console.log(JSON.stringify(item));
+        $.ajax({
+            url: url,
+            type: "POST",
+            contentType: "application/json;odata=verbose",
+            data: JSON.stringify(item),
+            beforeSend: function () {
+                //toggleCursor();
+                $(".MessageLabel").text("");
+            },
+            headers: {
+                "Accept": "application/json;odata=verbose",
+                "X-RequestDigest": $("#__REQUESTDIGEST").val()
+            },
+            success: function (data) {
+                //alert('success');
+                if (successMsg != '') {
+                    console.log(successMsg);
+                    console.log(JSON.stringify(item));
+                    alert(JSON.stringify(item));
+                    $("#insertStatus").show();
+                    $("#insertStatus").html("Request sent!").css({ "color": "green", "font-weight": "bold", "font-size": "18px" });
+                    location.href = _spPageContextInfo.webAbsoluteUrl + '/SitePages/CUASurveyRedirect.aspx';
+                };
+                //window.location.reload();
+            },
+            error: function (data) {
+                alert('fail');
+                if (failMsg != '') {
+                    alert(failMsg);
+                    console.log(failMsg);
+                    console.log(JSON.stringify(item));
+                    alert(JSON.stringify(item));
+                    //toggleCursor();
+                    $("#insertStatus").show();
+                    $("#insertStatus").html("Request NOT entered!").css({ "color": "red", "font-weight": "bold", "font-size": "18px" });
+                }
+            }
+    
+        });
+    }
+
 
 function addToSharepointList() {
     var count = 1;
     var url = 'https://alaskaair.sharepoint.com/sites/FOQA/_vti_bin/ListData.svc/CUASurvey';
     var listItemType = 'Microsoft.SharePoint.DataService.CUASurveyItem';
+
+    var ut = ""; $('#unmitigatedThreats option:selected').toArray().map(item =>ut += item.text + ", ")
+    var wc = ""; $('#whyContinue option:selected').toArray().map(item =>wc += item.text + ", ")
+    var af = ""; $('#additionalFactors option:selected').toArray().map(item =>af += item.text + ", ")
 
     var item = {
         "__metadata": { "type": listItemType }
@@ -394,6 +444,7 @@ function addToSharepointList() {
         , "Origin": ($("#origin").val() == "") ? null : $('#origin option:selected').text()
         , "Destination": ($("#destination").val() == "") ? null : $('#destination option:selected').text()
         , "LandingRunway": ($("#landingRunway").val() == "") ? null : $('#landingRunway').val()
+        , "Freighter": $("#freighter").prop("checked")
         , "Fleet": ($("#fleet").val() == "") ? null : $('#fleet').val()
         , "FleetModel": ($("#fleetModel").val() == "") ? null : $('#fleetModel option:selected').text()
         , "ApproachType": ($("#approachType").val() == "") ? null : $('#approachType').val()
@@ -416,7 +467,7 @@ function addToSharepointList() {
         , "Pfgatesunderstanding": ($("#pfGatesUnderstanding").val() == "") ? null : $('#pfGatesUnderstanding').val()
         , "Pmgatesunderstanding": ($("#pmGatesUnderstanding").val() == "") ? null : $('#pmGatesUnderstanding').val()
         , "Errorchain": ($("#errorChain").val() == "") ? null : $('#errorChain').val()
-        , "Unmitigatedthreats": $('#unmitigatedThreats option:selected').toArray().map(item => item.text)
+        , "Unmitigatedthreats": ut.substring(0, ut.length-2)
         , "Fullyconfigured": (document.querySelectorAll("input[id=fullyConfigured]:checked")[0] == undefined) ? null : document.querySelectorAll("input[id=fullyConfigured]:checked")[0].value
         , "Pmcommunicationunfigured": (document.querySelectorAll("input[id=pmCommunicationUnfigured]:checked")[0] == undefined) ? null : document.querySelectorAll("input[id=pmCommunicationUnfigured]:checked")[0].value
         , "Pfacknowledge": (document.querySelectorAll("input[id=pfAcknowledge]:checked")[0] == undefined) ? null : document.querySelectorAll("input[id=pfAcknowledge]:checked")[0].value
@@ -424,8 +475,8 @@ function addToSharepointList() {
         , "Pmnotstable": (document.querySelectorAll("input[id=pmNotStable]:checked")[0] == undefined) ? null : document.querySelectorAll("input[id=pmNotStable]:checked")[0].value
         , "Goaround500": (document.querySelectorAll("input[id=goAround500]:checked")[0] == undefined) ? null : document.querySelectorAll("input[id=goAround500]:checked")[0].value
         , "Pfacknowledgegoaround": (document.querySelectorAll("input[id=pfAcknowledgeGoAround]:checked")[0] == undefined) ? null : document.querySelectorAll("input[id=pfAcknowledgeGoAround]:checked")[0].value
-        , "Whycontinue": $('#whyContinue option:selected').toArray().map(item => item.text)
-        , "Additionalfactors": $('#additionalFactors option:selected').toArray().map(item => item.text)
+        , "Whycontinue": wc.substring(0, wc.length-2)
+        , "Additionalfactors": af.substring(0, af.length-2)
         , "Ccsummary": ($("#ccSummary").val() == "") ? null : $('#ccSummary').val()
     }//end item
 
