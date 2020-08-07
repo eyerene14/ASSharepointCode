@@ -89,7 +89,7 @@
     .formLeftAdjust {
         position: relative;
         padding-top: 0px;
-        padding-left: 150px;
+        padding-left: 80px;
         padding-right: 400px;
         border-width: .2rem 0 0;
     }
@@ -127,6 +127,7 @@
 
     .redirect {
         color: #2774AE;
+        font-weight: bold;
     }
 </style>
 
@@ -160,7 +161,7 @@
             <label class="col-form-label" for="gatekeeperLabel">Gatekeeper:</label>
             <label class="col-form-label redirect" id="gatekeepersNameRedirect"></label>
             <!--Fleet-->
-            <div class="form-row form-group">
+            <div class="form-row">
                 <label class="col-form-label" for="fleet">Fleet: </label>
                 <label class="col-form-label redirect" id="fleetRedirect"></label>
                 <!--Model-->
@@ -170,17 +171,15 @@
                 <label class="col-form-label" for="approachType">Type of Approach: </label>
                 <label class="col-form-label redirect" id="approachTypeRedirect"></label>
             </div>
-            <div class="form-row form-group">
+            <div class="form-row">
                 <label class="col-form-label" for="contactDateLabel">Contact Date:</label>
                 <label class="col-form-label redirect" id="contactDateRedirect"></label>
                 <label class="col-form-label ml-1" for="flightRecord">Event ID: </label>
                 <label class="col-form-label redirect" id="eventIDRedirect"></label>
-                <div class="col-md-2 col-sm-5 col-xs-3">
-                    <label class="col-form-label ml-1" for="conditionsLabel">Conditions: </label>
-                    <label class="col-form-label redirect" id="conditionsRedirect"></label>
-                </div>
+                <label class="col-form-label ml-1" for="conditionsLabel">Conditions: </label>
+                <label class="col-form-label redirect" id="conditionsRedirect"></label>
             </div>
-            <div class="form-row form-group">
+            <div class="form-row">
                 <label class="col-form-label" for="origin">Origin: </label>
                 <label class="col-form-label redirect" id="originRedirect"></label>
 
@@ -195,12 +194,12 @@
                 </div>
             </div>
 
-            <div class="form-row row-narrower form-group">
+            <div class="form-row row-narrower">
                 <div class="col-sm-12 col-xs-12">
                     <label class="col-form-label" for="tcpBrief">Was any of the following included in the TPC
                         brief?</label>
                 </div>
-                <div class="col-lg-3 col-md-2 col-sm-5">
+                <div class="col-lg-4 col-md-2 col-sm-5">
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="10-7 notes/FOQA Alert"
                             id="tcpBriefARedirect">
@@ -229,21 +228,18 @@
                     <label class="col-form-label" for="location">Location:</label>
                     <label class="col-form-label redirect" id="locationRedirect">Hawaii</label>
                 </div>
-                <div class="col-md-1 col-sm-9 col-xs-2">
                     <label class="col-form-label" for="pilotFlying">Flying:</label>
                     <label class="col-form-label redirect" id="pilotFlyingRedirect"></label>
-                </div>
-                <div class="col-md-1 col-sm-9 col-xs-2">
                     <label class="col-form-label" for="pilotFlying">Monitoring:</label>
                     <label class="col-form-label redirect" id="pilotMonitoringRedirect"></label>
-                </div>
             </div>
-            <div class="form-row form-group">
+            <div class="form-row">
                 <label class="col-form-label mr-1" for="base"><b>Base:</b></label>
                 <label class="col-form-label" for="caBaseRedirect">C.A.</label>
                 <label class="col-form-label redirect" id="caBaseRedirect"></label>
                 <label class="col-form-label" for="foBaseRedirect">F.O.</label>
                 <label class="col-md-1 col-sm-2 col-xs-1 col-form-label redirect" id="foBaseRedirect"></label>
+
                 <b><label class="col-form-label" for="loExperience">Level of experience in type
                         (hrs):</label></b>
                 <label class="col-form-label" for="caLOExperienceRedirect">C.A.</label>
@@ -251,7 +247,7 @@
                 <label class="col-form-label" for="caLOExperienceRedirect">F.O.</label>
                 <label class="col-form-label redirect" id="foLOExperienceRedirect"></label>
             </div>
-            <div class="form-row form-group">
+            <div class="form-row">
                 <div class="col-3">
                     <b><label class="col-form-label" for="roExperience">Recency of experience:</label></b>
                     <small id="greySmall1" class="form-text text-muted mr-1">*90 day look back</small>
@@ -281,16 +277,16 @@
                     </div>
                 </div>
             </div>
-            <div class="form-row row-narrower form-group">
+            <div class="form-row row-narrower">
                 <label class="col-form-label-sm" for="gatesUnderstandingLabel">Did
                     PF/PM
                     understand
                     the FOM Stabilized approach
                     gates?</label>
 
-                <label class="col-form-label" for="pfGatesUnderstandingRedirect">P.F.</label>
+                <label class="col-form-label" for="pfGatesUnderstanding">P.F.</label>
                 <label class="col-form-label redirect" id="pfGatesUnderstandingRedirect"></label>
-                <label class="col-form-label" for="pmGatesUnderstandingRedirect">P.M.</label>
+                <label class="col-form-label" for="pmGatesUnderstanding">P.M.</label>
                 <label class="col-form-label redirect" id="pmGatesUnderstandingRedirect"></label>
             </div>
             <div class="form-row">
@@ -318,7 +314,7 @@
                     <label class="col-form-label redirect" id="fullyConfiguredRedirect"></label>
                 </div>
             </div>
-            <div class="form-row" id="pmCommunicationUnfiguredHideRedirect">
+            <div class="form-row">
                 <div class="col-md-7 col-sm-9 col-xs-8">
                     <label class="col-form-label-sm" for="pmCommunication">
                         If yes, did the PM communicate not configured?
@@ -347,7 +343,7 @@
                     <label class="col-form-label redirect" id="pm500ftHATRedirect"></label>
                 </div>
             </div>
-            <div class="form-row" id="pmNotStableHideRedirect">
+            <div class="form-row">
                 <div class="col-md-7 col-sm-9 col-xs-8">
                     <label class="col-form-label-sm" for="pmNotStable">
                         If yes, did the PM communicate not stable?</label>
@@ -366,7 +362,7 @@
                     <label class="col-form-label redirect" id="goAround500Redirect"></label>
                 </div>
             </div>
-            <div class="form-row" id="pfAcknowledgeGoAroundHideRedirect">
+            <div class="form-row">
                 <div class="col-md-6 col-sm-9 col-xs-8">
                     <label class="col-form-label-sm" for="pfAcknowledgeGoAround">
                         If yes, did PF acknowledge?</label>
@@ -389,16 +385,13 @@
             <div class="row-narrower">
                 <label class="col-form-label-sm redirect" id="additionalFactorsRedirect"></label>
             </div>
-            <div class="form-row form-group">
-                <div class="col-md-6 col-sm-11 col-xs-8 input-group">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text">Crew Contact Summary</span>
-                    </div>
-                    <textarea class="form-control redirect" aria-label="With textarea"
-                        id="ccSummaryRedirect"></textarea>
-                </div>
+            <div class="form-row">
+                <label class="col-form-label-sm">Crew Contact Summary</label>
+                <label class="col-form-label-sm redirect" id="ccSummaryRedirect"></label>
+
             </div>
-        </form>
+    </div>
+    </form>
     </div>
 
     <!--container-->
