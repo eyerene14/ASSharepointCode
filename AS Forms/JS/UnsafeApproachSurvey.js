@@ -184,8 +184,8 @@ function getCUASurveyResults() {
                     document.getElementById('originRedirect').innerHTML = data.d.results[i].Origin;
                     document.getElementById('destinationRedirect').innerHTML = data.d.results[i].Destination;
                     document.getElementById('landingRunwayRedirect').innerHTML = data.d.results[i].LandingRunway;
-                    if (data.d.results[i].TcpBriefA == 'true') {
-                        $("#Freighter").prop("checked", data.d.results[i].Freighter);
+                    if (data.d.results[i].Freighter == 'true') {
+                        $("#freighterRedirect").prop("checked", data.d.results[i].Freighter);
                     }
                     if (data.d.results[i].TcpBriefA == 'true') {
                         $("#tcpBriefARedirect").prop("checked", data.d.results[i].TcpBriefA);
@@ -196,8 +196,11 @@ function getCUASurveyResults() {
                     if (data.d.results[i].TcpBriefC == 'true') {
                         $("#tcpBriefCRedirect").prop("checked", data.d.results[i].TcpBriefC);
                     }
-                    document.getElementById('airspaceRedirect').value = data.d.results[i].Airspace;
-                    document.getElementById('locationRedirect').value = data.d.results[i].Location;
+                    if (data.d.results[i].TcpBriefD == 'true') {
+                        $("#tcpBriefDRedirect").prop("checked", data.d.results[i].TcpBriefD);
+                    }
+                    document.getElementById('airspaceRedirect').innerHTML = data.d.results[i].Airspace;
+                    document.getElementById('locationRedirect').innerHTML = data.d.results[i].Location;
                     document.getElementById('pilotFlyingRedirect').innerHTML = data.d.results[i].Pilotflying;
                     document.getElementById('pilotMonitoringRedirect').innerHTML = data.d.results[i].Pilotmonitoring;
                     document.getElementById('caBaseRedirect').innerHTML = data.d.results[i].Cabase;
@@ -259,10 +262,11 @@ function getCUASurveyResultsTest() {
                     $("#destinationRedirect").append('<option value="' + data.d.results[i].Destination + '">' + data.d.results[i].Destination + '</option>')
                     document.getElementById('destinationRedirect').value = data.d.results[i].Destination;
                     document.getElementById('landingRunwayRedirect').value = data.d.results[i].LandingRunway;
-                    $("#freighter").prop("checked", data.d.results[i].Freighter);
+                    $("#freighterRedirect").prop("checked", data.d.results[i].Freighter);
                     $("#tcpBriefARedirect").prop("checked", data.d.results[i].TcpBriefA);
                     $("#tcpBriefBRedirect").prop("checked", data.d.results[i].TcpBriefB);
                     $("#tcpBriefCRedirect").prop("checked", data.d.results[i].TcpBriefC);
+                    $("#tcpBriefDRedirect").prop("checked", data.d.results[i].TcpBriefD);
                     document.getElementById('airspaceRedirect').innerHTML = data.d.results[i].Airspace;
                     document.getElementById('locationRedirect').innerHTML = data.d.results[i].Location;
                     document.getElementById('caBaseRedirect').value = data.d.results[i].Cabase;
@@ -350,6 +354,7 @@ function addToSharepointListTest() {
         , "TcpBriefA": $("#tcpBriefA").prop("checked")
         , "TcpBriefB": $("#tcpBriefB").prop("checked")
         , "TcpBriefC": $("#tcpBriefC").prop("checked")
+        , "TcpBriefD": $("#tcpBriefD").prop("checked")
         , "Airspace": (document.querySelectorAll("input[id=airspace]:checked")[0] == undefined) ? null : document.querySelectorAll("input[id=airspace]:checked")[0].value
         , "Location": (document.querySelectorAll("input[id=location]:checked")[0] == undefined) ? null : document.querySelectorAll("input[id=location]:checked")[0].value
         , "Conditions": ($("#conditions").val() == "Conditions") ? null : $('#conditions').val()
@@ -453,6 +458,7 @@ function addToSharepointList() {
         , "TcpBriefA": $("#tcpBriefA").prop("checked")
         , "TcpBriefB": $("#tcpBriefB").prop("checked")
         , "TcpBriefC": $("#tcpBriefC").prop("checked")
+        , "TcpBriefD": $("#tcpBriefD").prop("checked")
         , "Airspace": (document.querySelectorAll("input[id=airspace]:checked")[0] == undefined) ? null : document.querySelectorAll("input[id=airspace]:checked")[0].value
         , "Location": (document.querySelectorAll("input[id=location]:checked")[0] == undefined) ? null : document.querySelectorAll("input[id=location]:checked")[0].value
         , "Conditions": ($("#conditions").val() == "Conditions") ? null : $('#conditions').val()
@@ -506,16 +512,21 @@ function insertIntoList(url, item, successMsg, failMsg, source) {
         success: function (data) {
             //alert('success');
             if (successMsg != '') {
-                console.log(successMsg);
-                console.log(JSON.stringify(item));
                 $("#insertStatus").show();
                 $("#insertStatus").html("Request sent!").css({ "color": "green", "font-weight": "bold", "font-size": "18px" });
                 location.href = _spPageContextInfo.webAbsoluteUrl + '/SitePages/CUASurveyRedirect.aspx';
             };
-            //window.location.reload();
+            console.log(successMsg);
+            console.log(JSON.stringify(item));
         },
         error: function (data) {
-            alert('fail');
+            if (navigator.vendor == 'Apple Computer, Inc.') {
+                location.href = _spPageContextInfo.webAbsoluteUrl + '/SitePages/CUASurveyRedirect.aspx';
+                $("#safariMessage").show();
+            }
+            else {
+                location.href = _spPageContextInfo.webAbsoluteUrl + '/SitePages/FormErrorRedirect.aspx';
+            }
             if (failMsg != '') {
                 alert(failMsg);
                 console.log(failMsg);

@@ -4,7 +4,7 @@
 <!--git push -u origin master-->
 
 <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=10,chrome=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -152,10 +152,10 @@
             <input id="key_id" type="number" hidden="true" disabled>
             <!--Gatekeeper-->
             <label class="col-form-label" for="gatekeeperLabel">Gatekeeper:</label>
-            <label class="col-sm-3 col-xs-3 col-form-label" id="gatekeepersName"></label>
+            <label class="col-lg-4 col-sm-4 col-xs-3 col-form-label" id="gatekeepersName"></label>
             <!--Fleet-->
             <div class="form-row form-group">
-                <div class="col-md-2 col-sm-2 col-xs-2">
+                <div class="col-md-2 col-sm-3 col-xs-2">
                     <label class="col-form-label" for="fleet">Fleet<span style="color:red">*</span></label>
                     <select class="form-control" id="fleet" name="fleet" required>
                         <option value="">Select</option>
@@ -163,9 +163,9 @@
                         <option value="Boeing">Boeing</option>
                     </select>
                 </div>
-                <div class="col-lg-3 col-md-4 col-sm-7 col-xs-6">
+                <div class="col-lg-3 col-md-5 col-sm-5 col-xs-6">
                     <!--Model-->
-                    <label class="col-form-label" for="fleetModel">Aircraft type/model/freighter<span
+                    <label class="col-form-label" for="fleetModel">Aircraft type/model<span
                             style="color:red">*</span></label>
                     <select class="form-control" id="fleetModel" name="fleetModel" required>
                         <option value="">Select</option>
@@ -179,7 +179,7 @@
                         <option value="321">A321</option>
                     </select>
                 </div>
-                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-4">
+                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-4">
                     <label class="col-form-label" for="approachType">Type of Approach<span
                             style="color:red">*</span></label>
                     <select class="form-control" id="approachType" name="approachType" required>
@@ -192,11 +192,11 @@
                 </div>
             </div>
             <div class="form-row form-group">
-                <label class="col-lg-1 col-md-2 col-form-label" for="contactDateLabel">Contact Date:</label>
-                <input class="col-md-2 col-sm-3 col-xs-2 form-control col-form-label-sm" type="date" id="contactDate">
+                <label class="mr-1 col-form-label" for="contactDateLabel">Contact Date:</label>
+                <input class="col-md-3 col-sm-4 col-xs-2 form-control col-form-label-sm" type="date" id="contactDate">
                 <label class="col-form-label ml-1" for="flightRecord">Event ID</label>
-                <input class="col-md-1 col-sm-3 col-xs-2 ml-1 form-control col-form-label-sm" type="text" id="eventID">
-                <div class="col-lg-2 col-md-3 col-sm-5 col-xs-3">
+                <input class="col-xl-2 col-lg-1 col-md-2 col-sm-3 col-xs-2 ml-1 form-control col-form-label-sm" type="text" id="eventID">
+                <div class="col-xl-2 col-lg-3 col-md-3 col-sm-3 col-xs-3">
                     <select class="col-md-10 custom-select form-control col-form-label-sm" id="conditions">
                         <option selected>Conditions</option>
                         <option value="VFR">VFR</option>
@@ -229,35 +229,41 @@
                 </div>
             </div>
 
-            <div class="form-row row-narrower form-group">
+            <div class="form-row form-group">
                 <div class="col-sm-12 col-xs-12">
                     <label class="col-form-label" for="tcpBrief">Was any of the following included in the TPC
                         brief?<span style="color:red">*</span></label>
                 </div>
-                <div class="col-md-3 col-sm-5">
+                <div class="col-xl-3 col-lg-4 col-md-4 col-sm-5">
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="10-7 notes/FOQA Alert" id="tcpBriefA">
-                        <label class="form-check-label-sm" for="tcpBriefA">10-7 notes/FOQA Alert</label>
+                        <label class="form-check-label" for="tcpBriefA">10-7 notes/FOQA Alert</label>
                     </div>
                 </div>
-                <div class="col-md-2 col-sm-3">
+                <div class="col-lg-2 col-md-2 col-sm-3">
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="Steep GS" id="tcpBriefB">
                         <label class="form-check-label" for="tcpBriefB">Steep GS</label>
                     </div>
                 </div>
-                <div class="col-md-2 col-sm-2">
+                <div class="col-lg-2 col-md-2 col-sm-2">
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="Terrain" id="tcpBriefC">
                         <label class="form-check-label" for="tcpBriefC">Terrain</label>
                     </div>
                 </div>
+                <div class="col-lg-1 col-md-2 col-sm-2">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Terrain" id="tcpBriefD">
+                        <label class="form-check-label" for="tcpBriefD">n/a</label>
+                    </div>
+                </div>
             </div>
             <div class="form-row form-group">
-                <div class="col-md-3 col-sm-9 col-xs-2">
+                <div class="col-md-4 col-sm-9 col-xs-2">
                     <label class="col-form-label" for="airspaceType">Type of airspace:</label>
                     <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                        <label class="btn btn-secondary radioButton1 btn-sm align-self-center">
+                        <label class="btn btn-secondary btn-sm align-self-center">
                             <span style="color:rgb(210, 213, 214)"><input type="radio" name="airspace" id="airspace"
                                     value="Controlled" autocomplete="off">
                                 Controlled</span>
@@ -268,7 +274,7 @@
                         </label>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-9 col-xs-2">
+                <div class="col-lg-4 col-md-3 col-sm-9 col-xs-2">
                     <label class="col-form-label" for="location">Location:</label>
                     <div class="btn-group btn-group-toggle" data-toggle="buttons">
                         <label class="btn btn-secondary btn-sm align-self-center">
@@ -288,7 +294,7 @@
                 </div>
             </div>
             <div class="form-row form-group">
-                <label class="col-md-3 col-sm-2 col-xs-1 col-form-label" for="loExperience">Base: </label>
+                <label class="col-lg-4 col-md-3 col-sm-2 col-xs-1 col-form-label" for="loExperience">Base: </label>
                 <div class="col-md-2 col-sm-2 col-xs-2">
                     <select class="custom-select" id="caBase">
                         <option selected>C.A.</option>
@@ -311,7 +317,7 @@
                 </div>
             </div>
             <div class="form-row form-group">
-                <label class="col-md-3 col-sm-7 col-xs-4 col-form-label" for="loExperience">Level of experience in type
+                <label class="col-lg-4 col-md-3 col-sm-7 col-xs-4 col-form-label" for="loExperience">Level of experience in type
                     (hrs):</label>
                 <div class="col-md-2 col-sm-2 col-xs-2">
                     <select class="custom-select" id="caLOExperience">
@@ -335,7 +341,7 @@
                     <b><label class="col-form-label" for="roExperience">Recency of experience:</label></b>
                     <small id="greySmall1" class="form-text text-muted mr-1">*90 day look back</small>
                 </div>
-                <div class="col-md-1 col-sm-2 col-xs-2">
+                <div class="col-md-2 col-sm-2 col-xs-2">
                     <div class="form-row">
                         <label class="col-form-label" for="roExperience">Hrs:
                     </div>
@@ -353,7 +359,7 @@
                         </select>
                         <select class="custom-select" id="caROLandings">
                             <option selected>C.A.</option>
-                            <option value="&lt; 100"> &lt; 10</option>
+                            <option value="&lt; 10"> &lt; 10</option>
                             <option value="10-20"> 10-20</option>
                             <option value="&gt; 20"> &gt; 20</option>
                         </select>
@@ -363,13 +369,13 @@
                     <div class="form-row">
                         <select class="custom-select" id="foROExperience">
                             <option selected>F.O. (hrs)</option>
-                            <option value="&lt; 500"> &lt; 500</option>
-                            <option value="500-1000"> 500-1000</option>
-                            <option value="&gt; 1000"> &gt; 1000</option>
+                            <option value="&lt; 100"> &lt; 100</option>
+                            <option value="100-200"> 100-200</option>
+                            <option value="&gt; 200"> &gt; 200</option>
                         </select>
                         <select class="custom-select" id="foROLandings">
                             <option selected>F.O.</option>
-                            <option value="&lt; 100"> &lt; 10</option>
+                            <option value="&lt; 10"> &lt; 10</option>
                             <option value="10-20"> 10-20</option>
                             <option value="&gt; 20"> &gt; 20</option>
                         </select>
@@ -410,7 +416,7 @@
                     understand
                     the FOM Stabilized approach
                     gates?</label>
-                <div class="col-md-1 col-sm-2 col-xs-2">
+                <div class="col-md-2 col-sm-2 col-xs-2">
                     <select class="custom-select" id="pfGatesUnderstanding">
                         <option value="" selected>P.F.</option>
                         <option value="No">No</option>
@@ -424,7 +430,7 @@
                 </div>
             </div>
             <div class="form-row">
-                <label class="col-md-6 col-sm-8 col-xs col-form-label-sm" for="errorChainLabel">
+                <label class="col-lg-7 col-md-6 col-sm-8 col-xs col-form-label-sm" for="errorChainLabel">
                     At what altitude did the error chain start for this CUA? (HAT or RA)</label>
                 <select class="col-lg-1 col-md-2 col-sm-3 col-xs custom-select" id="errorChain">
                     <option value="" selected>Select</option>
@@ -433,7 +439,7 @@
                     <option value="&gt; 2000"> &gt; 2000</option>
                 </select>
             </div>
-            <div class="form-row row-narrower">
+            <div class="form-row">
                 <label class="col-lg-7 col-md-7 col-sm-8 col-form-label-sm" for="unmitigatedThreatsLabel">
                     What were the unmitigated threats or errors identified above the 1000ft configuration gate?</label>
             </div>
@@ -458,7 +464,7 @@
                 </div>
                 <div class="col-md-1 col-sm-2 col-xs-1">
                     <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                        <label class="btn btn-secondary radioButton1 btn-sm align-self-center">
+                        <label class="btn btn-secondary btn-sm align-self-center">
                             <span style="color:rgb(210, 213, 214)"><input type="radio" name="fullyConfigured"
                                     id="fullyConfigured" value="Yes" autocomplete="off">
                                 Yes</span>
@@ -499,7 +505,7 @@
                 </div>
                 <div class="col-md-1 col-sm-2 col-xs-1">
                     <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                        <label class="btn btn-secondary radioButton1 btn-sm align-self-center">
+                        <label class="btn btn-secondary btn-sm align-self-center">
                             <span style="color:rgb(210, 213, 214)"><input type="radio" name="pfAcknowledge"
                                     id="pfAcknowledge" value="Yes" autocomplete="off">
                                 Yes</span>
@@ -519,7 +525,7 @@
                 </div>
                 <div class="col-md-1 col-sm-2 col-xs-1">
                     <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                        <label class="btn btn-secondary radioButton1 btn-sm align-self-center">
+                        <label class="btn btn-secondary btn-sm align-self-center">
                             <span style="color:rgb(210, 213, 214)"><input type="radio" name="pm500ftHAT" id="pm500ftHAT"
                                     value="Yes" autocomplete="off">
                                 Yes</span>
@@ -538,7 +544,7 @@
                 </div>
                 <div class="col-md-1 col-sm-2 col-xs-1">
                     <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                        <label class="btn btn-secondary radioButton1 btn-sm align-self-center">
+                        <label class="btn btn-secondary btn-sm align-self-center">
                             <span style="color:rgb(210, 213, 214)"><input type="radio" name="pmNotStable"
                                     id="pmNotStable" value="Yes" autocomplete="off">
                                 Yes</span>
@@ -558,7 +564,7 @@
                 </div>
                 <div class="col-md-1 col-sm-2 col-xs-1">
                     <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                        <label class="btn btn-secondary radioButton1 btn-sm align-self-center">
+                        <label class="btn btn-secondary btn-sm align-self-center">
                             <span style="color:rgb(210, 213, 214)"><input type="radio" name="goAround500"
                                     id="goAround500" value="Yes" autocomplete="off">
                                 Yes</span>
@@ -577,7 +583,7 @@
                 </div>
                 <div class="col-md-1 col-sm-2 col-xs-1">
                     <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                        <label class="btn btn-secondary radioButton1 btn-sm align-self-center">
+                        <label class="btn btn-secondary btn-sm align-self-center">
                             <span style="color:rgb(210, 213, 214)"><input type="radio" name="pfAcknowledgeGoAround"
                                     id="pfAcknowledgeGoAround" value="Yes" autocomplete="off">
                                 Yes</span>
@@ -667,15 +673,6 @@
              $('[data-toggle="tooltip"]').tooltip()
          })
          */
-
-        function changeColor(color) {
-            if ($("#airspace").val() = "Controlled") {
-                document.getElementsByClassName("radioButton1").style.backgroundColor = color;
-            }
-            else {
-                document.getElementsByClassName("radioButton2").style.backgroundColor = color;
-            }
-        }
 
     </script>
 </body>
