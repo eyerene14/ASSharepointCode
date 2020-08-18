@@ -130,6 +130,8 @@ function getFleetType(fleet) {
                 arrayDefine2.forEach(oAirport => $("#origin").append('<option value="' + oAirport + '">' + oAirport + '</option>'));
                 arrayDefine2.every(dAirport => $("#destination").append('<option value="' + dAirport + '">' + dAirport + '</option>'));
             })
+            $("#origin").append('<option value="SAN">SAN</option>');
+            $("#destination").append('<option value="SAN">SAN</option>');
         }
         else {
             $("#fleetModel").children().remove().end();
