@@ -123,8 +123,7 @@
         border-color: white;
     }
 
-    .redirect
-    {
+    .redirect {
         color: #2774AE;
     }
 </style>
@@ -148,6 +147,9 @@
         </div>
     </header>
     <div class="container">
+        <div class="alert alert-warning" role="alert">
+            Chrome is the best browser to use for Sharepoint! Or Safari!
+          </div>
         <form id="changeEventForm">
             <input id="key_id" type="number" hidden="true" disabled>
             <!--Gatekeeper-->
@@ -195,7 +197,8 @@
                 <label class="mr-1 col-form-label" for="contactDateLabel">Contact Date:</label>
                 <input class="col-md-3 col-sm-4 col-xs-2 form-control col-form-label-sm" type="date" id="contactDate">
                 <label class="col-form-label ml-1" for="flightRecord">Event ID</label>
-                <input class="col-xl-2 col-lg-1 col-md-2 col-sm-3 col-xs-2 ml-1 form-control col-form-label-sm" type="text" id="eventID">
+                <input class="col-xl-2 col-lg-1 col-md-2 col-sm-3 col-xs-2 ml-1 form-control col-form-label-sm"
+                    type="text" id="eventID">
                 <div class="col-xl-2 col-lg-3 col-md-3 col-sm-3 col-xs-3">
                     <select class="col-md-10 custom-select form-control col-form-label-sm" id="conditions">
                         <option selected>Conditions</option>
@@ -317,7 +320,8 @@
                 </div>
             </div>
             <div class="form-row form-group">
-                <label class="col-lg-4 col-md-3 col-sm-7 col-xs-4 col-form-label" for="loExperience">Level of experience in type
+                <label class="col-lg-4 col-md-3 col-sm-7 col-xs-4 col-form-label" for="loExperience">Level of experience
+                    in type
                     (hrs):</label>
                 <div class="col-md-2 col-sm-2 col-xs-2">
                     <select class="custom-select" id="caLOExperience">
@@ -441,7 +445,9 @@
             </div>
             <div class="form-row">
                 <label class="col-lg-7 col-md-7 col-sm-8 col-form-label-sm" for="unmitigatedThreatsLabel">
-                    What were the unmitigated threats or errors identified above the 1000ft configuration gate?</label>
+                    What were the unmitigated threats or errors identified above the 1000ft configuration gate?
+                    <a data-toggle="tooltip" title="Hold down the CTRL key to select multiple"><i
+                            class="fas fa-info-circle"></i></a></label>
             </div>
             <div class="form-row">
                 <select class="col-lg-5 col-md-8 col-sm-8 custom-select" id="unmitigatedThreats" multiple>
@@ -599,37 +605,45 @@
             <div class="form-row">
                 <label class="col-lg-6 col-md-8 col-sm-11 col-form-label-sm" for="whyContinue">
                     Why did the crew continue? (choose all that apply)
-                    <select class="custom-select" id="whyContinue" multiple>
-                        <option value="" selected>Choose all that apply</option>
-                        <option value="Poor Decision Making">Poor Decision Making</option>
-                        <option value="Weather">Weather</option>
-                        <option value="Fuel">Fuel</option>
-                        <option value="Thunderstorm">Thunderstorm</option>
-                        <option value="Thought it was safer to land than go around">Thought it was safer to land
-                            than go
-                            around</option>
-                        <option value="Uncomfortable with GA/ breaking off from approach procedures">
-                            Uncomfortable with
-                            GA/ breaking off from approach procedures</option>
-                        <option value="Overcommitted">Overcommitted</option>
-                        <option value="Moderate of Greater Turbulence">Moderate of Greater Turbulence</option>
-                    </select>
+                    <a data-toggle="tooltip" title="Hold down the CTRL key to select multiple"><i
+                            class="fas fa-info-circle"></i></a></label>
+            </div>
+            <div class="form-row">
+                <select class="col-lg-6 col-md-8 col-sm-8 custom-select" id="whyContinue" multiple>
+                    <option value="" selected>Choose all that apply</option>
+                    <option value="Poor Decision Making">Poor Decision Making</option>
+                    <option value="Weather">Weather</option>
+                    <option value="Fuel">Fuel</option>
+                    <option value="Thunderstorm">Thunderstorm</option>
+                    <option value="Thought it was safer to land than go around">Thought it was safer to land
+                        than go
+                        around</option>
+                    <option value="Uncomfortable with GA/ breaking off from approach procedures">
+                        Uncomfortable with
+                        GA/ breaking off from approach procedures</option>
+                    <option value="Overcommitted">Overcommitted</option>
+                    <option value="Moderate of Greater Turbulence">Moderate of Greater Turbulence</option>
+                </select>
             </div>
             <div class="form-row">
                 <label class="col-lg-6 col-md-8 col-sm-11 col-form-label-sm" for="additionalFactors">
                     Crews assessment of additional factors: (choose all that apply)
-                    <select class="custom-select" id="additionalFactors" multiple>
-                        <option value="" selected>Choose all that apply</option>
-                        <option value="ATC">ATC</option>
-                        <option value="Weather">Weather</option>
-                        <option value="Improper Energy Management">Improper Energy Management</option>
-                        <option value="Aircraft weight">Aircraft weight</option>
-                        <option value="CRM">CRM</option>
-                        <option value="Inadequate briefing">Inadequate briefing</option>
-                        <option value="Recency of experience">Recency of experience</option>
-                        <option value="Traffic ">Traffic</option>
-                        <option value="Unfamiliar airport ">Unfamiliar airport</option>
-                    </select>
+                    <a data-toggle="tooltip" title="Hold down the CTRL key to select multiple"><i
+                            class="fas fa-info-circle"></i></a></label>
+            </div>
+            <div class="form-row form-group">
+                <select class="col-lg-6 col-md-8 col-sm-8 custom-select" id="additionalFactors" multiple>
+                    <option value="" selected>Choose all that apply</option>
+                    <option value="ATC">ATC</option>
+                    <option value="Weather">Weather</option>
+                    <option value="Improper Energy Management">Improper Energy Management</option>
+                    <option value="Aircraft weight">Aircraft weight</option>
+                    <option value="CRM">CRM</option>
+                    <option value="Inadequate briefing">Inadequate briefing</option>
+                    <option value="Recency of experience">Recency of experience</option>
+                    <option value="Traffic ">Traffic</option>
+                    <option value="Unfamiliar airport ">Unfamiliar airport</option>
+                </select>
             </div>
             <div class="form-row form-group">
                 <div class="col-lg-6 col-md-8 col-sm-11 col-xs-8 input-group">
@@ -663,6 +677,7 @@
 
     <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
     <script src="https://alaskaair.sharepoint.com/sites/FOQA/SiteAssets/UnsafeApproachSurvey.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.14.0/js/all.js" data-auto-a11y="true"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>

@@ -132,7 +132,6 @@ function getFleetType(fleet) {
             })
         }
         else {
-            alert("Select a fleet");
             $("#fleetModel").children().remove().end();
             $("#fleetModel").append('<option value="">Select</option>');
             $("#origin").children().remove().end();
