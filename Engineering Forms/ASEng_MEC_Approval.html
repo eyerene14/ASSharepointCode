@@ -1,0 +1,332 @@
+<html lang="en">
+
+<!--git remote add origin https://github.com/eyerene14/NuCampProject.git-->
+<!--git push -u origin master-->
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!--You can directly go to the link below if you want to go to different versions for font-awesome:
+    https://cdnjs.com/libraries/font-awesome
+    and you can browse more in libraries :
+    https://cdnjs.com/libraries/-->
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Comfortaa|Open+Sans" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="styleseet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/4.6.1/bootstrap-social.css">
+    <link href="https://alaskaair.sharepoint.com/sites/FOQA/SiteAssets/bootstrap.min.css" rel="stylesheet">
+
+    <!-- build:css css/main.css
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    endbuild -->
+
+    <title>AS EMS Event Tracker</title>
+</head>
+
+<style>
+    .ms-core-pageTitle,
+    .ms-core-pageTitle a {
+        color: white;
+        font-size: 1px;
+    }
+
+    .ms-displayInlineBlock ms-normalWrap {
+        color: white;
+        max-width: 0px;
+        max-height: 0px;
+    }
+
+    .ms-siteicon-img {
+        max-width: 0px;
+        max-height: 0px;
+        color: white;
+    }
+
+    #ms-pageDescriptionImage {
+        height: 0px;
+        width: 0px;
+        display: none;
+        color: white;
+    }
+
+    .error-message {
+        color: red;
+        font-weight: bold;
+    }
+
+    body {
+        font-family: "Comfortaa", sans-serif;
+    }
+
+    h4,
+    a {
+        padding-bottom: 5px;
+    }
+
+    .bannerAdjust {
+        position: relative;
+        padding-top: 15px;
+        padding-left: 125px;
+        border-width: .2rem 0 0;
+    }
+
+    .alertAdjust {
+        position: relative;
+        padding-top: 5px;
+        padding-bottom: 0px;
+        padding-left: 125px;
+        border-width: .2rem 0 0;
+    }
+
+    .formLeftAdjust {
+        position: relative;
+        padding-top: 0px;
+        padding-left: 80px;
+        padding-right: 400px;
+        border-width: .2rem 0 0;
+    }
+
+    .white-text {
+        color: white;
+    }
+
+    .row-content {
+        padding: 50px 0;
+        border-bottom: 1px ridge;
+        min-height: 100px;
+    }
+
+    .nonFormValue {
+        padding: 0px 0;
+        min-height: 10px;
+    }
+
+    .jumbotron {
+        padding: 10px;
+        background-image: linear-gradient(to right, white, #B3D57D, #48a9c5, #2774AE);
+        color: white;
+        margin: 0;
+    }
+
+    .modal-header {
+        padding: 8px;
+    }
+
+    .row-narrower {
+        padding: 0px;
+        margin-bottom: 0rem;
+    }
+
+    .redirect {
+        color: #2774AE;
+        font-weight: bold;
+    }
+</style>
+
+<body>
+
+    <header class="jumbotron jumbotron-fluid">
+        <div class="bannerAdjust">
+            <div class="row">
+                <div class="col-4 col-xs-3 col-md-2">
+                    <a href="#"><img
+                            src="https://alaskaair.sharepoint.com/sites/FOQA/SiteAssets/Images/Alaska_WorkgroupLockups_Safety_rgb_Sm.png"
+                            class="img-fluid" /></a>
+                </div>
+                <div class="col  align-self-center">
+                    <h1>AS FOQA</h1>
+                    <h4>Engineering - MEC Approval Request</h2>
+                </div>
+
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="alert alert-warning" role="alert" id="browserAlert">
+            Chrome is the best browser to use for Sharepoint! Or Safari!
+        </div>
+        <form id="changeEventForm">
+            <input id="key_id" type="number" hidden="true" disabled>
+            <!--Gatekeeper-->
+            <label class="col-form-label" for="usersNameLabel"></label>
+            <label class="col-lg-4 col-sm-4 col-xs-3 col-form-label" id="usersName"></label>
+            <!--Fleet-->
+            <div class="form-row form-group">
+                <div class="col-lg-3 col-md-5 col-sm-5 col-xs-6">
+                    <!--Model-->
+                    <label class="col-form-label" for="dataPullType">Data Pull Type<span
+                            style="color:red">*</span></label>
+                    <select class="form-control" id="dataPullType" name="dataPullType" required>
+                        <option value="">Select</option>
+                        <option value="1">1. Line Replaceable Unit (LRU) removal for off-aircraft download</option>
+                        <option value="2">2. Line Replaceable Unit (LRU) on-aircraft download (Boeing)</option>
+                        <option value="3">3. Removal of Quick Access Recorder (QAR) Media</option>
+                        <option value="4">4. Digital Flight Data Recorder (DFDR on-aircraft download (Airbus)</option>
+                        <option value="5">5. Leap-1A/1B Engine Electronic Control (EEC) Download</option>
+                    </select>
+                    <label class="control-label" for="error" id="dataPullTypeError">
+                        <span style="color:red">
+                            Please select 1-5
+                        </span>
+                    </label>
+                </div>
+                <div class="col-md-2 col-sm-3 col-xs-2">
+                    <label class="col-form-label" for="fleet">Fleet<span style="color:red">*</span></label>
+                    <select class="form-control" id="fleet" name="fleet" required>
+                        <option value="">Select</option>
+                        <option value="Airbus">Airbus</option>
+                        <option value="Boeing">Boeing</option>
+                    </select>
+                    <label class="control-label" for="error" id="fleetError">
+                        <span style="color:red">
+                            Please select a fleet
+                        </span>
+                    </label>
+                </div>
+                <div class="col-md-2 col-sm-3 col-xs-2">
+                    <label class="col-form-label" for="tail">Tail Number<span style="color:red">*</span></label>
+                    <select class="form-control" id="tail" name="tail" required>
+                        <option value="">Select</option>
+                        <option value="Airbus">Airbus</option>
+                    </select>
+                    <label class="control-label" for="error" id="tailError">
+                        <span style="color:red">
+                            Please select a tail #
+                        </span>
+                    </label>
+                </div>
+            </div>
+            <div class="form-row form-group">
+                <div class="col-md-2 col-sm-3 col-xs-2">
+                    <label class="col-form-label" for="flightNo">Flight Number<span style="color:red">*</span></label>
+                    <input class="form-control" id="flightNo" name="flightNo" required>
+                    <label class="control-label" for="error" id="flightNoError">
+                        <span style="color:red">
+                            Please enter a flight #
+                        </span>
+                    </label>
+                </div>
+                <div class="col-lg-3 col-md-5 col-sm-5 col-xs-6">
+                    <!--Model-->
+                    <label class="col-form-label" for="outsideVendor">Where is the data going?<span
+                            style="color:red">*</span></label>
+                    <select class="form-control" id="outsideVendor" name="outsideVendor" required>
+                        <option value="">Select</option>
+                        <option value="GE">GE</option>
+                        <option value="Honeywell">Honeywell</option>
+                        <option value="BAE">BAE</option>
+                        <option value="CFM">CFM</option>
+                        <option value="Boeing">Boeing</option>
+                        <option value="Airbus">Airbus</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    <label class="control-label" for="error" id="outsideVendorError">
+                        <span style="color:red">
+                            Please select a vendor
+                        </span>
+                    </label>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-4 col-xs-4">
+                    <!--Model-->
+                    <label class="mr-1 col-form-label" for="dateLabel">Deadline:</label>
+                    <input class="form-control col-form-label-sm" type="date" id="deadline">
+                    <label class="control-label" for="error" id="deadlineError">
+                        <span style="color:red">
+                            Please select a date
+                        </span>
+                    </label>
+                </div>
+                <div class="form-check m-3">
+                    <br />
+                    <input class="form-check-input" type="checkbox" value="Urgent" id="urgent">
+                    <label class="form-check-label-sm" for="urgent">Urgent?</label>
+                    <a data-toggle="tooltip" title="Turn around time within 4 hours"><i
+                            class="fas fa-info-circle"></i></a></label>
+                </div>
+            </div>
+            <div class="form-row form-group">
+                    <label class="col-form-label" for="otherVendor" id="otherVendorLabel">Other Vendor<span style="color:red">*</span></label>
+                    <input class="form-control col-2" id="otherVendor" name="otherVendor" required>
+            </div>
+            <div class="form-row form-group">
+                <div class="col-lg-7 col-md-7 col-sm-12 col-xs-8 input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Request <br />Details</span>
+                    </div>
+                    <textarea class="form-control" id="requestDescription" rows="6"></textarea>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col">
+                    <button type="submit" class="btn btn-warning" id="submitForm">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <br></br>
+
+    <footer class="site-footer">
+        <!--Results table -->
+        <div class="container">
+            <h4>Previous Requests</h4>
+            <div class="table-responsive">
+                <table id="returnedDataTable" class="table container-fluid" cellspacing="0" width="80%">
+                    <thead>
+                        <tr>
+                            <th scope="col-1">Id</th>
+                            <th scope="col-2">Requestors Name</th>
+                            <th scope="col-2">Fleet</th>
+                            <th scope="col-2">Request Date</th>
+                            <th scope="col-2">Tail Number</th>
+                            <th scope="col-2">Flight Number</th>
+                            <th scope="col-2">Deadline</th>
+                            <th scope="col-2">Urgent?</th>
+                        </tr>
+                    </thead>
+                    <tbody id="requestHistoryTable">
+                </table>
+            </div>
+        </div>
+    </footer>
+
+    <!-- build:js js/main.js -->
+    <!--<script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>-->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!--<script src="JS/ASEMSEventTrack.js"></script>-->
+    <!-- endbuild -->
+
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+    <script src="https://alaskaair.sharepoint.com/sites/FOQA/SiteAssets/ASEng_MEC_Approval.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.14.0/js/all.js" data-auto-a11y="true"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            $("#browserAlert").hide();
+            $("#otherVendorLabel").hide();
+            $("#otherVendor").hide();
+
+            $("#browser").val(navigator.vendor);
+            $("#browserDetail").val(navigator.userAgent);
+            $("#browserAppName").val(navigator.appName);
+
+            if (IsNullOrUndefined(navigator.vendor)) {
+                $("#browserAlert").show();
+            }
+
+        });
+
+    </script>
+</body>
