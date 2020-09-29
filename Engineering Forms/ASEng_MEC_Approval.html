@@ -19,6 +19,7 @@
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="styleseet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/4.6.1/bootstrap-social.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link href="https://alaskaair.sharepoint.com/sites/FOQA/SiteAssets/bootstrap.min.css" rel="stylesheet">
 
     <!-- build:css css/main.css
@@ -138,7 +139,7 @@
             <div class="row">
                 <div class="col-4 col-xs-3 col-md-2">
                     <a href="#"><img
-                            src="https://alaskaair.sharepoint.com/sites/FOQA/SiteAssets/Images/Alaska_WorkgroupLockups_Safety_rgb_Sm.png"
+                            src="https://alaskaair.sharepoint.com/sites/FOQA/SiteAssets/Images/Alaska Safety Logo Pic.png"
                             class="img-fluid" /></a>
                 </div>
                 <div class="col  align-self-center">
@@ -153,7 +154,7 @@
         <div class="alert alert-warning" role="alert" id="browserAlert">
             Chrome is the best browser to use for Sharepoint! Or Safari!
         </div>
-        <form id="changeEventForm">
+        <form id="changeEventForm" class="needs-validation" novalidate>
             <input id="key_id" type="number" hidden="true" disabled>
             <!--Gatekeeper-->
             <label class="col-form-label" for="usersNameLabel"></label>
@@ -172,7 +173,7 @@
                         <option value="4">4. Digital Flight Data Recorder (DFDR on-aircraft download (Airbus)</option>
                         <option value="5">5. Leap-1A/1B Engine Electronic Control (EEC) Download</option>
                     </select>
-                    <label class="control-label" for="error" id="dataPullTypeError">
+                    <label class="control-label valid-tooltip" for="error" id="dataPullTypeError">
                         <span style="color:red">
                             Please select 1-5
                         </span>
@@ -185,7 +186,7 @@
                         <option value="Airbus">Airbus</option>
                         <option value="Boeing">Boeing</option>
                     </select>
-                    <label class="control-label" for="error" id="fleetError">
+                    <label class="control-label valid-tooltip" for="error" id="fleetError">
                         <span style="color:red">
                             Please select a fleet
                         </span>
@@ -195,9 +196,8 @@
                     <label class="col-form-label" for="tail">Tail Number<span style="color:red">*</span></label>
                     <select class="form-control" id="tail" name="tail" required>
                         <option value="">Select</option>
-                        <option value="Airbus">Airbus</option>
                     </select>
-                    <label class="control-label" for="error" id="tailError">
+                    <label class="control-label valid-tooltip" for="error" id="tailError">
                         <span style="color:red">
                             Please select a tail #
                         </span>
@@ -205,57 +205,66 @@
                 </div>
             </div>
             <div class="form-row form-group">
-                <div class="col-md-2 col-sm-3 col-xs-2">
+                <div class="col-lg-2 col-md-2 col-sm-3 col-xs-2">
                     <label class="col-form-label" for="flightNo">Flight Number<span style="color:red">*</span></label>
                     <input class="form-control" id="flightNo" name="flightNo" required>
-                    <label class="control-label" for="error" id="flightNoError">
+                    <label class="control-label valid-tooltip" for="error" id="flightNoError">
                         <span style="color:red">
-                            Please enter a flight #
+                            Please enter a #
                         </span>
                     </label>
                 </div>
-                <div class="col-lg-3 col-md-5 col-sm-5 col-xs-6">
+
+                <div class="col-lg-3 col-md-7 col-sm-5 col-xs-6">
                     <!--Model-->
                     <label class="col-form-label" for="outsideVendor">Where is the data going?<span
                             style="color:red">*</span></label>
                     <select class="form-control" id="outsideVendor" name="outsideVendor" required>
                         <option value="">Select</option>
+                        <option value="Quarantine/in-house">Quarantine/in-house</option>
+                        <option value="Airbus">Airbus</option>
+                        <option value="BAE">BAE</option>
+                        <option value="Boeing">Boeing</option>
+                        <option value="CFM">CFM</option>
+                        <option value="Forloop ">Forloop</option>
                         <option value="GE">GE</option>
                         <option value="Honeywell">Honeywell</option>
-                        <option value="BAE">BAE</option>
-                        <option value="CFM">CFM</option>
-                        <option value="Boeing">Boeing</option>
-                        <option value="Airbus">Airbus</option>
                         <option value="Other">Other</option>
                     </select>
-                    <label class="control-label" for="error" id="outsideVendorError">
+                    <label class="control-label valid-tooltip" for="error" id="outsideVendorError">
                         <span style="color:red">
                             Please select a vendor
                         </span>
                     </label>
                 </div>
-                <div class="col-lg-2 col-md-4 col-sm-4 col-xs-4">
-                    <!--Model-->
-                    <label class="mr-1 col-form-label" for="dateLabel">Deadline:</label>
-                    <input class="form-control col-form-label-sm" type="date" id="deadline">
-                    <label class="control-label" for="error" id="deadlineError">
+                <div class="col-lg-7 col-md-3 col-sm-4 col-xs-4">
+                    <label class="col-form-label" for="otherVendor" id="otherVendorLabel"><span
+                            style="color:white">*</span></label>
+                    <input class="form-control col-3" id="otherVendor" name="otherVendor" placeholder="Other">
+                </div>
+            </div>
+                <div class="form-row form-group">
+                    <label class="mr-1 col-form-label" for="dateLabel">Flight timeframe:<span
+                            style="color:red">*</span></label>
+                    <div class="col-lg-2 col-md-4 col-sm-4 col-xs-4">
+                        <input type="text" class="form-control col-form-label-sm" placeholder="mm/dd/yyyy" id="dateFrom" required>
+                        <span class="input-group-addon"><span class="glyphicon-calendar glyphicon"></span></span>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-4 col-xs-4">
+                        <input type="text" class="form-control col-form-label-sm" placeholder="mm/dd/yyyy" id="dateTo">
+                        <span class="input-group-addon"><span class="glyphicon-calendar glyphicon"></span></span>
+                    </div>
+                    <label class="control-label valid-tooltip" for="error" id="timeframeError">
                         <span style="color:red">
                             Please select a date
                         </span>
                     </label>
-                </div>
-                <div class="form-check m-3">
-                    <br />
-                    <input class="form-check-input" type="checkbox" value="Urgent" id="urgent">
-                    <label class="form-check-label-sm" for="urgent">Urgent?</label>
-                    <a data-toggle="tooltip" title="Turn around time within 4 hours"><i
-                            class="fas fa-info-circle"></i></a></label>
+                <div class="form-check ml-4 m-1">
+                    <input class="form-check-input" type="checkbox" value="Next business day" id="urgent">
+                    <label class="form-check-label-sm" for="urgent">Deadline?</label><a data-toggle="tooltip" data-placement="right" title="Next business day"><i class="fa fa-info-circle"></i></a>
                 </div>
             </div>
-            <div class="form-row form-group">
-                    <label class="col-form-label" for="otherVendor" id="otherVendorLabel">Other Vendor<span style="color:red">*</span></label>
-                    <input class="form-control col-2" id="otherVendor" name="otherVendor" required>
-            </div>
+
             <div class="form-row form-group">
                 <div class="col-lg-7 col-md-7 col-sm-12 col-xs-8 input-group">
                     <div class="input-group-prepend">
@@ -282,13 +291,14 @@
                     <thead>
                         <tr>
                             <th scope="col-1">Id</th>
-                            <th scope="col-2">Requestors Name</th>
+                            <th scope="col-2">Requestor's Name</th>
                             <th scope="col-2">Fleet</th>
-                            <th scope="col-2">Request Date</th>
+                            <th scope="col-2">Date Request Created</th>
                             <th scope="col-2">Tail Number</th>
                             <th scope="col-2">Flight Number</th>
-                            <th scope="col-2">Deadline</th>
-                            <th scope="col-2">Urgent?</th>
+                            <th scope="col-2">Timeframe</th>
+                            <th scope="col-2">Done?</th>
+                            <th scope="col-2">Status</th>
                         </tr>
                     </thead>
                     <tbody id="requestHistoryTable">
@@ -306,10 +316,13 @@
 
     <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
     <script src="https://alaskaair.sharepoint.com/sites/FOQA/SiteAssets/ASEng_MEC_Approval.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="https://use.fontawesome.com/releases/v5.14.0/js/all.js" data-auto-a11y="true"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
+
+
 
     <script>
         $(document).ready(function () {
@@ -327,6 +340,24 @@
             }
 
         });
+
+        $("#dateFrom").datepicker({
+        numberOfMonths: 2,
+        onSelect: function (selected) {
+            var dt = new Date(selected);
+            dt.setDate(dt.getDate() + 1);
+            $("#dateTo").datepicker("option", "minDate", dt);
+        }
+    });
+    $("#dateTo").datepicker({
+        numberOfMonths: 2,
+        onSelect: function (selected) {
+            var dt = new Date(selected);
+            dt.setDate(dt.getDate() - 1);
+            $("#dateFrom").datepicker("option", "maxDate", dt);
+        }
+    });
+
 
     </script>
 </body>

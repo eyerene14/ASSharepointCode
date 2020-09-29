@@ -5,11 +5,13 @@ $(document).ready(function () {
     $("#tailError").hide();
     $("#flightNoError").hide();
     $("#outsideVendorError").hide();
-    $("#deadlineError").hide();
+    $("#timeframeError").hide();
 
     $("#fleet").change(function () {
         getFleetType($("#fleet").val());
     });
+
+    
 
     $("#outsideVendor").change(function () {
         if ($("#outsideVendor").val() == "Other") {
@@ -22,15 +24,35 @@ $(document).ready(function () {
         }
     });
 
+    $("#dataPullType").on("change", function () {
+        $("#dataPullTypeError").hide();
+    });
+    $("#fleet").on("click", function () {
+        $("#fleetError").hide();
+    });
+    $("#tail").on("change", function () {
+        $("#tailError").hide();
+    });
+    $("#flightNo").on("change", function () {
+        $("#flightNoError").hide();
+    });
+    $("#outsideVendor").on("change", function () {
+        $("#outsideVendorError").hide();
+    });
+    $("#dateFrom").on("change", function () {
+        $("#timeframeError").hide();
+    });
+
+
     getRequestHistoryTable();
 
     $("#submitForm").on("click", function () {
 
-        if ($("#fleet").val() == '') {
-            $("#fleetError").show();
-        }
-        else if ($("#dataPullType").val() == '') {
+        if ($("#dataPullType").val() == '') {
             $("#dataPullTypeError").show();
+        }
+        else if ($("#fleet").val() == '') {
+            $("#fleetError").show();
         }
         else if ($("#tail").val() == '') {
             $("#tailError").show();
@@ -41,8 +63,8 @@ $(document).ready(function () {
         else if ($("#outsideVendor").val() == '') {
             $("#outsideVendorError").show();
         }
-        else if ($("#deadline").val() == '') {
-            $("#deadlineError").show();
+        else if ($("#dateFrom").val() == '') {
+            $("#timeframeError").show();
         }
         else {
             saveToList();
@@ -50,7 +72,6 @@ $(document).ready(function () {
     });
 
 });
-
 
 
 
@@ -77,7 +98,7 @@ function getFleetType(fleet) {
 
 function getRequestHistoryTable() {
 
-    var url = 'https://alaskaair.sharepoint.com/sites/QXFOQA/_vti_bin/ListData.svc/ENG_MEC_ApprovalRequests?$orderby=Id%20desc';
+    var url = 'https://alaskaair.sharepoint.com/sites/FOQA/_vti_bin/ListData.svc/ENG_MEC_ApprovalRequests?$orderby=Id%20desc';
     //var urlTest = 'https://alaskaair.sharepoint.com/sites/FOQA/_vti_bin/ListData.svc/CrewContactTrackingList?$filter=substringof(%27'+ year +'%27,ReportingMonth)&$top=10&$orderby=Id%20desc';
 
     getListItems(url, function (data) {
@@ -91,17 +112,41 @@ function getRequestHistoryTable() {
                 for (var i = 0; i < 11; i++) {
 
                     //var userTitle = getUser(data.d.results[i].ModifiedById);
-                    var link = "https://alaskaair.sharepoint.com/sites/QXFOQA/_vti_bin/ListData.svc/ENG_MEC_ApprovalRequests(" + data.d.results[i].Id + ")";
+                    var createdDate = data.d.results[i].Created.slice(6,data.d.results[i].Created.length-2);
+                    var complete = '<i class="far fa-square"></i>';
+                    var status;
+
+                    if (data.d.results[i].Done == true) {
+                        var complete = '<i class="fas fa-check-square"></i>';
+                    }
+
+                    switch (data.d.results[i].Approval_Request_Status) {
+                        case 'Pending Gatekeeper Response':
+                            status = '<div class="progress"><div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 33%" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100">Pending Gatekeeper Response</div></div>';                            
+                            break;
+                        case 'Pending MEC Response':
+                            status = '<div class="progress"><div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 66%" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100">Pending MEC Response</div></div>';
+                            break;
+                        case 'Approvals Complete':
+                            status = '<div class="progress"><div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">Approvals Complete</div></div>';
+                            break;
+                        case 'Request Denied':
+                            status = '<div class="progress"><div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">Request Denied</div></div>';
+                            break;
+                        default:
+                            status = '<div class="progress"><div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">Notification Sent</div></div>';
+                    }
 
                     $("#requestHistoryTable").append("<tr>");
                     $("#requestHistoryTable").append("<td>" + data.d.results[i].Id + "</td>");
-                    $("#requestHistoryTable").append("<td>" + data.d.results[i].RequestorsName + "</td>");
+                    $("#requestHistoryTable").append("<td>" + data.d.results[i].CreatedByDisplayName + "</td>");
                     $("#requestHistoryTable").append("<td>" + data.d.results[i].Fleet + "</td>");
-                    $("#requestHistoryTable").append("<td>" + data.d.results[i].DateofEvent + "</td>");
+                    $("#requestHistoryTable").append("<td>" + Date(createdDate).slice(4,15) + "</td>");
                     $("#requestHistoryTable").append("<td>" + data.d.results[i].TailNo + "</td>");
                     $("#requestHistoryTable").append("<td>" + data.d.results[i].FlightNo + "</td>");
-                    $("#requestHistoryTable").append("<td>" + data.d.results[i].Deadline + "</td>");
-                    $("#requestHistoryTable").append("<td>" + data.d.results[i].Urgent + "</td>");
+                    $("#requestHistoryTable").append("<td>" + data.d.results[i].Timeframe + "</td>");
+                    $("#requestHistoryTable").append("<td class='ml-1'>" + complete + "</td>");
+                    $("#requestHistoryTable").append("<td>" + status + "</td>");
                     //$("#returnedData").append("<td><button class='btn btn-warning btn-sm' type='button' id='getIDButton' onclick='getData(" + data.d.results[i].Id + ")'>Get Details</button></td></tr>");
 
                 }
@@ -154,26 +199,27 @@ function getListItems(url, success, failure) {
 function saveToList() {
     //var count = document.getElementById("runningCount").value;
     var count = 1;
-    var url = 'https://alaskaair.sharepoint.com/sites/QXFOQA/_vti_bin/ListData.svc/ENG_MEC_ApprovalRequests';
+    var url = 'https://alaskaair.sharepoint.com/sites/FOQA/_vti_bin/ListData.svc/ENG_MEC_ApprovalRequests';
     //var listItemType = GetItemTypeForListName(listName);
     var listItemType = 'Microsoft.SharePoint.DataService.ENG_MEC_ApprovalRequestsItem';
 
     var item = {
         "__metadata": { "type": listItemType }
-        , "RequestType": ($("#dataPullType").val() == "") ? null : $("#dataPullType").val()
+        , "RequestType": ($("#dataPullType").val() == "") ? null : $('#dataPullType option:selected').text()
         , "Fleet": ($("#fleet").val() == "") ? null : $("#fleet").val()
         , "TailNo": ($("#tail").val() == "") ? null : $("#tail").val()
         , "FlightNo": ($("#flightNo").val() == "") ? null : $("#flightNo").val()
         , "Vendor": ($("#outsideVendor").val() == "Other") ? $("#otherVendor").val() : $("#outsideVendor").val()
         , "VendorOther": ($("#otherVendor").val() == "") ? null : $("#otherVendor").val()
-        , "Deadline": ($("#deadline").val() == "") ? null : $("#deadline").val()
-        , "Urgent": ($("#urgent").prop("checked")) ? "true" : "false"
-        , "requestDescription": ($("#dataRequestDetails").val() == "") ? null : $("#dataRequestDetails").val()
+        , "Timeframe": ($("#dateFrom").val() == "") ? null : $("#dateFrom").val() + ' ' + $("#dateTo").val() 
+        , "Urgent": ($("#urgent").prop("checked") == true) ? "true" : "false"
+        , "RequestDescription": ($("#requestDescription").val() == "") ? null : $("#requestDescription").val()
         , "BrowserVendor": navigator.vendor
         , "BrowserUserAgent": navigator.userAgent
         , "BrowserAppName": navigator.appName
         , "Done": "false"
     }//end item
+    
 
     var errorMessage = "Error inserting record number: " + count;
     insertIntoList(url, item, "Item added/saved", errorMessage);
@@ -202,6 +248,7 @@ function insertIntoList(url, item, successMsg, failMsg, source) {
             //window.location.reload();
         },
         error: function (data) {
+            alert("");
             if ($("#browser").val() == 'Safari') {
                 location.href = _spPageContextInfo.webAbsoluteUrl + '/SitePages/FormSuccessRedirect.aspx';
             }
