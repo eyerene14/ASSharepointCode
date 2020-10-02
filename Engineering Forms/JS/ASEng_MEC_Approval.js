@@ -3,7 +3,7 @@ $(document).ready(function () {
     $("#fleetError").hide();
     $("#dataPullTypeError").hide();
     $("#tailError").hide();
-    $("#flightNoError").hide();
+    //$("#flightNoError").hide();
     $("#outsideVendorError").hide();
     $("#timeframeError").hide();
 
@@ -33,9 +33,6 @@ $(document).ready(function () {
     $("#tail").on("change", function () {
         $("#tailError").hide();
     });
-    $("#flightNo").on("change", function () {
-        $("#flightNoError").hide();
-    });
     $("#outsideVendor").on("change", function () {
         $("#outsideVendorError").hide();
     });
@@ -56,9 +53,6 @@ $(document).ready(function () {
         }
         else if ($("#tail").val() == '') {
             $("#tailError").show();
-        }
-        else if ($("#flightNo").val() == '') {
-            $("#flightNoError").show();
         }
         else if ($("#outsideVendor").val() == '') {
             $("#outsideVendorError").show();
