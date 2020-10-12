@@ -92,7 +92,7 @@ function getFleetType(fleet) {
 
 function getRequestHistoryTable() {
 
-    var url = 'https://alaskaair.sharepoint.com/sites/FOQA/_vti_bin/ListData.svc/ENG_MEC_ApprovalRequests?$orderby=Id%20desc';
+    var url = 'https://alaskaair.sharepoint.com/sites/FOQA/_vti_bin/ListData.svc/AS_ENGTechSvc_MEC_Request?$orderby=Id%20desc';
     //var urlTest = 'https://alaskaair.sharepoint.com/sites/FOQA/_vti_bin/ListData.svc/CrewContactTrackingList?$filter=substringof(%27'+ year +'%27,ReportingMonth)&$top=10&$orderby=Id%20desc';
 
     getListItems(url, function (data) {
@@ -193,9 +193,9 @@ function getListItems(url, success, failure) {
 function saveToList() {
     //var count = document.getElementById("runningCount").value;
     var count = 1;
-    var url = 'https://alaskaair.sharepoint.com/sites/FOQA/_vti_bin/ListData.svc/ENG_MEC_ApprovalRequests';
+    var url = 'https://alaskaair.sharepoint.com/sites/FOQA/_vti_bin/ListData.svc/AS_ENGTechSvc_MEC_Request';
     //var listItemType = GetItemTypeForListName(listName);
-    var listItemType = 'Microsoft.SharePoint.DataService.ENG_MEC_ApprovalRequestsItem';
+    var listItemType = 'Microsoft.SharePoint.DataService.AS_ENGTechSvc_MEC_RequestItem';
 
     var item = {
         "__metadata": { "type": listItemType }
