@@ -71,7 +71,7 @@ $(document).ready(function () {
 
 function getFleetType(fleet) {
 
-    var url = 'https://alaskaair.sharepoint.com/sites/FOQA/_vti_bin/ListData.svc/FLICS_AS_FleetTailNo?$select=ACT_FULL_TAIL_NBR&$filter=(%20substringof(%27' + fleet + '%27,MANUFACTURER_NM))&groupBy=ACT_FULL_TAIL_NBR&$orderby=ACT_FULL_TAIL_NBR%20asc';
+    var url = 'https://alaskaair.sharepoint.com/sites/FOQA/_vti_bin/ListData.svc/FLICS_AS_FleetTailNo0?$select=ACT_FULL_TAIL_NBR&$filter=(%20substringof(%27' + fleet + '%27,MANUFACTURER_NM))&groupBy=ACT_FULL_TAIL_NBR&$orderby=ACT_FULL_TAIL_NBR%20asc';
 
     getListItems(url, function (data) {
         var numRecords = data.d.results.length;
@@ -92,7 +92,7 @@ function getFleetType(fleet) {
 
 function getRequestHistoryTable() {
 
-    var url = 'https://alaskaair.sharepoint.com/sites/FOQA/_vti_bin/ListData.svc/AS_ENGTechSvc_MEC_Request?$orderby=Id%20desc';
+    var url = 'https://alaskaair.sharepoint.com/sites/FOQA/_vti_bin/ListData.svc/ENGTechSvc_MEC_Request?$orderby=Id%20desc';
     //var urlTest = 'https://alaskaair.sharepoint.com/sites/FOQA/_vti_bin/ListData.svc/CrewContactTrackingList?$filter=substringof(%27'+ year +'%27,ReportingMonth)&$top=10&$orderby=Id%20desc';
 
     getListItems(url, function (data) {
@@ -107,19 +107,19 @@ function getRequestHistoryTable() {
 
                     //var userTitle = getUser(data.d.results[i].ModifiedById);
                     var createdDate = data.d.results[i].Created.slice(6,data.d.results[i].Created.length-2);
-                    var complete = '<i class="far fa-square"></i>';
+                    //var complete = '<i class="far fa-square"></i>';
                     var status;
 
-                    if (data.d.results[i].Done == true) {
+                    /*if (data.d.results[i].Done == true) {
                         var complete = '<i class="fas fa-check-square"></i>';
-                    }
+                    }*/
 
                     switch (data.d.results[i].Approval_Request_Status) {
                         case 'Pending Gatekeeper Response':
-                            status = '<div class="progress"><div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 33%" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100">Pending Gatekeeper Response</div></div>';                            
+                            status = '<div class="progress"><div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 33%" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100">GK Phase 1:3</div></div>';                            
                             break;
                         case 'Pending MEC Response':
-                            status = '<div class="progress"><div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 66%" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100">Pending MEC Response</div></div>';
+                            status = '<div class="progress"><div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 66%" aria-valuenow="66" aria-valuemin="0" aria-valuemax="100">MEC Phase 1:3</div></div>';
                             break;
                         case 'Approvals Complete':
                             status = '<div class="progress"><div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">Approvals Complete</div></div>';
@@ -139,7 +139,7 @@ function getRequestHistoryTable() {
                     $("#requestHistoryTable").append("<td>" + data.d.results[i].TailNo + "</td>");
                     $("#requestHistoryTable").append("<td>" + data.d.results[i].FlightNo + "</td>");
                     $("#requestHistoryTable").append("<td>" + data.d.results[i].Timeframe + "</td>");
-                    $("#requestHistoryTable").append("<td class='ml-1'>" + complete + "</td>");
+                    //$("#requestHistoryTable").append("<td class='ml-1'>" + complete + "</td>");
                     $("#requestHistoryTable").append("<td>" + status + "</td>");
                     //$("#returnedData").append("<td><button class='btn btn-warning btn-sm' type='button' id='getIDButton' onclick='getData(" + data.d.results[i].Id + ")'>Get Details</button></td></tr>");
 
@@ -193,9 +193,9 @@ function getListItems(url, success, failure) {
 function saveToList() {
     //var count = document.getElementById("runningCount").value;
     var count = 1;
-    var url = 'https://alaskaair.sharepoint.com/sites/FOQA/_vti_bin/ListData.svc/AS_ENGTechSvc_MEC_Request';
+    var url = 'https://alaskaair.sharepoint.com/sites/FOQA/_vti_bin/ListData.svc/ENGTechSvc_MEC_Request';
     //var listItemType = GetItemTypeForListName(listName);
-    var listItemType = 'Microsoft.SharePoint.DataService.AS_ENGTechSvc_MEC_RequestItem';
+    var listItemType = 'Microsoft.SharePoint.DataService.ENGTechSvc_MEC_RequestItem';
 
     var item = {
         "__metadata": { "type": listItemType }
