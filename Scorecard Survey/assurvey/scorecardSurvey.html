@@ -1,0 +1,303 @@
+<html lang="en">
+
+<!--git remote add origin https://github.com/eyerene14/NuCampProject.git-->
+<!--git push -u origin master-->
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!--You can directly go to the link below if you want to go to different versions for font-awesome:
+    https://cdnjs.com/libraries/font-awesome
+    and you can browse more in libraries :
+    https://cdnjs.com/libraries/-->
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Comfortaa|Open+Sans" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="styleseet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/4.6.1/bootstrap-social.css">
+    <link href="https://alaskaair.sharepoint.com/sites/FOQA/SiteAssets/bootstrap.min.css" rel="stylesheet">
+
+    <!-- build:css css/main.css
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    endbuild -->
+
+    <title>AS EMS Event Tracker</title>
+</head>
+
+<style>
+    .ms-core-pageTitle,
+    .ms-core-pageTitle a {
+        color: white;
+        font-size: 1px;
+    }
+
+    .ms-displayInlineBlock ms-normalWrap {
+        color: white;
+        max-width: 0px;
+        max-height: 0px;
+    }
+
+    .ms-siteicon-img {
+        max-width: 0px;
+        max-height: 0px;
+        color: white;
+    }
+
+    #ms-pageDescriptionImage {
+        height: 0px;
+        width: 0px;
+        display: none;
+        color: white;
+    }
+
+    .error-message {
+        color: red;
+        font-weight: bold;
+    }
+
+    body {
+        font-family: "Comfortaa", sans-serif;
+    }
+
+    h4,
+    a {
+        padding-bottom: 5px;
+    }
+
+    .white-text {
+        color: white;
+    }
+
+    .row-content {
+        padding: 50px 0;
+        border-bottom: 1px ridge;
+        min-height: 100px;
+    }
+
+    .nonFormValue {
+        padding: 0px 0;
+        min-height: 10px;
+    }
+
+    .jumbotron {
+        padding: 10px;
+        background-image: linear-gradient(to right, white, #B3D57D, #48a9c5, #2774AE);
+        color: white;
+        margin: 0;
+    }
+
+    .modal-header {
+        padding: 8px;
+    }
+
+    .row-narrower {
+        padding: 0px;
+        margin-bottom: 0rem;
+    }
+
+    .btn-secondary:hover {
+        color: #fff;
+        background-color: #2774AE;
+        border-color: #2774AE;
+    }
+
+    .btn-secondary:not(:disabled):not(.disabled) {
+        color: #fff;
+        background-color: #013f66;
+        border-color: rgb(96, 129, 179);
+        border-width: 1px;
+    }
+
+    .btn-secondary:not(:disabled):not(.disabled).active,
+    .btn-secondary:not(:disabled):not(.disabled):active,
+    .show>.btn-secondary.dropdown-toggle {
+        color: #fff;
+        background-color: #48a9c5;
+        border-color: white;
+    }
+
+    .redirect {
+        color: #2774AE;
+    }
+</style>
+
+<body>
+
+    <header class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-4 col-xs-3 col-md-2">
+                    <a href="#"><img
+                            src="https://alaskaair.sharepoint.com/sites/FOQA/SiteAssets/Images/Alaska_WorkgroupLockups_Safety_rgb_Sm.png"
+                            class="img-fluid" /></a>
+                </div>
+                <div class="col  align-self-center">
+                    <h1>Boeing & Airbus</h1>
+                    <h4>Continous Unstable Approach Survey</h2>
+                </div>
+
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <div class="alert alert-warning" role="alert">
+            Chrome is the best browser to use for Sharepoint! Or Safari!
+        </div>
+        <form id="changeEventForm">
+            <input id="key_id" type="number" hidden="true" disabled>
+            <input id="gatekeepersEmail" type="text" hidden="true" disabled>
+            <!--Gatekeeper-->
+            <label class="col-form-label" for="gatekeeperLabel">Gatekeeper:</label>
+            <label class="col-lg-4 col-sm-4 col-xs-3 col-form-label" id="gatekeepersName"></label>
+            <!--Fleet-->
+            <div class="form-row form-group">
+                <div class="col-md-2 col-sm-3 col-xs-2">
+                    <label class="col-form-label" for="fleet">Fleet<span style="color:red">*</span></label>
+                    <select class="form-control" id="fleet" name="fleet" required>
+                        <option value="">Select</option>
+                        <option value="Airbus">Airbus</option>
+                        <option value="Boeing">Boeing</option>
+                    </select>
+                </div>
+                <div class="col-lg-3 col-md-5 col-sm-5 col-xs-6">
+                    <!--Model-->
+                    <label class="col-form-label" for="fleetModel">Aircraft type/model<span
+                            style="color:red">*</span></label>
+                    <select class="form-control" id="fleetModel" name="fleetModel" required>
+                        <option value="">Select</option>
+                        <option value="700">700</option>
+                        <option value="800">800</option>
+                        <option value="800">800SFP</option>
+                        <option value="900">900</option>
+                        <option value="900">Freighter</option>
+                        <option value="319">319</option>
+                        <option value="320">A320</option>
+                        <option value="321">A321</option>
+                    </select>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-4">
+                    <label class="col-form-label" for="cause">Cause<span style="color:red">*</span></label>
+                    <select class="form-control" id="cause" name="cause" required>
+                        <option value="">Select</option>
+                        <option value="Reserve Pilot non-fly (+30 days or more)">Reserve Pilot non-fly (+30 days or
+                            more)</option>
+                        <option value="Coming back from a leave of absence">Coming back from a leave of absence</option>
+                        <option value="Extended Vacation (+30 days or more)">Extended Vacation (+30 days or more)
+                        </option>
+                        <option value="Combination of Leave, vacation, reserve non-fly">Combination of Leave, vacation,
+                            reserve non-fly</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row form-group">
+                <label class="mr-1 col-form-label" for="contactDateLabel">Contact Date:<span style="color:red">*</span></label>
+                <input class="col-md-3 col-sm-4 col-xs-2 form-control col-form-label-sm" type="date" id="contactDate">
+                <label class="col-form-label ml-1" for="flightRecord">Flight Record</label><span style="color:red">*</span>
+                <input class="col-xl-2 col-lg-1 col-md-2 col-sm-3 col-xs-2 ml-1 form-control col-form-label-sm"
+                    type="text" id="flightRecord" placeholder="#" required>
+                <label class="col-form-label-sm" for="durationOfBreak">How many months (duration) was your break from
+                    flying?</label><span style="color:red">*</span>
+                <input class="col-xl-2 col-lg-1 col-md-2 col-sm-3 col-xs-2 ml-1 form-control col-form-label-sm"
+                    type="number" id="durationOfBreak" placeholder="#" required>
+            </div>
+            <div class="form-row form-group">
+                    <label class="col-form-label-sm" for="lastTrainingEvent">How long since a last training event
+                        (months)?</label><span style="color:red">*</span>
+                    <input class="col-xl-2 col-lg-1 col-md-2 col-sm-3 col-xs-2 ml-1 form-control col-form-label-sm"
+                        type="number" id="lastTrainingEvent" placeholder="#" required>
+            </div>
+            <div class="form-row">
+                <div class="col-md-6 col-sm-9 col-xs-8">
+                    <label class="col-form-label-sm" for="contributingFactor">
+                        Was your leave of absence a contributing factor to this event?
+                    </label><span style="color:red">*</span>
+                </div>
+                <div class="col-md-1 col-sm-2 col-xs-1">
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-secondary btn-sm align-self-center">
+                            <span style="color:rgb(210, 213, 214)"><input type="radio" name="contributingFactor"
+                                    id="contributingFactor" value="Yes" autocomplete="off">
+                                Yes</span>
+                        </label>
+                        <label class="btn btn-secondary btn-sm align-self-center">
+                            <input type="radio" name="contributingFactor" id="contributingFactor" value="No"
+                                autocomplete="off">
+                            No
+                        </label>
+                        <label class="btn btn-secondary btn-sm align-self-center">
+                            <input type="radio" name="contributingFactor" id="contributingFactor" value="Somewhat"
+                                autocomplete="off">
+                            Somewhat
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col">
+                    <button type="submit" class="btn btn-warning" id="submitForm">Submit</button>
+                </div>
+            </div>
+        </form>
+        <label class="col-md-6 col-sm-11 col-form-label-sm" id="insertStatus"></label>
+    </div>
+
+    <!--container-->
+    <br></br>
+
+    <footer class="site-footer">
+        <!--Results table -->
+        <div class="container">
+            <h4>Previous Submissions</h4>
+            <div class="table-responsive">
+                <table id="returnedDataTable" class="table container-fluid" cellspacing="0" width="80%">
+                    <thead>
+                        <tr>
+                            <th scope="col-1">Id</th>
+                            <th scope="col-2">Requestor's Name</th>
+                            <th scope="col-2">Fleet</th>
+                            <th scope="col-2">Date Request Created</th>
+                            <th scope="col-2">Tail Number</th>
+                            <th scope="col-2">Flight Number</th>
+                            <th scope="col-2">Timeframe</th>
+                            <th scope="col-2">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="previousSubmissionsTable">
+                </table>
+            </div>
+        </div>
+    </footer>
+
+    <!-- build:js js/main.js -->
+    <!--<script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+<script src="node_modules/popper.js/dist/umd/popper.min.js"></script>-->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!--<script src="JS/ASEMSEventTrack.js"></script>-->
+    <!-- endbuild -->
+
+    <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+    <script src="https://alaskaair.sharepoint.com/sites/FOQA/SiteAssets/scorecardSurvey.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.14.0/js/all.js" data-auto-a11y="true"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+    <script>
+        /* Tooltip Code
+         $(function () {
+             $('[data-toggle="tooltip"]').tooltip()
+         })
+         */
+
+    </script>
+
+</body>
+
+</html>
