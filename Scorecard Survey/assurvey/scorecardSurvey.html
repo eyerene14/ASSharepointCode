@@ -135,7 +135,7 @@
             <div class="row">
                 <div class="col-4 col-xs-3 col-md-2">
                     <a href="#"><img
-                            src="https://alaskaair.sharepoint.com/sites/FOQA/SiteAssets/Images/Alaska_WorkgroupLockups_Safety_rgb_Sm.png"
+                            src="https://alaskaair.sharepoint.com/sites/FOQA/SiteAssets/Images/Alaska Safety Logo Pic.png"
                             class="img-fluid" /></a>
                 </div>
                 <div class="col  align-self-center">
@@ -148,7 +148,7 @@
     </header>
     <div class="container">
         <div class="alert alert-warning" role="alert">
-            Chrome is the best browser to use for Sharepoint! Or Safari!
+            Chrome or Safari are the best browsers to use for Sharepoint!
         </div>
         <form id="changeEventForm">
             <input id="key_id" type="number" hidden="true" disabled>
@@ -178,8 +178,8 @@
                         <option value="900">900</option>
                         <option value="900">Freighter</option>
                         <option value="319">319</option>
-                        <option value="320">A320</option>
-                        <option value="321">A321</option>
+                        <option value="320">320</option>
+                        <option value="321">321</option>
                     </select>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-4 col-xs-4">
@@ -197,9 +197,13 @@
                 </div>
             </div>
             <div class="form-row form-group">
-                <label class="mr-1 col-form-label" for="contactDateLabel">Contact Date:<span style="color:red">*</span></label>
+                <label class="mr-1 col-form-label" for="contactDateLabel">Contact Date:<span
+                        style="color:red">*</span></label>
                 <input class="col-md-3 col-sm-4 col-xs-2 form-control col-form-label-sm" type="date" id="contactDate">
-                <label class="col-form-label ml-1" for="flightRecord">Flight Record</label><span style="color:red">*</span>
+                <label class="mr-1 col-form-label" id="contactDateNull"><span style="color:red">Please select a
+                        date</span></label>
+                <label class="col-form-label ml-1" for="flightRecord">Flight Record</label><span
+                    style="color:red">*</span>
                 <input class="col-xl-2 col-lg-1 col-md-2 col-sm-3 col-xs-2 ml-1 form-control col-form-label-sm"
                     type="text" id="flightRecord" placeholder="#" required>
                 <label class="col-form-label-sm" for="durationOfBreak">How many months (duration) was your break from
@@ -208,10 +212,10 @@
                     type="number" id="durationOfBreak" placeholder="#" required>
             </div>
             <div class="form-row form-group">
-                    <label class="col-form-label-sm" for="lastTrainingEvent">How long since a last training event
-                        (months)?</label><span style="color:red">*</span>
-                    <input class="col-xl-2 col-lg-1 col-md-2 col-sm-3 col-xs-2 ml-1 form-control col-form-label-sm"
-                        type="number" id="lastTrainingEvent" placeholder="#" required>
+                <label class="col-form-label-sm" for="lastTrainingEvent">How long since a last training event
+                    (months)?</label><span style="color:red">*</span>
+                <input class="col-xl-2 col-lg-1 col-md-2 col-sm-3 col-xs-2 ml-1 form-control col-form-label-sm"
+                    type="number" id="lastTrainingEvent" placeholder="#" required>
             </div>
             <div class="form-row">
                 <div class="col-md-6 col-sm-9 col-xs-8">
@@ -239,6 +243,11 @@
                     </div>
                 </div>
             </div>
+            <div class="form-row form-group">
+                <div class="col-md-6 col-sm-9 col-xs-8">
+                    <label class="mr-1 col-form-label" id="contributingFactorNull"><span style="color:red"></span></label>
+                </div>
+            </div>
             <div class="row form-group">
                 <div class="col">
                     <button type="submit" class="btn btn-warning" id="submitForm">Submit</button>
@@ -262,11 +271,12 @@
                             <th scope="col-1">Id</th>
                             <th scope="col-2">Requestor's Name</th>
                             <th scope="col-2">Fleet</th>
-                            <th scope="col-2">Date Request Created</th>
-                            <th scope="col-2">Tail Number</th>
-                            <th scope="col-2">Flight Number</th>
-                            <th scope="col-2">Timeframe</th>
-                            <th scope="col-2">Status</th>
+                            <th scope="col-2">Fleet Model</th>
+                            <th scope="col-2">Date Created</th>
+                            <th scope="col-2">Cause</th>
+                            <th scope="col-2">Contact Date</th>
+                            <th scope="col-2">F.R.</th>
+                            <th scope="col-2"></th>
                         </tr>
                     </thead>
                     <tbody id="previousSubmissionsTable">
@@ -295,6 +305,7 @@
              $('[data-toggle="tooltip"]').tooltip()
          })
          */
+        $("#contactDateNull").hide();
 
     </script>
 
