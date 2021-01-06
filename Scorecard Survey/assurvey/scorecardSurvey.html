@@ -199,13 +199,15 @@
             <div class="form-row form-group">
                 <label class="mr-1 col-form-label" for="contactDateLabel">Contact Date:<span
                         style="color:red">*</span></label>
-                <input class="col-md-3 col-sm-4 col-xs-2 form-control col-form-label-sm" type="date" id="contactDate">
-                <label class="mr-1 col-form-label" id="contactDateNull"><span style="color:red">Please select a
-                        date</span></label>
+                <input class="col-lg-2 col-md-2 col-sm-4 col-xs-2 form-control col-form-label-sm" type="date"
+                    id="contactDate" required>
+                <label class="mr-1 col-form-label-sm" id="contactDateNull"><span style='color:red'>Please enter a date mm/dd/yy</span></label>
                 <label class="col-form-label ml-1" for="flightRecord">Flight Record</label><span
                     style="color:red">*</span>
                 <input class="col-xl-2 col-lg-1 col-md-2 col-sm-3 col-xs-2 ml-1 form-control col-form-label-sm"
                     type="text" id="flightRecord" placeholder="#" required>
+            </div>
+            <div class="form-row form-group">
                 <label class="col-form-label-sm" for="durationOfBreak">How many months (duration) was your break from
                     flying?</label><span style="color:red">*</span>
                 <input class="col-xl-2 col-lg-1 col-md-2 col-sm-3 col-xs-2 ml-1 form-control col-form-label-sm"
@@ -227,27 +229,25 @@
                     <div class="btn-group btn-group-toggle" data-toggle="buttons">
                         <label class="btn btn-secondary btn-sm align-self-center">
                             <span style="color:rgb(210, 213, 214)"><input type="radio" name="contributingFactor"
-                                    id="contributingFactor" value="Yes" autocomplete="off">
+                                    id="contributingFactor" value="Yes" autocomplete="off" required>
                                 Yes</span>
                         </label>
                         <label class="btn btn-secondary btn-sm align-self-center">
                             <input type="radio" name="contributingFactor" id="contributingFactor" value="No"
-                                autocomplete="off">
+                                autocomplete="off" required>
                             No
                         </label>
                         <label class="btn btn-secondary btn-sm align-self-center">
                             <input type="radio" name="contributingFactor" id="contributingFactor" value="Somewhat"
-                                autocomplete="off">
+                                autocomplete="off" required>
                             Somewhat
                         </label>
                     </div>
                 </div>
             </div>
-            <div class="form-row form-group">
-                <div class="col-md-6 col-sm-9 col-xs-8">
-                    <label class="mr-1 col-form-label" id="contributingFactorNull"><span style="color:red"></span></label>
-                </div>
-            </div>
+
+            <label class="mr-1 col-form-label" id="contributingFactorNull"><span style='color:red'>Please select a
+                    contributing factor</span></label>
             <div class="row form-group">
                 <div class="col">
                     <button type="submit" class="btn btn-warning" id="submitForm">Submit</button>
@@ -303,9 +303,35 @@
         /* Tooltip Code
          $(function () {
              $('[data-toggle="tooltip"]').tooltip()
-         })
+         
          */
-        $("#contactDateNull").hide();
+        $(function () {
+            $("#insertStatus").hide();
+            $("#contactDateNull").hide();
+            $("#contributingFactorNull").hide();
+        })
+
+        $("#flightRecord").on("change", function () {
+            if ($("#contactDate").val() == "" || $("#contactDate").val() == null) {
+                document.getElementById("submitForm").disabled = true;
+                $("#contactDateNull").show();
+            }
+            else {
+                document.getElementById("submitForm").disabled = false;
+                $("#contactDateNull").hide();
+            }
+        });
+
+        $("#contactDate").on("click", function () {
+            if ($("#contactDate").val() == "" || $("#contactDate").val() == null) {
+                document.getElementById("submitForm").disabled = true;
+                $("#contactDateNull").show();
+            }
+            else {
+                document.getElementById("submitForm").disabled = false;
+                $("#contactDateNull").hide();
+            }
+        });
 
     </script>
 
