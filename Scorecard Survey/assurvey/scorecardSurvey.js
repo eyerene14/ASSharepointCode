@@ -38,27 +38,42 @@ $("#fleet").on("click", function () {
         $("#fleetModel").append('<option value=""></option>');
         $("#fleetModel").append('<option value="700">700</option>');
         $("#fleetModel").append('<option value="800">800</option>');
-        $("#fleetModel").append('<option value="800">800SFP</option>');
         $("#fleetModel").append('<option value="900">900</option>');
-        $("#fleetModel").append('<option value="900">Freighter</option>');
+        $("#fleetModel").append('<option value="Freighter">Freighter</option>');
     }
 });
 
 
-$("#submitForm").click(function() {
+$("#submitForm").click(function () {
 
-    alert(
-        $("#fleet").val() + ' ' +
-        $("#fleetModel").val() + ' ' +
-        $("#cause").val() + ' ' +
-        $("#contactDate").val() + ' ' +
-        $("#flightRecord").val() + ' ' +
-        $("#durationOfBreak").val() + ' ' +
-        $("#lastTrainingEvent").val() + ' ' +
-        document.querySelectorAll("input[id=contributingFactor]:checked")[0].value
+    alert( 'Inserting: ' +
+        'Fleet: ' + $("#fleet").val() +
+        '; FleetModel: ' + $("#fleetModel").val() +
+        '; Cause: ' + $("#cause").val() +
+        '; ContactDate: ' + $("#contactDate").val() +
+        '; FlightRecord: ' + $("#flightRecord").val() +
+        '; DurationOfBreak: ' + $("#durationOfBreak").val() +
+        '; LastTrainingEvent: ' + $("#lastTrainingEvent").val() +
+        '; ContributingFactor: ' + document.querySelector("label.btn.active").id
     );
 
     saveToTestList();
+});
+
+$("#updateForm").click(function () {
+
+    alert( 'Updating: ' +
+        'Fleet: ' + $("#fleet").val() +
+        '; FleetModel: ' + $("#fleetModel").val() +
+        '; Cause: ' + $("#cause").val() +
+        '; ContactDate: ' + $("#contactDate").val() +
+        '; FlightRecord: ' + $("#flightRecord").val() +
+        '; DurationOfBreak: ' + $("#durationOfBreak").val() +
+        '; LastTrainingEvent: ' + $("#lastTrainingEvent").val() +
+        '; ContributingFactor: ' + document.querySelector("label.btn.active").id
+    );
+
+    updateForm();
 });
 
 function getCurrentUser() {
@@ -99,6 +114,12 @@ function onError(error) {
 
 function getData(id) {
 
+    //cfLabelRemove = document.querySelector("label.btn.active");
+    if (document.querySelector("label.btn.active") != undefined) {
+        document.querySelector("label.btn.active").classList.remove('active')
+        document.querySelector("#contributingFactor").value = null;
+    }
+
     var url = 'https://alaskaair.sharepoint.com/sites/FOQA/_vti_bin/ListData.svc/ScorecardSurveyTest?$filter=Id%20eq%20' + id + '%20';
 
     getListItems(url, function (data) {
@@ -110,23 +131,28 @@ function getData(id) {
                 for (var i = 0; i < numRecords; i++) {
                     //var userTitle = getUser(data.d.results[i].ModifiedById);
 
-                    $("#key").val(data.d.results[i].Id);
+                    $("#key_id").val(data.d.results[i].Id);
                     $('#fleet').val(data.d.results[i].Fleet);
                     $('#fleetModel').val(data.d.results[i].FleetModel);
                     $('#cause').val(data.d.results[i].Cause);
+                    //document.getElementById('cause').options.selectedIndex this gets the position # of the selected option in dropdown
                     $("#contactDate").val(data.d.results[i].ContactDate);
                     $("#flightRecord").val(data.d.results[i].FlightRecord);
                     $("#durationOfBreak").val(data.d.results[i].DurationOfBreak);
                     $("#lastTrainingEvent").val(data.d.results[i].LastTrainingEvent);
-                    document.getElementById('contributingFactor').innerHTML = data.d.results[i].ContributingFactor;
+                    var cfLabelId = document.getElementById(data.d.results[i].ContributingFactor);
+                    cfLabelId.classList.add("active");
+                    document.querySelector("#contributingFactor").value = data.d.results[i].ContributingFactor;
+                    //document.querySelector("#contributingFactor").textContent e.g. 'Somewhat'
 
-                    /*
-                    if ($('#gatekeeperPOC').children() != data.d.results[i].GatekeeperPOC) {
-                        $('#gatekeeperPOC select').val("Jon Dodd");
-                    }*/
+                    //$('#gatekeeperPOC').children();
+
                 }
             })
 
+            $("#submitForm").hide();
+            $("#updateForm").show();
+            $("#cancelUpdate").show();
         }
     });
 }
@@ -145,6 +171,7 @@ function populateTbodyTable() {
 
                 for (var i = 0; i < 11; i++) {
                     //var userTitle = getUser(data.d.results[i].ModifiedById);
+
                     var createdDate = data.d.results[i].Created.slice(6, data.d.results[i].Created.length - 2);
 
                     $("#previousSubmissionsTable").append("<tr>");
@@ -222,7 +249,8 @@ function saveToList() {
         , "FlightRecord": ($("#flightRecord").val() == "") ? null : $('#flightRecord').val()
         , "DurationOfBreak": ($("#durationOfBreak").val() == "") ? 0 : $('#durationOfBreak').val()
         , "LastTrainingEvent": ($("#lastTrainingEvent").val() == "") ? null : $('#lastTrainingEvent').val()
-        , "ContributingFactor": (document.querySelectorAll("input[id=contributingFactor]:checked")[0] == undefined) ? null : document.querySelectorAll("input[id=contributingFactor]:checked")[0].value
+        , "ContributingFactor": (document.querySelector("label.btn.active") == undefined) ? null : document.querySelector("label.btn.active").id
+        //, "ContributingFactor": (document.querySelectorAll("input[id=contributingFactor]:checked")[0] == undefined) ? null : document.querySelector("#contributingFactor").value
         , "BrowserVendor": navigator.vendor
         , "BrowserUserAgent": navigator.userAgent
         , "BrowserAppName": navigator.appName
@@ -252,7 +280,8 @@ function saveToTestList() {
         , "FlightRecord": ($("#flightRecord").val() == "") ? null : $('#flightRecord').val()
         , "DurationOfBreak": ($("#durationOfBreak").val() == "") ? 0 : $('#durationOfBreak').val()
         , "LastTrainingEvent": ($("#lastTrainingEvent").val() == "") ? null : $('#lastTrainingEvent').val()
-        , "ContributingFactor": (document.querySelectorAll("input[id=contributingFactor]:checked")[0] == undefined) ? null : document.querySelectorAll("input[id=contributingFactor]:checked")[0].value
+        , "ContributingFactor": (document.querySelector("label.btn.active") == undefined) ? null : document.querySelector("label.btn.active").id
+        //, "ContributingFactor": (document.querySelectorAll("input[id=contributingFactor]:checked")[0] == undefined) ? null : document.querySelector("#contributingFactor").value
         , "BrowserVendor": navigator.vendor
         , "BrowserUserAgent": navigator.userAgent
         , "BrowserAppName": navigator.appName
@@ -277,54 +306,54 @@ function insertIntoList(url, item, successMsg, failMsg, source) {
         contentType: "application/json;odata=verbose",
         data: JSON.stringify(item),
         beforeSend: function () {
-            alert('insertIntoList: beforeSend' + successMsg);
+            console.log('insertIntoList: beforeSend' + successMsg);
             $("#insertStatus").show();
             $("#insertStatus").html("Request sent!").css({ "color": "green", "font-weight": "bold", "font-size": "18px" });
-            saveToErrorList(JSON.stringify(item));
+            //saveToFormErrorLog(item);
         },
         headers: {
             "Accept": "application/json;odata=verbose",
             "X-RequestDigest": $("#__REQUESTDIGEST").val()
         },
         success: function (data) {
-            alert('success');
+            console.log('insertIntoList: beforeSend' + successMsg);
+            //alert('success');
             /*if (successMsg != '') {
                 $("#insertStatus").show();
                 $("#insertStatus").html("Request sent!").css({ "color": "green", "font-weight": "bold", "font-size": "18px" });
                 location.href = _spPageContextInfo.webAbsoluteUrl + '/SitePages/FormSuccessRedirect.aspx';
-            };
-            console.log(successMsg);
-            console.log(JSON.stringify(item));*/
+            };*/
+
         },
-        error: saveToErrorList
+        error: saveError
     });
 }
 
-function saveToErrorList(jsonVersionOfItem, request) {
-    alert('Failed to Save Form: saveToErrorList');
+function saveError(data, request) {
+    alert('JS: saveToFormErrorLog -> logging(data)');
 
-    var count = 1;
-    var url = 'https://alaskaair.sharepoint.com/sites/FOQA/_vti_bin/ListData.svc/FormErrorLog';
+    //var url = 'https://alaskaair.sharepoint.com/sites/FOQA/_vti_bin/ListData.svc/FormErrorLog';
     //var listItemType = GetItemTypeForListName(listName);
     var listItemType = 'Microsoft.SharePoint.DataService.FormErrorLogItem';
 
     var item = {
         "__metadata": { "type": listItemType }
+        , "FK_ID": ($("#key_id").val() == "") ? null : $("#key_id").val()
         , "BrowserVendor": navigator.vendor
         , "BrowserUserAgent": navigator.userAgent
         , "BrowserAppName": navigator.appName
         , "ListsName": "ScorecardSurvey"
         , "UsersName": $("#gatekeepersName").val()
         , "UsersEmail": $("#gatekeepersEmail").val()
-        , "ItemData": jsonVersionOfItem
+        //, "ItemData": JSON.stringify(data)
+        , "ItemData": 'Fleet: ' + $("#fleet").val() + '; FleetModel: ' + $("#fleetModel").val() + '; Cause: ' + $("#cause").val() + '; ContactDate: ' + $("#contactDate").val() + '; FlightRecord: ' + $("#flightRecord").val() + '; DurationOfBreak: ' + $("#durationOfBreak").val() + '; LastTrainingEvent: ' + $("#lastTrainingEvent").val() + '; ContributingFactor: ' + document.querySelectorAll("input[id=contributingFactor]:checked")[0].value
+        , "Test": 'saveError() error submitting OR updating record'
     }//end item
 
-    var errorMessage = "Error inserting record number: " + count;
     logging(item);
-    /*window.location.reload();
-    $("#tBody1").append("Saved to Human Factors by Flight List");*/
-
+    //window.location.reload();
 }
+
 function logging(data) {
 
     var requestUri = _spPageContextInfo.webAbsoluteUrl + "/_vti_bin/ListData.svc/FormErrorLog";
@@ -340,21 +369,76 @@ function logging(data) {
         contentType: "application/json;odata=verbose",
         headers: requestHeaders,
         data: JSON.stringify(data),
+        beforeSend: function () {
+            console.log('Error');
+            $("#insertStatus").show();
+            $("#insertStatus").text("Your Request has NOT been saved!").css({ "color": "red", "font-weight": "bold", "font-size": "18px" });
+        },
         success: loggingSuccess,
         error: loggingError
     });
 }
 
 function loggingSuccess(data, request) {
-    alert('Inserted to Error Log');
-    //var loginName = data.d.Title;
-    //var email = data.d.Email;
-    //var count = 0;
-    //alert("Consent from co-pilot must be received before we can fullfill requests");
+    $("#insertStatus").text("A log of error has been made").css({ "color": "orange", "font-weight": "bold", "font-size": "18px" });
+    alert('loggingSuccess(data, request) -> Form Error Log List');
+    location.href = _spPageContextInfo.webAbsoluteUrl + '/SitePages/FormErrorRedirect.aspx';
 }
 
 function loggingError(error) {
-    alert('FAIL: Inserted to Error Log');
+    $("#insertStatus").text("A log of error has NOT been made").css({ "color": "orange", "font-weight": "bold", "font-size": "18px" });
+    alert('loggingError(data, request) -> Form Error Log List');
     location.href = _spPageContextInfo.webAbsoluteUrl + '/SitePages/FormErrorRedirect.aspx';
-    //alert(error);
 }
+
+
+function updateForm() {
+
+    updateListItem($("#key_id").val());
+}
+
+function updateListItem(itemId) {
+    var itemType = 'Microsoft.SharePoint.DataService.ScorecardSurveyTestItem';
+    var url = "https://alaskaair.sharepoint.com/sites/FOQA/_vti_bin/ListData.svc/ScorecardSurveyTest(" + itemId + ")";
+
+    var item = {
+        "__metadata": { "type": itemType }
+        , "GatekeepersName": ($("#gatekeepersName").val() == "") ? null : $("#gatekeepersName").val()
+        , "Fleet": ($("#fleet").val() == "") ? null : $("#fleet").val()
+        , "FleetModel": ($("#fleetModel").val() == "") ? null : $('#fleetModel option:selected').text()
+        , "Cause": ($("#cause").val() == "") ? null : $("#cause").val() //$('#cause option:selected').text()
+        , "ContactDate": ($("#contactDate").val() == "") ? null : $('#contactDate').val()
+        , "FlightRecord": ($("#flightRecord").val() == "") ? null : $('#flightRecord').val()
+        , "DurationOfBreak": ($("#durationOfBreak").val() == "") ? 0 : $('#durationOfBreak').val()
+        , "LastTrainingEvent": ($("#lastTrainingEvent").val() == "") ? null : $('#lastTrainingEvent').val()
+        , "ContributingFactor": (document.querySelector("label.btn.active") == undefined) ? null : document.querySelector("label.btn.active").id
+    };
+
+    //update List ScorecardSurveyTest with item
+    getListItems(url, function (data) {
+        $.ajax({
+            url: url,
+            type: "POST",
+            contentType: "application/json;odata=verbose",
+            data: JSON.stringify(item),
+            beforeSend: function () {
+                console.log('Success');
+                $("#insertStatus").show();
+            },
+            headers: {
+                "Accept": "application/json;odata=verbose",
+                "X-RequestDigest": $("#__REQUESTDIGEST").val(),
+                "X-HTTP-Method": "MERGE",
+                "If-Match": "*"
+            },
+            success: function (data) {
+                $("#insertStatus").html("Record has been updated!").css({ "color": "green", "font-weight": "bold", "font-size": "18px" });
+                window.location.reload();
+                //window.location.href = window.location.href;
+            },
+            error: saveError
+        });
+    })
+    //window.location.reload();
+
+};
