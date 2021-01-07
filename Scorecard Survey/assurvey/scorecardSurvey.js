@@ -46,7 +46,7 @@ $("#fleet").on("click", function () {
 
 $("#submitForm").click(function () {
 
-    alert( 'Inserting: ' +
+    /*alert( 'Inserting: ' +
         'Fleet: ' + $("#fleet").val() +
         '; FleetModel: ' + $("#fleetModel").val() +
         '; Cause: ' + $("#cause").val() +
@@ -55,14 +55,14 @@ $("#submitForm").click(function () {
         '; DurationOfBreak: ' + $("#durationOfBreak").val() +
         '; LastTrainingEvent: ' + $("#lastTrainingEvent").val() +
         '; ContributingFactor: ' + document.querySelector("label.btn.active").id
-    );
+    );*/
 
     saveToTestList();
 });
 
 $("#updateForm").click(function () {
 
-    alert( 'Updating: ' +
+    /*alert( 'Updating: ' +
         'Fleet: ' + $("#fleet").val() +
         '; FleetModel: ' + $("#fleetModel").val() +
         '; Cause: ' + $("#cause").val() +
@@ -71,7 +71,7 @@ $("#updateForm").click(function () {
         '; DurationOfBreak: ' + $("#durationOfBreak").val() +
         '; LastTrainingEvent: ' + $("#lastTrainingEvent").val() +
         '; ContributingFactor: ' + document.querySelector("label.btn.active").id
-    );
+    );*/
 
     updateForm();
 });
@@ -244,7 +244,7 @@ function saveToList() {
         , "GatekeepersName": ($("#gatekeepersName").val() == "") ? null : $("#gatekeepersName").val()
         , "Fleet": ($("#fleet").val() == "") ? null : $("#fleet").val()
         , "FleetModel": ($("#fleetModel").val() == "") ? null : $('#fleetModel option:selected').text()
-        , "Cause": ($("#cause").val() == "") ? null : $('#cause option:selected').text()
+        , "Cause": ($("#cause").val() == "") ? null : $("#cause").val() //$('#cause option:selected').text()
         , "ContactDate": ($("#contactDate").val() == "") ? null : $('#contactDate').val()
         , "FlightRecord": ($("#flightRecord").val() == "") ? null : $('#flightRecord').val()
         , "DurationOfBreak": ($("#durationOfBreak").val() == "") ? 0 : $('#durationOfBreak').val()
@@ -275,7 +275,7 @@ function saveToTestList() {
         , "GatekeepersName": ($("#gatekeepersName").val() == "") ? null : $("#gatekeepersName").val()
         , "Fleet": ($("#fleet").val() == "") ? null : $("#fleet").val()
         , "FleetModel": ($("#fleetModel").val() == "") ? null : $('#fleetModel option:selected').text()
-        , "Cause": ($("#cause").val() == "") ? null : $('#cause option:selected').text()
+        , "Cause": ($("#cause").val() == "") ? null : $("#cause").val() //$('#cause option:selected').text()
         , "ContactDate": ($("#contactDate").val() == "") ? null : $('#contactDate').val()
         , "FlightRecord": ($("#flightRecord").val() == "") ? null : $('#flightRecord').val()
         , "DurationOfBreak": ($("#durationOfBreak").val() == "") ? 0 : $('#durationOfBreak').val()
@@ -287,9 +287,7 @@ function saveToTestList() {
         , "BrowserAppName": navigator.appName
     }//end item
 
-    alert(
-        'saveToTestList: ' + JSON.stringify(item)
-    );
+    //alert('saveToTestList: ' + JSON.stringify(item));
 
     var errorMessage = "IJ Test Error";
     insertIntoList(url, item, "Item added/saved", errorMessage);
@@ -330,7 +328,7 @@ function insertIntoList(url, item, successMsg, failMsg, source) {
 }
 
 function saveError(data, request) {
-    alert('JS: saveToFormErrorLog -> logging(data)');
+    //alert('JS: saveToFormErrorLog -> logging(data)');
 
     //var url = 'https://alaskaair.sharepoint.com/sites/FOQA/_vti_bin/ListData.svc/FormErrorLog';
     //var listItemType = GetItemTypeForListName(listName);
@@ -347,7 +345,7 @@ function saveError(data, request) {
         , "UsersEmail": $("#gatekeepersEmail").val()
         //, "ItemData": JSON.stringify(data)
         , "ItemData": 'Fleet: ' + $("#fleet").val() + '; FleetModel: ' + $("#fleetModel").val() + '; Cause: ' + $("#cause").val() + '; ContactDate: ' + $("#contactDate").val() + '; FlightRecord: ' + $("#flightRecord").val() + '; DurationOfBreak: ' + $("#durationOfBreak").val() + '; LastTrainingEvent: ' + $("#lastTrainingEvent").val() + '; ContributingFactor: ' + document.querySelectorAll("input[id=contributingFactor]:checked")[0].value
-        , "Test": 'saveError() error submitting OR updating record'
+        , "Test": 'Error submitting OR updating record'
     }//end item
 
     logging(item);
@@ -381,13 +379,13 @@ function logging(data) {
 
 function loggingSuccess(data, request) {
     $("#insertStatus").text("A log of error has been made").css({ "color": "orange", "font-weight": "bold", "font-size": "18px" });
-    alert('loggingSuccess(data, request) -> Form Error Log List');
+    //alert('loggingSuccess(data, request) -> Form Error Log List');
     location.href = _spPageContextInfo.webAbsoluteUrl + '/SitePages/FormErrorRedirect.aspx';
 }
 
 function loggingError(error) {
     $("#insertStatus").text("A log of error has NOT been made").css({ "color": "orange", "font-weight": "bold", "font-size": "18px" });
-    alert('loggingError(data, request) -> Form Error Log List');
+    //alert('loggingError(data, request) -> Form Error Log List');
     location.href = _spPageContextInfo.webAbsoluteUrl + '/SitePages/FormErrorRedirect.aspx';
 }
 

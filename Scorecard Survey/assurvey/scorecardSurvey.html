@@ -342,19 +342,8 @@
             }
         });
 
-        /*
-        $("#submitForm").click(function () {
-
-            saveToFormErrorLog('Error submitting form');
-        });
-
-        $("#updateForm").click(function () {
-
-            saveToFormErrorLog('Error updating form');
-        });*/
-
         function saveToFormErrorLog(buttonClicked) {
-            alert('HTML: saveToFormErrorLog -> logging(data)');
+            //alert('HTML: saveToFormErrorLog -> logging(data)');
 
             var count = 1;
             var url = 'https://alaskaair.sharepoint.com/sites/FOQA/_vti_bin/ListData.svc/FormErrorLog';
@@ -404,7 +393,7 @@
         }
 
         function loggingSuccess(data, request) {
-            alert('loggingSuccess(data, request) to LOG: ' +
+            /*alert('loggingSuccess(data, request) to LOG: ' +
                 'Fleet: ' + $("#fleet").val() +
                 '; FleetModel: ' + $("#fleetModel").val() +
                 '; Cause: ' + $("#cause").val() +
@@ -413,12 +402,12 @@
                 '; DurationOfBreak: ' + $("#durationOfBreak").val() +
                 '; LastTrainingEvent: ' + $("#lastTrainingEvent").val() +
                 '; ContributingFactor: ' + document.querySelector("label.btn.active").id
-            );
+            );*/
             console.log('Logging: Record Saved to FormErrorLog');
         }
 
         function loggingError(error) {
-            alert('loggingError(data, request) to LOG: ' +
+            /*alert('loggingError(data, request) to LOG: ' +
                 'Fleet: ' + $("#fleet").val() +
                 '; FleetModel: ' + $("#fleetModel").val() +
                 '; Cause: ' + $("#cause").val() +
@@ -427,7 +416,7 @@
                 '; DurationOfBreak: ' + $("#durationOfBreak").val() +
                 '; LastTrainingEvent: ' + $("#lastTrainingEvent").val() +
                 '; ContributingFactor: ' + document.querySelector("label.btn.active").id
-            );
+            );*/
             console.log('Logging: Record Saved to FormErrorLog');
             location.href = _spPageContextInfo.webAbsoluteUrl + '/SitePages/FormErrorRedirect.aspx';
         }
