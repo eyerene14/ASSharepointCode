@@ -57,7 +57,8 @@ $("#submitForm").click(function () {
         '; ContributingFactor: ' + document.querySelector("label.btn.active").id
     );*/
 
-    saveToTestList();
+    //saveToTestList();
+    saveToList();
 });
 
 $("#updateForm").click(function () {
@@ -120,7 +121,7 @@ function getData(id) {
         document.querySelector("#contributingFactor").value = null;
     }
 
-    var url = 'https://alaskaair.sharepoint.com/sites/FOQA/_vti_bin/ListData.svc/ScorecardSurveyTest?$filter=Id%20eq%20' + id + '%20';
+    var url = 'https://alaskaair.sharepoint.com/sites/FOQA/_vti_bin/ListData.svc/ScorecardSurvey?$filter=Id%20eq%20' + id + '%20';
 
     getListItems(url, function (data) {
         var numRecords = data.d.results.length;
@@ -160,7 +161,7 @@ function getData(id) {
 function populateTbodyTable() {
 
     //var url = 'https://alaskaair.sharepoint.com/sites/FOQA/_vti_bin/ListData.svc/ScorecardSurvey?$orderby=Id%20desc';
-    var urlTest = 'https://alaskaair.sharepoint.com/sites/FOQA/_vti_bin/ListData.svc/ScorecardSurveyTest?$orderby=Id%20desc';
+    var urlTest = 'https://alaskaair.sharepoint.com/sites/FOQA/_vti_bin/ListData.svc/ScorecardSurvey?$orderby=Id%20desc';
     //var urlTest = 'https://alaskaair.sharepoint.com/sites/FOQA/_vti_bin/ListData.svc/CrewContactTrackingList?$filter=substringof(%27'+ year +'%27,ReportingMonth)&$top=10&$orderby=Id%20desc';
 
     getListItems(urlTest, function (data) {
@@ -396,8 +397,8 @@ function updateForm() {
 }
 
 function updateListItem(itemId) {
-    var itemType = 'Microsoft.SharePoint.DataService.ScorecardSurveyTestItem';
-    var url = "https://alaskaair.sharepoint.com/sites/FOQA/_vti_bin/ListData.svc/ScorecardSurveyTest(" + itemId + ")";
+    var itemType = 'Microsoft.SharePoint.DataService.ScorecardSurveyItem';
+    var url = "https://alaskaair.sharepoint.com/sites/FOQA/_vti_bin/ListData.svc/ScorecardSurvey(" + itemId + ")";
 
     var item = {
         "__metadata": { "type": itemType }
