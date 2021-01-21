@@ -300,7 +300,13 @@
     <!-- endbuild -->
 
     <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
-    <script src="https://alaskaair.sharepoint.com/sites/FOQA/SiteAssets/scorecardSurvey.js"></script>
+    <script>
+        var versionUpdate = (new Date()).getTime();
+        var script = document.createElement("script");
+        script.type = "text/javascript";
+        script.src = "https://alaskaair.sharepoint.com/sites/FOQA/SiteAssets/scorecardSurvey.js?v=" + versionUpdate;
+        document.body.appendChild(script);  
+    </script>
     <script src="https://use.fontawesome.com/releases/v5.14.0/js/all.js" data-auto-a11y="true"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
@@ -312,13 +318,47 @@
              $('[data-toggle="tooltip"]').tooltip()
          
          */
+
+        /*function deleteAllCookies() {
+            var cookies = document.cookie.split(";");
+            for (var i = 0; i < cookies.length; i++)
+                deleteCookie(cookies[i].split("=")[0]);
+        }
+
+        function setCookie(name, value, expirydays) {
+            var d = new Date();
+            d.setTime(d.getTime() + (expirydays * 24 * 60 * 60 * 1000));
+            var expires = "expires=" + d.toUTCString();
+            document.cookie = name + "=" + value + "; " + expires;
+        }
+
+        function deleteCookie(name) {
+            setCookie(name, "", -1);
+        }*/
+
+$.ajaxSetup({cache: false}); 
+
         $(function () {
+            $.ajaxSetup({cache: false}); 
             $("#insertStatus").hide();
             $("#contactDateNull").hide();
             $("#contributingFactorNull").hide();
             $("#updateForm").hide();
             $("#cancelUpdate").hide();
         })
+
+        function deleteAllCookies() {
+            var cookies = document.cookie.split(";");
+
+            for (var i = 0; i < cookies.length; i++) {
+                var cookie = cookies[i];
+                var eqPos = cookie.indexOf("=");
+                var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+                document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
+            }
+        }
+
+        deleteAllCookies();
 
         $("#flightRecord").on("change", function () {
             if ($("#contactDate").val() == "" || $("#contactDate").val() == null) {
@@ -420,6 +460,7 @@
             console.log('Logging: Record Saved to FormErrorLog');
             location.href = _spPageContextInfo.webAbsoluteUrl + '/SitePages/FormErrorRedirect.aspx';
         }
+
 
     </script>
 

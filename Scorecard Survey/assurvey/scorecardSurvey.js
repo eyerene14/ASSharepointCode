@@ -28,14 +28,14 @@ $("#contactDate").on("change", function () {
 $("#fleet").on("click", function () {
     if ($("#fleet").val() == "Airbus") {
         $("#fleetModel").children().remove().end();
-        $("#fleetModel").append('<option value=""></option>');
+        $("#fleetModel").append('<option value="">Select</option>');
         $("#fleetModel").append('<option value="319">319</option>');
         $("#fleetModel").append('<option value="320">320</option>');
         $("#fleetModel").append('<option value="321">321</option>');
     }
     else if ($("#fleet").val() == "Boeing") {
         $("#fleetModel").children().remove().end();
-        $("#fleetModel").append('<option value=""></option>');
+        $("#fleetModel").append('<option value="">Select</option>');
         $("#fleetModel").append('<option value="700">700</option>');
         $("#fleetModel").append('<option value="800">800</option>');
         $("#fleetModel").append('<option value="900">900</option>');
@@ -56,7 +56,7 @@ $("#submitForm").click(function () {
         '; LastTrainingEvent: ' + $("#lastTrainingEvent").val() +
         '; ContributingFactor: ' + document.querySelector("label.btn.active").id
     );*/
-
+    //alert("saveToList");
     //saveToTestList();
     saveToList();
 });
@@ -257,8 +257,8 @@ function saveToList() {
         , "BrowserAppName": navigator.appName
     }//end item
 
-
-    var errorMessage = "Error inserting record number: " + count;
+    //alert("In saveToList method");
+    var errorMessage = "Error inserting record number: ";
     insertIntoList(url, item, "Item added/saved", errorMessage);
     /*window.location.reload();
     $("#tBody1").append("Saved to Human Factors by Flight List");*/
@@ -305,7 +305,6 @@ function insertIntoList(url, item, successMsg, failMsg, source) {
         contentType: "application/json;odata=verbose",
         data: JSON.stringify(item),
         beforeSend: function () {
-            console.log('insertIntoList: beforeSend' + successMsg);
             $("#insertStatus").show();
             $("#insertStatus").html("Request sent!").css({ "color": "green", "font-weight": "bold", "font-size": "18px" });
             //saveToFormErrorLog(item);
@@ -315,8 +314,8 @@ function insertIntoList(url, item, successMsg, failMsg, source) {
             "X-RequestDigest": $("#__REQUESTDIGEST").val()
         },
         success: function (data) {
-            console.log('insertIntoList: beforeSend' + successMsg);
-            //alert('success');
+            //alert(JSON.stringify(item));
+            //alert('insert success');
             /*if (successMsg != '') {
                 $("#insertStatus").show();
                 $("#insertStatus").html("Request sent!").css({ "color": "green", "font-weight": "bold", "font-size": "18px" });
@@ -330,7 +329,7 @@ function insertIntoList(url, item, successMsg, failMsg, source) {
 
 function saveError(data, request) {
     //alert('JS: saveToFormErrorLog -> logging(data)');
-
+    alert("saveError");
     //var url = 'https://alaskaair.sharepoint.com/sites/FOQA/_vti_bin/ListData.svc/FormErrorLog';
     //var listItemType = GetItemTypeForListName(listName);
     var listItemType = 'Microsoft.SharePoint.DataService.FormErrorLogItem';
@@ -345,7 +344,7 @@ function saveError(data, request) {
         , "UsersName": $("#gatekeepersName").val()
         , "UsersEmail": $("#gatekeepersEmail").val()
         //, "ItemData": JSON.stringify(data)
-        , "ItemData": 'Fleet: ' + $("#fleet").val() + '; FleetModel: ' + $("#fleetModel").val() + '; Cause: ' + $("#cause").val() + '; ContactDate: ' + $("#contactDate").val() + '; FlightRecord: ' + $("#flightRecord").val() + '; DurationOfBreak: ' + $("#durationOfBreak").val() + '; LastTrainingEvent: ' + $("#lastTrainingEvent").val() + '; ContributingFactor: ' + document.querySelectorAll("input[id=contributingFactor]:checked")[0].value
+        , "ItemData": 'Fleet: ' + $("#fleet").val() + ' FleetModel: ' + $("#fleetModel").val() + ' Cause: ' + $("#cause").val() + ' ContactDate: ' + $("#contactDate").val() + ' FlightRecord: ' + $("#flightRecord").val() + ' DurationOfBreak: ' + $("#durationOfBreak").val() + ' LastTrainingEvent: ' + $("#lastTrainingEvent").val() + ' ContributingFactor: ' + document.querySelector("label.btn.active").id
         , "Test": 'Error submitting OR updating record'
     }//end item
 
@@ -368,11 +367,6 @@ function logging(data) {
         contentType: "application/json;odata=verbose",
         headers: requestHeaders,
         data: JSON.stringify(data),
-        beforeSend: function () {
-            console.log('Error');
-            $("#insertStatus").show();
-            $("#insertStatus").text("Your Request has NOT been saved!").css({ "color": "red", "font-weight": "bold", "font-size": "18px" });
-        },
         success: loggingSuccess,
         error: loggingError
     });
