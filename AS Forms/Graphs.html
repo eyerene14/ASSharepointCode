@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Pie Chart</title>
+    <!--<script src="/ChartJS/Chart.min.js"></script>
+    <script src="/ChartJS/utils.js"></script>
+    <script src="/ChartJS/horizontal.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script src="https://alaskaair.sharepoint.com/sites/FOQA/SiteAssets/Chart.js-2.9.4/Chart.min.js"></script>
+    <script src="https://alaskaair.sharepoint.com/sites/FOQA/SiteAssets/Chart.js-2.9.4/utils.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script>
+        var versionUpdate = (new Date()).getTime();
+        var script = document.createElement("script");
+        script.type = "text/javascript";
+        script.src = "https://alaskaair.sharepoint.com/sites/FOQA/SiteAssets/horizontal.js?v=" + versionUpdate;
+        document.body.appendChild(script);  
+    </script>
+    <link href="https://alaskaair.sharepoint.com/sites/FOQA/SiteAssets/bootstrap.min.css" rel="stylesheet">
+    <style>
+        canvas {
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="chart_div"></div>
+
+    <!--<div id="container" style="width: 75%;">
+        <canvas id="canvas"></canvas>
+    </div>
+    <button id="randomizeData">Randomize Data</button>
+    <button id="addDataset">Add Dataset</button>
+    <button id="removeDataset">Remove Dataset</button>
+    <button id="addData">Add Data</button>
+    <button id="removeData">Remove Data</button>-->
+
+    <script>
+        //horizontalBarGraph();
+
+        $.ajaxSetup({cache: false}); 
+
+        $(function () {
+            $.ajaxSetup({cache: false}); 
+            $("#insertStatus").hide();
+            $("#contactDateNull").hide();
+            $("#contributingFactorNull").hide();
+            $("#updateForm").hide();
+            $("#cancelUpdate").hide();
+        })
+
+        function deleteAllCookies() {
+            var cookies = document.cookie.split(";");
+
+            for (var i = 0; i < cookies.length; i++) {
+                var cookie = cookies[i];
+                var eqPos = cookie.indexOf("=");
+                var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+                document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
+            }
+        }
+
+        deleteAllCookies();
+
+    </script>
+
+</body>
+
+</html>

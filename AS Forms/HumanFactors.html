@@ -1,0 +1,1549 @@
+
+<!DOCTYPE head PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<head id="Head1">
+    <meta http-equiv="X-UA-Compatible" content="IE=10,chrome=1" />
+    <!--<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css"/>-->
+    <!--<link type="text/css" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">-->
+    <!--<script type="text/ecmascript" src="/_layouts/SP.Core.js"></script>-->
+    <!--<script src="/_layouts/SP.js" type="text/ecmascript"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script href="https://alaskaair.sharepoint.com/sites/FOQA/SiteAssets/HfactorsCommon.js"></script>
+    <script>
+        var versionUpdate = (new Date()).getTime();
+        var script = document.createElement("script");
+        script.type = "text/javascript";
+        script.src = "https://alaskaair.sharepoint.com/sites/FOQA/SiteAssets/HfactorsCommon.js?v=" + versionUpdate;
+        document.body.appendChild(script);  
+    </script>
+    <script href="https://alaskaair.sharepoint.com/sites/FOQA/SiteAssets/mssql-jdbc-7.0.0.jre10.jar"></script>
+    <script href="https://alaskaair.sharepoint.com/sites/FOQA/SiteAssets/mssql-jdbc-7.0.0.jre8.jar"></script>
+    <link href="C:\Program Files\bootstrap-4.0.0\dist\css\bootstrap.min.css" rel="stylesheet">
+    <link href="https://alaskaair.sharepoint.com/sites/FOQA/SiteAssets/bootstrap.min.css" rel="stylesheet">
+    <script src="https://alaskaair.sharepoint.com/sites/FOQA/_vti_bin/ListData.svc/HumanFactorsList" type="application/json">
+    </script>
+
+    <!--<script src="https://alaskaair.sharepoint.com/sites/FOQA/_vti_bin/ListData.svc/LeadingIndicatorsCombinedMetrics" type="application/json"></script>-->
+    <!--<script src="https://alaskaair.sharepoint.com/sites/FOQA/SiteAssets/CLIcommon.js"></script>-->
+
+    <style>
+
+        .formG {
+            position: relative;
+            padding-top: 15px;
+            padding-left: 60px;
+            margin: 1rem -15px 0;
+            border: solid #f7f7f9;
+            border-width: .2rem 0 0;
+        }
+
+        .readfrom {
+            position: relative;
+            padding-top: 15px;
+            padding-left: 60px;
+            margin: 1rem -15px 0;
+            border: solid #f7f7f9;
+            border-width: .2rem 0 0;
+        }
+
+        .ms-DetailsRow {
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #ffffff 100%);
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 4em;
+        }
+        .od-FieldRenderer-text.is-truncated {
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #ffffff 100%);
+            position: relative;
+            height: 101px;
+            display: inline-block;
+            overflow: hidden;
+        }
+    </style>
+
+
+    <title>Human Factors</title>
+
+    <body>
+
+        <form class="needs-validation" action="">
+            <div class="formG" data-toggle="collapse collapse">
+                <table>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <input id="key" type="text"/ hidden>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            Flight Record:<span style="color:red">*</span>
+                            <input type="text" id="flightRecord" required></input>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-sm-10>
+                            <label for="fleetvalidationCustom01">Fleet:<span style="color:red">*</span></label>
+                            <select id="fleet" class="custom-select" id="fleetvalidationCustom01" required>
+                                <option default="true" value="">Select</option>
+                                <option id="airbus">Airbus</option>
+                                <option id="boeing">Boeing</option>
+                            </select>
+                            <div class="invalid-feedback">Please select a fleet</div>
+                        </div>
+
+                        <div class="form-group col-sm-10>
+                            <label for="pofvalidationCustom01">Phase of Flight:<span style="color:red">*</span></label>
+                            <select id="pof" class="custom-select" id="pofvalidationCustom01" required>
+                                <option default="true" value="">Select</option>
+                                <option id="taxi">Taxi</option>
+                                <option id="takeoff">Takeoff</option>
+                                <option id="cruise">Cruise</option>
+                                <option id="descent">Descent</option>
+                                <option id="approach">Approach</option>
+                                <option id="landing">Landing</option>
+                            </select>
+                            <div class="invalid-feedback">Please select a phase of flight</div>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-sm-10>
+                            <label for="datevalidationCustom01">Month of Incident:<span style="color:red">*</span></label>
+                            <select id="month" class="custom-select" id="datevalidationCustom01" required></select>
+                            <div class="invalid-feedback">Please select a month</div>
+                        </div>
+
+                        <div class="form-group col-sm-10>
+                            <label for="datevalidationCustom01">Year of Incident:<span style="color:red">*</span></label>
+                            <select id="year" class="custom-select" id="datevalidationCustom01" required>
+                                <option default="true" value="">Select</option>
+                                <option id="2019">2019</option>
+                                <option id="2020">2020</option>
+                                <option id="2021">2021</option>
+<option id="2022">2022</option>
+                            </select>
+                            <div class="invalid-feedback">Please select a year</div>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label for="validationCustom01">Event:<span style="color:red">*</span></label>
+                            <select id="event" class="custom-select" id="validationCustom01" onchange='CheckColors(this.value);' required>
+                                <option default="true" value="">Select</option>
+                                <option id="bncft">Bleeds Not Configured for Takeoff</option>
+                                <option id="fb">Flap Blowback</option>
+                                <option id="ga">Go Arounds</option>
+                                <option id="g">GPWS </option>
+                                <option id="gpu">GPWS Pull Up</option>
+                                <option id="hli">Hard Landing Investigations</option>
+                                <option id="hrd">High Rate of Descent</option>
+                                <option id="ibto">Improper Bleed T/O</option>
+                                <option id="ias">Incorrect altimeter setting</option>
+                                <option id="llt">Landing less than 500'</option>
+                                <option id="lot">Landing outside TDZ (ROR)</option>
+                                <option id="la">Low Airspeed</option>
+                                <option id="agl">Low Altitude- AGL</option>
+                                <option id="lfl">Low Fuel Landing</option>
+                                <option id="loewma">Loc Offset event w/missed Approach</option>
+                                <option id="me">MMO exceedance</option>
+                                <option id="pdr">Pilot Data Request (PDR)</option>
+                                <option id="roc">Reduced Flight Control Mode</option>
+                                <option id="roc">Risk of CFIT</option>
+                                <option id="rofe">Risk of Fuel Exhaustion</option>
+                                <option id="roro">Risk Of Runway Overrun</option>
+                                <option id="jto">Rejected Takeoff</option>
+                                <option id="st">Severe Turbulance</option>
+                                <option id="sbwfe">Speed Brake w/flaps extended</option>
+                                <option id="sw">Stall Warning</option>
+                                <option id="tr">TCAS RA</option>
+                                <option id="uy">Uncommanded YAW</option>
+                                <option id="ua">Unstable Approaches</option>
+                                <option id="w">Windshear</option>
+                                <option id="o">Other</option>
+                            </select>
+                            <div class="invalid-feedback">Please select an event</div>
+                            <div id="otherEvent" class="form-group collapse" required>
+                                <div class="form-group row">
+                                    <div class="col-sm-10">
+                                        <label for="other">Other Event:</label>
+                                        <input ID="otherEventText" type="text" required></input>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="ccDetail">Crew Contact Summary:<span style="color:red">*</span></label>
+                            <textarea id="ccDetail" rows="4" cols="100" required></textarea>
+                            <div class="invalid-feedback">Please enter a crew contact summary</div>
+                        </div>
+                    </div>
+
+                    <!--FailureLevel1-->
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <h4><label id="failureLevel1" value="Organizational Influences">Organizational Influences</label></h4>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label for="validationCustom01">Human Factor:<span style="color:red">*</span></label>
+                            <select id="hFactor1" class="custom-select" id="validationCustom01" required>
+                                <option default="true" value="">Select</option>
+                                <option id="ams"> Adverse Mental State</option>
+                                <option id="aps"> Adverse Physiological State</option>
+                                <option id="atc"> Air Traffic Control</option>
+                                <option id="clt"> Culture</option>
+                                <option id="de"> Decision Error</option>
+                                <option id="ev"> Exceptional Violation</option>
+                                <option id="ftckp"> Failure to Correct Known Problems</option>
+                                <option id="ffd"> Fitness for Duty</option>
+                                <option id="is"> Inadequate Supervision</option>
+                                <option id="lat"> Leadership and Teamwork</option>
+                                <option id="op"> Operations</option>
+                                <option id="ov"> Oversight</option>
+                                <option id="pe"> Perceptual Errors</option>
+                                <option id="phe"> Physical Environment</option>
+                                <option id="poml"> Physical or Mental Limitations</option>
+                                <option id="pio"> Planned Inappropriate Operation</option>
+                                <option id="pro"> Procedure</option>
+                                <option id="rv"> Routine Violation</option>
+                                <option id="sbe"> Skill Based Error</option>
+                                <option id="sv"> Supervisory Violation</option>
+                                <option id="tech"> Technological</option>
+                            </select>
+                            <div class="invalid-feedback">Please select a Human Factor</div>
+                        </div>
+
+                        <div class="form-group col-md-4">
+                            <label for="causeValidationCustom01">Cause:<span style="color:red">*</span></label>
+                            <select id="hfCause1" class="custom-select" id="causeValidationCustom01" required>
+                                <option default="true" id="selected" value="">Select</option>
+                            </select>
+                            <div class="invalid-feedback">Please select a cause</div>
+                        </div>
+                    </div>
+                    <!--FailureLevel1 END-->
+
+                    <!--FailureLevel2 START-->
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <h4 id="failureLevel2">Unsafe Supervision</h4>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label for="validationCustom02">Human Factor:<span style="color:red">*</span></label>
+                            <select id="hFactor2" class="custom-select" id="validationCustom02" required>
+                                <option default="true" value="">Select</option>
+                                <option id="ams"> Adverse Mental State</option>
+                                <option id="aps"> Adverse Physiological State</option>
+                                <option id="atc"> Air Traffic Control</option>
+                                <option id="clt"> Culture</option>
+                                <option id="de"> Decision Error</option>
+                                <option id="ev"> Exceptional Violation</option>
+                                <option id="ftckp"> Failure to Correct Known Problems</option>
+                                <option id="ffd"> Fitness for Duty</option>
+                                <option id="is"> Inadequate Supervision</option>
+                                <option id="lat"> Leadership and Teamwork</option>
+                                <option id="op"> Operations</option>
+                                <option id="ov"> Oversight</option>
+                                <option id="pe"> Perceptual Errors</option>
+                                <option id="phe"> Physical Environment</option>
+                                <option id="poml"> Physical or Mental Limitations</option>
+                                <option id="pio"> Planned Inappropriate Operation</option>
+                                <option id="pro"> Procedure</option>
+                                <option id="rv"> Routine Violation</option>
+                                <option id="sbe"> Skill Based Error</option>
+                                <option id="sv"> Supervisory Violation</option>
+                                <option id="tech"> Technological</option>
+                            </select>
+                            <div class="invalid-feedback">Please select a human factor</div>
+                        </div>
+
+                        <div class="form-group col-md-4">
+                            <label for="causeValidationCustom02">Cause:<span style="color:red">*</span></label>
+                            <select id="hfCause2" class="custom-select" id="causeValidationCustom02" required>
+                                <option default="true" id="selected" value=""> Select </option>
+                            </select>
+                            <div class="invalid-feedback">Please select a cause</div>
+                        </div>
+                    </div>
+                    <!--FailureLevel2 END-->
+                    <!--FailureLevel3-A START-->
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <h4 id="failureLevel3">Precondition for Unsafe Acts</h4>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            Human Factor:<span style="color:red">*</span>
+                            <select id="hFactor3" class="custom-select" id="validationCustom03" required>
+                                <option default="true" value="">Select</option>
+                                <option id="ams"> Adverse Mental State</option>
+                                <option id="aps"> Adverse Physiological State</option>
+                                <option id="atc"> Air Traffic Control</option>
+                                <option id="clt"> Culture</option>
+                                <option id="de"> Decision Error</option>
+                                <option id="ev"> Exceptional Violation</option>
+                                <option id="ftckp"> Failure to Correct Known Problems</option>
+                                <option id="ffd"> Fitness for Duty</option>
+                                <option id="is"> Inadequate Supervision</option>
+                                <option id="lat"> Leadership and Teamwork</option>
+                                <option id="op"> Operations</option>
+                                <option id="ov"> Oversight</option>
+                                <option id="pe"> Perceptual Errors</option>
+                                <option id="phe"> Physical Environment</option>
+                                <option id="poml"> Physical or Mental Limitations</option>
+                                <option id="pio"> Planned Inappropriate Operation</option>
+                                <option id="pro"> Procedure</option>
+                                <option id="rv"> Routine Violation</option>
+                                <option id="sbe"> Skill Based Error</option>
+                                <option id="sv"> Supervisory Violation</option>
+                                <option id="tech"> Technological</option>
+                            </select>
+                            <div class="invalid-feedback">Please select a human factor</div>
+                        </div>
+
+                        <div class="form-group col-md-4">
+                            Cause:<span style="color:red">*</span>
+                            <select id="hfCause3" class="custom-select" id="validationCustom03" required>
+                                <option default="true" id="selected" value=""> Select </option>
+                            </select>
+                            <div class="invalid-feedback">Please select a cause</div>
+                        </div>
+                    </div>
+
+
+                        <!--FailureLevel3-A END-->
+                        <!--FailureLevel3-B START-->
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                Human Factor:<span style="color:red">*</span>
+                                <select id="hFactor3b" class="custom-select" id="validationCustom03b" required>
+                                    <option default="true" value="">Select</option>
+                                    <option id="ams3b"> Adverse Mental State</option>
+                                    <option id="aps3b"> Adverse Physiological State</option>
+                                    <option id="atc3b"> Air Traffic Control</option>
+                                    <option id="clt3b"> Culture</option>
+                                    <option id="de3b"> Decision Error</option>
+                                    <option id="ev3b"> Exceptional Violation</option>
+                                    <option id="ftckp3b"> Failure to Correct Known Problems</option>
+                                    <option id="ffd3b"> Fitness for Duty</option>
+                                    <option id="is3b"> Inadequate Supervision</option>
+                                    <option id="lat3b"> Leadership and Teamwork</option>
+                                    <option id="op3b"> Operations</option>
+                                    <option id="ov3b"> Oversight</option>
+                                    <option id="pe3b"> Perceptual Errors</option>
+                                    <option id="phe3b"> Physical Environment</option>
+                                    <option id="poml3b"> Physical or Mental Limitations</option>
+                                    <option id="pio3b"> Planned Inappropriate Operation</option>
+                                    <option id="pro3b"> Procedure</option>
+                                    <option id="rv3b"> Routine Violation</option>
+                                    <option id="sbe3b"> Skill Based Error</option>
+                                    <option id="sv3b"> Supervisory Violation</option>
+                                    <option id="tech3b"> Technological</option>
+                                </select>
+                                <div class="invalid-feedback">Please select a human factor</div>
+                            </div>
+
+                            <div class="form-group col-md-4">
+                                Cause:
+                                <select id="hfCause3b" class="custom-select" id="validationCustom03b">
+                                    <option default="true" id="selected" value=""> Select </option>
+                                </select>
+                                <div class="invalid-feedback">Please select a cause</div>
+                            </div>
+                        </div>
+                        <!--FailureLevel3-CAUSE END-->
+
+                        <!--FailureLevel4-A START-->
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <h4 id="failureLevel4b">Unsafe Acts</h4>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                Human Factor:<span style="color:red">*</span>
+                                <select id="hFactor4" class="custom-select" id="customControlValidation4" required>
+                                    <option default="true" value="">Select</option>
+                                    <option id="ams"> Adverse Mental State</option>
+                                    <option id="aps"> Adverse Physiological State</option>
+                                    <option id="atc"> Air Traffic Control</option>
+                                    <option id="clt"> Culture</option>
+                                    <option id="de"> Decision Error</option>
+                                    <option id="ev"> Exceptional Violation</option>
+                                    <option id="ftckp"> Failure to Correct Known Problems</option>
+                                    <option id="ffd"> Fitness for Duty</option>
+                                    <option id="is"> Inadequate Supervision</option>
+                                    <option id="lat"> Leadership and Teamwork</option>
+                                    <option id="op"> Operations</option>
+                                    <option id="ov"> Oversight</option>
+                                    <option id="pe"> Perceptual Errors</option>
+                                    <option id="phe"> Physical Environment</option>
+                                    <option id="poml"> Physical or Mental Limitations</option>
+                                    <option id="pio"> Planned Inappropriate Operation</option>
+                                    <option id="pro"> Procedure</option>
+                                    <option id="rv"> Routine Violation</option>
+                                    <option id="sbe"> Skill Based Error</option>
+                                    <option id="sv"> Supervisory Violation</option>
+                                    <option id="tech"> Technological</option>
+
+                                </select>
+                                <div class="invalid-feedback">Please select a human factor</div>
+                            </div>
+
+                                <div class="form-group col-md-4">
+                                    Cause:<span style="color:red">*</span>
+                                    <select id="hfCause4" class="custom-select" id="validationCustom01" required>
+                                        <option default="true" id="selected" value=""> Select </option>
+                                    </select>
+                                    <div class="invalid-feedback">Please select a cause</div>
+                                </div>
+                            </div>
+                                <!--FailureLevel4-A END-->
+                                <!--FailureLevel4-B START-->
+
+                                <div class="form-row">
+                                    <div class="form-group col-md-4">
+                                        Human Factor:<span style="color:red">*</span>
+                                        <select id="hFactor4b" class="custom-select" id="customControlValidation4" required>
+                                            <option default="true" value="">Select</option>
+                                            <option id="ams2"> Adverse Mental State</option>
+                                            <option id="aps2"> Adverse Physiological State</option>
+                                            <option id="atc2"> Air Traffic Control</option>
+                                            <option id="clt2"> Culture</option>
+                                            <option id="de2"> Decision Error</option>
+                                            <option id="ev2"> Exceptional Violation</option>
+                                            <option id="ftckp2"> Failure to Correct Known Problems</option>
+                                            <option id="ffd2"> Fitness for Duty</option>
+                                            <option id="is2"> Inadequate Supervision</option>
+                                            <option id="lat2"> Leadership and Teamwork</option>
+                                            <option id="op2"> Operations</option>
+                                            <option id="ov2"> Oversight</option>
+                                            <option id="pe2"> Perceptual Errors</option>
+                                            <option id="phe2"> Physical Environment</option>
+                                            <option id="poml2"> Physical or Mental Limitations</option>
+                                            <option id="pio2"> Planned Inappropriate Operation</option>
+                                            <option id="pro2"> Procedure</option>
+                                            <option id="rv2"> Routine Violation</option>
+                                            <option id="sbe2"> Skill Based Error</option>
+                                            <option id="sv2"> Supervisory Violation</option>
+                                            <option id="tech2"> Technological</option>
+
+                                        </select>
+                                        <div class="invalid-feedback">Please select a human factor</div>
+                                    </div>
+
+                                    <div class="form-group col-md-4">
+                                        Cause:
+                                        <select id="hfCause4b" class="custom-select" id="validationCustom01">
+                                            <option default="true" id="selectedb" value=""> Select </option>
+                                        </select>
+                                        <div class="invalid-feedback">Please select a cause</div>
+                                    </div>
+                                </div>
+                                <!--FailureLevel4-Cause END-->
+
+
+                                <div class="form-group row" id="buttonSave">
+                                    <div class="col-sm-10">
+                                        <button class="btn btn-primary btn-sm" type="submit" id="btnSave">Submit form</button>
+                                    </div>
+                                </div>
+                                <div class="form-group row" id="buttonUpdate">
+                                    <div class="col-sm-10">
+                                        <button class="btn btn-primary btn-sm" type="submit" id="btnUpdate">Update form</button>
+                                    </div>
+                                </div>
+
+</form>
+        </table>
+
+        <!--Results table -->
+        <form>
+            <table id="returnedDataTable" class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">EMS Flight Record ID</th>
+                        <th scope="col">Fleet</th>
+                        <th scope="col">Event Date</th>
+                        <th scope="col">Event Type</th>
+                        <th scope="col">Phase of Flight</th>
+                        <div class="col-md-6">
+                            <th scope="col">Crew Contact Summary</th>
+                        </div>
+                        <th scope="col">Organizational Human Factor</th>
+                        <th scope="col">Organizational Cause</th>
+                        <th scope="col">Unsafe Supervision Human Factor</th>
+                        <th scope="col">Unsafe Supervision Cause</th>
+                        <th scope="col">Precondition Human Factor</th>
+                        <th scope="col">Precondition Cause</th>
+                        <th scope="col">Precondition Human Factor2</th>
+                        <th scope="col">Precondition Cause2</th>
+                        <th scope="col">Unsafe Acts Human Factor</th>
+                        <th scope="col">Unsafe Acts Cause</th>
+                        <th scope="col">Unsafe Acts Human Factor2</th>
+                        <th scope="col">Unsafe Acts Cause2</th>
+                    </tr>
+                </thead>
+                <tbody id="returnedData">
+                    <table>
+        </form>
+
+        <script>
+
+            $(document).ready(function () {
+
+                each();
+
+                $("#buttonUpdate").hide();
+
+                var n = new Date();
+                var monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
+                    "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+                var year = n.getFullYear();
+                var monthName = monthNames[n.getMonth()];
+
+                $("#month").val('<option id="' + monthName + '">' + monthName + '</option>');
+
+
+                for (a = 0; a < 12; a++) {
+                    $("#month").append('<option id="' + monthNames[a] + '">' + monthNames[a] + '</option>');
+                }
+
+
+                //Filtering HumanFactor by FailureLevel: Organizational Influences
+                var url1 = 'https://alaskaair.sharepoint.com/sites/FOQA/_vti_bin/ListData.svc/Failure_Level?select=Human_Factor&$filter=Failure_Level%20eq%20%27Organizational%27';
+
+                getListItems(url1, function (data) {
+                    var numRecords = data.d.results.length;
+
+                    var select = document.getElementById("hFactor1");
+                    for (i = 0; i < numRecords; i++) {
+                        select.options[i] = null;
+                    }
+
+                    $("#hFactor1").val();
+
+                    if (numRecords > 0) {
+                        $.each(data, function (i, item) {
+                            $("#hFactor1").children().remove().end();
+                            $("#hFactor1").append('<option id="hFactor1Default" value="">Select</option>');
+
+                            for (var i = 0; i < numRecords; i++) {
+
+                                $("#hFactor1").append('<option id= "hf1' + i + '" value="' + data.d.results[i].Human_Factor + '">' + data.d.results[i].Human_Factor + '</option>');
+
+                                //$("#"+item.title).text(item.key));
+                            }
+
+                        })
+                    }
+                    else {
+                        $("#ccDetail").append("<tr><td><b>No records for given month</b></td></tr>")
+                    }
+
+                })
+
+                //Filtering HumanFactor by FailureLevel: Unsafe Supervision
+                var url2 = 'https://alaskaair.sharepoint.com/sites/FOQA/_vti_bin/ListData.svc/Failure_Level?select=Human_Factor&$filter=Failure_Level%20eq%20%27Unsafe Supervision%27';
+
+                getListItems(url2, function (data) {
+                    var numRecords = data.d.results.length;
+
+                    var select = document.getElementById("hFactor2");
+                    for (i = 0; i < numRecords; i++) {
+                        select.options[i] = null;
+                    }
+
+                    $("#hFactor2").val();
+
+                    if (numRecords > 0) {
+                        $.each(data, function (i, item) {
+                            $("#hFactor2").children().remove().end();
+                            $("#hFactor2").append('<option id="hFactor1Default" value="">Select</option>');
+
+                            for (var i = 0; i < numRecords; i++) {
+
+                                $("#hFactor2").append('<option id= "hf2' + i + '" value="' + data.d.results[i].Human_Factor + '">' + data.d.results[i].Human_Factor + '</option>');
+
+                                //$("#"+item.title).text(item.key));
+                            }
+
+                        })
+                    }
+                    else {
+                        $("#ccDetail").append("<tr><td><b>No records for given month</b></td></tr>")
+                    }
+
+                })
+
+
+                //Filtering HumanFactor by FailureLevel: Precondition
+                var url3 = 'https://alaskaair.sharepoint.com/sites/FOQA/_vti_bin/ListData.svc/Failure_Level?select=Human_Factor&$filter=Failure_Level%20eq%20%27Precondition%27';
+
+                getListItems(url3, function (data) {
+                    var numRecords = data.d.results.length;
+
+                    var select = document.getElementById("hFactor3");
+                    for (i = 0; i < numRecords; i++) {
+                        select.options[i] = null;
+                    }
+
+                    $("#hFactor3").val();
+
+                    if (numRecords > 0) {
+                        $.each(data, function (i, item) {
+                            $("#hFactor3").children().remove().end();
+                            $("#hFactor3").append('<option id="hFactor1Default" value="">Select</option>');
+
+                            for (var i = 0; i < numRecords; i++) {
+
+                                $("#hFactor3").append('<option id= "hf3' + i + '" value="' + data.d.results[i].Human_Factor + '">' + data.d.results[i].Human_Factor + '</option>');
+
+                                //$("#"+item.title).text(item.key));
+                            }
+
+                        })
+                    }
+                    else {
+                        $("#ccDetail").append("<tr><td><b>No records for given month</b></td></tr>")
+                    }
+
+                }) //Filtering HumanFactor by FailureLevel: Precondition-A END
+
+
+                //Filtering HumanFactor by FailureLevel: Precondition-B START
+                var url3b = 'https://alaskaair.sharepoint.com/sites/FOQA/_vti_bin/ListData.svc/Failure_Level?select=Human_Factor&$filter=Failure_Level%20eq%20%27Precondition%27';
+
+                getListItems(url3b, function (data) {
+                    var numRecords = data.d.results.length;
+
+                    var select = document.getElementById("hFactor3b");
+                    for (i = 0; i < numRecords; i++) {
+                        select.options[i] = null;
+                    }
+
+                    $("#hFactor3b").val();
+
+                    if (numRecords > 0) {
+                        $.each(data, function (i, item) {
+                            $("#hFactor3b").children().remove().end();
+                            $("#hFactor3b").append('<option id="hFactor1Default" value="">Select</option>');
+                            $("#hFactor3b").append('<option id="hFactor1Default" value="">n/a</option>');
+
+
+                            for (var i = 0; i < numRecords; i++) {
+
+                                $("#hFactor3b").append('<option id= "hf3b' + i + '" value="' + data.d.results[i].Human_Factor + '">' + data.d.results[i].Human_Factor + '</option>');
+
+                                //$("#"+item.title).text(item.key));
+                            }
+
+                        })
+                    }
+                    else {
+                        $("#ccDetail").append("<tr><td><b>No records for given month</b></td></tr>")
+                    }
+
+                }) //Filtering HumanFactor by FailureLevel: Precondition-B END
+
+
+                //Filtering HumanFactor by FailureLevel: Unsafe Act-A START
+                var url4 = 'https://alaskaair.sharepoint.com/sites/FOQA/_vti_bin/ListData.svc/Failure_Level?select=Human_Factor&$filter=Failure_Level%20eq%20%27Unsafe Act%27';
+
+                getListItems(url4, function (data) {
+                    var numRecords = data.d.results.length;
+
+                    var select = document.getElementById("hFactor4");
+                    for (i = 0; i < numRecords; i++) {
+                        select.options[i] = null;
+                    }
+
+                    $("#hFactor4").val();
+
+                    if (numRecords > 0) {
+                        $.each(data, function (i, item) {
+                            $("#hFactor4").children().remove().end();
+                            $("#hFactor4").append('<option id="hFactor1Default" value="">Select</option>');
+
+                            for (var i = 0; i < numRecords; i++) {
+
+                                $("#hFactor4").append('<option id= "hf4' + i + '" value="' + data.d.results[i].Human_Factor + '">' + data.d.results[i].Human_Factor + '</option>');
+
+                                //$("#"+item.title).text(item.key));
+                            }
+
+                        })
+                    }
+                    else {
+                        $("#ccDetail").append("<tr><td><b>No records for given month</b></td></tr>")
+                    }
+
+                }) //Filtering HumanFactor by FailureLevel: Unsafe Act-A  END
+
+            //Filtering HumanFactor by FailureLevel: Unsafe Act-B START
+            var url4b = 'https://alaskaair.sharepoint.com/sites/FOQA/_vti_bin/ListData.svc/Failure_Level?select=Human_Factor&$filter=Failure_Level%20eq%20%27Unsafe Act%27';
+
+                getListItems(url4b, function (data) {
+                var numRecords = data.d.results.length;
+
+                var select = document.getElementById("hFactor4b");
+                for (i = 0; i < numRecords; i++) {
+                    select.options[i] = null;
+                }
+
+                $("#hFactor4b").val();
+
+                if (numRecords > 0) {
+                    $.each(data, function (i, item) {
+                        $("#hFactor4b").children().remove().end();
+                        $("#hFactor4b").append('<option id="hFactor4bDefault" value="">Select</option>');
+                        $("#hFactor4b").append('<option id="hFactor4bDefault" value="">n/a</option>');
+
+                        for (var i = 0; i < numRecords; i++) {
+
+                            $("#hFactor4b").append('<option id= "hf4b' + i + '" value="' + data.d.results[i].Human_Factor + '">' + data.d.results[i].Human_Factor + '</option>');
+
+                            //$("#"+item.title).text(item.key));
+                        }
+
+                    })
+                }
+                else {
+                    $("#ccDetail").append("<tr><td><b>No records for given month</b></td></tr>")
+                }
+
+                })//Filtering HumanFactor by FailureLevel: Unsafe Act-B END
+            }); //$(document).ready(function () {
+
+            //FailureLevel1 Precondition
+            $("#hFactor1").on("click", function () {
+                //Clearing the 'Cause' dropdown list
+                var select = document.getElementById("hfCause1");
+                var length = select.options.length;
+                for (i = 0; i < length + 1; i++) {
+                    select.options[i] = null;
+                }
+            });
+
+
+            $("#hFactor1").on("change", function () {
+                var url = 'https://alaskaair.sharepoint.com/sites/FOQA/_vti_bin/ListData.svc/Human_Factors_v3?select=Cause&$filter=Human_Factor_FK%20eq%20%27' + $("#hFactor1").val() + '%27';
+
+                getListItems(url, function (data) {
+                    var numRecords = data.d.results.length;
+
+                    var select = document.getElementById("hfCause1");
+                    for (i = 0; i < numRecords; i++) {
+                        select.options[i] = null;
+                    }
+
+                    $("#hfCause1").val();
+
+                    if (numRecords > 0) {
+                        $.each(data, function (i, item) {
+                            $("#hfCause1").children().remove().end();
+                            $("#hfCause1").append('<option id="hfCause1Default" value="">Select</option>');
+
+                            for (var i = 0; i < numRecords; i++) {
+                                //var userTitle = getUser(data.d.results[i].ModifiedById);
+
+                                $("#hfCause1").append('<option id= "hc1' + i + '" value="' + data.d.results[i].Cause + '">' + data.d.results[i].Cause + '</option>');
+
+
+                                //$("#"+item.title).text(item.key));
+                            }
+
+                        })
+                    }
+                    else {
+                        $("#ccDetail").append("<tr><td><b>No records for given month</b></td></tr>")
+                    }
+
+                })
+            });
+            // FailureLevel1 END
+
+            //FailureLevel2 Organizational
+            $("#hFactor2").on("click", function () {
+                //Clearing the 'Cause' dropdown list
+                var select = document.getElementById("hfCause2");
+                var length = select.options.length;
+                for (i = 0; i < length + 1; i++) {
+                    select.options[i] = null;
+                }
+            });
+
+
+            $("#hFactor2").on("change", function () {
+                var url = 'https://alaskaair.sharepoint.com/sites/FOQA/_vti_bin/ListData.svc/Human_Factors_v3?select=Cause&$filter=Human_Factor_FK%20eq%20%27' + $("#hFactor2").val() + '%27';
+
+                getListItems(url, function (data) {
+                    var numRecords = data.d.results.length;
+
+                    var select = document.getElementById("hfCause2");
+                    for (i = 0; i < numRecords; i++) {
+                        select.options[i] = null;
+                    }
+
+                    $("#hfCause2").val();
+
+                    if (numRecords > 0) {
+                        $.each(data, function (i, item) {
+                            $("#hfCause2").children().remove().end();
+                            $("#hfCause2").append('<option id="hfCause2Default" value="">Select</option>');
+
+                            for (var i = 0; i < numRecords; i++) {
+                                //var userTitle = getUser(data.d.results[i].ModifiedById);
+
+                                $("#hfCause2").append('<option id= "hf2' + i + '" value="' + data.d.results[i].Cause + '">' + data.d.results[i].Cause + '</option>');
+
+
+                                //$("#"+item.title).text(item.key));
+                            }
+
+                        })
+                    }
+                    else {
+                        $("#ccDetail").append("<tr><td><b>No records for given month</b></td></tr>")
+                    }
+
+                })
+            });
+            // FailureLeve2 END
+
+            //FailureLevel3-A Unsafe Act Click START
+            $("#hFactor3").on("click", function () {
+                //Clearing the 'Cause' dropdown list
+                var select = document.getElementById("hfCause3");
+                var length = select.options.length;
+                for (i = 0; i < length + 1; i++) {
+                    select.options[i] = null;
+                }
+            });
+            //FailureLevel3-A Unsafe Act Click END
+
+            //FailureLevel3-B Unsafe Act Click START
+            $("#hFactor3b").on("click", function () {
+                //Clearing the 'Cause' dropdown list
+                var select = document.getElementById("hfCause3b");
+                var length = select.options.length;
+                for (i = 0; i < length + 1; i++) {
+                    select.options[i] = null;
+                }
+            });
+            //FailureLevel3-B Unsafe Act Click END
+
+            // FailureLevel3-A START
+            $("#hFactor3").on("change", function () {
+                var url = 'https://alaskaair.sharepoint.com/sites/FOQA/_vti_bin/ListData.svc/Human_Factors_v3?select=Cause&$filter=Human_Factor_FK%20eq%20%27' + $("#hFactor3").val() + '%27';
+
+                getListItems(url, function (data) {
+                    var numRecords = data.d.results.length;
+
+                    var select = document.getElementById("hfCause3");
+                    for (i = 0; i < numRecords; i++) {
+                        select.options[i] = null;
+                    }
+
+                    $("#hfCause3").val();
+
+                    if (numRecords > 0) {
+                        $.each(data, function (i, item) {
+                            $("#hfCause3").children().remove().end();
+                            $("#hfCause3").append('<option id="hfCause3Default" value="">Select</option>');
+
+                            for (var i = 0; i < numRecords; i++) {
+                                //var userTitle = getUser(data.d.results[i].ModifiedById);
+
+                                $("#hfCause3").append('<option id= "hf3' + i + '" value="' + data.d.results[i].Cause + '">' + data.d.results[i].Cause + '</option>');
+
+
+                                //$("#"+item.title).text(item.key));
+                            }
+
+                        })
+                    }
+                    else {
+                        $("#ccDetail").append("<tr><td><b>No records for given month</b></td></tr>")
+                    }
+
+                })
+            });
+            // FailureLevel3-A END
+
+            // FailureLevel3-B START
+            $("#hFactor3b").on("change", function () {
+                var url = 'https://alaskaair.sharepoint.com/sites/FOQA/_vti_bin/ListData.svc/Human_Factors_v3?select=Cause&$filter=Human_Factor_FK%20eq%20%27' + $("#hFactor3b").val() + '%27';
+
+                getListItems(url, function (data) {
+                    var numRecords = data.d.results.length;
+
+                    var select = document.getElementById("hfCause3b");
+                    for (i = 0; i < numRecords; i++) {
+                        select.options[i] = null;
+                    }
+
+                    $("#hfCause3b").val();
+
+                    if (numRecords > 0) {
+                        $.each(data, function (i, item) {
+                            $("#hfCause3b").children().remove().end();
+                            $("#hfCause3b").append('<option id="hfCause3bDefault" value="">Select</option>');
+                            $("#hfCause3b").append('<option id="na" value="">n/a</option>');
+
+                            for (var i = 0; i < numRecords; i++) {
+                                //var userTitle = getUser(data.d.results[i].ModifiedById);
+
+                                $("#hfCause3b").append('<option id= "hf3b' + i + '" value="' + data.d.results[i].Cause + '">' + data.d.results[i].Cause + '</option>');
+
+
+                                //$("#"+item.title).text(item.key));
+                            }
+
+                        })
+                    }
+                    else {
+                        $("#ccDetail").append("<tr><td><b>No records for given month</b></td></tr>")
+                    }
+
+                })
+            });
+            // FailureLevel3-B END
+
+            //FailureLevel4-A Unsafe Act
+            $("#hFactor4").on("click", function () {
+                //Clearing the 'Cause' dropdown list
+                var select = document.getElementById("hfCause4");
+                var length = select.options.length;
+                for (i = 0; i < length + 1; i++) {
+                    select.options[i] = null;
+                }
+            });
+            //FailureLevel4-A Unsafe Act Click END
+
+            //FailureLevel4-B Unsafe Act
+            $("#hFactor4b").on("click", function () {
+                //Clearing the 'Cause' dropdown list
+                var select = document.getElementById("hfCause4b");
+                var length = select.options.length;
+                for (i = 0; i < length + 1; i++) {
+                    select.options[i] = null;
+                }
+            });
+            //FailureLevel4-B Unsafe Act Click END
+
+            // FailureLevel4A START
+            $("#hFactor4").on("change", function () {
+                var url = 'https://alaskaair.sharepoint.com/sites/FOQA/_vti_bin/ListData.svc/Human_Factors_v3?select=Cause&$filter=Human_Factor_FK%20eq%20%27' + $("#hFactor4").val() + '%27';
+
+                getListItems(url, function (data) {
+                    var numRecords = data.d.results.length;
+
+                    var select = document.getElementById("hfCause4");
+                    for (i = 0; i < numRecords; i++) {
+                        select.options[i] = null;
+                    }
+
+                    $("#hfCause4").val();
+
+                    if (numRecords > 0) {
+                        $.each(data, function (i, item) {
+                            $("#hfCause4").children().remove().end();
+                            $("#hfCause4").append('<option id="hfCause4Default" value="">Select</option>');
+
+                            for (var i = 0; i < numRecords; i++) {
+                                //var userTitle = getUser(data.d.results[i].ModifiedById);
+
+                                $("#hfCause4").append('<option id= "hf4' + i + '" value="' + data.d.results[i].Cause + '">' + data.d.results[i].Cause + '</option>');
+
+
+                                //$("#"+item.title).text(item.key));
+                            }
+
+                        })
+                    }
+                    else {
+                        $("#ccDetail").append("<tr><td><b>No records for given month</b></td></tr>")
+                    }
+
+                })
+            });
+            // FailureLevel4A END
+
+            //FailureLevel4B START
+            $("#hFactor4b").on("change", function () {
+                var url = 'https://alaskaair.sharepoint.com/sites/FOQA/_vti_bin/ListData.svc/Human_Factors_v3?select=Cause&$filter=Human_Factor_FK%20eq%20%27' + $("#hFactor4b").val() + '%27';
+
+                getListItems(url, function (data) {
+                    var numRecords = data.d.results.length;
+
+                    var select = document.getElementById("hfCause4b");
+                    for (i = 0; i < numRecords; i++) {
+                        select.options[i] = null;
+                    }
+
+                    $("#hfCause4b").val();
+
+                    if (numRecords > 0) {
+                        $.each(data, function (i, item) {
+                            $("#hfCause4b").children().remove().end();
+                            $("#hfCause4b").append('<option id="hfCause4bDefault" value="">Select</option>');
+                            $("#hfCause4b").append('<option id="na" value="">n/a</option>');
+
+                            for (var i = 0; i < numRecords; i++) {
+                                //var userTitle = getUser(data.d.results[i].ModifiedById);
+
+                                $("#hfCause4b").append('<option id= "hf4b' + i + '" value="' + data.d.results[i].Cause + '">' + data.d.results[i].Cause + '</option>');
+
+
+                                //$("#"+item.title).text(item.key));
+                            }
+
+                        })
+                    }
+                    else {
+                        $("#ccDetail").append("<tr><td><b>No records for given month</b></td></tr>")
+                    }
+
+                })
+            });
+            // FailureLevel4b END
+
+
+            function CheckColors(val) {
+                var element = document.getElementById('event');
+                var otherEvent = document.getElementById('otherEvent');
+
+                if (v == 'Other') {
+                    $("#otherEvent").show();
+                }
+                else {
+                    $("#otherEvent").hide();
+                }
+            }
+
+            function each() {
+
+                var n = new Date();
+                var year = n.getFullYear();
+                var url = 'https://alaskaair.sharepoint.com/sites/FOQA/_vti_bin/ListData.svc/Human_Factor_by_Flight_List?$orderby=Id%20desc';
+                //var urlTest = 'https://alaskaair.sharepoint.com/sites/FOQA/_vti_bin/ListData.svc/CrewContactTrackingList?$filter=substringof(%27'+ year +'%27,ReportingMonth)&$top=10&$orderby=Id%20desc';
+
+                getListItems(url, function (data) {
+                    var numRecords = data.d.results.length;
+
+
+                    $("#returnedData").val();
+
+                    if (numRecords > 0) {
+                        $.each(data, function (i, item) {
+
+
+                            for (var i = 0; i < 15; i++) {
+                                //var userTitle = getUser(data.d.results[i].ModifiedById);
+
+                                $("#returnedData").append("<tr>");
+                                $("#returnedData").append("<td>" + data.d.results[i].Id + "</td>");
+                                $("#returnedData").append("<td>" + data.d.results[i].Flight_Record + "</td>");
+                                $("#returnedData").append("<td>" + data.d.results[i].Fleet + "</td>");
+                                $("#returnedData").append("<td>" + data.d.results[i].ReportingMonth + "</td>");
+                                $("#returnedData").append("<td>" + data.d.results[i].EventType + "</td>");
+                                $("#returnedData").append("<td>" + data.d.results[i].Phase_of_Flight + "</td>");
+                                $("#returnedData").append("<td><div class='od-FieldRenderer-text is-truncated'>" + data.d.results[i].Crew_Contact_Summary+ "</div></td>");
+                                $("#returnedData").append("<td>" + data.d.results[i].Human_Factor1 + "</td>");
+                                $("#returnedData").append("<td>" + data.d.results[i].HF_Cause1 + "</td>");
+                                $("#returnedData").append("<td>" + data.d.results[i].Human_Factor2 + "</td>");
+                                $("#returnedData").append("<td>" + data.d.results[i].HF_Cause2 + "</td>");
+                                $("#returnedData").append("<td>" + data.d.results[i].Human_Factor3 + "</td>");
+                                $("#returnedData").append("<td>" + data.d.results[i].HF_Cause3 + "</td>");
+                                $("#returnedData").append("<td>" + data.d.results[i].Human_Factor3b + "</td>");
+                                $("#returnedData").append("<td>" + data.d.results[i].HF_Cause3b + "</td>");
+                                $("#returnedData").append("<td>" + data.d.results[i].Human_Factor4 + "</td>");
+                                $("#returnedData").append("<td>" + data.d.results[i].HF_Cause4 + "</td>");
+                                $("#returnedData").append("<td>" + data.d.results[i].Human_Factor4b + "</td>");
+                                $("#returnedData").append("<td>" + data.d.results[i].HF_Cause4b + "</td>");
+                                $("#returnedData").append("<td><button class='btn btn-warning btn-sm' type='button' id='getIDButton' onclick='getData(" + data.d.results[i].Id + ")'>Get Details</button></td></tr>");
+
+                                //$("#returnedData").append("<button class='btn btn-sm delete' type='submit' id='btnDelete'>Delete row</button>");
+                            }
+
+                            //$("#tbody").append("<tr>");
+                        })
+                    }
+                    else {
+                        $("#returnedData").append("<tr><td><b>No records for given month</b></td></tr>")
+                    }
+
+                })
+
+            };
+
+            function getData(id) {
+
+                var url = 'https://alaskaair.sharepoint.com/sites/FOQA/_vti_bin/ListData.svc/Human_Factor_by_Flight_List?$filter=Id%20eq%20' + id + '%20';
+                //var urlTest = 'https://alaskaair.sharepoint.com/sites/FOQA/_vti_bin/ListData.svc/CrewContactTrackingList?$filter=substringof(%27'+ year +'%27,ReportingMonth)&$top=10&$orderby=Id%20desc';
+
+                $("#buttonSave").hide();
+                $("#buttonUpdate").show();
+                //document.getElementById("ccDetail").disabled = true;
+                //document.getElementById("month").disabled = true;
+                //document.getElementById("year").disabled = true;
+
+                getListItems(url, function (data) {
+                    var numRecords = data.d.results.length;
+
+                    if (numRecords > 0) {
+                        $.each(data, function (i, item) {
+
+
+                            for (var i = 0; i < numRecords; i++) {
+                                //var userTitle = getUser(data.d.results[i].ModifiedById);
+
+                                $("#key").val(data.d.results[i].Id);
+                                $("#flightRecord").val(data.d.results[i].Flight_Record);
+                                $("#fleet").val(data.d.results[i].Fleet);
+                                $("#pof").val(data.d.results[i].Phase_of_Flight);
+                                $("#month").val(data.d.results[i].Month);
+                                $("#year").val(data.d.results[i].Year);
+                                $("#event").val(data.d.results[i].EventType);
+                                $("#ccDetail").val(data.d.results[i].Crew_Contact_Summary);
+                                $("#hFactor1").val(data.d.results[i].Human_Factor1);
+                                $("#hfCause1").val(data.d.results[i].HF_Cause1);
+                                $("#hFactor2").val(data.d.results[i].Human_Factor2);
+                                $("#hfCause2").val(data.d.results[i].HF_Cause2);
+                                $("#hFactor3").val(data.d.results[i].Human_Factor3);
+                                $("#hfCause3").val(data.d.results[i].HF_Cause3);
+                                $("#hFactor3b").val(data.d.results[i].Human_Factor3b);
+                                $("#hfCause3b").val(data.d.results[i].HF_Cause3b);
+                                $("#hFactor4").val(data.d.results[i].Human_Factor4);
+                                $("#hfCause4").val(data.d.results[i].HF_Cause4);
+                                $("#hFactor4b").val(data.d.results[i].Human_Factor4b);
+                                $("#hfCause4b").val(data.d.results[i].HF_Cause4b);
+                            }
+
+                        })
+
+                    }
+                    else {
+                        $("#returnedData").append("<tr><td><b>No records for given month</b></td></tr>")
+                    }
+
+                })
+
+            }//end getData(id)
+
+            function getListItems(url, success, failure) {
+
+                $.ajax({
+                    url: url,
+                    method: "GET",
+                    headers: {
+                        "Accept": "application/json; odata=verbose"
+                    },
+                    cache: true,
+                    beforeSend: function () {
+                        //toggleCursor();
+                        $(".MessageLabel").text("");
+                    },
+                    async: true
+                    ,
+                    success: function (data) {
+                        console.log('data success');
+                        success(data);
+                        ////toggleCursor();
+                    },
+                    error: function (data) {
+                        console.log('data failure');
+                        ////toggleCursor();
+                        //$(".MessageLabel").text('Error getting list items').css({"color":"red","font-weight":"bold"});
+                        console.log('Error getting list items');
+                    }
+                });
+            };
+
+            function getGroupedListItems(url, success, failure) {
+
+                $.ajax({
+                    url: url,
+                    method: "GET",
+                    headers: {
+                        "Accept": "application/json; odata=verbose"
+                    },
+                    cache: true,
+                    beforeSend: function () {
+                        //toggleCursor();
+                        $(".MessageLabel").text("");
+                    },
+                    async: true
+                    ,
+                    success: function (data) {
+                        console.log('data success');
+                        success(groupedData);
+                        ////toggleCursor();
+                    },
+                    error: function (data) {
+                        console.log('data failure');
+                        ////toggleCursor();
+                        //$(".MessageLabel").text('Error getting list items').css({"color":"red","font-weight":"bold"});
+                        console.log('Error getting list items');
+                    }
+                });
+            };
+
+            $("#btnSave").on("click", function () {
+                var itemCount = 1;
+                //refreshPage();
+
+                //checking HF dropwdown1 not 'Select'
+                if ($("#flightRecord").val() == "") {
+                    itemCount = 0;
+                }
+                else if ($("#fleet").val() == "Select") {
+                    itemCount = 0;
+                }
+                else if ($("#month").val() == "Select") {
+                    itemCount = 0;
+                }
+                else if ($("#year").val() == "Select") {
+                    itemCount = 0;
+                }
+                else if ($("#pof").val() == "Select") {
+                    itemCount = 0;
+                }
+                else if ($("#ccDetail").val() == "") {
+                    itemCount = 0;
+                }
+                else if ($("#event").val() == "Select") {
+                    itemCount = 0;
+                }
+                else if ($("#hFactor1").val() == "Select" || $("#hFactor1").val() == "") {
+                    itemCount = 0;
+                }
+                else if ($("#hfCause1").val() == "Select" || $("#hfCause1").val() == "") {
+                    itemCount = 0;
+                }
+                //checking HF dropwdown2 not 'Select'
+                else if ($("#hFactor2").val() == "Select" || $("#hFactor2").val() == "") {
+                    itemCount = 0;
+                }
+                else if ($("#hfCause2").val() == "Select" || $("#hfCause2").val() == "") {
+                    itemCount = 0;
+                }
+                //checking HF dropwdown3 not 'Select'
+                else if ($("#hFactor3").val() == "Select" || $("#hFactor3").val() == "") {
+                    itemCount = 0;
+                }
+                else if ($("#hfCause3").val() == "Select" || $("#hfCause3").val() == "") {
+                    itemCount = 0;
+                }
+                //checking HF dropwdown3-B not 'Select'
+                else if ($("#hFactor3b").val() == "Select" || $("#hFactor3b").val() == "") {
+                    itemCount = 0;
+                }
+                //checking HF dropwdown4 not 'Select'
+                else if ($("#hFactor4").val() == "Select" || $("#hFactor4").val() == "") {
+                    itemCount = 0;
+                }
+                else if ($("#hfCause4").val() == "Select" || $("#hfCause4").val() == "") {
+                    itemCount = 0;
+                }
+                //checking HF dropwdown4-B not 'Select'
+                else if ($("#hFactor4b").val() == "Select" || $("#hFactor4b").val() == "") {
+                    itemCount = 0;
+                }
+
+
+
+                //CONTINUE TO SAVE
+                if (itemCount > 0) {
+                    save();
+                }
+                else {
+                    // Do nothing!
+                }
+
+            });
+
+            $("#btnUpdate").on("click", function () {
+                var itemCount = 1;
+                //refreshPage();
+
+                //checking HF dropwdown1 not 'Select'
+                if ($("#flightRecord").val() == "") {
+                    itemCount = 0;
+                }
+                else if ($("#fleet").val() == "Select") {
+                    itemCount = 0;
+                }
+                else if ($("#month").val() == "Select") {
+                    itemCount = 0;
+                }
+                else if ($("#year").val() == "Select") {
+                    itemCount = 0;
+                }
+                else if ($("#pof").val() == "Select") {
+                    itemCount = 0;
+                }
+                else if ($("#ccDetail").val() == "") {
+                    itemCount = 0;
+                }
+                else if ($("#event").val() == "Select") {
+                    itemCount = 0;
+                }
+                else if ($("#hFactor1").val() == "Select" | $("#hFactor1").val() == "") {
+                    itemCount = 0;
+                }
+                else if ($("#hfCause1").val() == "Select" | $("#hfCause1").val() == "") {
+                    itemCount = 0;
+                }
+                //checking HF dropwdown2 not 'Select'
+                else if ($("#hFactor2").val() == "Select" | $("#hFactor2").val() == "") {
+                    itemCount = 0;
+                }
+                else if ($("#hfCause2").val() == "Select" | $("#hfCause2").val() == "") {
+                    itemCount = 0;
+                }
+                //checking HF dropwdown3 not 'Select'
+                else if ($("#hFactor3").val() == "Select" | $("#hFactor3").val() == "") {
+                    itemCount = 0;
+                }
+                else if ($("#hfCause3").val() == "Select" | $("#hfCause3").val() == "") {
+                    itemCount = 0;
+                }
+                //checking HF dropwdown3-B not 'Select'
+                else if ($("#hFactor3b").val() == "Select" | $("#hFactor3b").val() == "") {
+                    itemCount = 0;
+                }
+                //checking HF dropwdown4 not 'Select'
+                else if ($("#hFactor4").val() == "Select" | $("#hFactor4").val() == "") {
+                    itemCount = 0;
+                }
+                else if ($("#hfCause4").val() == "Select" | $("#hfCause4").val() == "") {
+                    itemCount = 0;
+                }
+                //checking HF dropwdown4-B not 'Select'
+                else if ($("#hFactor4b").val() == "Select" | $("#hFactor4b").val() == "") {
+                    itemCount = 0;
+                }
+
+                //CONTINUE TO SAVE
+                if (itemCount > 0) {
+                    updateHF($("#key").val());
+                }
+                else {
+                    // Do nothing!
+                }
+
+            });
+
+            function save() {
+                //var count = document.getElementById("runningCount").value;
+                var count = 1;
+                var url = 'https://alaskaair.sharepoint.com/sites/FOQA/_vti_bin/ListData.svc/Human_Factor_by_Flight_List';
+                var listItemType = 'Microsoft.SharePoint.DataService.Human_Factor_by_Flight_ListItem';
+
+                var item = {
+                    "__metadata": { "type": listItemType }
+                    , "Flight_Record": ($("#flightRecord").val() == "") ? 0 : $("#flightRecord").val()
+                    , "Crew_Contact_Summary": ($("#ccDetail").val() == "") ? null : $("#ccDetail").val()
+                    , "Fleet": ($("#fleet").val() == "") ? null : $("#fleet").val()
+                    , "Month": ($("#month").val() == "") ? null : $("#month").val()
+                    , "Year": ($("#year").val() == "") ? null : $("#year").val()
+                    , "ReportingMonth": ($("#month").val() == "") ? null : $("#month").val() + " " + $("#year").val()
+                    , "Phase_of_Flight": ($("#pof").val() == "") ? null : $("#pof").val()
+                    , "EventType": ($("#event").val() == "") ? null : $("#event").val()
+                    , "Human_Factor1": ($("#hFactor1").val() == "") ? null : $("#hFactor1").val()
+                    , "HF_Cause1": ($("#hfCause1").val() == "") ? null : $("#hfCause1").val()
+                    , "Human_Factor2": ($("#hFactor2").val() == "") ? null : $("#hFactor2").val()
+                    , "HF_Cause2": ($("#hfCause2").val() == "") ? null : $("#hfCause2").val()
+                    , "Human_Factor3": ($("#hFactor3").val() == "") ? null : $("#hFactor3").val()
+                    , "HF_Cause3": ($("#hfCause3").val() == "") ? null : $("#hfCause3").val()
+                    , "Human_Factor3b": ($("#hFactor3b").val() == "") ? null : $("#hFactor3b").val()
+                    , "HF_Cause3b": ($("#hfCause3b").val() == "") ? null : $("#hfCause3b").val()
+                    , "Human_Factor4": ($("#hFactor4").val() == "") ? null : $("#hFactor4").val()
+                    , "HF_Cause4": ($("#hfCause4").val() == "") ? null : $("#hfCause4").val()
+                    , "Human_Factor4b": ($("#hFactor4b").val() == "") ? null : $("#hFactor4b").val()
+                    , "HF_Cause4b": ($("#hfCause4b").val() == "") ? null : $("#hfCause4b").val()
+                }//end item
+
+                var errorMessage = "Error inserting record number: " + count;
+                insertIntoList(url, item, "Item added/saved", errorMessage);
+                /*window.location.reload();
+                $("#tBody1").append("Saved to Human Factors by Flight List");*/
+
+            }
+
+            function insertIntoList(url, item, successMsg, failMsg, source) {
+
+                $.ajax({
+                    url: url,
+                    type: "POST",
+                    contentType: "application/json;odata=verbose",
+                    data: JSON.stringify(item),
+                    beforeSend: function () {
+                        //toggleCursor();
+                        $(".MessageLabel").text("");
+                    },
+                    headers: {
+                        "Accept": "application/json;odata=verbose",
+                        "X-RequestDigest": $("#__REQUESTDIGEST").val()
+                    },
+                    success: function (data) {
+                        if (successMsg != '') { console.log(successMsg); $(".MessageLabel").text(successMsg).css({ "color": "green", "font-weight": "bold" }); each(); };
+                        if (successMsg != '') {
+                            window.location.reload();
+                            each();
+                        }
+
+                        //toggleCursor();
+                    },
+                    error: function (data) {
+                        if (failMsg != '') {
+                            console.log(failMsg);
+                            $(".MessageLabel").text(failMsg).css({ "color": "red", "font-weight": "bold" });
+                            //toggleCursor();
+                            alert(failMsg);
+                        }
+                    }
+                });
+            }//end function
+
+            function updateHF(id) {
+
+                var errorMessage = "Error updating record in Sharepoint Item List - Done field: " + id;
+                updateHFListItem(id, "Item updated/saved", errorMessage);
+
+            }
+
+            function updateHFListItem(itemId, success, failure) {
+                var itemType = 'Microsoft.SharePoint.DataService.Human_Factor_by_Flight_ListItem';
+                var listName = 'CCHumanFactorAdded';
+                //var url = "https://alaskaair.sharepoint.com/sites/QXFOQA/_api/web/lists/getbytitle('PDRList')/items(" + itemId + ")";
+                var url = "https://alaskaair.sharepoint.com/sites/FOQA/_vti_bin/ListData.svc/Human_Factor_by_Flight_List(" + itemId + ")";
+
+                var item = {
+                    "__metadata": { "type": itemType }
+                    , "Flight_Record": ($("#flightRecord").val() == "") ? 0 : $("#flightRecord").val()
+                    , "Crew_Contact_Summary": ($("#ccDetail").val() == "") ? null : $("#ccDetail").val()
+                    , "Fleet": ($("#fleet").val() == "") ? null : $("#fleet").val()
+                    , "Month": ($("#month").val() == "") ? null : $("#month").val()
+                    , "Year": ($("#year").val() == "") ? null : $("#year").val()
+                    , "ReportingMonth": $("#month").val() + " " + $("#year").val()
+                    , "Phase_of_Flight": ($("#pof").val() == "") ? null : $("#pof").val()
+                    , "EventType": ($("#event").val() == "") ? null : $("#event").val()
+                    , "Human_Factor1": ($("#hFactor1").val() == "") ? null : $("#hFactor1").val()
+                    , "HF_Cause1": ($("#hfCause1").val() == "") ? null : $("#hfCause1").val()
+                    , "Human_Factor2": ($("#hFactor2").val() == "") ? null : $("#hFactor2").val()
+                    , "HF_Cause2": ($("#hfCause2").val() == "") ? null : $("#hfCause2").val()
+                    , "Human_Factor3": ($("#hFactor3").val() == "") ? null : $("#hFactor3").val()
+                    , "HF_Cause3": ($("#hfCause3").val() == "") ? null : $("#hfCause3").val()
+                    , "Human_Factor3b": ($("#hFactor3b").val() == "") ? null : $("#hFactor3b").val()
+                    , "HF_Cause3b": ($("#hfCause3b").val() == "") ? null : $("#hfCause3b").val()
+                    , "Human_Factor4": ($("#hFactor4").val() == "") ? null : $("#hFactor4").val()
+                    , "HF_Cause4": ($("#hfCause4").val() == "") ? null : $("#hfCause4").val()
+                    , "Human_Factor4b": ($("#hFactor4").val() == "") ? null : $("#hFactor4b").val()
+                    , "HF_Cause4b": ($("#hfCause4b").val() == "") ? null : $("#hfCause4b").val()
+                };
+
+                getListItems(url, function (data) {
+                    $.ajax({
+                        url: url,
+                        type: "POST",
+                        contentType: "application/json;odata=verbose",
+                        data: JSON.stringify(item),
+                        headers: {
+                            "Accept": "application/json;odata=verbose",
+                            "X-RequestDigest": $("#__REQUESTDIGEST").val(),
+                            "X-HTTP-Method": "MERGE",
+                            "If-Match": "*"
+                        },
+                        success: function (data) {
+                            console.log('Success');
+                            window.location.href = window.location.href;
+                        },
+                        error: failure
+                    });
+                })
+                //window.location.reload();
+            };
+
+            function refreshPage() {
+                if ($("#flightRecord").val() == "") {
+                    $("#flightRecord").val().focus();
+                    //alert('Fill in Flight Record ID before hitting "Submit Form" button');
+                }
+                else if ($("#ccDetail").val() == "") {
+                    $("#ccDetail").val().focus();
+                    //alert('Fill in Crew Contact Detail before hitting "Submit Form" button');
+                }
+                else if ($("#hFactor1").val() == "Select" || $("#hFactor1").val() == "") {
+                    $("#hFactor1").val().focus();
+                    //break;
+                    //alert('Select Precondition- Human Factor before hitting "Submit Form" button');
+                }
+                else if ($("#hfCause1").val() == "Select" || $("#hfCause1").val() == "") {
+                    $("#hfCause1").val().focus();
+                    //alert('Select Precondition- Cause before hitting "Submit Form" button');
+                }
+                else if ($("#hFactor2").val() == "Select" || $("#hFactor2").val() == "") {
+                    $("#hFactor2").val().focus();
+                    //alert('Select Organizational- Human Factor before hitting "Submit Form" button');
+                }
+                else if ($("#hfCause2").val() == "Select" || $("#hfCause2").val() == "") {
+                    $("#hfCause2").val().focus();
+                    //alert('Select Organizational- Cause before hitting "Submit Form" button');
+                }
+                else if ($("#hFactor3").val() == "Select" || $("#hFactor3").val() == "") {
+                    $("#hFactor3").val().focus();
+                    //alert('Select Unsafe Act- Human Factor before hitting "Submit Form" button');
+                }
+                else if ($("#hfCause3").val() == "Select" || $("#hfCause3").val() == "") {
+                    $("#hfCause3").val().focus();
+                    //alert('Select Unsafe Act- Cause before hitting "Submit Form" button');
+                }
+                else if ($("#hFactor3b").val() == "Select" || $("#hFactor3b").val() == "") {
+                    $("#hFactor3b").val().focus();
+                    //alert('Select Unsafe Act- Human Factor before hitting "Submit Form" button');
+                }
+                else if ($("#hFactor4").val() == "Select" || $("#hFactor4").val() == "") {
+                    $("#hFactor4").val().focus();
+                    //alert('Select Unsafe Supervision- Human Factor before hitting "Submit Form" button');
+                }
+                else if ($("#hfCause4").val() == "Select" || $("#hfCause4").val() == "") {
+                    $("#hfCause4").val().focus();
+                    //alert('Select Unsafe Supervision- Cause before hitting "Submit Form" button');
+                }
+                else if ($("#hFactor4b").val() == "Select" || $("#hFactor4b").val() == "") {
+                    $("#hFactor4b").val().focus();
+                    //alert('Select Unsafe Supervision- Human Factor before hitting "Submit Form" button');
+                }
+                /*
+                else
+                {
+                        window.location.reload();
+                        $("#tBody").append("Saved to Human Factors by Flight List");
+                }*/
+            }
+
+        </script>
+
+    </body>
+</head>
