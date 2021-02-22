@@ -173,7 +173,8 @@ function populateTbodyTable() {
                 for (var i = 0; i < 11; i++) {
                     //var userTitle = getUser(data.d.results[i].ModifiedById);
 
-                    var createdDate = data.d.results[i].Created.slice(6, data.d.results[i].Created.length - 2);
+                    var createdDate = new Date(Number(data.d.results[i].Created.slice(6, data.d.results[i].Created.length - 2)));
+                    //createdDate.slice(4, 15);
 
                     $("#previousSubmissionsTable").append("<tr>");
                     $("#previousSubmissionsTable").append("<td>" + data.d.results[i].Id + "</td>");
@@ -181,7 +182,7 @@ function populateTbodyTable() {
                     //$("#previousSubmissionsTable").append("<td>" + data.d.results[i].CreatedByDisplayName + "</td>");
                     $("#previousSubmissionsTable").append("<td>" + data.d.results[i].Fleet + "</td>");
                     $("#previousSubmissionsTable").append("<td>" + data.d.results[i].FleetModel + "</td>");
-                    $("#previousSubmissionsTable").append("<td>" + Date(createdDate).slice(4, 15) + "</td>");
+                    $("#previousSubmissionsTable").append("<td>" + createdDate.toDateString() + "</td>");
                     $("#previousSubmissionsTable").append("<td>" + data.d.results[i].Cause + "</td>");
                     $("#previousSubmissionsTable").append("<td>" + data.d.results[i].ContactDate + "</td>");
                     $("#previousSubmissionsTable").append("<td>" + data.d.results[i].FlightRecord + "</td>");

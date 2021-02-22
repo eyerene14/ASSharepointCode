@@ -140,7 +140,7 @@
                 </div>
                 <div class="col  align-self-center">
                     <h1>Boeing & Airbus</h1>
-                    <h4>Continous Unstable Approach Survey</h2>
+                    <h4>Scorecard Survey</h2>
                 </div>
 
             </div>
@@ -428,7 +428,7 @@ $.ajaxSetup({cache: false});
                     console.log('Logging');
                 },
                 success: loggingSuccess,
-                error: loggingError
+                error: saveError
             });
         }
 
@@ -458,7 +458,7 @@ $.ajaxSetup({cache: false});
                 '; ContributingFactor: ' + document.querySelector("label.btn.active").id
             );*/
             console.log('Logging: Record Saved to FormErrorLog');
-            location.href = _spPageContextInfo.webAbsoluteUrl + '/SitePages/FormErrorRedirect.aspx';
+            //location.href = _spPageContextInfo.webAbsoluteUrl + '/SitePages/FormErrorRedirect.aspx';
         }
 
 
